@@ -55,7 +55,7 @@
       <img src="images/profile.JPG" alt="Photo of Samuel Davies"
            onerror="this.onerror=null;this.src='images/profile-placeholder.svg';">
     </div>
-    <div class="photo-caption">Samuel Davies -- Manchester</div>
+    <a href="#" id="photo-caption-link" class="photo-caption" target="_blank" rel="noopener">Samuel Davies</a>
   </div>
 
   <div class="about-copy">
@@ -71,8 +71,6 @@
       <div class="fact-item"><span class="eyebrow">Aiming for</span><span id="fact-goal"></span></div>
       <div class="fact-item"><span class="eyebrow">Status</span><span>Open to freelance work</span></div>
     </div>
-
-    <ul class="coverage-list" id="coverage-list"></ul>
 
     <div class="pull-quote">
       <p class="pull-quote-text" id="pull-quote-text"></p>
@@ -110,11 +108,10 @@
   document.getElementById("bio-text").textContent = siteConfig.bio;
   document.getElementById("fact-location").textContent = siteConfig.location;
   document.getElementById("fact-goal").textContent = siteConfig.careerGoal;
-  document.getElementById("coverage-list").innerHTML =
-    siteConfig.coverage.map(item => `<li>${item}</li>`).join("");
   renderAboutStats("about-stats");
   renderAboutQuote("pull-quote-text", "pull-quote-author");
   renderAboutTeaser("about-teaser");
+  document.getElementById("photo-caption-link").href = siteConfig.twitter;
   renderFooter();
   renderKicker();
 </script>

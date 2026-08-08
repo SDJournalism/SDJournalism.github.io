@@ -923,13 +923,17 @@ nav.site-nav a.active {
 }
 
 .photo-caption {
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
   margin-top: 10px;
+  transition: color 0.15s ease, transform 0.15s ease;
 }
+
+.photo-caption:hover { color: var(--gold); transform: translateY(-2px); }
 
 .availability-badge {
   display: inline-flex;
