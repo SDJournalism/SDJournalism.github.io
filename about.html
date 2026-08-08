@@ -64,13 +64,26 @@
     <h1>Hi, I'm Samuel.</h1>
     <p id="bio-text"></p>
 
+    <div class="stats-strip" id="about-stats"></div>
+
     <div class="fact-strip">
       <div class="fact-item"><span class="eyebrow">Based in</span><span id="fact-location"></span></div>
-      <div class="fact-item"><span class="eyebrow">Focus</span><span>Match analysis &amp; opinion</span></div>
+      <div class="fact-item"><span class="eyebrow">Aiming for</span><span id="fact-goal"></span></div>
       <div class="fact-item"><span class="eyebrow">Status</span><span>Open to freelance work</span></div>
     </div>
 
     <ul class="coverage-list" id="coverage-list"></ul>
+
+    <div class="pull-quote">
+      <p class="pull-quote-text" id="pull-quote-text"></p>
+      <span class="pull-quote-author" id="pull-quote-author"></span>
+    </div>
+
+    <div class="about-teaser-section">
+      <span class="eyebrow">From the archive</span>
+      <div id="about-teaser"></div>
+      <a href="articles.html" class="read-link">Check out my work here &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -96,8 +109,12 @@
 <script>
   document.getElementById("bio-text").textContent = siteConfig.bio;
   document.getElementById("fact-location").textContent = siteConfig.location;
+  document.getElementById("fact-goal").textContent = siteConfig.careerGoal;
   document.getElementById("coverage-list").innerHTML =
     siteConfig.coverage.map(item => `<li>${item}</li>`).join("");
+  renderAboutStats("about-stats");
+  renderAboutQuote("pull-quote-text", "pull-quote-author");
+  renderAboutTeaser("about-teaser");
   renderFooter();
   renderKicker();
 </script>

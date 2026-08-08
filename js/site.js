@@ -222,6 +222,33 @@ function renderPatreonStrip(containerId) {
   `;
 }
 
+function renderAboutStats(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const articleCount = articles.length;
+  const uniquePlayers = new Set(articles.flatMap(a => a.players || [])).size;
+  el.innerHTML = `
+    <div class="stat-item"><span class="stat-number">${articleCount}</span><span class="stat-label">Articles Published</span></div>
+    <div class="stat-item"><span class="stat-number">${uniquePlayers}</span><span class="stat-label">Players Covered</span></div>
+  `;
+}
+
+function renderAboutTeaser(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const pick = shuffleArray(articles)[0];
+  if (!pick) return;
+  el.innerHTML = magazineRowHTML(pick);
+}
+
+function renderAboutQuote(textId, authorId) {
+  const textEl = document.getElementById(textId);
+  const authorEl = document.getElementById(authorId);
+  if (!textEl || !authorEl || !siteConfig.aboutQuote) return;
+  textEl.textContent = siteConfig.aboutQuote.text;
+  authorEl.textContent = `-- ${siteConfig.aboutQuote.author}`;
+}
+
 function renderPatreonPromo(containerId) {
   const el = document.getElementById(containerId);
   if (!el || !siteConfig.patreonPerks) return;
@@ -318,13 +345,38 @@ function renderFooter() {
 
 /* ---------- Articles page ---------- */
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 let currentFilter = "All";
+let currentSearch = "";
 
 function renderArticleList() {
   const el = document.getElementById("article-grid");
   if (!el) return;
-  const all = sortedArticles().filter(a => currentFilter === "All" || a.type === currentFilter);
-  el.innerHTML = all.map((a, i) => articleCardHTML(a, i)).join("");
+  const term = currentSearch.trim().toLowerCase();
+  const all = sortedArticles().filter(a => {
+    const matchesFilter = currentFilter === "All" || a.type === currentFilter;
+    const matchesSearch = !term || a.title.toLowerCase().includes(term) || a.excerpt.toLowerCase().includes(term);
+    return matchesFilter && matchesSearch;
+  });
+  el.innerHTML = all.length
+    ? all.map((a, i) => articleCardHTML(a, i)).join("")
+    : `<p class="no-results">No articles match "${escapeHtml(currentSearch)}". Try a different search.</p>`;
+}
+
+function setupSearch() {
+  const input = document.getElementById("article-search");
+  if (!input) return;
+  input.addEventListener("input", () => {
+    currentSearch = input.value;
+    renderArticleList();
+  });
 }
 
 const FILTER_HEADINGS = {

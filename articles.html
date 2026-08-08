@@ -64,6 +64,8 @@
     <button class="filter-btn" data-filter="Opinion">Opinion</button>
   </div>
 
+  <input type="text" id="article-search" class="search-input" placeholder="Search articles...">
+
   <div class="article-grid" id="article-grid"></div>
 </div>
 
@@ -80,6 +82,7 @@
 <script>
   renderArticleList();
   setupFilters();
+  setupSearch();
   renderFooter();
   renderKicker();
 </script>

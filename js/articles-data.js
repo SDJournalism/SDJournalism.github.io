@@ -30,6 +30,12 @@
    - featured     : true or false
    - premium      : optional, true or false. If true, only the first
                      paragraph shows publicly.
+   - players      : optional, only include a player here if the WHOLE
+                     article is specifically about them (a profile,
+                     transfer deep-dive, etc.) -- not every player
+                     mentioned in passing. Powers the "players covered"
+                     stat on your About page. Leave as [] for
+                     articles that aren't focused on one player.
    ============================================================ */
 
 const articles = [
@@ -60,6 +66,7 @@ const articles = [
       { label: "Liverpool.com -- How much Liverpool must pay for permanent Araujo transfer", url: "https://www.liverpool.com/liverpool-fc-news/transfer-news/araujo-transfer-clause-price-liverpool-34425680" },
       { label: "Forbes -- Liverpool Signs FC Barcelona Defender Ronald Araujo In Shock Transfer", url: "https://www.forbes.com/sites/tomsanderson/2026/08/07/liverpool-signs-fc-barcelona-defender-ronald-araujo/" }
     ],
+    players: ["Ronald Araujo"],
     featured: true
   },
 {
@@ -98,6 +105,7 @@ const articles = [
       { label: "The FA", url: "https://www.thefa.com" },
       { label: "Harvard Business Review", url: "https://hbr.org" }
     ],
+    players: [],
     featured: true
   },
   {
@@ -140,6 +148,7 @@ const articles = [
       { label: "The Coaches Voice", url: "https://www.coachesvoice.com/cv/roberto-de-zerbi-tactics-brighton/" },
       { label: "UEFA", url: "https://www.uefa.com" }
     ],
+    players: [],
     featured: true
   },
   {
@@ -176,6 +185,7 @@ const articles = [
       { label: "Sky Sports (via Yahoo Sports) -- Van de Ven close to new contract", url: "https://sports.yahoo.com/articles/sky-sports-tottenham-hotspur-set-205000167.html" },
       { label: "The Athletic (via Football Talk) -- Tottenham remain interested in Savinho", url: "https://football-talk.co.uk/235581/tottenham-remain-interested-in-signing-savinho" }
     ],
+    players: [],
     featured: true
   },
   {
@@ -216,6 +226,7 @@ const articles = [
       { label: "Tottenham Hotspur -- press conference", url: "https://www.tottenhamhotspur.com/news/1081286/chelsea-1-2-spurs-every-word-of-roberto-de-zerbis-post-match-press-conference-in-sydney" },
       { label: "BBC Sport", url: "https://www.bbc.co.uk/sport/football/live/cm2pem5vp95t" }
     ],
+    players: [],
     featured: false
   }
 ];

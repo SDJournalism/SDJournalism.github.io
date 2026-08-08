@@ -627,6 +627,34 @@ nav.site-nav a.active {
 
 .filter-btn:hover { border-color: var(--gold); color: var(--navy); transform: translateY(-2px); }
 
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 0 32px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.search-input::placeholder { color: var(--ink-soft); }
+
+.no-results {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding: 20px 0;
+}
+
 .filter-btn.active {
   border-color: var(--navy);
   color: var(--navy);
@@ -682,6 +710,14 @@ nav.site-nav a.active {
 }
 
 .detail .body-text p { margin: 0 0 16px; color: var(--ink); font-size: 15.5px; }
+
+.detail .body-text .body-subheading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--navy);
+  margin: 30px 0 12px;
+}
 
 .premium-pill {
   font-family: var(--font-mono);
@@ -958,6 +994,70 @@ nav.site-nav a.active {
   border-top: 1px solid var(--line);
   padding-top: 10px;
 }
+
+.stats-strip {
+  display: flex;
+  gap: 44px;
+  margin: 28px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.pull-quote {
+  margin: 36px 0;
+  padding: 4px 0 4px 26px;
+  border-left: 3px solid var(--gold);
+}
+
+.pull-quote-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.pull-quote-author {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.about-teaser-section {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.about-teaser-section .eyebrow { display: block; margin-bottom: 14px; }
+
+.about-teaser-section .read-link { margin-top: 14px; display: inline-block; }
 
 /* ---------- Contact page ---------- */
 .contact-layout {
