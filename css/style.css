@@ -26,7 +26,11 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
@@ -132,10 +136,14 @@ nav.site-nav a.active {
 .ticker-track {
   display: inline-flex;
   align-items: center;
-  animation: tickerScroll 32s linear infinite;
+  animation: tickerScroll 55s linear infinite;
 }
 
 .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
+
+@media (max-width: 600px) {
+  .ticker-track { animation-duration: 90s; }
+}
 
 .ticker-item {
   display: inline-flex;
@@ -643,7 +651,7 @@ nav.site-nav a.active {
 
 .detail-image img {
   width: 100%;
-  max-height: 420px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top;
   display: block;
