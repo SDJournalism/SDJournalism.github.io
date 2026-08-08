@@ -352,7 +352,7 @@ const PREMIER_LEAGUE_CLUBS = [
   "Manchester United", "Newcastle United", "Nottingham Forest", "Sunderland", "Tottenham Hotspur"
 ];
 
-const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League", "Other"];
+const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League", "Europa League", "Conference League", "Other"];
 
 const SEARCH_PLACEHOLDERS = {
   "All": "Search all articles...",
@@ -384,7 +384,7 @@ function renderArticleList() {
     const matchesTeam = currentTeam === "All" || (a.teams || []).includes(currentTeam);
     const matchesCompetition = currentCompetition === "All" ||
       (currentCompetition === "Other"
-        ? !COMPETITIONS.slice(0, 4).includes(a.competition)
+        ? !COMPETITIONS.slice(0, -1).includes(a.competition)
         : a.competition === currentCompetition);
     return matchesFilter && matchesSearch && matchesTeam && matchesCompetition;
   });
