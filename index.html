@@ -12,14 +12,14 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://samueldaviesjournalism.netlify.app/">
+<meta property="og:url" content="https://sdjournalism.github.io/">
 <meta property="og:title" content="Samuel Davies -- Football Writer & Analyst">
 <meta property="og:description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
-<meta property="og:image" content="https://samueldaviesjournalism.netlify.app/images/og-image.png">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Samuel Davies -- Football Writer & Analyst">
 <meta name="twitter:description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
-<meta name="twitter:image" content="https://samueldaviesjournalism.netlify.app/images/og-image.png">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
 
 <!-- Google Analytics -- replace G-F6G9RSG4MN with your real Measurement ID from analytics.google.com -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
@@ -46,12 +46,15 @@
   </div>
 </header>
 
-<section class="hero">
+<div class="ticker-wrap">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<section class="hero hero-compact">
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow" id="hero-eyebrow">Manchester, UK &middot; Football Writer &amp; Analyst</span>
       <h1>Match reports and tactical analysis, written properly.</h1>
-      <p class="lede" id="hero-lede">I'm a sports journalism student covering Tottenham Hotspur and the wider Premier League -- match reports, analysis, and opinion, published here.</p>
       <div class="tag-row" id="hero-contact-tags"></div>
     </div>
 
@@ -72,13 +75,31 @@
 <div class="wrap">
   <div class="section-head">
     <div>
-      <span class="eyebrow">Latest work</span>
+      <span class="eyebrow">Editor's picks</span>
       <h2>Featured articles</h2>
+    </div>
+  </div>
+
+  <div class="magazine-split">
+    <div class="magazine-lead" id="magazine-lead"></div>
+    <div class="magazine-list" id="magazine-list"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Latest work</span>
+      <h2>Most recent articles</h2>
     </div>
     <a href="articles.html" class="read-link">View all articles &rarr;</a>
   </div>
 
-  <div class="article-grid" id="featured-grid"></div>
+  <div class="article-grid" id="latest-grid"></div>
+</div>
+
+<div class="wrap">
+  <div class="patreon-strip" id="patreon-strip"></div>
 </div>
 
 <footer class="site-footer">
@@ -92,11 +113,13 @@
 <script src="js/articles-data.js"></script>
 <script src="js/site.js"></script>
 <script>
-  renderFeatured();
+  renderTicker("ticker-track");
+  renderMagazine("magazine-lead", "magazine-list");
+  renderLatest("latest-grid", 3);
   renderContactTags("hero-contact-tags");
   renderFplLink("hero-contact-tags");
   renderQuotePanel("quote-text", "quote-attribution", "quote-dots", "quote-panel");
-  document.getElementById("hero-lede").textContent = siteConfig.bio;
+  renderPatreonStrip("patreon-strip");
   renderFooter();
   renderKicker();
 </script>
