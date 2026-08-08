@@ -648,6 +648,29 @@ nav.site-nav a.active {
 
 .search-input::placeholder { color: var(--ink-soft); }
 
+.dropdown-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dropdown-filter {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.dropdown-filter:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+.dropdown-filter:focus { outline: none; border-color: var(--gold); }
+
 .no-results {
   font-family: var(--font-mono);
   font-size: 13px;

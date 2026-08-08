@@ -64,7 +64,12 @@
     <button class="filter-btn" data-filter="Opinion">Opinion</button>
   </div>
 
-  <input type="text" id="article-search" class="search-input" placeholder="Search articles...">
+  <div class="dropdown-filter-row">
+    <select id="team-filter" class="dropdown-filter"></select>
+    <select id="competition-filter" class="dropdown-filter"></select>
+  </div>
+
+  <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
 
   <div class="article-grid" id="article-grid"></div>
 </div>
@@ -83,6 +88,8 @@
   renderArticleList();
   setupFilters();
   setupSearch();
+  renderTeamFilter("team-filter");
+  renderCompetitionFilter("competition-filter");
   renderFooter();
   renderKicker();
 </script>

@@ -345,6 +345,22 @@ function renderFooter() {
 
 /* ---------- Articles page ---------- */
 
+const PREMIER_LEAGUE_CLUBS = [
+  "Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton & Hove Albion",
+  "Chelsea", "Coventry City", "Crystal Palace", "Everton", "Fulham",
+  "Hull City", "Ipswich Town", "Leeds United", "Liverpool", "Manchester City",
+  "Manchester United", "Newcastle United", "Nottingham Forest", "Sunderland", "Tottenham Hotspur"
+];
+
+const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League", "Other"];
+
+const SEARCH_PLACEHOLDERS = {
+  "All": "Search all articles...",
+  "Match Report": "Search match reports...",
+  "Analysis": "Search analysis...",
+  "Opinion": "Search opinion pieces..."
+};
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -355,6 +371,8 @@ function escapeHtml(str) {
 
 let currentFilter = "All";
 let currentSearch = "";
+let currentTeam = "All";
+let currentCompetition = "All";
 
 function renderArticleList() {
   const el = document.getElementById("article-grid");
@@ -363,7 +381,12 @@ function renderArticleList() {
   const all = sortedArticles().filter(a => {
     const matchesFilter = currentFilter === "All" || a.type === currentFilter;
     const matchesSearch = !term || a.title.toLowerCase().includes(term) || a.excerpt.toLowerCase().includes(term);
-    return matchesFilter && matchesSearch;
+    const matchesTeam = currentTeam === "All" || (a.teams || []).includes(currentTeam);
+    const matchesCompetition = currentCompetition === "All" ||
+      (currentCompetition === "Other"
+        ? !COMPETITIONS.slice(0, 4).includes(a.competition)
+        : a.competition === currentCompetition);
+    return matchesFilter && matchesSearch && matchesTeam && matchesCompetition;
   });
   el.innerHTML = all.length
     ? all.map((a, i) => articleCardHTML(a, i)).join("")
@@ -379,6 +402,28 @@ function setupSearch() {
   });
 }
 
+function renderTeamFilter(selectId) {
+  const el = document.getElementById(selectId);
+  if (!el) return;
+  el.innerHTML = `<option value="All">All Teams</option>` +
+    PREMIER_LEAGUE_CLUBS.map(t => `<option value="${t}">${t}</option>`).join("");
+  el.addEventListener("change", () => {
+    currentTeam = el.value;
+    renderArticleList();
+  });
+}
+
+function renderCompetitionFilter(selectId) {
+  const el = document.getElementById(selectId);
+  if (!el) return;
+  el.innerHTML = `<option value="All">All Competitions</option>` +
+    COMPETITIONS.map(c => `<option value="${c}">${c}</option>`).join("");
+  el.addEventListener("change", () => {
+    currentCompetition = el.value;
+    renderArticleList();
+  });
+}
+
 const FILTER_HEADINGS = {
   "All": { eyebrow: "All articles", heading: "Match reports, analysis &amp; opinion" },
   "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
@@ -390,6 +435,7 @@ function setupFilters() {
   const buttons = document.querySelectorAll(".filter-btn");
   const eyebrowEl = document.getElementById("articles-eyebrow");
   const headingEl = document.getElementById("articles-heading");
+  const searchEl = document.getElementById("article-search");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       buttons.forEach(b => b.classList.remove("active"));
@@ -401,6 +447,9 @@ function setupFilters() {
       if (copy && eyebrowEl && headingEl) {
         eyebrowEl.textContent = copy.eyebrow;
         headingEl.innerHTML = copy.heading;
+      }
+      if (searchEl && SEARCH_PLACEHOLDERS[currentFilter]) {
+        searchEl.placeholder = SEARCH_PLACEHOLDERS[currentFilter];
       }
     });
   });

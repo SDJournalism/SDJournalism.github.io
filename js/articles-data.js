@@ -36,6 +36,12 @@
                      mentioned in passing. Powers the "players covered"
                      stat on your About page. Leave as [] for
                      articles that aren't focused on one player.
+   - teams        : optional, only include a club here if the WHOLE
+                     article is specifically about them -- not every
+                     club mentioned as an example or in passing.
+                     Powers the team filter dropdown on the Articles
+                     page. Leave as [] if the piece isn't focused on
+                     one club.
    ============================================================ */
 
 const articles = [
@@ -67,6 +73,7 @@ const articles = [
       { label: "Forbes -- Liverpool Signs FC Barcelona Defender Ronald Araujo In Shock Transfer", url: "https://www.forbes.com/sites/tomsanderson/2026/08/07/liverpool-signs-fc-barcelona-defender-ronald-araujo/" }
     ],
     players: ["Ronald Araujo"],
+    teams: ["Liverpool"],
     featured: true
   },
 {
@@ -106,6 +113,7 @@ const articles = [
       { label: "Harvard Business Review", url: "https://hbr.org" }
     ],
     players: [],
+    teams: [],
     featured: true
   },
   {
@@ -149,6 +157,7 @@ const articles = [
       { label: "UEFA", url: "https://www.uefa.com" }
     ],
     players: [],
+    teams: ["Tottenham Hotspur"],
     featured: true
   },
   {
@@ -186,6 +195,7 @@ const articles = [
       { label: "The Athletic (via Football Talk) -- Tottenham remain interested in Savinho", url: "https://football-talk.co.uk/235581/tottenham-remain-interested-in-signing-savinho" }
     ],
     players: [],
+    teams: ["Tottenham Hotspur"],
     featured: true
   },
   {
@@ -227,6 +237,7 @@ const articles = [
       { label: "BBC Sport", url: "https://www.bbc.co.uk/sport/football/live/cm2pem5vp95t" }
     ],
     players: [],
+    teams: ["Tottenham Hotspur"],
     featured: false
   }
 ];
