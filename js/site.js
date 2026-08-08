@@ -184,17 +184,26 @@ function magazineRowHTML(article) {
   `;
 }
 
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 function renderMagazine(leadId, listId) {
   const leadEl = document.getElementById(leadId);
   const listEl = document.getElementById(listId);
   if (!leadEl || !listEl) return;
 
-  const featured = sortedArticles().filter(a => a.featured);
-  if (featured.length === 0) return;
+  const picked = shuffleArray(articles).slice(0, 4);
+  if (picked.length === 0) return;
 
-  const [lead, ...rest] = featured;
+  const [lead, ...rest] = picked;
   leadEl.innerHTML = magazineLeadHTML(lead);
-  listEl.innerHTML = rest.slice(0, 3).map(magazineRowHTML).join("");
+  listEl.innerHTML = rest.map(magazineRowHTML).join("");
 }
 
 function renderLatest(containerId, count) {
