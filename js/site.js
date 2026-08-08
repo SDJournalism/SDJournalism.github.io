@@ -15,6 +15,7 @@ function formatDate(dateStr) {
 
 function readVerb(type) {
   if (type === "Match Report") return "report";
+  if (type === "Scouting Report") return "scouting report";
   if (type === "Opinion") return "opinion";
   return "analysis";
 }
@@ -357,6 +358,7 @@ const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League",
 const SEARCH_PLACEHOLDERS = {
   "All": "Search all articles...",
   "Match Report": "Search match reports...",
+  "Scouting Report": "Search scouting reports...",
   "Analysis": "Search analysis...",
   "Opinion": "Search opinion pieces..."
 };
@@ -427,6 +429,7 @@ function renderCompetitionFilter(selectId) {
 const FILTER_HEADINGS = {
   "All": { eyebrow: "All articles", heading: "Match reports, analysis &amp; opinion" },
   "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
+  "Scouting Report": { eyebrow: "Scouting Reports", heading: "Player and squad breakdowns" },
   "Analysis": { eyebrow: "Analysis", heading: "Tactical breakdowns &amp; deep dives" },
   "Opinion": { eyebrow: "Opinion", heading: "Takes, arguments &amp; perspective" }
 };
