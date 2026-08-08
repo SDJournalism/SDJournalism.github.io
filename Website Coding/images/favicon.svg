@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <circle cx="256" cy="256" r="248" fill="#14224B" stroke="#B9903E" stroke-width="10"/>
-  <circle cx="256" cy="256" r="222" fill="none" stroke="#B9903E" stroke-width="2"/>
-  <text x="256" y="300" font-family="Georgia, serif" font-weight="700" font-size="200" fill="#F5F6F1" text-anchor="middle">SD</text>
-</svg>
