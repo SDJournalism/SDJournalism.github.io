@@ -34,6 +34,35 @@
 
 const articles = [
 {
+    id: 5,
+    title: "Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-08",
+    scoreline: "",
+    image: "images/araujoliverpool.JPG",
+    imageLink: "https://www.fcbarcelona.com/en/news/4392119/ronald-araujo-a-game-away-from-making-top-10-list",
+    imageCredit: "Photo: FC Barcelona",
+    excerpt: "Liverpool have moved quickly to sign Ronald Araujo on a season-long loan from Barcelona. We break down what he actually offers, why the timing makes sense for both clubs, and what Andoni Iraola will expect from him.",
+    content: [
+      "Liverpool have completed one of the more eye-catching moves of the summer, agreeing a season-long loan for Barcelona captain Ronald Araujo. The deal has moved unusually fast by transfer-window standards, going from first reports to documents being signed within a matter of days.",
+      "The structure of the deal is worth understanding before anything else. There is no loan fee involved, with Liverpool simply covering Araujo's wages for the campaign. Built into the agreement is a buy option, not an obligation, reportedly set at around 55 million euros, roughly 47 million pounds. That gives Liverpool a full season to assess whether a permanent deal makes sense, without committing to one now.",
+      "Why Liverpool moved for a defender at all becomes obvious once their current injury list is considered. Joe Gomez, Giovanni Leoni and Jeremy Jacquet are all working their way back from injury, while Conor Bradley remains sidelined following a serious knee problem. That has left Andoni Iraola short of recognised defensive options heading into the new season, with preseason already exposing the gap.",
+      "Araujo himself is a well-established profile in Spanish football. Primarily a centre-back, the Uruguay international has made over 200 appearances for Barcelona and captained the side, built a reputation on aggressive duelling, strong aerial presence and a willingness to lead from the back. He is not the most composed passer in possession, and has at times been prone to rash challenges under pressure, but few defenders in Europe win more individual battles.",
+      "What makes him particularly useful for Liverpool specifically is his versatility. Araujo can also operate at right-back, a position where Liverpool have had persistent issues. Bradley is still recovering, and Jeremie Frimpong has struggled for both fitness and form since arriving at Anfield. A single signing capable of covering two problem positions is a notably efficient piece of business given the circumstances.",
+      "The Barcelona side of the deal is its own story. Araujo remains one of the club's four captains, which makes his departure, even on loan, a notable moment. Reports indicate a conversation with head coach Hansi Flick made clear he was not viewed as a key player for the season ahead, prompting the move. Losing a captain to a direct rival's growing sphere of interest is an unusual look for any club, though Barcelona's motivation appears to be squad management rather than anything more dramatic.",
+      "For Iraola, the expectations are relatively clear. Araujo will not need to adapt to a new league's tactical demands so much as its physical ones, the Premier League's pace and intensity are a different test to LaLiga, but his duel-heavy style should translate reasonably well. The more interesting question is where he actually plays. If fit-again defenders return to form quickly, Araujo may end up as valuable squad depth rather than a guaranteed starter. If Liverpool's injury situation persists, he could end up first choice at either centre-back or right-back within weeks.",
+      "That uncertainty is, in a sense, the point of a loan with a buy option rather than an outright transfer. Liverpool are not required to make a long-term judgement now. They get a season to see how Araujo performs against Premier League opposition, how he fits Iraola's system, and how the club's other defensive options recover, before deciding whether 55 million euros is money well spent.",
+      "For a squad that looked genuinely short at the back heading into preseason, that is a sensible way to solve an immediate problem without closing off future options. Whether it becomes a bargain or a footnote will depend largely on factors outside Araujo's control, but on paper, it is exactly the kind of low-risk, high-utility move a club in Liverpool's position should be making."
+    ],
+    sources: [
+      { label: "ESPN -- Sources: Liverpool set to sign Barcelona's Ronald Araujo on loan", url: "https://www.espn.com/soccer/story/_/id/49556442/liverpool-barcelona-transfer-ronald-araujo-loan" },
+      { label: "Liverpool.com -- How much Liverpool must pay for permanent Araujo transfer", url: "https://www.liverpool.com/liverpool-fc-news/transfer-news/araujo-transfer-clause-price-liverpool-34425680" },
+      { label: "Forbes -- Liverpool Signs FC Barcelona Defender Ronald Araujo In Shock Transfer", url: "https://www.forbes.com/sites/tomsanderson/2026/08/07/liverpool-signs-fc-barcelona-defender-ronald-araujo/" }
+    ],
+    featured: true
+  },
+{
     id: 4,
     title: "From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment",
     type: "Opinion",
