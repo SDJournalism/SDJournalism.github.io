@@ -742,6 +742,14 @@ nav.site-nav a.active {
   margin: 30px 0 12px;
 }
 
+.citation-link {
+  color: var(--navy);
+  border-bottom: 1px dotted var(--navy);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.citation-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
 .premium-pill {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -934,6 +942,26 @@ nav.site-nav a.active {
 }
 
 .photo-caption:hover { color: var(--gold); transform: translateY(-2px); }
+
+.photo-caption-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.photo-caption-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(20, 34, 75, 0.2);
+}
 
 .availability-badge {
   display: inline-flex;
