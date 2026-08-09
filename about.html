@@ -39,7 +39,13 @@
 
 <header class="masthead">
   <div class="wrap masthead-inner">
-    <a class="logo" href="index.html"><span class="js-site-name">Samuel Davies</span><span class="kicker js-tagline">Football Writer &amp; Analyst</span></a>
+    <a class="logo" href="index.html">
+      <img src="images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="articles.html">Articles</a>
@@ -69,8 +75,6 @@
       <div class="fact-item"><span class="eyebrow">Aiming for</span><span id="fact-goal"></span></div>
       <div class="fact-item"><span class="eyebrow">Status</span><span>Open to freelance work</span></div>
     </div>
-
-    <div class="stats-strip" id="about-stats"></div>
 
     <div class="pull-quote">
       <p class="pull-quote-text" id="pull-quote-text"></p>
@@ -103,7 +107,6 @@
   document.getElementById("bio-text").textContent = siteConfig.bio;
   document.getElementById("fact-location").textContent = siteConfig.location;
   document.getElementById("fact-goal").textContent = siteConfig.careerGoal;
-  renderAboutStats("about-stats");
   renderAboutQuote("pull-quote-text", "pull-quote-author");
   renderAboutTeaser("about-teaser");
   document.getElementById("photo-caption-link").href = siteConfig.twitter;
