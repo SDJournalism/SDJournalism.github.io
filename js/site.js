@@ -228,9 +228,11 @@ function renderAboutStats(containerId) {
   if (!el) return;
   const articleCount = articles.length;
   const uniquePlayers = new Set(articles.flatMap(a => a.players || [])).size;
+  const uniqueTeams = new Set(articles.flatMap(a => a.teams || [])).size;
   el.innerHTML = `
     <div class="stat-item"><span class="stat-number">${articleCount}</span><span class="stat-label">Articles Published</span></div>
     <div class="stat-item"><span class="stat-number">${uniquePlayers}</span><span class="stat-label">Players Covered</span></div>
+    <div class="stat-item"><span class="stat-number">${uniqueTeams}</span><span class="stat-label">Teams Covered</span></div>
   `;
 }
 
