@@ -290,10 +290,16 @@ function renderAboutStats(containerId) {
   const articleCount = articles.length;
   const uniquePlayers = new Set(articles.flatMap(a => a.players || [])).size;
   const uniqueTeams = new Set(articles.flatMap(a => a.teams || [])).size;
+
+  const teamCounts = {};
+  articles.forEach(a => (a.teams || []).forEach(t => { teamCounts[t] = (teamCounts[t] || 0) + 1; }));
+  const topTeamEntry = Object.entries(teamCounts).sort((a, b) => b[1] - a[1])[0];
+
   el.innerHTML = `
     <div class="stat-item"><span class="stat-number">${articleCount}</span><span class="stat-label">Articles Published</span></div>
     <div class="stat-item"><span class="stat-number">${uniquePlayers}</span><span class="stat-label">Players Covered</span></div>
     <div class="stat-item"><span class="stat-number">${uniqueTeams}</span><span class="stat-label">Teams Covered</span></div>
+    ${topTeamEntry ? `<div class="stat-item"><span class="stat-number">${topTeamEntry[0]}</span><span class="stat-label">Most Covered Club</span></div>` : ""}
   `;
 }
 
