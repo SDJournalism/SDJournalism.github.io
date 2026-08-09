@@ -456,7 +456,7 @@ function renderCompetitionFilter(selectId) {
 }
 
 const FILTER_HEADINGS = {
-  "All": { eyebrow: "All articles", heading: "Match reports, analysis &amp; opinion" },
+  "All": { eyebrow: "All articles", heading: "Match reports, analysis, scouting &amp; opinion" },
   "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
   "Scouting Report": { eyebrow: "Scouting Reports", heading: "Identifying the Next Stars" },
   "Analysis": { eyebrow: "Analysis", heading: "Tactical breakdowns &amp; deep dives" },
