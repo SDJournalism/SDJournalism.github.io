@@ -74,9 +74,13 @@
   <div class="dropdown-filter-row">
     <select id="team-filter" class="dropdown-filter"></select>
     <select id="competition-filter" class="dropdown-filter"></select>
+    <button id="reset-filters" class="reset-filters-btn" type="button" hidden>Reset all filters &times;</button>
   </div>
 
-  <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
+  <div class="search-wrap">
+    <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
+    <button id="search-clear" class="search-clear-btn" type="button" aria-label="Clear search" hidden>&times;</button>
+  </div>
 
   <div class="article-grid" id="article-grid"></div>
 </div>
@@ -90,6 +94,7 @@
   renderArticleList();
   setupFilters();
   setupSearch();
+  setupResetFilters();
   renderTeamFilter("team-filter");
   renderCompetitionFilter("competition-filter");
   renderStatsPanel("stats-value", "stats-label");

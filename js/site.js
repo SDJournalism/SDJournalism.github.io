@@ -491,13 +491,70 @@ function renderArticleList() {
   el.innerHTML = all.length
     ? all.map((a, i) => articleCardHTML(a, i)).join("")
     : `<p class="no-results">No articles match "${escapeHtml(currentSearch)}". Try a different search.</p>`;
+
+  updateFilterControlsVisibility();
+}
+
+function updateFilterControlsVisibility() {
+  const resetBtn = document.getElementById("reset-filters");
+  const searchClearBtn = document.getElementById("search-clear");
+  const hasActiveFilters = currentFilter !== "All" || currentTeam !== "All" ||
+    currentCompetition !== "All" || currentSearch.trim() !== "";
+  if (resetBtn) resetBtn.hidden = !hasActiveFilters;
+  if (searchClearBtn) searchClearBtn.hidden = currentSearch === "";
 }
 
 function setupSearch() {
   const input = document.getElementById("article-search");
-  if (!input) return;
-  input.addEventListener("input", () => {
-    currentSearch = input.value;
+  const clearBtn = document.getElementById("search-clear");
+  if (input) {
+    input.addEventListener("input", () => {
+      currentSearch = input.value;
+      renderArticleList();
+    });
+  }
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      currentSearch = "";
+      if (input) {
+        input.value = "";
+        input.focus();
+      }
+      renderArticleList();
+    });
+  }
+}
+
+function setupResetFilters() {
+  const resetBtn = document.getElementById("reset-filters");
+  if (!resetBtn) return;
+
+  resetBtn.addEventListener("click", () => {
+    currentFilter = "All";
+    currentTeam = "All";
+    currentCompetition = "All";
+    currentSearch = "";
+
+    document.querySelectorAll(".filter-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.filter === "All");
+    });
+
+    const teamEl = document.getElementById("team-filter");
+    const competitionEl = document.getElementById("competition-filter");
+    const searchEl = document.getElementById("article-search");
+    if (teamEl) teamEl.value = "All";
+    if (competitionEl) competitionEl.value = "All";
+    if (searchEl) searchEl.value = "";
+
+    const eyebrowEl = document.getElementById("articles-eyebrow");
+    const headingEl = document.getElementById("articles-heading");
+    const copy = FILTER_HEADINGS["All"];
+    if (copy && eyebrowEl && headingEl) {
+      eyebrowEl.textContent = copy.eyebrow;
+      headingEl.innerHTML = copy.heading;
+    }
+    if (searchEl) searchEl.placeholder = SEARCH_PLACEHOLDERS["All"];
+
     renderArticleList();
   });
 }
