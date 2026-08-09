@@ -159,9 +159,14 @@ const THEME_INIT_SCRIPT = `<script>
 (function(){
   try {
     var t = localStorage.getItem("sd-theme");
-    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      document.documentElement.setAttribute("data-theme", "dark");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
     }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
   } catch (e) {}
 })();
 </script>`;
@@ -372,6 +377,7 @@ ${renderFooter()}
     }
   });
   initThemeToggle("theme-toggle");
+  initAutoTheme();
 </script>
 </body>
 </html>
