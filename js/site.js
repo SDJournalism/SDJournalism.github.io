@@ -14,6 +14,7 @@ function formatDate(dateStr) {
 }
 
 function readVerb(type) {
+  if (type === "Match Preview") return "preview";
   if (type === "Match Report") return "report";
   if (type === "Scouting Report") return "scouting report";
   if (type === "Opinion") return "opinion";
@@ -455,6 +456,7 @@ const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League",
 
 const SEARCH_PLACEHOLDERS = {
   "All": "Search all articles...",
+  "Match Preview": "Search match previews...",
   "Match Report": "Search match reports...",
   "Scouting Report": "Search scouting reports...",
   "Analysis": "Search analysis...",
@@ -582,7 +584,8 @@ function renderCompetitionFilter(selectId) {
 }
 
 const FILTER_HEADINGS = {
-  "All": { eyebrow: "All articles", heading: "Match reports, analysis, scouting &amp; opinion" },
+  "All": { eyebrow: "All articles", heading: "Match previews, reports, analysis, scouting &amp; opinion" },
+  "Match Preview": { eyebrow: "Match Previews", heading: "Looking ahead to every fixture" },
   "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
   "Scouting Report": { eyebrow: "Scouting Reports", heading: "Identifying the Next Stars" },
   "Analysis": { eyebrow: "Analysis", heading: "Tactical breakdowns &amp; deep dives" },

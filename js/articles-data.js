@@ -20,7 +20,7 @@
    FIELD GUIDE:
    - id           : a unique number, never repeat one
    - title        : the headline of your article
-   - type         : "Match Report", "Analysis", "Opinion", or "Scouting Report"
+   - type         : "Match Preview", "Match Report", "Analysis", "Opinion", or "Scouting Report"
    - competition  : e.g. "Premier League", "Champions League"
    - date         : format "YYYY-MM-DD" so articles sort correctly
    - scoreline    : optional, e.g. "Spurs 2-1 Man City" (leave "" if none)
