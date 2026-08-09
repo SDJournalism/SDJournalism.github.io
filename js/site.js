@@ -57,6 +57,107 @@ function firstSentence(text) {
   return match ? match[0].trim() : text;
 }
 
+function computeStats() {
+  const articleCount = articles.length;
+  const uniquePlayers = new Set(articles.flatMap(a => a.players || [])).size;
+  const uniqueTeams = new Set(articles.flatMap(a => a.teams || [])).size;
+  const uniqueCompetitions = new Set(articles.map(a => a.competition).filter(Boolean)).size;
+  const totalWords = articles.reduce((sum, a) => sum + a.content.join(" ").split(/\s+/).length, 0);
+
+  const teamCounts = {};
+  articles.forEach(a => (a.teams || []).forEach(t => { teamCounts[t] = (teamCounts[t] || 0) + 1; }));
+  const topTeamEntry = Object.entries(teamCounts).sort((a, b) => b[1] - a[1])[0];
+
+  const stats = [
+    { value: articleCount, label: "Articles Published" },
+    { value: uniquePlayers, label: "Players Covered" },
+    { value: uniqueTeams, label: "Teams Covered" },
+    { value: uniqueCompetitions, label: "Competitions Covered" },
+    { value: totalWords.toLocaleString(), label: "Words Published" }
+  ];
+
+  if (topTeamEntry) {
+    stats.push({ value: topTeamEntry[0], label: "Most Covered Club" });
+  }
+
+  return stats;
+}
+
+function renderStatsPanel(valueId, labelId, dotsId, panelId) {
+  const valueEl = document.getElementById(valueId);
+  const labelEl = document.getElementById(labelId);
+  const dotsEl = document.getElementById(dotsId);
+  const panelEl = panelId ? document.getElementById(panelId) : null;
+  if (!valueEl || !labelEl || !dotsEl) return;
+
+  const stats = computeStats();
+  if (stats.length === 0) return;
+
+  let current = 0;
+
+  function show(index) {
+    valueEl.style.opacity = "0";
+    labelEl.style.opacity = "0";
+    setTimeout(() => {
+      const stat = stats[index];
+      valueEl.textContent = stat.value;
+      labelEl.textContent = stat.label;
+      valueEl.style.opacity = "1";
+      labelEl.style.opacity = "1";
+      dotsEl.querySelectorAll(".quote-dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }, 200);
+  }
+
+  function goTo(index) {
+    current = ((index % stats.length) + stats.length) % stats.length;
+    show(current);
+    resetTimer();
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  dotsEl.innerHTML = stats.map((_, i) => `<button class="quote-dot" data-index="${i}" aria-label="Show stat ${i + 1}"></button>`).join("");
+  dotsEl.querySelectorAll(".quote-dot").forEach(dot => {
+    dot.addEventListener("click", () => goTo(parseInt(dot.dataset.index, 10)));
+  });
+
+  const prevBtn = document.getElementById("stats-prev");
+  const nextBtn = document.getElementById("stats-next");
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
+
+  if (stats.length <= 1) {
+    if (prevBtn) prevBtn.style.display = "none";
+    if (nextBtn) nextBtn.style.display = "none";
+  }
+
+  if (panelEl) {
+    let touchStartX = 0;
+    panelEl.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    panelEl.addEventListener("touchend", (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const delta = touchEndX - touchStartX;
+      if (Math.abs(delta) > 40) {
+        if (delta < 0) next(); else prev();
+      }
+    }, { passive: true });
+  }
+
+  let timer;
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 6000);
+  }
+
+  show(current);
+  resetTimer();
+}
+
 function renderQuotePanel(textId, attrId, dotsId, panelId) {
   const textEl = document.getElementById(textId);
   const attrEl = document.getElementById(attrId);
