@@ -683,7 +683,8 @@ nav.site-nav a.active {
 }
 
 @media (max-width: 900px) {
-  .stats-panel { width: 100%; text-align: left; }
+  .section-head { display: block; }
+  .stats-panel { width: 100%; text-align: left; margin-top: 16px; }
   .stats-panel-value { justify-content: flex-start; }
 }
 
