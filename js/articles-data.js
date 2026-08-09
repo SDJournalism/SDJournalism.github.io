@@ -46,6 +46,45 @@
 
 const articles = [
 {
+    id: 6,
+    title: "Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-09",
+    scoreline: "",
+    image: "images/jaydenlienousigning.JPG",
+    imageLink: "https://www.leedsunited.com/en/news/jayden-lienou-joins-leeds-united",
+    imageCredit: "Photo: Leeds United",
+    excerpt: "Signed from Manchester City's academy just over a year ago, Jayden Lienou has gone from a name few outside West Yorkshire recognised to a first-team bench regular and a full Wales international. We look at what makes him one of the more compelling under-the-radar prospects in the country.",
+    content: [
+      "Not every breakout story arrives with fanfare. Jayden Lienou's has built quietly, one contract extension and one matchday squad list at a time, and it is now reaching the point where it deserves proper attention.",
+      "The 18-year-old left-back joined Leeds United from Manchester City's academy in the summer of 2025, having previously come through Everton's youth setup. It was not, on paper, the kind of signing that generates headlines. A year on, it looks like one of the shrewder pieces of business Leeds did that window.",
+      "The road to Elland Road",
+      "Lienou's first season at Leeds was spent almost entirely with Scott Gardner's Under-21 side, where he made 26 appearances across the EFL Trophy and National League Cup. It was a solid, unspectacular introduction to English football culture at a new club, the kind of season that rarely gets written about until it starts paying off.",
+      "It has started paying off. In July 2026, Leeds rewarded Lienou with a new three-year contract, tying him to the club until 2029 (Yorkshire Evening Post, 2026). For a teenager not yet a year into his time at the club, that is a significant statement of internal belief.",
+      "Making the bench",
+      "With first-choice left-back Gabriel Gudmundsson sidelined by injury towards the end of last season, Daniel Farke turned to Lienou. He was named in Leeds' matchday squad for Premier League fixtures against both Tottenham Hotspur and Brighton & Hove Albion (Leeds United, 2026), his first taste of first-team involvement at the highest level in England.",
+      "Being an unused substitute is a modest milestone in isolation. In context, for a player who spent the first half of the season entirely in Under-21 football, it represents a genuinely fast trajectory.",
+      "What the numbers say",
+      "Lienou's Premier League 2 season provides a clearer picture of his level. Across 1,556 minutes, he registered one assist and an average match rating of 6.59 (FotMob, 2026). His standout performances tell their own story: an 8.4-rated display against Chelsea's Under-21s that included his assist, and a 7.6-rated away win over Tottenham Hotspur's Under-21 side.",
+      "None of those numbers are spectacular in isolation. Taken together, across a full season adjusting to a new club and a new level of competition, they describe a defender building genuine consistency rather than relying on standout moments.",
+      "International recognition",
+      "Lienou's progress has not gone unnoticed outside Leeds either. He received his first call-up to Craig Bellamy's senior Wales squad in May 2026, featuring as an unused substitute in a friendly against Ghana (Yahoo Sports, 2026). For a left-back who started the season in Under-21 football, a senior international call-up within twelve months is a meaningful marker of trajectory.",
+      "What comes next",
+      "Lienou travelled with Leeds' first-team squad for their pre-season tour of the United States this summer, a strong indicator of where he currently sits in Farke's thinking heading into the new campaign. With Gudmundsson still the incumbent, regular Premier League minutes are not guaranteed. But the pathway is visibly there, and few 18-year-old left-backs enter a season with as clear a sense of a manager's trust already established.",
+      "Lienou is exactly the kind of player scouting reports exist for: not yet a first-team certainty, not yet a name outside his own club's fanbase, but with enough evidence already on record to suggest that will not remain the case for long."
+    ],
+    sources: [
+      { label: "Yorkshire Evening Post -- Whites secure Lienou with new contract", url: "https://www.yorkshireeveningpost.co.uk/sport/football/leeds-united/leeds-united-news-jayden-lienou-wales-man-city-pre-season-elland-road-8813705" },
+      { label: "Leeds United -- Jayden Lienou signs new contract with the Whites", url: "https://www.leedsunited.com/en/news/jayden-lienou-signs-new-contract-with-the-whites" },
+      { label: "FotMob -- Jayden Lienou player profile and statistics", url: "https://www.fotmob.com/players/1797582/jayden-lienou" },
+      { label: "Yahoo Sports -- Wales call up teenage Leeds left-back Lienou", url: "https://ca.sports.yahoo.com/news/wales-call-teenage-leeds-left-161531066.html" }
+    ],
+    players: ["Jayden Lienou"],
+    teams: ["Leeds United"],
+    featured: true
+  },
+{
     id: 5,
     title: "Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis",
     type: "Analysis",
