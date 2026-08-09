@@ -331,17 +331,45 @@ function renderKicker() {
   });
 }
 
-function renderFooter() {
-  document.querySelectorAll(".js-footer-email").forEach(el => {
-    el.textContent = siteConfig.email;
-    el.href = `mailto:${siteConfig.email}`;
-  });
-  document.querySelectorAll(".js-footer-name").forEach(el => {
-    el.textContent = siteConfig.name;
-  });
-  document.querySelectorAll(".js-year").forEach(el => {
-    el.textContent = new Date().getFullYear();
-  });
+const SITEMAP_PAGES = [
+  { key: "index", label: "Home", href: "index.html" },
+  { key: "articles", label: "Articles", href: "articles.html" },
+  { key: "about", label: "About", href: "about.html" },
+  { key: "contact", label: "Contact", href: "contact.html" }
+];
+
+function renderMegaFooter(containerId, currentPage) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const sitemapLinks = SITEMAP_PAGES
+    .filter(p => p.key !== currentPage)
+    .map(p => `<a href="${p.href}">${p.label}</a>`)
+    .join("");
+
+  el.innerHTML = `
+    <div class="wrap mega-footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="footer-name-btn">${siteConfig.name}</a>
+        <p class="footer-tagline">${siteConfig.heroHeadline}</p>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow">Site Map</span>
+        <nav class="footer-links">${sitemapLinks}</nav>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow">Community</span>
+        <nav class="footer-links">
+          <a href="${siteConfig.twitter}" target="_blank" rel="noopener">Twitter</a>
+          <a href="${siteConfig.patreon}" target="_blank" rel="noopener">Support Me</a>
+          <a href="mailto:${siteConfig.email}">Contact Me</a>
+        </nav>
+      </div>
+    </div>
+    <div class="wrap mega-footer-bottom">
+      <span>${siteConfig.name} &copy; ${new Date().getFullYear()}</span>
+    </div>
+  `;
 }
 
 /* ---------- Articles page ---------- */
@@ -429,7 +457,7 @@ function renderCompetitionFilter(selectId) {
 const FILTER_HEADINGS = {
   "All": { eyebrow: "All articles", heading: "Match reports, analysis &amp; opinion" },
   "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
-  "Scouting Report": { eyebrow: "Scouting Reports", heading: "Player and squad breakdowns" },
+  "Scouting Report": { eyebrow: "Scouting Reports", heading: "Identifying the Next Stars" },
   "Analysis": { eyebrow: "Analysis", heading: "Tactical breakdowns &amp; deep dives" },
   "Opinion": { eyebrow: "Opinion", heading: "Takes, arguments &amp; perspective" }
 };

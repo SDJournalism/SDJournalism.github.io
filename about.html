@@ -94,12 +94,7 @@
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span><span class="js-footer-name"></span> &copy; <span class="js-year"></span></span>
-    <a class="js-footer-email" href="#"></a>
-  </div>
-</footer>
+<footer class="mega-footer" id="mega-footer"></footer>
 
 <script src="js/contact-info.js"></script>
 <script src="js/articles-data.js"></script>
@@ -112,7 +107,7 @@
   renderAboutQuote("pull-quote-text", "pull-quote-author");
   renderAboutTeaser("about-teaser");
   document.getElementById("photo-caption-link").href = siteConfig.twitter;
-  renderFooter();
+  renderMegaFooter("mega-footer", "about");
   renderKicker();
 </script>
 </body>

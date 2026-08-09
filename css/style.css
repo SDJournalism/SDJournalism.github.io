@@ -1196,30 +1196,86 @@ nav.site-nav a.active {
 }
 
 /* ---------- Footer ---------- */
-footer.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 30px 0;
-  margin-top: 40px;
+.mega-footer {
+  background: var(--navy);
+  padding: 48px 0 20px;
+  margin-top: 60px;
 }
 
-.footer-inner {
+.mega-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(245, 246, 241, 0.15);
+}
+
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+
+.footer-name-btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  margin-bottom: 12px;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.footer-name-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(185, 144, 62, 0.3);
+}
+
+.footer-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(245, 246, 241, 0.65);
+  max-width: 30ch;
+  margin: 0;
+}
+
+.footer-col .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+}
+
+.footer-links {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: rgba(245, 246, 241, 0.7);
+  transition: color 0.15s ease, transform 0.15s ease;
+  width: fit-content;
+}
+
+.footer-links a:hover { color: var(--gold); transform: translateX(4px); }
+
+.mega-footer-bottom {
+  padding-top: 18px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: rgba(245, 246, 241, 0.45);
 }
 
-.footer-inner a {
-  display: inline-block;
-  transition: color 0.15s ease, transform 0.15s ease;
+@media (max-width: 700px) {
+  .mega-footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
-
-.footer-inner a:hover { color: var(--navy); transform: translateY(-2px); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {

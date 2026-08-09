@@ -57,7 +57,7 @@
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow" id="hero-eyebrow">Manchester, UK &middot; Football Writer &amp; Analyst</span>
-      <h1>Match reports and tactical analysis, written properly.</h1>
+      <h1 id="hero-headline">Match reports and tactical analysis, written properly.</h1>
       <div class="tag-row" id="hero-contact-tags"></div>
     </div>
 
@@ -105,17 +105,13 @@
   <div class="patreon-strip" id="patreon-strip"></div>
 </div>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span><span class="js-footer-name"></span> &copy; <span class="js-year"></span></span>
-    <a class="js-footer-email" href="#"></a>
-  </div>
-</footer>
+<footer class="mega-footer" id="mega-footer"></footer>
 
 <script src="js/contact-info.js"></script>
 <script src="js/articles-data.js"></script>
 <script src="js/site.js"></script>
 <script>
+  document.getElementById("hero-headline").textContent = siteConfig.heroHeadline;
   renderTicker("ticker-track");
   renderMagazine("magazine-lead", "magazine-list");
   renderLatest("latest-grid", 3);
@@ -123,7 +119,7 @@
   renderFplLink("hero-contact-tags");
   renderQuotePanel("quote-text", "quote-attribution", "quote-dots", "quote-panel");
   renderPatreonStrip("patreon-strip");
-  renderFooter();
+  renderMegaFooter("mega-footer", "index");
   renderKicker();
 </script>
 </body>

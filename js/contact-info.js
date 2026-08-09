@@ -15,6 +15,11 @@
 const siteConfig = {
   name: "Samuel Davies",
   tagline: "Student Football Writer and Analyst",
+
+  // Shows as the big headline on the homepage, and as the short
+  // tagline under your name in the footer on every page.
+  heroHeadline: "Match reports and tactical analysis, written properly.",
+
   location: "Manchester, UK",
   email: "daviessamuelj@outlook.com",
   phone: "+44 7494 218761",

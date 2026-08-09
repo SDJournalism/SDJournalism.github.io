@@ -124,22 +124,36 @@
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span><span class="js-footer-name"></span> &copy; <span class="js-year"></span></span>
-    <a class="js-footer-email" href="#"></a>
+<footer class="mega-footer">
+  <div class="wrap mega-footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="../index.html" class="footer-name-btn">Samuel Davies</a>
+      <p class="footer-tagline">Match reports and tactical analysis, written properly.</p>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Site Map</span>
+      <nav class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Community</span>
+      <nav class="footer-links">
+        <a href="https://x.com/SamDaviesTHFC" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://patreon.com/SamuelDavies?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" rel="noopener">Support Me</a>
+        <a href="mailto:daviessamuelj@outlook.com">Contact Me</a>
+      </nav>
+    </div>
+  </div>
+  <div class="wrap mega-footer-bottom">
+    <span>Samuel Davies &copy; 2026</span>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
 <script>
-  document.querySelectorAll(".js-footer-email").forEach(el => {
-    el.textContent = siteConfig.email;
-    el.href = "mailto:" + siteConfig.email;
-  });
-  document.querySelectorAll(".js-footer-name").forEach(el => { el.textContent = siteConfig.name; });
-  document.querySelectorAll(".js-year").forEach(el => { el.textContent = new Date().getFullYear(); });
-
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences", text: "Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/1.html" };
     if (navigator.share) {
