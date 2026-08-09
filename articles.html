@@ -49,43 +49,41 @@
   </div>
 </header>
 
-<div class="wrap articles-layout">
-  <div class="articles-main">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow" id="articles-eyebrow">All articles</span>
-        <h2 id="articles-heading">Match reports, analysis, scouting &amp; opinion</h2>
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow" id="articles-eyebrow">All articles</span>
+      <h2 id="articles-heading">Match reports, analysis, scouting &amp; opinion</h2>
+    </div>
+
+    <aside class="quote-panel stats-panel" id="stats-panel">
+      <span class="eyebrow">By the numbers</span>
+      <div class="stats-panel-value" id="stats-value"></div>
+      <div class="stats-panel-label" id="stats-label"></div>
+      <div class="quote-nav">
+        <button class="quote-arrow" id="stats-prev" type="button" aria-label="Previous stat">&larr;</button>
+        <div class="quote-dots" id="stats-dots"></div>
+        <button class="quote-arrow" id="stats-next" type="button" aria-label="Next stat">&rarr;</button>
       </div>
-    </div>
-
-    <div class="filter-row">
-      <button class="filter-btn active" data-filter="All">All</button>
-      <button class="filter-btn" data-filter="Match Report">Match Report</button>
-      <button class="filter-btn" data-filter="Analysis">Analysis</button>
-      <button class="filter-btn" data-filter="Opinion">Opinion</button>
-      <button class="filter-btn" data-filter="Scouting Report">Scouting Report</button>
-    </div>
-
-    <div class="dropdown-filter-row">
-      <select id="team-filter" class="dropdown-filter"></select>
-      <select id="competition-filter" class="dropdown-filter"></select>
-    </div>
-
-    <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
-
-    <div class="article-grid" id="article-grid"></div>
+    </aside>
   </div>
 
-  <aside class="quote-panel stats-panel" id="stats-panel">
-    <span class="eyebrow">By the numbers</span>
-    <div class="stats-panel-value" id="stats-value"></div>
-    <div class="stats-panel-label" id="stats-label"></div>
-    <div class="quote-nav">
-      <button class="quote-arrow" id="stats-prev" type="button" aria-label="Previous stat">&larr;</button>
-      <div class="quote-dots" id="stats-dots"></div>
-      <button class="quote-arrow" id="stats-next" type="button" aria-label="Next stat">&rarr;</button>
-    </div>
-  </aside>
+  <div class="filter-row">
+    <button class="filter-btn active" data-filter="All">All</button>
+    <button class="filter-btn" data-filter="Match Report">Match Report</button>
+    <button class="filter-btn" data-filter="Analysis">Analysis</button>
+    <button class="filter-btn" data-filter="Opinion">Opinion</button>
+    <button class="filter-btn" data-filter="Scouting Report">Scouting Report</button>
+  </div>
+
+  <div class="dropdown-filter-row">
+    <select id="team-filter" class="dropdown-filter"></select>
+    <select id="competition-filter" class="dropdown-filter"></select>
+  </div>
+
+  <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
+
+  <div class="article-grid" id="article-grid"></div>
 </div>
 
 <footer class="mega-footer" id="mega-footer"></footer>

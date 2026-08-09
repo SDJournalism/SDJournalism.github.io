@@ -648,16 +648,10 @@ nav.site-nav a.active {
 
 .search-input::placeholder { color: var(--ink-soft); }
 
-.articles-layout {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 44px;
-  align-items: start;
-}
-
 .stats-panel {
-  position: sticky;
-  top: 24px;
+  width: 280px;
+  min-height: auto;
+  flex-shrink: 0;
 }
 
 .stats-panel-value {
@@ -682,8 +676,7 @@ nav.site-nav a.active {
 }
 
 @media (max-width: 900px) {
-  .articles-layout { grid-template-columns: 1fr; }
-  .stats-panel { position: static; }
+  .stats-panel { width: 100%; }
 }
 
 .dropdown-filter-row {
