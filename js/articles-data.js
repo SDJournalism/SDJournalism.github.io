@@ -46,6 +46,50 @@
 
 const articles = [
 {
+    id: 7,
+    title: "Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-09",
+    scoreline: "",
+    image: "images/romeroarsenal.JPG",
+    imageLink: "https://www.tottenhamhotspur.com/news/987603/romero-reflects-on-world-cup-glory-at-that-moment-i-was-very-emotional",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "Tottenham's ownership has blocked Cristian Romero from joining Arsenal on rivalry grounds alone, even as their captain looks open to the move and better financial offers sit elsewhere. It's a decision most Spurs fans will cheer. It's also, increasingly, the wrong way to run a football club.",
+    content: [
+      "Cristian Romero wants to leave Tottenham this summer, and for a while it looked like he might end up somewhere unthinkable to most of the fanbase: Arsenal.",
+      "The chain of events is straightforward enough. William Saliba's serious back injury left Arsenal short at centre-back, and with Aston Villa refusing to budge on Ezri Konsa, Mikel Arteta's club made contact over Romero instead. According to Fabrizio Romano, Romero is genuinely open to the move, partly due to his relationship with Gabriel Heinze, the Argentine coach Arsenal appointed to their first-team staff last summer.",
+      "Tottenham's response has been unambiguous. The club will not sell Cristian Romero to Arsenal, full stop, regardless of what Arsenal offer or what Romero himself wants.",
+      "This isn't a football decision",
+      "What makes this particular refusal interesting is how openly it has been framed as symbolic rather than strategic. Romano has been explicit that the call sits with Tottenham's ownership, not with anyone assessing football or financial logic: it's about the board, the rivalry, full stop. Reports elsewhere describe the same stance from a high-level source at Spurs, framed simply as not entertaining the prospect of selling to Arsenal.",
+      "That is worth sitting with for a moment. Tottenham are not arguing the fee is too low. They are not arguing Romero is more valuable to keep than to sell. They are arguing, purely and explicitly, that a rival club's money is worth less than everyone else's.",
+      "The financial reality",
+      "Spurs have reportedly set a valuation of £34-38 million for Romero. Atletico Madrid have already agreed personal terms and are viewed as the likely destination, while Inter Milan remain interested but complicated by their own outgoing business. There is no indication Arsenal's offer would have been worse than either of those. If anything, a direct swap of Premier League money, spent by a club with no reason to negotiate patiently, is often the cleanest deal on the table.",
+      "By ruling Arsenal out entirely, Tottenham haven't protected their financial position. They have narrowed it, on principle, at a moment when Roberto De Zerbi's rebuild needs every available pound.",
+      "Why the taboo exists",
+      "None of this is to pretend the instinct is irrational. Selling to a direct rival has always carried a different emotional weight than selling to a club a few hundred miles away, and North London derbies are not just fixtures, they're identity. The example everyone still reaches for a quarter of a century later is Sol Campbell's free transfer from Tottenham to Arsenal in 2001, a move that remains one of the most bitterly remembered in Premier League history among Spurs supporters.",
+      "That memory is precisely why the current stance exists. Ownership groups are, understandably, wary of repeating it.",
+      "But that's exactly the problem",
+      "Football finance in 2026 does not look like it did in 2001. Profit and sustainability rules mean every pound of transfer income matters more, not less, than it used to. Rebuilding a squad under De Zerbi is expensive, and turning away the most straightforward buyer, for a fee that is unlikely to differ meaningfully from other offers, is a luxury few clubs can genuinely afford to indulge purely for symbolic reasons.",
+      "There's also a player-relations cost that shouldn't be ignored. Romero is Tottenham's captain, by all accounts a willing and reportedly happy one until now. Blocking a move he wants, for reasons that have nothing to do with football, risks the exact kind of unhappy-captain situation clubs spend most of their energy trying to avoid.",
+      "The counterargument, and why it doesn't hold",
+      "The honest defence of Tottenham's position is that fan identity has real value too, that a club is not just a business, and that some things are worth more than the difference between two similar bids. There's truth in that. Football without tribalism would be a much emptier sport.",
+      "But identity and financial discipline aren't actually in conflict here, because the alternative destinations exist and the fee is comparable either way. This isn't a case of Tottenham sacrificing millions to protect their pride. It's a case of Tottenham insisting the transfer happen with literally any other buyer, at a similar price, for no reason beyond which badge is on the cheque.",
+      "That's not principle. That's optics dressed up as principle, and it's an increasingly expensive habit for a club trying to rebuild on a budget.",
+      "Where this leaves Romero",
+      "Romero will very likely end up at Atletico Madrid, a good move by most measures, and Tottenham will get their fee regardless of how this played out. In that narrow sense, the outcome barely changes.",
+      "But the reasoning behind it is worth challenging anyway, because this situation will happen again, at Tottenham and everywhere else. The clubs that treat every transfer purely as a football and financial decision, rather than a tribal one, are the clubs best placed to compete in an era where every pound of value genuinely matters. The 'never sell to your rivals' rule made emotional sense in 2001. In 2026, it's mostly just an expensive story clubs tell themselves."
+    ],
+    sources: [
+      { label: "Goal.com -- Tottenham issue firm response to Arsenal interest in Romero", url: "https://www.goal.com/en-us/lists/tottenham-block-cristian-romero-arsenal-transfer/blt9ad2b51e6be0fd3f" },
+      { label: "football365 -- Romano reveals ENIC involvement as Tottenham reach final decision", url: "https://www.football365.com/news/tottenham-hotspur-arsenal-cristian-romero-fabrizio-romano-reveals-final-decision" },
+      { label: "ESPN -- Transfer rumors: Could Tottenham's Romero join Arsenal?", url: "https://www.espn.com/soccer/story/_/id/49566333/transfer-rumors-news-tottenham-hotspur-cristian-romero-arsenal" }
+    ],
+    players: ["Cristian Romero"],
+    teams: ["Tottenham Hotspur", "Arsenal"],
+    featured: true
+  },
+{
     id: 6,
     title: "Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around",
     type: "Scouting Report",
