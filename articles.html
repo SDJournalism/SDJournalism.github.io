@@ -56,15 +56,10 @@
       <h2 id="articles-heading">Match reports, analysis, scouting &amp; opinion</h2>
     </div>
 
-    <aside class="quote-panel stats-panel" id="stats-panel">
+    <aside class="stats-panel" id="stats-panel">
       <span class="eyebrow">By the numbers</span>
       <div class="stats-panel-value" id="stats-value"></div>
       <div class="stats-panel-label" id="stats-label"></div>
-      <div class="quote-nav">
-        <button class="quote-arrow" id="stats-prev" type="button" aria-label="Previous stat">&larr;</button>
-        <div class="quote-dots" id="stats-dots"></div>
-        <button class="quote-arrow" id="stats-next" type="button" aria-label="Next stat">&rarr;</button>
-      </div>
     </aside>
   </div>
 
@@ -97,7 +92,7 @@
   setupSearch();
   renderTeamFilter("team-filter");
   renderCompetitionFilter("competition-filter");
-  renderStatsPanel("stats-value", "stats-label", "stats-dots", "stats-panel");
+  renderStatsPanel("stats-value", "stats-label");
   renderMegaFooter("mega-footer", "articles");
   renderKicker();
 </script>

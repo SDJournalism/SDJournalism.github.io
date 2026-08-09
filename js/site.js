@@ -83,12 +83,10 @@ function computeStats() {
   return stats;
 }
 
-function renderStatsPanel(valueId, labelId, dotsId, panelId) {
+function renderStatsPanel(valueId, labelId) {
   const valueEl = document.getElementById(valueId);
   const labelEl = document.getElementById(labelId);
-  const dotsEl = document.getElementById(dotsId);
-  const panelEl = panelId ? document.getElementById(panelId) : null;
-  if (!valueEl || !labelEl || !dotsEl) return;
+  if (!valueEl || !labelEl) return;
 
   const stats = computeStats();
   if (stats.length === 0) return;
@@ -104,58 +102,20 @@ function renderStatsPanel(valueId, labelId, dotsId, panelId) {
       labelEl.textContent = stat.label;
       valueEl.style.opacity = "1";
       labelEl.style.opacity = "1";
-      dotsEl.querySelectorAll(".quote-dot").forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
     }, 200);
   }
 
-  function goTo(index) {
-    current = ((index % stats.length) + stats.length) % stats.length;
+  function next() {
+    current = (current + 1) % stats.length;
     show(current);
-    resetTimer();
-  }
-
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  dotsEl.innerHTML = stats.map((_, i) => `<button class="quote-dot" data-index="${i}" aria-label="Show stat ${i + 1}"></button>`).join("");
-  dotsEl.querySelectorAll(".quote-dot").forEach(dot => {
-    dot.addEventListener("click", () => goTo(parseInt(dot.dataset.index, 10)));
-  });
-
-  const prevBtn = document.getElementById("stats-prev");
-  const nextBtn = document.getElementById("stats-next");
-  if (prevBtn) prevBtn.addEventListener("click", prev);
-  if (nextBtn) nextBtn.addEventListener("click", next);
-
-  if (stats.length <= 1) {
-    if (prevBtn) prevBtn.style.display = "none";
-    if (nextBtn) nextBtn.style.display = "none";
-  }
-
-  if (panelEl) {
-    let touchStartX = 0;
-    panelEl.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    panelEl.addEventListener("touchend", (e) => {
-      const touchEndX = e.changedTouches[0].screenX;
-      const delta = touchEndX - touchStartX;
-      if (Math.abs(delta) > 40) {
-        if (delta < 0) next(); else prev();
-      }
-    }, { passive: true });
   }
 
   let timer;
-  function resetTimer() {
-    clearInterval(timer);
+  if (stats.length > 1) {
     timer = setInterval(next, 6000);
   }
 
   show(current);
-  resetTimer();
 }
 
 function renderQuotePanel(textId, attrId, dotsId, panelId) {
