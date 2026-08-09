@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment -- Samuel Davies</title>
 <meta name="description" content="Data has changed the way football clubs discover talent, assess players and make transfer decisions. While traditional scouting remains vital, performance analysis has become one of the most influe...">
@@ -61,11 +71,11 @@
   <div class="detail open" style="margin-top: 16px;">
     <figure class="detail-image">
         <img src="../images/PepPA.JPG" alt="From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment">
-        <figcaption>Photo: <a href="https://www.independent.co.uk/sport/football/man-city-pep-guardiola-juanma-lillo-club-world-cup-b2759197.html?callback=in&code=ZDY3MDHHMDYTODBHZI0ZMTVILTGWY2ITZMU1OWQ1ZDQ3YTLL&state=7cee6cc75178494787c0e7adc046aceb" target="_blank" rel="noopener nofollow">Photo: The Independent</a></figcaption>
+        <figcaption><a href="https://www.independent.co.uk/sport/football/man-city-pep-guardiola-juanma-lillo-club-world-cup-b2759197.html?callback=in&code=ZDY3MDHHMDYTODBHZI0ZMTVILTGWY2ITZMU1OWQ1ZDQ3YTLL&state=7cee6cc75178494787c0e7adc046aceb" target="_blank" rel="noopener nofollow">Photo: The Independent</a></figcaption>
       </figure>
     <span class="eyebrow">Opinion &middot; Premier League &middot; 7 Aug 2026</span>
     <h3>From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment</h3>
-    
+
     <div class="body-text">
       <p>Football recruitment has always been about finding an advantage. For decades, clubs relied primarily on experienced scouts who travelled from stadium to stadium, analysing players through observation, instinct and years of football knowledge. While this traditional approach remains valuable, the modern game has introduced another powerful tool: performance analysis.</p>
       <p>Today, the best recruitment departments combine human judgement with data-driven insight. Rather than simply asking whether a player looks talented, clubs can now analyse thousands of performance metrics to understand exactly how a player contributes, where their strengths lie and whether they fit a specific tactical system.</p>
@@ -86,7 +96,7 @@
       <p>Yet football remains a human sport. Data can highlight potential, but it cannot completely measure character, mentality or ambition. The future of recruitment will not belong to clubs that rely only on statistics or only on traditional scouting, but to those capable of combining both.</p>
       <p>The best recruiters of tomorrow will not choose between the eye test and expected goals. They will understand that both are essential pieces of the same puzzle.</p>
     </div>
-    
+
     <div class="sources-list">
         <span class="eyebrow">Sources</span>
         <ul>
@@ -109,14 +119,14 @@
               <span class="type-pill">Scouting Report</span>
               <span class="related-title">Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around</span>
             </a>
-            <a class="related-card" href="2.html">
-              <div class="related-thumb"><img src="../images/tonalishirt.jpg" alt="Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi" loading="lazy"></div>
+            <a class="related-card" href="5.html">
+              <div class="related-thumb"><img src="../images/araujoliverpool.JPG" alt="Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis" loading="lazy"></div>
               <span class="type-pill">Analysis</span>
-              <span class="related-title">Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi</span>
+              <span class="related-title">Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis</span>
             </a>
         </div>
       </div>
-    
+
     <div class="share-row">
       <span class="eyebrow">Share this article</span>
       <div class="tag-row">
@@ -153,11 +163,19 @@
   </div>
   <div class="wrap mega-footer-bottom">
     <span>Samuel Davies &copy; 2026</span>
-    <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+    <div class="mega-footer-bottom-right">
+      <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment", text: "From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/4.html" };
@@ -172,6 +190,7 @@
       });
     }
   });
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis -- Samuel Davies</title>
 <meta name="description" content="Liverpool have moved quickly to sign Ronald Araujo on a season-long loan from Barcelona. We break down what he actually offers, why the timing makes sense for both clubs, and what Andoni Iraola wil...">
@@ -61,11 +71,11 @@
   <div class="detail open" style="margin-top: 16px;">
     <figure class="detail-image">
         <img src="../images/araujoliverpool.JPG" alt="Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis">
-        <figcaption>Photo: <a href="https://www.fcbarcelona.com/en/news/4392119/ronald-araujo-a-game-away-from-making-top-10-list" target="_blank" rel="noopener nofollow">Photo: FC Barcelona</a></figcaption>
+        <figcaption><a href="https://www.fcbarcelona.com/en/news/4392119/ronald-araujo-a-game-away-from-making-top-10-list" target="_blank" rel="noopener nofollow">Photo: FC Barcelona</a></figcaption>
       </figure>
     <span class="eyebrow">Analysis &middot; Premier League &middot; 8 Aug 2026</span>
     <h3>Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis</h3>
-    
+
     <div class="body-text">
       <p>Liverpool have completed one of the more eye-catching moves of the summer, agreeing a season-long loan for Barcelona captain Ronald Araujo. The deal has moved unusually fast by transfer-window standards, going from first reports to documents being signed within a matter of days <a href="https://www.espn.com/soccer/story/_/id/49556442/liverpool-barcelona-transfer-ronald-araujo-loan" target="_blank" rel="noopener nofollow" class="citation-link">(ESPN, 2026)</a>.</p>
       <p>The structure of the deal is worth understanding before anything else. There is no loan fee involved, with Liverpool simply covering Araujo's wages for the campaign. Built into the agreement is a buy option, not an obligation, reportedly set at around 55 million euros, roughly 47 million pounds <a href="https://www.liverpool.com/liverpool-fc-news/transfer-news/araujo-transfer-clause-price-liverpool-34425680" target="_blank" rel="noopener nofollow" class="citation-link">(Liverpool.com, 2026)</a>. That gives Liverpool a full season to assess whether a permanent deal makes sense, without committing to one now.</p>
@@ -77,7 +87,7 @@
       <p>That uncertainty is, in a sense, the point of a loan with a buy option rather than an outright transfer. Liverpool are not required to make a long-term judgement now. They get a season to see how Araujo performs against Premier League opposition, how he fits Iraola's system, and how the club's other defensive options recover, before deciding whether 55 million euros is money well spent.</p>
       <p>For a squad that looked genuinely short at the back heading into preseason, that is a sensible way to solve an immediate problem without closing off future options. Whether it becomes a bargain or a footnote will depend largely on factors outside Araujo's control, but on paper, it is exactly the kind of low-risk, high-utility move a club in Liverpool's position should be making.</p>
     </div>
-    
+
     <div class="sources-list">
         <span class="eyebrow">Sources</span>
         <ul>
@@ -90,24 +100,24 @@
         <span class="eyebrow">Related Articles</span>
         <div class="related-grid">
           
+            <a class="related-card" href="3.html">
+              <div class="related-thumb"><img src="../images/RDZhighline.JPG" alt="Spurs' High Line Is Back -- And So Is the Risk" loading="lazy"></div>
+              <span class="type-pill">Analysis</span>
+              <span class="related-title">Spurs' High Line Is Back -- And So Is the Risk</span>
+            </a>
+            <a class="related-card" href="2.html">
+              <div class="related-thumb"><img src="../images/tonalishirt.jpg" alt="Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi" loading="lazy"></div>
+              <span class="type-pill">Analysis</span>
+              <span class="related-title">Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi</span>
+            </a>
             <a class="related-card" href="1.html">
               <div class="related-thumb"><img src="../images/RobertoDeZerbiPressConference.JPG" alt="Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences" loading="lazy"></div>
               <span class="type-pill">Analysis</span>
               <span class="related-title">Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences</span>
             </a>
-            <a class="related-card" href="7.html">
-              <div class="related-thumb"><img src="../images/romeroarsenal.JPG" alt="Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated" loading="lazy"></div>
-              <span class="type-pill">Opinion</span>
-              <span class="related-title">Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated</span>
-            </a>
-            <a class="related-card" href="6.html">
-              <div class="related-thumb"><img src="../images/jaydenlienousigning.JPG" alt="Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around" loading="lazy"></div>
-              <span class="type-pill">Scouting Report</span>
-              <span class="related-title">Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around</span>
-            </a>
         </div>
       </div>
-    
+
     <div class="share-row">
       <span class="eyebrow">Share this article</span>
       <div class="tag-row">
@@ -144,11 +154,19 @@
   </div>
   <div class="wrap mega-footer-bottom">
     <span>Samuel Davies &copy; 2026</span>
-    <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+    <div class="mega-footer-bottom-right">
+      <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis", text: "Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/5.html" };
@@ -163,6 +181,7 @@
       });
     }
   });
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

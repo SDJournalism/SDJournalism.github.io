@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Davies -- Football Writer &amp; Analyst</title>
 <meta name="description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
@@ -116,6 +126,7 @@
 <script src="js/contact-info.js"></script>
 <script src="js/articles-data.js"></script>
 <script src="js/site.js"></script>
+<script src="js/theme.js"></script>
 <script>
   document.getElementById("hero-headline").textContent = siteConfig.heroHeadline;
   renderTicker("ticker-track");
@@ -127,6 +138,7 @@
   renderPatreonStrip("patreon-strip");
   renderMegaFooter("mega-footer", "index");
   renderKicker();
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

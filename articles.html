@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Articles -- Samuel Davies</title>
 <meta name="description" content="Match previews, match reports, tactical analysis and opinion pieces from Samuel Davies, football writer.">
@@ -97,6 +107,7 @@
 <script src="js/contact-info.js"></script>
 <script src="js/articles-data.js"></script>
 <script src="js/site.js"></script>
+<script src="js/theme.js"></script>
 <script>
   renderArticleList();
   setupFilters();
@@ -107,6 +118,7 @@
   renderStatsPanel("stats-value", "stats-label");
   renderMegaFooter("mega-footer", "articles");
   renderKicker();
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

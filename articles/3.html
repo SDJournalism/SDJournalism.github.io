@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spurs' High Line Is Back -- And So Is the Risk -- Samuel Davies</title>
 <meta name="description" content="Roberto De Zerbi's arrival has brought an immediate return to the aggressive defensive approach Tottenham fans became familiar with under Ange Postecoglou. But while the high line promises greater ...">
@@ -61,11 +71,11 @@
   <div class="detail open" style="margin-top: 16px;">
     <figure class="detail-image">
         <img src="../images/RDZhighline.JPG" alt="Spurs' High Line Is Back -- And So Is the Risk">
-        <figcaption>Photo: <a href="https://www.tottenhamhotspur.com/news/1018847/gallery-every-photo-from-roberto-de-zerbis-first-training-session" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
+        <figcaption><a href="https://www.tottenhamhotspur.com/news/1018847/gallery-every-photo-from-roberto-de-zerbis-first-training-session" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
       </figure>
     <span class="eyebrow">Analysis &middot; Premier League &middot; 7 Aug 2026</span>
     <h3>Spurs' High Line Is Back -- And So Is the Risk</h3>
-    
+
     <div class="body-text">
       <p>For better or worse, Tottenham Hotspur's high defensive line has returned.</p>
       <p>Early signs from Roberto De Zerbi's opening weeks in charge suggest Spurs are once again committing to one of football's most demanding tactical principles. The pre-season fixtures have already shown defenders stepping aggressively towards the halfway line, the goalkeeper positioned high outside the penalty area and an emphasis on compressing the pitch whenever possession is lost.</p>
@@ -90,7 +100,7 @@
       <p>As the new season approaches, Tottenham once again find themselves walking one of football's finest tactical tightropes. The high line is back.</p>
       <p>Now comes the difficult part: proving this time it can be sustained.</p>
     </div>
-    
+
     <div class="sources-list">
         <span class="eyebrow">Sources</span>
         <ul>
@@ -120,7 +130,7 @@
             </a>
         </div>
       </div>
-    
+
     <div class="share-row">
       <span class="eyebrow">Share this article</span>
       <div class="tag-row">
@@ -157,11 +167,19 @@
   </div>
   <div class="wrap mega-footer-bottom">
     <span>Samuel Davies &copy; 2026</span>
-    <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+    <div class="mega-footer-bottom-right">
+      <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "Spurs' High Line Is Back -- And So Is the Risk", text: "Spurs' High Line Is Back -- And So Is the Risk -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/3.html" };
@@ -176,6 +194,7 @@
       });
     }
   });
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

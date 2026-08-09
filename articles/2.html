@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi -- Samuel Davies</title>
 <meta name="description" content="A summer of significant change has reshaped Tottenham's squad. From marquee signings to smart free transfers, we examine how Spurs have approached the market and whether their recruitment has laid ...">
@@ -61,11 +71,11 @@
   <div class="detail open" style="margin-top: 16px;">
     <figure class="detail-image">
         <img src="../images/tonalishirt.jpg" alt="Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi">
-        <figcaption>Photo: <a href="https://www.tottenhamhotspur.com/news/1076467/welcome-sandro-tonali-makes-the-move-to-n17" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
+        <figcaption><a href="https://www.tottenhamhotspur.com/news/1076467/welcome-sandro-tonali-makes-the-move-to-n17" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
       </figure>
     <span class="eyebrow">Analysis &middot; Premier League &middot; 6 Aug 2026</span>
     <h3>Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi</h3>
-    
+
     <div class="body-text">
       <p>Following an underwhelming 2025/26 campaign, Tottenham Hotspur entered the 2026 summer transfer window with a clear objective: reshape the squad, increase technical quality and provide Roberto De Zerbi with the tools required to implement his distinctive footballing philosophy. With significant investment committed and a mixture of experienced winners and emerging talent arriving in North London, Spurs have become one of the Premier League's most active clubs during this summer's window.</p>
       <p>For Tottenham, the rebuild began before the window officially opened, with experienced defenders Andy Robertson and Marcos Senesi arriving on free transfers. Both signings represent a strategic approach from the club, adding proven quality, leadership and top-level experience without requiring significant transfer fees.</p>
@@ -81,7 +91,7 @@
       <p>However, the work may not yet be complete. Tottenham continue to be linked with attacking reinforcements, particularly in wide areas, as the club searches for additional pace and creativity in the final third. Interest in players such as Antonio Nusa and continued speculation surrounding Savinho suggests the recruitment team remains active ahead of the deadline <a href="https://sports.yahoo.com/articles/breaking-tottenham-agree-92-5m-184929164.html" target="_blank" rel="noopener nofollow" class="citation-link">(The Athletic, 2026)</a>.</p>
       <p>While Spurs deserve credit for an ambitious transfer window, expectations will inevitably rise alongside investment. Integrating several new arrivals into De Zerbi's demanding tactical system will require patience, and success will depend not only on individual quality but also on how effectively the squad adapts to a new style of play. Tottenham's transfer activity represents a significant attempt to establish a new identity under De Zerbi. Although performances on the pitch will ultimately determine whether the rebuild succeeds, Spurs have created stronger foundations for future progress.</p>
     </div>
-    
+
     <div class="sources-list">
         <span class="eyebrow">Sources</span>
         <ul>
@@ -97,15 +107,15 @@
         <span class="eyebrow">Related Articles</span>
         <div class="related-grid">
           
-            <a class="related-card" href="1.html">
-              <div class="related-thumb"><img src="../images/RobertoDeZerbiPressConference.JPG" alt="Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences" loading="lazy"></div>
-              <span class="type-pill">Analysis</span>
-              <span class="related-title">Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences</span>
-            </a>
             <a class="related-card" href="3.html">
               <div class="related-thumb"><img src="../images/RDZhighline.JPG" alt="Spurs' High Line Is Back -- And So Is the Risk" loading="lazy"></div>
               <span class="type-pill">Analysis</span>
               <span class="related-title">Spurs' High Line Is Back -- And So Is the Risk</span>
+            </a>
+            <a class="related-card" href="1.html">
+              <div class="related-thumb"><img src="../images/RobertoDeZerbiPressConference.JPG" alt="Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences" loading="lazy"></div>
+              <span class="type-pill">Analysis</span>
+              <span class="related-title">Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences</span>
             </a>
             <a class="related-card" href="7.html">
               <div class="related-thumb"><img src="../images/romeroarsenal.JPG" alt="Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated" loading="lazy"></div>
@@ -114,7 +124,7 @@
             </a>
         </div>
       </div>
-    
+
     <div class="share-row">
       <span class="eyebrow">Share this article</span>
       <div class="tag-row">
@@ -151,11 +161,19 @@
   </div>
   <div class="wrap mega-footer-bottom">
     <span>Samuel Davies &copy; 2026</span>
-    <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+    <div class="mega-footer-bottom-right">
+      <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi", text: "Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/2.html" };
@@ -170,6 +188,7 @@
       });
     }
   });
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

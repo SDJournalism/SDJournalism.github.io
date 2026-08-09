@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact -- Samuel Davies</title>
 <meta name="description" content="Get in touch with Samuel Davies -- football writer, available for story tips, feedback and freelance work.">
@@ -84,6 +94,7 @@
 <script src="js/contact-info.js"></script>
 <script src="js/articles-data.js"></script>
 <script src="js/site.js"></script>
+<script src="js/theme.js"></script>
 <script>
   const mailBtn = document.getElementById("mailto-button");
   mailBtn.href = `mailto:${siteConfig.email}?subject=Hello%20from%20your%20website`;
@@ -92,6 +103,7 @@
   renderSupportTags("support-tags", "support-section");
   renderMegaFooter("mega-footer", "contact");
   renderKicker();
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>

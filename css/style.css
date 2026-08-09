@@ -1378,6 +1378,13 @@ nav.site-nav a.active {
 
 .mega-footer-bottom a:hover { color: var(--gold); transform: translateY(-2px); }
 
+.mega-footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 700px) {
   .mega-footer-grid { grid-template-columns: 1fr; gap: 30px; }
 }
@@ -1400,3 +1407,86 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
+
+/* ============================================================
+   DARK MODE
+   Most of the site (body text, card backgrounds, hairline
+   borders) is already built on CSS variables, so redefining
+   those five here does most of the work automatically. The
+   handful of spots below use --navy directly as a heading/
+   text colour (rather than a background), so they're listed
+   individually to flip them to --ink instead.
+   ============================================================ */
+
+[data-theme="dark"] {
+  --bg: #0C1633;
+  --bg-card: #16203F;
+  --ink: #E9EAF2;
+  --ink-soft: #9CA2BE;
+  --line: #2A3560;
+}
+
+[data-theme="dark"] .search-input,
+[data-theme="dark"] .dropdown-filter,
+[data-theme="dark"] .detail {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .tag,
+[data-theme="dark"] .card .scoreline,
+[data-theme="dark"] .read-link,
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .search-clear-btn:hover,
+[data-theme="dark"] .stats-panel-value,
+[data-theme="dark"] .dropdown-filter,
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .detail-image figcaption a,
+[data-theme="dark"] .body-text .body-subheading,
+[data-theme="dark"] .citation-link,
+[data-theme="dark"] .sources-list a,
+[data-theme="dark"] .close-detail:hover,
+[data-theme="dark"] .photo-caption-btn,
+[data-theme="dark"] .availability-badge,
+[data-theme="dark"] .fact-item span:last-child,
+[data-theme="dark"] .coverage-list li,
+[data-theme="dark"] .stat-number,
+[data-theme="dark"] .perk-list li {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .tag,
+[data-theme="dark"] .read-link,
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .detail,
+[data-theme="dark"] .detail-image figcaption a,
+[data-theme="dark"] .citation-link,
+[data-theme="dark"] .sources-list a,
+[data-theme="dark"] .photo-caption-btn {
+  border-color: var(--ink);
+}
+
+/* ---------- Theme toggle (footer) ---------- */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 241, 0.45);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.theme-toggle-btn:hover { color: var(--gold); transform: translateY(-2px); }
+
+.theme-toggle-btn svg { display: block; }
+
+.theme-toggle-btn .theme-icon-moon { display: none; }
+
+[data-theme="dark"] .theme-toggle-btn .theme-icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle-btn .theme-icon-moon { display: block; }

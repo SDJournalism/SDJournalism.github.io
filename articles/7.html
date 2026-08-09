@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated -- Samuel Davies</title>
 <meta name="description" content="Tottenham's ownership has blocked Cristian Romero from joining Arsenal on rivalry grounds alone, even as their captain looks open to the move and better financial offers sit elsewhere. It's a decis...">
@@ -61,11 +71,11 @@
   <div class="detail open" style="margin-top: 16px;">
     <figure class="detail-image">
         <img src="../images/romeroarsenal.JPG" alt="Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated">
-        <figcaption>Photo: <a href="https://www.tottenhamhotspur.com/news/987603/romero-reflects-on-world-cup-glory-at-that-moment-i-was-very-emotional" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
+        <figcaption><a href="https://www.tottenhamhotspur.com/news/987603/romero-reflects-on-world-cup-glory-at-that-moment-i-was-very-emotional" target="_blank" rel="noopener nofollow">Photo: Tottenham Hotspur</a></figcaption>
       </figure>
     <span class="eyebrow">Opinion &middot; Premier League &middot; 9 Aug 2026</span>
     <h3>Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated</h3>
-    
+
     <div class="body-text">
       <p>Cristian Romero wants to leave Tottenham this summer, and for a while it looked like he might end up somewhere unthinkable to most of the fanbase: Arsenal.</p>
       <p>The chain of events is straightforward enough. William Saliba's serious back injury left Arsenal short at centre-back, and with Aston Villa refusing to budge on Ezri Konsa, Mikel Arteta's club made contact over Romero instead. According to Fabrizio Romano, Romero is genuinely open to the move, partly due to his relationship with Gabriel Heinze, the Argentine coach Arsenal appointed to their first-team staff last summer.</p>
@@ -90,7 +100,7 @@
       <p>Romero will very likely end up at Atletico Madrid, a good move by most measures, and Tottenham will get their fee regardless of how this played out. In that narrow sense, the outcome barely changes.</p>
       <p>But the reasoning behind it is worth challenging anyway, because this situation will happen again, at Tottenham and everywhere else. The clubs that treat every transfer purely as a football and financial decision, rather than a tribal one, are the clubs best placed to compete in an era where every pound of value genuinely matters. The 'never sell to your rivals' rule made emotional sense in 2001. In 2026, it's mostly just an expensive story clubs tell themselves.</p>
     </div>
-    
+
     <div class="sources-list">
         <span class="eyebrow">Sources</span>
         <ul>
@@ -108,10 +118,10 @@
               <span class="type-pill">Analysis</span>
               <span class="related-title">Spurs' High Line Is Back -- And So Is the Risk</span>
             </a>
-            <a class="related-card" href="4.html">
-              <div class="related-thumb"><img src="../images/PepPA.JPG" alt="From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment" loading="lazy"></div>
-              <span class="type-pill">Opinion</span>
-              <span class="related-title">From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment</span>
+            <a class="related-card" href="2.html">
+              <div class="related-thumb"><img src="../images/tonalishirt.jpg" alt="Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi" loading="lazy"></div>
+              <span class="type-pill">Analysis</span>
+              <span class="related-title">Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi</span>
             </a>
             <a class="related-card" href="1.html">
               <div class="related-thumb"><img src="../images/RobertoDeZerbiPressConference.JPG" alt="Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences" loading="lazy"></div>
@@ -120,7 +130,7 @@
             </a>
         </div>
       </div>
-    
+
     <div class="share-row">
       <span class="eyebrow">Share this article</span>
       <div class="tag-row">
@@ -157,11 +167,19 @@
   </div>
   <div class="wrap mega-footer-bottom">
     <span>Samuel Davies &copy; 2026</span>
-    <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+    <div class="mega-footer-bottom-right">
+      <a href="mailto:daviessamuelj@outlook.com">daviessamuelj@outlook.com</a>
+      <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
   </div>
 </footer>
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
     const shareData = { title: "Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated", text: "Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated -- by Samuel Davies", url: "https://sdjournalism.github.io/articles/7.html" };
@@ -176,6 +194,7 @@
       });
     }
   });
+  initThemeToggle("theme-toggle");
 </script>
 </body>
 </html>
