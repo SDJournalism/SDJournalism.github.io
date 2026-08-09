@@ -1265,6 +1265,10 @@ nav.site-nav a.active {
 .footer-links a:hover { color: var(--gold); transform: translateX(4px); }
 
 .mega-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   padding-top: 18px;
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1272,6 +1276,14 @@ nav.site-nav a.active {
   text-transform: uppercase;
   color: rgba(245, 246, 241, 0.45);
 }
+
+.mega-footer-bottom a {
+  color: rgba(245, 246, 241, 0.45);
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.mega-footer-bottom a:hover { color: var(--gold); transform: translateY(-2px); }
 
 @media (max-width: 700px) {
   .mega-footer-grid { grid-template-columns: 1fr; gap: 30px; }

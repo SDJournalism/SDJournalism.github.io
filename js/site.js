@@ -368,6 +368,7 @@ function renderMegaFooter(containerId, currentPage) {
     </div>
     <div class="wrap mega-footer-bottom">
       <span>${siteConfig.name} &copy; ${new Date().getFullYear()}</span>
+      <a href="mailto:${siteConfig.email}">${siteConfig.email}</a>
     </div>
   `;
 }
