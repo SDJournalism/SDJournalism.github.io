@@ -58,6 +58,10 @@ function firstSentence(text) {
   return match ? match[0].trim() : text;
 }
 
+// Powers the "By the numbers" panel on the Articles page only. Deliberately
+// reads from `articles` (articles-data.js) alone -- Tactical Lab pieces
+// live in a separate `tacticalLabEntries` array (tactical-lab-data.js) and
+// should never be counted in these totals.
 function computeStats() {
   const articleCount = articles.length;
   const uniquePlayers = new Set(articles.flatMap(a => a.players || [])).size;
@@ -888,6 +892,8 @@ function labCardHTML(entry) {
       ${labThumbHTML(entry)}
       <div class="meta-row">
         <span class="type-pill">${entry.category}</span>
+        ${entry.competition ? `<span>${entry.competition}</span>` : ""}
+        ${entry.competition && entry.team ? `<span>&middot;</span>` : ""}
         ${entry.team ? `<span>${entry.team}</span>` : ""}
       </div>
       <h3>${entry.title}</h3>

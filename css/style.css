@@ -1573,6 +1573,17 @@ a:focus-visible, button:focus-visible {
   margin: 12px 0 0;
 }
 
+/* The Tactical Lab heading lives in .lab-page-head rather than
+   .section-head (a different container, needed for the grid layout),
+   so it was missing the shared heading font entirely and falling back
+   to the browser default -- this brings it back in line with Articles. */
+.lab-page-head h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 6px 0 0;
+}
+
 @media (max-width: 900px) {
   .lab-page-head { grid-template-columns: 1fr; }
 }
