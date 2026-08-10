@@ -26,9 +26,9 @@ const tacticalLabEntries = [
     excerpt: "Why De Zerbi's Tottenham park the ball in their own box on purpose -- and how the resulting press-bait turns an opponent's pressure into a route through it.",
     team: "Tottenham Hotspur",
     competition: "Premier League",
-    image: "images/RDZhighline.JPG",
-    imageLink: "https://www.tottenhamhotspur.com/news/1018847/gallery-every-photo-from-roberto-de-zerbis-first-training-session",
-    imageCredit: "Photo: Tottenham Hotspur",
+    image: "images/RDZtaclab.jpg",
+    imageLink: "https://www.football.london/tottenham-hotspur-fc/news/roberto-de-zerbi-tottenham-training-33714938",
+    imageCredit: "Photo: Football London",
     comingSoon: false
   },
   {

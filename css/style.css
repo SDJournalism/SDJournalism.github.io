@@ -699,6 +699,14 @@ nav.site-nav a.active {
   transform: translateY(-2px);
 }
 
+/* Keep the reset button's space reserved even when inactive, so the
+   filter row doesn't shrink/reflow when switching to "All" */
+.reset-filters-btn[hidden] {
+  display: inline-block;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .stats-panel {
   width: 280px;
   flex-shrink: 0;
