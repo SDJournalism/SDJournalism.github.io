@@ -46,6 +46,41 @@
 
 const articles = [
 {
+    id: 11,
+    title: "Carabao Cup Second Round Draw: Newcastle, Everton, Wolves and Burnley Learn Their Opponents",
+    type: "Analysis",
+    competition: "Carabao Cup",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/carabaocupdraw.jpg",
+    imageLink: "https://sports.yahoo.com/articles/efl-cup-second-round-draw-131733559.html",
+    imageCredit: "Photo: Yahoo Sports",
+    excerpt: "Newcastle United were sent to West Bromwich Albion and Nottingham Forest drew Leeds United at home as the Carabao Cup second round draw was made on Monday night, while Chelsea host Luton and Tottenham were handed a London derby against Charlton. We run through every confirmed tie from both sections.",
+    content: [
+      "The draw for the second round of the Carabao Cup -- still the EFL Cup to most supporters -- was made on Monday evening, broadcast live on Sky Sports ahead of Plymouth Argyle's derby with Exeter City at Home Park. David Prutton hosted, with pundits Jobi McAnuff and Jamie Mackie pulling the balls shortly after 7.20pm.",
+      "Still split north and south",
+      "As in round one, the draw remained regionalised, with 46 teams split into Northern and Southern sections and kept apart from opponents on the other side of the country until round three. The pot was made up of the 35 winners from last week's first round, plus the 11 Premier League clubs not involved in this season's European competitions, who entered the competition for the first time tonight: Brentford, Chelsea, Coventry City, Everton, Fulham, Hull City, Ipswich Town, Leeds United, Newcastle United, Nottingham Forest and Tottenham Hotspur.",
+      "Northern section in full",
+      "Newcastle United were drawn at home to West Bromwich Albion, and Leeds United were given an all-Premier League clash away to Nottingham Forest. David Moyes' Everton go to second-tier Preston North End, Sheffield Wednesday were handed a home tie against Wolverhampton Wanderers, and Bradford City will welcome Burnley to Valley Parade -- two of the three clubs relegated from the Premier League last season, along with West Ham, already back in the hat as first-round winners.",
+      "Elsewhere in the North, newly promoted Hull City travel to Stoke City, Blackburn Rovers were drawn against Sheffield United, Doncaster Rovers face Middlesbrough, and Barnsley were paired with Crewe Alexandra. Blackpool will play host to Lincoln City, while Fleetwood Town were given a tie against fellow League Two side Shrewsbury Town.",
+      "Chelsea and Spurs both handed home London ties",
+      "The Southern section draw sent Xabi Alonso's Chelsea to a home tie against Jack Wilshere's Luton Town -- the fifth time the two clubs have met in five years. Chelsea beat the Hatters in consecutive FA Cup ties in 2021 and 2022, then completed a league double over them during Luton's solitary Premier League season in 2023-24. Luton have since suffered back-to-back relegations and missed out on the League One play-offs last season by a single point, meaning Chelsea will start their pursuit of a sixth League Cup title as firm favourites.",
+      "Tottenham Hotspur, who entered the draw as ball number 20, were handed a London derby of their own, drawn at home to Charlton Athletic. Elsewhere in the south, Alvaro Arbeloa's Fulham will host League One's AFC Wimbledon at Craven Cottage, while Keith Andrews' Brentford face a trickier away tie at Championship side Birmingham City. West Ham, relegated from the Premier League last season, were drawn away to fellow Championship club Southampton, and newly promoted Ipswich Town host Leicester City. Coventry City, who also enter as one of the 11 Premier League sides without European football, will host the winner of Monday night's Devon derby between Plymouth Argyle and Exeter City.",
+      "The remaining Southern ties pair Walsall with Leyton Orient, Cardiff City with Norwich City, Stevenage with Reading, Cambridge United with Millwall, and Watford with Peterborough United.",
+      "When the ties are played",
+      "Second round fixtures are scheduled for the week commencing 24 August. The Premier League clubs still involved in Europe this season enter at the third round, which is split across the weeks commencing 7 and 14 September, with the Champions League sides waiting until the later of the two."
+    ],
+    sources: [
+      { label: "Sky Sports -- Carabao Cup second round: Chelsea vs Luton, Tottenham vs Charlton and Newcastle vs West Brom as 11 Premier League sides enter draw", url: "https://www.skysports.com/football/news/11095/13571634/carabao-cup-second-round-chelsea-vs-luton-tottenham-vs-charlton-and-newcastle-vs-west-brom-as-11-premier-league-sides-enter-draw" },
+      { label: "Yahoo Sports (via BBC Sport) -- When is the EFL Cup second-round draw?", url: "https://sports.yahoo.com/articles/efl-cup-second-round-draw-131733559.html" },
+      { label: "Chelsea FC -- Chelsea's Carabao Cup second round opponents revealed", url: "https://www.chelseafc.com/en/news/article/chelseas-carabao-cup-second-round-opponents-revealed" },
+      { label: "EFL -- Carabao Cup Round Two draw confirmed", url: "https://www.efl.com/news/2026/august/10/carabao-cup-round-two-draw-confirmed/" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
     id: 10,
     title: "Scouting Report: Brian Madjo -- The 17-Year-Old Aston Villa Had to Fight FIFA to Register",
     type: "Scouting Report",
