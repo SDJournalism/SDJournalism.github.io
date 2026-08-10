@@ -417,15 +417,25 @@ function renderMegaFooter(containerId, currentPage) {
   const el = document.getElementById(containerId);
   if (!el) return;
 
+  // The footer is rendered on both root pages (index.html, articles.html...)
+  // and pages one folder deep (articles/1.html, tactical-lab/<id>.html), but
+  // this function always builds the same root-relative links (e.g.
+  // "index.html"). From inside a subfolder that would wrongly resolve to
+  // "articles/index.html". Detecting the depth here and prefixing with
+  // "../" when needed means every page that calls renderMegaFooter gets
+  // working links automatically, without having to pass anything extra in.
+  const inSubfolder = /\/(articles|tactical-lab)\/[^/]+$/.test(window.location.pathname);
+  const prefix = inSubfolder ? "../" : "";
+
   const sitemapLinks = SITEMAP_PAGES
     .filter(p => p.key !== currentPage)
-    .map(p => `<a href="${p.href}">${p.label}</a>`)
+    .map(p => `<a href="${prefix}${p.href}">${p.label}</a>`)
     .join("");
 
   el.innerHTML = `
     <div class="wrap mega-footer-grid">
       <div class="footer-col footer-brand">
-        <a href="index.html" class="footer-name-btn">${siteConfig.name}</a>
+        <a href="${prefix}index.html" class="footer-name-btn">${siteConfig.name}</a>
         <p class="footer-tagline">${siteConfig.heroHeadline}</p>
       </div>
       <div class="footer-col">
@@ -438,6 +448,13 @@ function renderMegaFooter(containerId, currentPage) {
           <a href="${siteConfig.twitter}" target="_blank" rel="noopener">Twitter</a>
           <a href="${siteConfig.patreon}" target="_blank" rel="noopener">Support Me</a>
           <a href="mailto:${siteConfig.email}">Contact Me</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <span class="eyebrow">Support</span>
+        <nav class="footer-links">
+          <a href="mailto:${siteConfig.email}">Help</a>
+          <a href="${prefix}faq.html">FAQs</a>
         </nav>
       </div>
     </div>

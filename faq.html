@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs -- Samuel Davies</title>
+<meta name="description" content="Frequently asked questions about the site, the writing, and how to get in touch.">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjournalism.github.io/faq.html">
+<meta property="og:title" content="FAQs -- Samuel Davies">
+<meta property="og:description" content="Frequently asked questions about the site, the writing, and how to get in touch.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAQs -- Samuel Davies">
+<meta name="twitter:description" content="Frequently asked questions about the site, the writing, and how to get in touch.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="index.html">
+      <img src="images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="tactical-lab.html">Tactical Lab</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="faq-hero">
+    <span class="eyebrow">Help</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>A few quick answers before you email me directly.</p>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <h2 class="faq-question">Who writes everything on this site?</h2>
+      <p class="faq-answer">Every article and Tactical Lab piece is written and researched by me, Samuel Davies -- a sport student based in Manchester with a focus on tactics, players and the stories behind the scoreline.</p>
+    </div>
+    <div class="faq-item">
+      <h2 class="faq-question">What's the difference between Articles and Tactical Lab?</h2>
+      <p class="faq-answer">Articles cover match reports, previews, transfer news and opinion. Tactical Lab is the visual side of the site -- moving pitch diagrams that break down a manager's system or a player's signature movement pattern, grouped into Manager DNA, Player Blueprints and the Tactical Vault.</p>
+    </div>
+    <div class="faq-item">
+      <h2 class="faq-question">Can I use or republish your work?</h2>
+      <p class="faq-answer">Feel free to share a link to any article or breakdown. Please don't copy or republish full pieces, quotes or diagrams elsewhere without asking first -- email me and I'm happy to talk about it.</p>
+    </div>
+    <div class="faq-item">
+      <h2 class="faq-question">How do I suggest a topic, team or player breakdown?</h2>
+      <p class="faq-answer">Email me your idea. I'm always looking for suggestions, and reader requests regularly turn into full pieces.</p>
+    </div>
+    <div class="faq-item">
+      <h2 class="faq-question">Are you available for freelance work?</h2>
+      <p class="faq-answer">Yes -- I take on match reports, previews, analysis and opinion pieces for commission or ongoing contributor work. Head to the About page for more, or get in touch directly.</p>
+    </div>
+    <div class="faq-item">
+      <h2 class="faq-question">Where do your sources and stats come from?</h2>
+      <p class="faq-answer">Every article and Tactical Lab breakdown links its sources at the bottom of the piece, so you can check the reporting for yourself.</p>
+    </div>
+  </div>
+
+  <div class="contact-hero">
+    <span class="eyebrow">Get in touch</span>
+    <h2>Still need help? Contact me directly.</h2>
+    <p class="contact-note" style="margin-bottom:18px;">Can't find what you're looking for? Send me an email and I'll get back to you as soon as I can.</p>
+    <a class="mailto-btn" href="#" id="faq-email-btn">Email Me &rarr;</a>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="js/contact-info.js"></script>
+<script src="js/site.js"></script>
+<script src="js/theme.js"></script>
+<script>
+  document.getElementById("faq-email-btn").href = "mailto:" + siteConfig.email;
+  renderMegaFooter("mega-footer", "faq");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+</script>
+</body>
+</html>

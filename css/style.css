@@ -1349,6 +1349,54 @@ nav.site-nav a.active {
   margin: 34px auto 0;
 }
 
+/* ---------- FAQ page ---------- */
+.faq-hero {
+  max-width: 640px;
+  padding: 60px 0 10px;
+}
+
+.faq-hero .eyebrow { display: block; margin-bottom: 10px; }
+
+.faq-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.faq-hero p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 20px 0 56px;
+}
+
+.faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item:first-child { border-top: 1px solid var(--line); }
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+
+.faq-answer {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* ---------- Footer ---------- */
 .mega-footer {
   background: var(--navy);
@@ -1358,7 +1406,7 @@ nav.site-nav a.active {
 
 .mega-footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(245, 246, 241, 0.15);
@@ -1831,7 +1879,10 @@ a:focus-visible, button:focus-visible {
 [data-theme="dark"] .fact-item span:last-child,
 [data-theme="dark"] .coverage-list li,
 [data-theme="dark"] .stat-number,
-[data-theme="dark"] .perk-list li {
+[data-theme="dark"] .perk-list li,
+[data-theme="dark"] .faq-question,
+[data-theme="dark"] .error-page h1,
+[data-theme="dark"] .error-number {
   color: var(--ink);
 }
 
