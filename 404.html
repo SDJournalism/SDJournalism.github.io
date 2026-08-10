@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found -- Samuel Davies</title>
+<meta name="description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
+<meta name="robots" content="noindex">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjournalism.github.io/404.html">
+<meta property="og:title" content="Page Not Found -- Samuel Davies">
+<meta property="og:description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page Not Found -- Samuel Davies">
+<meta name="twitter:description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="index.html">
+      <img src="images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="tactical-lab.html">Tactical Lab</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="error-page">
+    <span class="eyebrow">Error 404</span>
+    <p class="error-number">404</p>
+    <h1>Offside.</h1>
+    <p>The page you're looking for doesn't exist -- it might have moved, been renamed, or never made it past the last defender. Let's play it back.</p>
+    <div class="error-actions">
+      <a class="mailto-btn" href="index.html">Back to Home &rarr;</a>
+      <a class="read-link" href="articles.html">Read the Articles &rarr;</a>
+      <a class="read-link" href="tactical-lab.html">Visit the Tactical Lab &rarr;</a>
+    </div>
+    <div class="error-pitch-line"></div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="js/contact-info.js"></script>
+<script src="js/site.js"></script>
+<script src="js/theme.js"></script>
+<script>
+  renderMegaFooter("mega-footer");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+</script>
+</body>
+</html>
