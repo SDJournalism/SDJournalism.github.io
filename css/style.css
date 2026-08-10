@@ -1934,29 +1934,35 @@ a:focus-visible, button:focus-visible {
    Approach: rather than writing new selectors for every card,
    panel and pill, this redefines the SAME custom properties
    the rest of the site already reads (--bg-card, --line, --gold,
-   --navy, --navy-deep) -- but only within .wrap, not on <body>
-   itself. Since the masthead and footer sit outside .wrap as
-   separate siblings, they never see these overrides and stay
-   the site's normal cream/navy -- only the page content between
-   them shifts into the lab palette. The page canvas itself
-   (body's own background) is set separately below so the grey
-   extends edge-to-edge, not just inside the 1080px column.
-   Both blocks have a [data-theme="dark"] pair, same as the
-   site's existing dark mode.
-   ============================================================ */
+   --navy, --navy-deep) -- but only within the page's own top-
+   level .wrap, not on <body> itself and not on ANY .wrap. The
+   ">" (direct child) combinator matters here: the mega-footer
+   also builds an inner "<div class='wrap mega-footer-grid'>" of
+   its own for centering its columns, and without the ">" that
+   inner div matches ".wrap" too and silently inherits the same
+   overrides -- which is what was turning the footer's links and
+   the "Samuel Davies" button green. Restricting to the direct
+   child keeps this scoped to the page's own content only, so the
+   masthead and footer (both separate siblings of .wrap, not
+   descendants) stay the site's normal cream/navy regardless.
+   The page canvas itself (body's own background) is set
+   separately below so the grey extends edge-to-edge, not just
+   inside the 1080px column. Both blocks have a
+   [data-theme="dark"] pair, same as the site's existing dark
+   mode. */
 
-body.lab-page { background: #E7E8E3; }
+body.lab-page { background: #B7B9B2; }
 [data-theme="dark"] body.lab-page { background: #17191B; }
 
-body.lab-page .wrap {
-  --bg-card: #DBDDD6;
-  --line: #CACCC4;
+body.lab-page > .wrap {
+  --bg-card: #A6A8A0;
+  --line: #91938B;
   --gold: #2E9E5B;
   --navy: #333B36;
   --navy-deep: #1D2320;
 }
 
-[data-theme="dark"] body.lab-page .wrap {
+[data-theme="dark"] body.lab-page > .wrap {
   --bg-card: #202422;
   --line: #33362F;
   --gold: #4CC489;
@@ -1968,33 +1974,49 @@ body.lab-page .wrap {
    rule (only the site's own dark mode overrides it), so lab
    pages need their own explicit background here to pick up the
    grey card colour in light mode too, not just dark. */
-body.lab-page .wrap .detail { background: var(--bg-card); }
+body.lab-page > .wrap .detail { background: var(--bg-card); }
 
 /* The "selected filter" state reads better in the lab's own
    accent than the reused --navy text colour it inherits from
    filter-btn.active elsewhere on the site. */
-body.lab-page .filter-btn.active { color: var(--gold); border-color: var(--gold); }
+body.lab-page > .wrap .filter-btn.active { color: var(--gold); border-color: var(--gold); }
 
 /* ---------- Spec strip (replaces the plain eyebrow tag on
    lab detail pages with a small labelled data-field row) ---------- */
 
+/* flex-wrap stays "nowrap" deliberately -- if fields ever wrapped
+   onto a second row, that row would stretch to its own height
+   independently of the first, so the divider lines between
+   fields would end up different heights (the "broken" look).
+   Keeping everything on one row, with white-space:nowrap
+   inside each field so long values can't wrap either, guarantees
+   every field -- and its divider -- is exactly the same height,
+   with a horizontal scroll as the fallback on very narrow screens. */
+
 .spec-strip {
   border: 1px solid var(--line);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow-x: auto;
   margin-bottom: 18px;
 }
 
 .spec-field {
-  padding: 6px 18px 6px 0;
-  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px 18px;
   border-right: 1px solid var(--line);
 }
 
-.spec-field:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.spec-field:first-child { padding-left: 14px; }
+.spec-field:last-child { border-right: none; }
 
 .spec-field-label {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -2004,6 +2026,7 @@ body.lab-page .filter-btn.active { color: var(--gold); border-color: var(--gold)
 
 .spec-field-value {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.02em;
@@ -2018,11 +2041,11 @@ body.lab-page .filter-btn.active { color: var(--gold); border-color: var(--gold)
    "02" in the HTML, so sections can be added or reordered
    without ever needing to renumber anything by hand. */
 
-body.lab-page .wrap .detail .body-text {
+body.lab-page > .wrap .detail .body-text {
   counter-reset: labsection;
 }
 
-body.lab-page .wrap .detail .body-text .body-subheading {
+body.lab-page > .wrap .detail .body-text .body-subheading {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 13px;
@@ -2032,7 +2055,7 @@ body.lab-page .wrap .detail .body-text .body-subheading {
   margin: 32px 0 12px;
 }
 
-body.lab-page .wrap .detail .body-text .body-subheading::before {
+body.lab-page > .wrap .detail .body-text .body-subheading::before {
   counter-increment: labsection;
   content: counter(labsection, decimal-leading-zero) "  \2014  ";
 }
