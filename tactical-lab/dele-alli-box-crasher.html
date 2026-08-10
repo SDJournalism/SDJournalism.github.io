@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dele Alli: The Box Crasher -- Samuel Davies</title>
+<meta name="description" content="How Dele Alli's blindside runs off Harry Kane's dropped movement turned him into Tottenham's second striker in a midfielder's shirt.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dele Alli: The Box Crasher">
+<meta property="og:description" content="How Dele Alli's blindside runs off Harry Kane's dropped movement turned him into Tottenham's second striker in a midfielder's shirt.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/dele-alli-box-crasher.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dele Alli: The Box Crasher">
+<meta name="twitter:description" content="How Dele Alli's blindside runs off Harry Kane's dropped movement turned him into Tottenham's second striker in a midfielder's shirt.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/deletaclab.jpg" alt="Dele Alli">
+      <figcaption><a href="https://www.independent.co.uk/sport/football/premier-league/dele-alli-signs-new-tottenham-contract-until-2021-after-impressive-start-to-his-spurs-career-a6807366.html" target="_blank" rel="noopener nofollow">Photo: The Independent</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Dele Alli</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Tottenham Hotspur</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Box Crasher</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="box-crasher-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="box-crasher-name"></span>
+          <div class="buzzword-row" id="box-crasher-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="box-crasher-stage-list"></div>
+        <div class="annotation-legend" id="box-crasher-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="box-crasher-stats"></div>
+
+    <div class="body-text">
+      <p>Across three Premier League seasons under Mauricio Pochettino, Dele Alli built a reputation less as a conventional attacking midfielder than as a support striker who happened to start in midfield. The clearest description of that duality still belongs to Pochettino himself, on Alli after a hard-fought home win over Southampton in 2016/17: "In the box he looks like a striker, and outside the box he plays like a midfielder."</p>
+
+      <h4 class="body-subheading">Shuffling to disappear</h4>
+      <p>Alli's game away from the box was built on constant small adjustments -- shuffling between the lines just enough to stay available for a pass without ever giving a marker a fixed reference point to track.</p>
+
+      <h4 class="body-subheading">The blindside run</h4>
+      <p>The real damage came from what he did once possession arrived elsewhere. Alli specialised in drifting into a slightly withdrawn position before darting onto the blindside of an opposition centre-back -- attacking the space behind a defender's eyeline rather than in front of it, which is why so many of his box arrivals looked, to defenders, like he'd appeared from nowhere.</p>
+
+      <h4 class="body-subheading">Built around Kane, not alongside him</h4>
+      <p>The mechanism depended on Harry Kane. Kane's own habit of dropping short to link play vacated exactly the space Alli was running into, meaning the pair's movement pinned an opposition back line in two directions at once -- one striker dropping short, another arriving late from deep.</p>
+
+      <h4 class="body-subheading">The numbers</h4>
+      <p>Across his first three Premier League seasons at Tottenham, only Manchester City's David Silva touched the ball inside the opposition box more often than Alli among Premier League midfielders. His 2016/17 season -- 18 Premier League goals, most of them born from exactly this kind of off-the-ball movement -- won him a second consecutive PFA Young Player of the Year award, a feat only Ryan Giggs, Robbie Fowler and Wayne Rooney had managed before him.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://theanalyst.com/articles/dele-alli-or-nothing" target="_blank" rel="noopener nofollow">Opta Analyst -- Dele Alli or Nothing: The Space Invader Lost in Time</a></li>
+        <li><a href="https://www.skysports.com/football/news/11675/10848178/tottenhams-dele-alli-crowned-pfa-young-player-of-the-year" target="_blank" rel="noopener nofollow">Sky Sports -- Dele Alli crowned PFA Young Player of the Year</a></li>
+        <li><a href="https://www.thepfa.com/news/2017/4/23/dele-alli-wins-pfa-young-player-of-the-year" target="_blank" rel="noopener nofollow">The PFA -- Dele Alli wins PFA Young Player of the Year</a></li>
+      </ul>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Box%20Crasher%3A%20how%20Dele%20Alli%27s%20blindside%20runs%20off%20Harry%20Kane%20made%20him%20Spurs%27%20second%20striker%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fdele-alli-box-crasher.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Box%20Crasher%3A%20how%20Dele%20Alli%27s%20blindside%20runs%20off%20Harry%20Kane%20made%20him%20Spurs%27%20second%20striker%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fdele-alli-box-crasher.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const BOX_CRASHER_FRAMES = [
+    {
+      name: "Drops Between the Lines",
+      buzzwords: ["Between The Lines"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 35, y: 25, opponent: true },
+        { x: 65, y: 25, opponent: true },
+        { x: 50, y: 15 },
+        { x: 45, y: 45 },
+        { x: 75, y: 30 }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Alli shuffles between the lines to receive" }
+      ]
+    },
+    {
+      name: "Kane Drops, Alli Goes",
+      buzzwords: ["Kane Drops", "Alli Goes"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 38, y: 22, opponent: true },
+        { x: 62, y: 22, opponent: true },
+        { x: 50, y: 35 },
+        { x: 40, y: 20 },
+        { x: 78, y: 25 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Kane drops short to link play, dragging a centre-back out" },
+        { dotIndex: 4, text: "Alli attacks the blindside space Kane's drop creates" }
+      ]
+    },
+    {
+      name: "Arrives Late",
+      buzzwords: ["Arrives Late", "Finish"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 40, y: 20, opponent: true },
+        { x: 60, y: 20, opponent: true },
+        { x: 50, y: 30 },
+        { x: 45, y: 10 },
+        { x: 80, y: 15 }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Arrives late in the box for the finish" }
+      ]
+    }
+  ];
+  const BOX_CRASHER_STATS = [
+    { value: "18", label: "Premier League goals in 2016/17, most from off-the-ball box arrivals" },
+    { value: "2x", label: "PFA Young Player of the Year, won back-to-back in 2015/16 and 2016/17" }
+  ];
+  initFormationDiagram("box-crasher-pitch", "box-crasher-name", "box-crasher-buzzwords", BOX_CRASHER_FRAMES, 3400, "box-crasher-stage-list", "horizontal", "box-crasher-legend");
+  renderStatPanel("box-crasher-stats", BOX_CRASHER_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Dele Alli: The Box Crasher",
+      text: "Dele Alli: The Box Crasher -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/dele-alli-box-crasher.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

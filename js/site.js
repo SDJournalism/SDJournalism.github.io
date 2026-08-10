@@ -1083,8 +1083,8 @@ const LAB_FILTER_HEADINGS = {
   },
   "Tactical Vault": {
     eyebrow: "Tactical Vault",
-    heading: "Classic systems from Premier League history",
-    description: "Title-winning managers and the players who defined them, rebuilt as moving diagrams from Premier League history."
+    heading: "Archive systems from Premier League clubs and players",
+    description: "Managers and players with Premier League pedigree, rebuilt as moving diagrams -- whichever competition the tactical moment itself came from."
   }
 };
 

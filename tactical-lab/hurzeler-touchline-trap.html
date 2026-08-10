@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabian Hürzeler: The Touchline Trap -- Samuel Davies</title>
+<meta name="description" content="How Fabian Hürzeler turns Brighton's wide press into a trap -- using the touchline itself as an extra defender.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fabian Hürzeler: The Touchline Trap">
+<meta property="og:description" content="How Fabian Hürzeler turns Brighton's wide press into a trap -- using the touchline itself as an extra defender.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/hurzeler-touchline-trap.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fabian Hürzeler: The Touchline Trap">
+<meta name="twitter:description" content="How Fabian Hürzeler turns Brighton's wide press into a trap -- using the touchline itself as an extra defender.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/hurzelertaclab.jpg" alt="Fabian Hürzeler">
+      <figcaption><a href="https://www.independent.co.uk/sport/football/fabian-hurzeler-brighton-everton-premier-league-b2597852.html" target="_blank" rel="noopener nofollow">Photo: The Independent</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Fabian Hürzeler</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Brighton &amp; Hove Albion</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Touchline Trap</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="touchline-trap-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="touchline-trap-name"></span>
+          <div class="buzzword-row" id="touchline-trap-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="touchline-trap-stage-list"></div>
+        <div class="annotation-legend" id="touchline-trap-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="touchline-trap-stats"></div>
+
+    <div class="body-text">
+      <p>Fabian Hürzeler was appointed Brighton &amp; Hove Albion head coach on 15 June 2024 at the age of 31 -- to this day the youngest permanent head coach in Premier League history, and the first ever born after the competition itself began. He arrived in Sussex having just guided St Pauli back into the Bundesliga, and by May 2026 had done enough to sign a new three-year contract to 2029 with Brighton on the cusp of a European finish, turning down interest from Bayer Leverkusen to stay. The clearest thread running through that rise is what has become known as the touchline trap.</p>
+
+      <h4 class="body-subheading">Hunting in pairs, not zones</h4>
+      <p>Rather than screening passing lanes from a fixed zonal shape, Hürzeler's Brighton match up man-for-man across the pitch, every outfield player assigned an opponent to follow and press. It's built to force the opposition backwards rather than sideways, and it demands a level of repeat-sprint fitness Hürzeler treats as non-negotiable in his squad.</p>
+
+      <h4 class="body-subheading">The touchline as an extra defender</h4>
+      <p>The wide trap is where it bites hardest. Brighton show an opponent down the line on purpose, then collapse three or four bodies around him at once -- using the touchline itself to remove one passing option before a single Brighton player has actually closed him down. Every slow pass or backwards ball is the trigger: the front line steps up, and the rest of the team squeezes with it to stay compact.</p>
+
+      <h4 class="body-subheading">Built to be broken, on purpose</h4>
+      <p>Brighton's build-up shape works on the same logic in reverse. Centre-backs split wide, a central midfielder drops between or beside them, and -- when the space invites it -- one of those centre-backs will simply step into midfield himself. Every rotation is designed to drag an opposition presser out of position and leave a free man in the pocket he's just vacated.</p>
+
+      <h4 class="body-subheading">In the match: Brighton 2-0 Everton</h4>
+      <p>The trap showed up cleanly at the Amex. An Everton centre-back was shown down the right touchline, three Brighton players closing the triangle around him inside four seconds, and the ball won back deep in Everton's own half. Brighton worked it forward for their second goal inside twelve seconds of the turnover -- the trap doing the work a tackle usually gets the credit for.</p>
+
+      <h4 class="body-subheading">The numbers</h4>
+      <p>The clearest evidence sits in the offside count. In the opening four matches of his first Premier League season, Brighton won more offsides against their opponents than any other side in the competition -- a back line squeezing up the pitch together rather than sitting deep, exactly the platform the touchline trap is built from.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.premierleague.com/en/news/4139913/fabian-hurzeler" target="_blank" rel="noopener nofollow">Premier League -- Fabian Hürzeler</a></li>
+        <li><a href="https://www.espn.com/soccer/story/_/id/48703826/brighton-boss-fabian-hurzeler-signs-three-year-contract-extension" target="_blank" rel="noopener nofollow">ESPN -- Hürzeler signs three-year contract extension</a></li>
+        <li><a href="https://totalfootballanalysis.com/head-coach-analysis/fabian-hurzeler-brighton-202425-tactical-analysis-tactics" target="_blank" rel="noopener nofollow">Total Football Analysis -- Fabian Hürzeler tactics at Brighton</a></li>
+        <li><a href="https://www.squawka.com/en/features/tactical-analysis-brighton-hurzeler-evolution/" target="_blank" rel="noopener nofollow">Squawka -- Hürzeler's tactical evolution at Brighton</a></li>
+      </ul>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Touchline%20Trap%3A%20how%20Fabian%20H%C3%BCrzeler%27s%20Brighton%20use%20the%20line%20as%20an%20extra%20defender%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fhurzeler-touchline-trap.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Touchline%20Trap%3A%20how%20Fabian%20H%C3%BCrzeler%27s%20Brighton%20use%20the%20line%20as%20an%20extra%20defender%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fhurzeler-touchline-trap.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const TOUCHLINE_TRAP_FRAMES = [
+    {
+      name: "Show Wide",
+      buzzwords: ["Show Wide"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 30, y: 78 },
+        { x: 70, y: 78 },
+        { x: 52, y: 55 },
+        { x: 85, y: 45 },
+        { x: 88, y: 38, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Cuts the pass back inside, showing the ball down the line" }
+      ]
+    },
+    {
+      name: "Trap Set",
+      buzzwords: ["Trap Set"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 35, y: 75 },
+        { x: 68, y: 72 },
+        { x: 68, y: 42 },
+        { x: 90, y: 40 },
+        { x: 92, y: 36, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 5, text: "Pinned against the touchline -- his fourth defender" },
+        { dotIndex: 3, text: "Second presser closes the passing lane back inside" }
+      ]
+    },
+    {
+      name: "Turnover Won",
+      buzzwords: ["Turnover Won", "Break"],
+      dots: [
+        { x: 50, y: 95, gk: true },
+        { x: 40, y: 70 },
+        { x: 60, y: 65 },
+        { x: 55, y: 50 },
+        { x: 75, y: 25 },
+        { x: 85, y: 45, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Turnover won -- Brighton break before the opponent can turn" }
+      ]
+    }
+  ];
+  const TOUCHLINE_TRAP_STATS = [
+    { value: "31", label: "Age when appointed in June 2024 -- the youngest permanent head coach in Premier League history" },
+    { value: "19", label: "Offsides won inside his first four Premier League matches -- most of any side" }
+  ];
+  initFormationDiagram("touchline-trap-pitch", "touchline-trap-name", "touchline-trap-buzzwords", TOUCHLINE_TRAP_FRAMES, 3400, "touchline-trap-stage-list", "horizontal", "touchline-trap-legend");
+  renderStatPanel("touchline-trap-stats", TOUCHLINE_TRAP_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Fabian Hürzeler: The Touchline Trap",
+      text: "Fabian Hürzeler: The Touchline Trap -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/hurzeler-touchline-trap.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

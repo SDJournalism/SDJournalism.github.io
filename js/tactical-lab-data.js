@@ -54,5 +54,41 @@ const tacticalLabEntries = [
     imageLink: "https://www.chelseafc.com/en/eden-hazard",
     imageCredit: "Photo: Chelsea FC",
     comingSoon: false
+  },
+  {
+    id: "hurzeler-touchline-trap",
+    category: "Manager DNA",
+    title: "Fabian Hürzeler: The Touchline Trap",
+    excerpt: "How Fabian Hürzeler turns Brighton's wide press into a trap -- using the touchline itself as an extra defender.",
+    team: "Brighton & Hove Albion",
+    competition: "Premier League",
+    image: "images/fabiantaclab.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/fabian-hurzeler-brighton-everton-premier-league-b2597852.html",
+    imageCredit: "Photo: The Independent",
+    comingSoon: false
+  },
+  {
+    id: "liverpool-1819-full-back-overload",
+    category: "Tactical Vault",
+    title: "Liverpool 2018/19: The Full-Back Overload",
+    excerpt: "How Jürgen Klopp's gegenpress freed Trent Alexander-Arnold and Andy Robertson to become auxiliary wingers on Liverpool's run to the 2019 Champions League.",
+    team: "Liverpool",
+    competition: "Champions League",
+    image: "images/liverpoolcltaclab.jpeg",
+    imageLink: "https://www.liverpoolfc.com/news/first-team/351532-jurgen-klopp-champions-league-final-reaction",
+    imageCredit: "Photo: Liverpool FC",
+    comingSoon: false
+  },
+  {
+    id: "dele-alli-box-crasher",
+    category: "Tactical Vault",
+    title: "Dele Alli: The Box Crasher",
+    excerpt: "How Dele Alli's blindside runs off Harry Kane's dropped movement turned him into Tottenham's second striker in a midfielder's shirt.",
+    team: "Tottenham Hotspur",
+    competition: "Premier League",
+    image: "images/deletaclab.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/premier-league/dele-alli-signs-new-tottenham-contract-until-2021-after-impressive-start-to-his-spurs-career-a6807366.html",
+    imageCredit: "Photo: The Independent",
+    comingSoon: false
   }
 ];
