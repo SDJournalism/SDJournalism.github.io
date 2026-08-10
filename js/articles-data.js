@@ -46,6 +46,43 @@
 
 const articles = [
 {
+    id: 9,
+    title: "UEFA Super Cup Preview: Aston Villa Chase a Second European Trophy Against Champions League Holders PSG",
+    type: "Match Preview",
+    competition: "UEFA Super Cup",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/villapsgsupercup.jpg",
+    imageLink: "https://www.goal.com/en/lists/alejandro-garnacho-dig-chelsea-aston-villa-indonesia/blt3a0e7605d0f892a0",
+    imageCredit: "Photo: GOAL",
+    excerpt: "Three months after their first-ever Europa League triumph, Aston Villa face the toughest test imaginable: back-to-back Champions League winners PSG in the UEFA Super Cup. We look at how both sides got here, the Premier League's uneasy recent history in this fixture, and the World Cup hangover complicating team news on both sides.",
+    content: [
+      "Aston Villa's remarkable season continues on Wednesday night, when Unai Emery's side travel to Austria to face Paris Saint-Germain in the UEFA Super Cup, the traditional curtain-raiser to the new European season. Three months after beating Freiburg 3-0 in Istanbul to win their first-ever UEFA Europa League title, Villa now face the toughest possible test of that achievement: the back-to-back Champions League holders, chasing a piece of history of their own.",
+      "How both sides got here",
+      "PSG's route to Salzburg was earned the hard way. Luis Enrique's side beat Arsenal on penalties in Budapest in May, retaining the Champions League and becoming only the second team since Real Madrid in 2016 and 2017 to defend the European Cup (Goal.com, 2026). Villa's path was arguably even more improbable, with goals from Youri Tielemans, Emiliano Buendia and Morgan Rogers seeing off Freiburg in Istanbul to win a first European trophy in over 40 years.",
+      "The Premier League's recent history here",
+      "There is a slightly uncomfortable precedent for Villa to be aware of. This is the second year running that a Premier League club has represented English football in the Super Cup final against PSG, and last year did not end well. Tottenham Hotspur led 2-0 through Micky van de Ven and Cristian Romero in Udine last August, only for PSG to score twice in the final five minutes through Lee Kang-in and Goncalo Ramos, before winning 4-3 on penalties (ESPN, 2025). Villa will hope to avoid a repeat of that late collapse, but the warning is clear: PSG have twice shown against English opposition that they do not need to be at their best for long to still find a way to win.",
+      "A history of near misses",
+      "Villa and PSG are no strangers to each other, and their only previous meetings suggest this fixture rarely lacks drama. The two sides met in the 2024-25 Champions League quarter-finals, with PSG winning the first leg 3-1 at Parc des Princes before Villa produced a spirited 3-2 win at home in the return leg, Morgan Rogers among the scorers on both occasions. PSG progressed 5-4 on aggregate, but Villa's fightback from 5-1 down at one stage remains one of Villa Park's most memorable European nights (Goal.com, 2026).",
+      "Villa's missing men",
+      "Complicating Villa's task considerably is the fact that two of their Europa League final goalscorers will not be involved on Wednesday. Morgan Rogers completed a British-record £117 million move to Chelsea earlier this summer, while Youri Tielemans left for Manchester United in a £35 million deal. Losing two players who scored two of Villa's three goals in Istanbul is a significant blow, leaving Emery's attacking options notably thinner than they were in May.",
+      "Team news: a World Cup hangover",
+      "Villa's preparation has also been complicated by the World Cup, which finished less than a month ago. Amadou Onana, Johan Manzambi and Leon Bailey are all definitely unavailable, with Onana and Manzambi out through knee injuries and Bailey sidelined by a muscular problem. Emiliano Martinez, Ezri Konsa and Ollie Watkins are all doubts after returning late from international duty, with Martinez having carried the heaviest workload of any Premier League player this summer during Argentina's run to the World Cup final (Read Aston Villa, 2026). John McGinn is being managed after a knee concern, and new loan signing Alejandro Garnacho, who could make his competitive debut, picked up a facial injury in pre-season. If Martinez isn't passed fit, Marco Bizot is set to deputise in goal.",
+      "PSG have their own fitness questions to answer. Ousmane Dembele, Bradley Barcola and Achraf Hakimi are among several senior players managing a late return from the World Cup, featuring only sparingly in a recent friendly draw with Manchester United as a result. New signing Maghnes Akliouche arrived from Monaco only last Thursday and is unlikely to start (Read Aston Villa, 2026).",
+      "What to expect",
+      "Both squads head into Wednesday undercooked by their own admission. Villa have won two and lost three of their last five pre-season matches, including a 2-1 defeat to Bayern Munich just four days out, while PSG's own form has been similarly patchy following their exertions in Budapest. Expect a cagey opening period as both managers manage fitness carefully, before space opens up as substitutions are made. Emery is likely to set up in a 4-2-3-1, with Boubacar Kamara and Joao Gomes screening the back four and Watkins leading the line if fit, while Luis Enrique's PSG should line up in their familiar 4-3-3, built around Vitinha and Joao Neves in midfield.",
+      "Whatever happens on Wednesday, Villa have already delivered one of English football's more remarkable European campaigns in years. Beating PSG would be a statement in its own right, not just for Villa's season but for English football's credibility against the current dominant force in Europe. Losing, as Tottenham found out twelve months ago, would not undo what Villa have already achieved. But for a club chasing only its second Super Cup appearance in more than 40 years, the chance to win it is not one Emery's side will want to let slip."
+    ],
+    sources: [
+      { label: "Goal.com -- PSG vs Aston Villa: Comprehensive UEFA Super Cup preview", url: "https://www.goal.com/en/news/paris-saint-germain-aston-villa-uefa-super-cup-preview/bltdfff59300d29b07f" },
+      { label: "ESPN -- PSG 2-2 Spurs (Aug 13, 2025) Game Analysis", url: "https://www.espn.com/soccer/report/_/gameId/735899" },
+      { label: "Read Aston Villa -- Aston Villa v PSG: Predicted line-up, injury news and how to watch", url: "https://readastonvilla.com/2026/08/08/aston-villa-v-psg-predicted-line-up-injury-news-and-how-to-watch/" }
+    ],
+    players: [],
+    teams: ["Aston Villa"],
+    featured: true
+  },
+{
     id: 8,
     title: "Transfer Round-Up: Anderson, Rogers and Guimaraes Redraw the Premier League's Spending Rules",
     type: "Analysis",
