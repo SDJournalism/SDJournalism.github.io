@@ -4,6 +4,12 @@
    Each entry is one Tactical Lab piece. Categories must be exactly
    one of: "Manager DNA", "Player Blueprints", "Tactical Vault".
 
+   date is the piece's release date on the site (format: "YYYY-MM-DD"),
+   same convention as articles-data.js. The hub grid always sorts by
+   this field (oldest to newest), so entries here don't need to be
+   listed in date order themselves -- just give each new piece a date
+   and the grid will place it correctly on its own.
+
    team / competition are optional and use the exact same values
    as articles-data.js (see PREMIER_LEAGUE_CLUBS / COMPETITIONS in
    site.js) so the same filter dropdowns can be reused here.
@@ -26,6 +32,7 @@ const tacticalLabEntries = [
     excerpt: "Why De Zerbi's Tottenham park the ball in their own box on purpose -- and how the resulting press-bait turns an opponent's pressure into a route through it.",
     team: "Tottenham Hotspur",
     competition: "Premier League",
+    date: "2026-07-14",
     image: "images/RDZtaclab.jpg",
     imageLink: "https://www.football.london/tottenham-hotspur-fc/news/roberto-de-zerbi-tottenham-training-33714938",
     imageCredit: "Photo: Football London",
@@ -38,6 +45,7 @@ const tacticalLabEntries = [
     excerpt: "How Antoine Semenyo turns an opponent's mistake into three seconds of terror -- the sprint in behind that made him one of the Premier League's most dangerous transition weapons.",
     team: "Manchester City",
     competition: "Premier League",
+    date: "2026-07-22",
     image: "images/semenyotaclab.jpg",
     imageLink: "https://www.manchestereveningnews.co.uk/sport/football/football-news/antoine-semenyo-excited-new-man-34391383",
     imageCredit: "Photo: Manchester Evening News",
@@ -50,6 +58,7 @@ const tacticalLabEntries = [
     excerpt: "How Antonio Conte's back three freed Eden Hazard from defensive duty and turned Chelsea's left flank into an unsolvable 2v1 during their 2016/17 title run.",
     team: "Chelsea",
     competition: "Premier League",
+    date: "2026-07-29",
     image: "images/hazardtaclab.jpg",
     imageLink: "https://www.chelseafc.com/en/eden-hazard",
     imageCredit: "Photo: Chelsea FC",
@@ -62,6 +71,7 @@ const tacticalLabEntries = [
     excerpt: "How Fabian Hürzeler turns Brighton's wide press into a trap -- using the touchline itself as an extra defender.",
     team: "Brighton & Hove Albion",
     competition: "Premier League",
+    date: "2026-08-10",
     image: "images/fabiantaclab.jpg",
     imageLink: "https://www.independent.co.uk/sport/football/fabian-hurzeler-brighton-everton-premier-league-b2597852.html",
     imageCredit: "Photo: The Independent",
@@ -74,6 +84,7 @@ const tacticalLabEntries = [
     excerpt: "How Jürgen Klopp's gegenpress freed Trent Alexander-Arnold and Andy Robertson to become auxiliary wingers on Liverpool's run to the 2019 Champions League.",
     team: "Liverpool",
     competition: "Champions League",
+    date: "2026-08-10",
     image: "images/liverpoolcltaclab.jpeg",
     imageLink: "https://www.liverpoolfc.com/news/first-team/351532-jurgen-klopp-champions-league-final-reaction",
     imageCredit: "Photo: Liverpool FC",
@@ -86,6 +97,7 @@ const tacticalLabEntries = [
     excerpt: "How Dele Alli's blindside runs off Harry Kane's dropped movement turned him into Tottenham's second striker in a midfielder's shirt.",
     team: "Tottenham Hotspur",
     competition: "Premier League",
+    date: "2026-08-10",
     image: "images/deletaclab.jpg",
     imageLink: "https://www.independent.co.uk/sport/football/premier-league/dele-alli-signs-new-tottenham-contract-until-2021-after-impressive-start-to-his-spurs-career-a6807366.html",
     imageCredit: "Photo: The Independent",

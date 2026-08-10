@@ -988,7 +988,7 @@ function renderStatPanel(containerId, stats) {
 /* ---------- Lab entry grid (reuses .article-grid / .card look) ---------- */
 
 function sortedLabEntries() {
-  return [...tacticalLabEntries];
+  return [...tacticalLabEntries].sort((a, b) => new Date(a.date || 0) - new Date(b.date || 0));
 }
 
 function labThumbHTML(entry) {
