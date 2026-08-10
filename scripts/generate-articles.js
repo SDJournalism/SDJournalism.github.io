@@ -235,6 +235,7 @@ function renderMasthead() {
     <nav class="site-nav">
       <a href="../index.html">Home</a>
       <a href="../articles.html" class="active">Articles</a>
+      <a href="../tactical-lab.html">Tactical Lab</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
@@ -296,6 +297,8 @@ function renderFooter() {
       <span class="eyebrow">Site Map</span>
       <nav class="footer-links">
         <a href="../index.html">Home</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../tactical-lab.html">Tactical Lab</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
       </nav>

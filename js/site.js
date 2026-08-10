@@ -404,6 +404,7 @@ function renderKicker() {
 const SITEMAP_PAGES = [
   { key: "index", label: "Home", href: "index.html" },
   { key: "articles", label: "Articles", href: "articles.html" },
+  { key: "tactical-lab", label: "Tactical Lab", href: "tactical-lab.html" },
   { key: "about", label: "About", href: "about.html" },
   { key: "contact", label: "Contact", href: "contact.html" }
 ];
@@ -623,6 +624,171 @@ function setupFilters() {
       if (searchEl && SEARCH_PLACEHOLDERS[currentFilter]) {
         searchEl.placeholder = SEARCH_PLACEHOLDERS[currentFilter];
       }
+    });
+  });
+}
+
+/* ============================================================
+   TACTICAL LAB
+   ============================================================ */
+
+/* ---------- Formation-morph diagram ----------
+   A pitch of 11 dots (index 0 = GK) that smoothly repositions
+   itself between formations on a timer. Coordinates are in real
+   pitch metres (0-68 wide, 0-105 long, 0 = attacking/opponent's
+   goal end) so they line up with the SVG markings below -- the
+   JS just converts metres to a left/top percentage and lets the
+   CSS transition on .formation-dot do the actual animating.
+
+   Player "identity" (dot index) is kept consistent across every
+   formation on purpose: dot 4, for example, starts as a right-back
+   in the 4-3-3, tucks into an auxiliary role, then overlaps all
+   the way to a wide forward by the 3-2-5. That's what lets the
+   diagram visually explain a buzzword like "Invert" or "Overload"
+   rather than just relabelling a static shape. */
+
+const PITCH_SVG_MARKUP = `<svg class="pitch-lines" viewBox="0 0 68 105" preserveAspectRatio="none">
+  <rect x="1" y="1" width="66" height="103" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <line x1="1" y1="52.5" x2="67" y2="52.5" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="34" cy="52.5" r="9.15" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="34" cy="52.5" r="0.4" fill="rgba(245,246,241,0.35)"/>
+  <rect x="13.84" y="0" width="40.32" height="16.5" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="24.84" y="0" width="18.32" height="5.5" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="13.84" y="88.5" width="40.32" height="16.5" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="24.84" y="99.5" width="18.32" height="5.5" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="34" cy="11" r="0.4" fill="rgba(245,246,241,0.35)"/>
+  <circle cx="34" cy="94" r="0.4" fill="rgba(245,246,241,0.35)"/>
+</svg>`;
+
+const FORMATION_FRAMES = [
+  {
+    name: "4-3-3",
+    buzzwords: ["Base Shape"],
+    dots: [
+      { x: 34, y: 97, gk: true },
+      { x: 10, y: 78 }, { x: 26, y: 82 }, { x: 42, y: 82 }, { x: 58, y: 78 },
+      { x: 20, y: 55 }, { x: 34, y: 50 }, { x: 48, y: 55 },
+      { x: 12, y: 22 }, { x: 34, y: 14 }, { x: 56, y: 22 }
+    ]
+  },
+  {
+    name: "3-2-4-1",
+    buzzwords: ["Invert", "Overload"],
+    dots: [
+      { x: 34, y: 97, gk: true },
+      { x: 17, y: 80 }, { x: 34, y: 75 }, { x: 51, y: 80 }, { x: 58, y: 32 },
+      { x: 24, y: 55 }, { x: 44, y: 55 }, { x: 26, y: 28 },
+      { x: 10, y: 32 }, { x: 34, y: 12 }, { x: 42, y: 28 }
+    ]
+  },
+  {
+    name: "3-2-5",
+    buzzwords: ["Rotate", "Progress"],
+    dots: [
+      { x: 34, y: 97, gk: true },
+      { x: 17, y: 80 }, { x: 34, y: 75 }, { x: 51, y: 80 }, { x: 62, y: 26 },
+      { x: 24, y: 55 }, { x: 44, y: 55 }, { x: 22, y: 18 },
+      { x: 6, y: 26 }, { x: 34, y: 12 }, { x: 46, y: 18 }
+    ]
+  }
+];
+
+function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs) {
+  const pitchEl = document.getElementById(pitchId);
+  const nameEl = document.getElementById(nameId);
+  const buzzEl = document.getElementById(buzzId);
+  if (!pitchEl || !frames || frames.length === 0) return;
+
+  pitchEl.innerHTML = PITCH_SVG_MARKUP;
+  const dotEls = frames[0].dots.map(d => {
+    const el = document.createElement("div");
+    el.className = "formation-dot" + (d.gk ? " is-gk" : "") + (d.opponent ? " is-opponent" : "");
+    pitchEl.appendChild(el);
+    return el;
+  });
+
+  function toPercent(d) {
+    return { left: (d.x / 68) * 100 + "%", top: (d.y / 105) * 100 + "%" };
+  }
+
+  function show(index) {
+    const frame = frames[index];
+    frame.dots.forEach((d, i) => {
+      const el = dotEls[i];
+      if (!el) return;
+      const pos = toPercent(d);
+      el.style.left = pos.left;
+      el.style.top = pos.top;
+    });
+    if (nameEl) nameEl.textContent = frame.name;
+    if (buzzEl) {
+      buzzEl.innerHTML = frame.buzzwords
+        .map((w, i) => `<span class="buzzword-chip" style="animation-delay:${i * 0.15}s">${w}</span>`)
+        .join("");
+    }
+  }
+
+  let current = 0;
+  show(current);
+  if (frames.length > 1) {
+    setInterval(() => {
+      current = (current + 1) % frames.length;
+      show(current);
+    }, intervalMs || 4200);
+  }
+}
+
+/* ---------- Lab entry grid (reuses .article-grid / .card look) ---------- */
+
+function sortedLabEntries() {
+  return [...tacticalLabEntries];
+}
+
+function labCardHTML(entry) {
+  if (entry.comingSoon) {
+    return `
+      <div class="card coming-soon">
+        <div class="meta-row">
+          <span class="type-pill">${entry.category}</span>
+          <span class="coming-soon-badge">Coming Soon</span>
+        </div>
+        <h3>${entry.title}</h3>
+        <p class="excerpt">${entry.excerpt}</p>
+        <span class="read-link">In the works &rarr;</span>
+      </div>
+    `;
+  }
+  return `
+    <a class="card" href="tactical-lab/${entry.id}.html">
+      <div class="meta-row">
+        <span class="type-pill">${entry.category}</span>
+      </div>
+      <h3>${entry.title}</h3>
+      <p class="excerpt">${entry.excerpt}</p>
+      <span class="read-link">Read the breakdown &rarr;</span>
+    </a>
+  `;
+}
+
+let currentLabFilter = "All";
+
+function renderLabGrid(gridId) {
+  const el = document.getElementById(gridId);
+  if (!el) return;
+  const all = sortedLabEntries().filter(e => currentLabFilter === "All" || e.category === currentLabFilter);
+  el.innerHTML = all.length
+    ? all.map(labCardHTML).join("")
+    : `<p class="no-results">Nothing here yet.</p>`;
+}
+
+function setupLabFilters(gridId) {
+  const buttons = document.querySelectorAll(".lab-filter-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentLabFilter = btn.dataset.filter;
+      renderLabGrid(gridId);
     });
   });
 }
