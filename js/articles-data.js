@@ -46,6 +46,40 @@
 
 const articles = [
 {
+    id: 8,
+    title: "Transfer Round-Up: Anderson, Rogers and Guimaraes Redraw the Premier League's Spending Rules",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/transferroundup.JPG",
+    imageLink: "https://www.mancity.com/news/mens/elliot-anderson-first-day-gallery-63920411",
+    imageCredit: "Photo: Manchester City",
+    excerpt: "Two British transfer records broken inside a month, and Newcastle United banking more than £240 million in sales. We break down what the completed moves for Elliot Anderson, Morgan Rogers and Bruno Guimaraes actually tell us about where Premier League money is going this summer.",
+    content: [
+      "Summer transfer windows produce headlines every year, but the last few weeks of this one have delivered something more unusual: two British transfer records broken inside a month, and Newcastle United, of all clubs, sitting at the centre of the window's biggest exit story. Here's what three of the summer's most significant completed deals actually tell us about where Premier League money is going.",
+      "A record broken twice",
+      "Elliot Anderson's £116 million move from Nottingham Forest to Manchester City looked, when it was agreed in June, like the kind of fee that would stand for years. Forest, who had paid roughly a tenth of that figure to sign him from Newcastle only two seasons earlier, held firm on their valuation throughout, and City eventually met it in full to beat Manchester United to a 23-year-old they had watched closely since his breakthrough season at the City Ground (ESPN, 2026).",
+      "It didn't stand for long. Within weeks, Chelsea agreed £117 million with Aston Villa for Morgan Rogers, edging past Anderson's fee by a single million pounds and making Rogers, on paper, the most expensive British player in football history (Goal.com, 2026). Both deals were driven by a similar calculation: two 23-year-old England internationals, already Premier League-proven, with resale value still ahead of them, bought by clubs unwilling to let a domestic rival get there first.",
+      "Why domestic fees keep climbing",
+      "The scale of both fees says as much about the market as it does about either player. English-qualified players help squads meet homegrown quota rules more comfortably than imports, and buying domestically avoids the complications that can come with recruiting from abroad. Add two clubs, City and Chelsea, both operating comfortably within profit and sustainability limits and both determined not to lose a rival transfer battle, and fees this size stop looking like outliers and start looking like the going rate for proven English talent.",
+      "Newcastle's summer of exits",
+      "The third deal worth examining involves less spending and more selling. Bruno Guimaraes's £75 million move to Arsenal was, by his own account, driven by a personal request to leave St James' Park after four years as one of Newcastle's most important players. Newcastle didn't fight it. If anything, the club leaned into the sale, with the deal taking their total player sales this summer past £240 million, a figure that also includes Sandro Tonali's British-record move to Tottenham and Anthony Gordon's departure to Barcelona (Sky Sports, 2026).",
+      "That volume of outgoing business looks like a deliberate strategy rather than a fire sale. Newcastle have spent much of the summer reinvesting the proceeds into a younger, cheaper squad, while banking a substantial transfer surplus that strengthens their position under profit and sustainability rules for seasons to come. Losing Guimaraes, a genuine fan favourite and long-serving captain, is a real footballing cost. Financially, it looks closer to the plan working exactly as intended.",
+      "The bigger picture",
+      "Taken together, these three deals total more than £300 million in confirmed spending, agreed inside a single transfer window, on three players who have all featured for their countries at senior international level within the past year. It's a reminder of how far transfer inflation has moved even by recent standards, and of how directly profit and sustainability rules now shape which clubs can spend and which are forced to sell. Anderson and Rogers show what the buying end of that equation looks like when two clubs both refuse to blink. Guimaraes shows the selling end: even a club as ambitious as Newcastle now treats a homegrown-feeling talisman as an asset to be cashed in under the right circumstances, rather than a player to be protected at all costs.",
+      "None of the three deals guarantees success on the pitch, big fees rarely do on their own, but together they tell a consistent story about the state of the market heading into the season: British internationals with sell-on value are now worth more than continental imports of similar quality, PSR is dictating almost as much transfer business as ambition is, and Newcastle, historically one of the window's biggest spenders, has spent this summer as one of its most disciplined sellers."
+    ],
+    sources: [
+      { label: "Sky Sports -- Bruno Guimaraes: Arsenal sign midfielder in £75m transfer as Newcastle surpass £240m in player sales this summer", url: "https://www.skysports.com/football/news/11095/13570096/bruno-guimaraes-arsenal-sign-midfielder-in-lb75m-transfer-as-newcastle-surpass-lb240m-in-player-sales-this-summer" },
+      { label: "ESPN -- Elliot Anderson completes move to Manchester City from Nottingham Forest", url: "https://www.espn.com/soccer/story/_/id/49433223/elliot-anderson-completes-move-manchester-city-nottingham-forest" },
+      { label: "Goal.com -- Chelsea complete record-breaking £117m transfer for Morgan Rogers, with England international leaving Aston Villa as the most expensive British player of all-time", url: "https://www.goal.com/en/lists/chelsea-record-breaking-117m-transfer-morgan-rogers-aston-villa-british-player/blt51956570079aa15b" }
+    ],
+    players: ["Bruno Guimaraes", "Morgan Rogers", "Elliot Anderson"],
+    teams: ["Arsenal", "Newcastle United", "Chelsea", "Aston Villa", "Manchester City", "Nottingham Forest"],
+    featured: true
+  },
+{
     id: 7,
     title: "Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated",
     type: "Opinion",
