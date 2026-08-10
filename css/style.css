@@ -700,9 +700,10 @@ nav.site-nav a.active {
 }
 
 /* Keep the reset button's space reserved even when inactive, so the
-   filter row doesn't shrink/reflow when switching to "All" */
-.reset-filters-btn[hidden] {
-  display: inline-block;
+   filter row doesn't shrink/reflow when switching to "All". A class
+   (rather than the hidden attribute) is used so it never falls back
+   to display:none. */
+.reset-filters-btn.is-inactive {
   visibility: hidden;
   pointer-events: none;
 }

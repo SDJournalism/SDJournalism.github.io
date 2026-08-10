@@ -514,7 +514,12 @@ function updateFilterControlsVisibility() {
   const searchClearBtn = document.getElementById("search-clear");
   const hasActiveFilters = currentFilter !== "All" || currentTeam !== "All" ||
     currentCompetition !== "All" || currentSearch.trim() !== "";
-  if (resetBtn) resetBtn.hidden = !hasActiveFilters;
+  // Use a class instead of the "hidden" attribute here (unlike the search-
+  // clear button below) -- the reset button sits inline in the filter row,
+  // so hiding it with display:none would shrink the row's width every time
+  // filters go back to "All". The is-inactive class just makes it invisible
+  // while still reserving its space, so the row stays a consistent size.
+  if (resetBtn) resetBtn.classList.toggle("is-inactive", !hasActiveFilters);
   if (searchClearBtn) searchClearBtn.hidden = currentSearch === "";
 }
 
@@ -821,6 +826,14 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
       current = (current + 1) % frames.length;
       show(current);
     }, effectiveInterval);
+    // Store the live interval on the element itself so the NEXT call to
+    // initFormationDiagram (e.g. clicking a different filter tab) can find
+    // and clear it. Without this, old timers never got cancelled -- they
+    // kept running in the background and overwriting the shared name/
+    // buzzword text with frames from whichever example was last cycling,
+    // which is why stale words (like "Bergkamp") could flash up on a
+    // different tab.
+    pitchEl._diagramTimer = timer;
   }
 
   function jumpTo(index) {
@@ -915,7 +928,7 @@ function updateLabFilterControlsVisibility() {
   const searchClearBtn = document.getElementById("lab-search-clear");
   const hasActiveFilters = currentLabFilter !== "All" || currentLabTeam !== "All" ||
     currentLabCompetition !== "All" || currentLabSearch.trim() !== "";
-  if (resetBtn) resetBtn.hidden = !hasActiveFilters;
+  if (resetBtn) resetBtn.classList.toggle("is-inactive", !hasActiveFilters);
   if (searchClearBtn) searchClearBtn.hidden = currentLabSearch === "";
 }
 
