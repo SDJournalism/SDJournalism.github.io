@@ -46,6 +46,31 @@
 
 const articles = [
 {
+    id: 10,
+    title: "Scouting Report: Brian Madjo -- The 17-Year-Old Aston Villa Had to Fight FIFA to Register",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/brianmadjo.jpg",
+    imageLink: "https://www.bbc.com/sport/football/articles/cgr74dj0xryo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Aston Villa signed Brian Madjo from Metz in January for £10m, but FIFA's rules on international transfers involving minors meant the 17-year-old striker couldn't play a single competitive minute -- until a Court of Arbitration for Sport ruling changed everything days before the UEFA Super Cup final.",
+    content: [
+      "Not every scouting report exists because a player is already good enough to demand attention. Some exist because of everything that had to happen just for a player to be selectable in the first place. Brian Madjo's belongs to the second category -- although on the evidence of this pre-season, it may not stay there for long.",
+      "Aston Villa signed the 17-year-old centre-forward from French club Metz in January 2026 for a reported £10m, on a five-and-a-half-year contract. Born in Enfield to Cameroonian parents before being raised in Luxembourg, Madjo came through the youth ranks at Racing Union and Marisca Mersch before Metz picked him up, where 13 goals in 26 games for the club's Under-19 side earned him a quick promotion to the senior squad.",
+      "It was, by the standards of a mid-table Premier League club's January window, a low-key piece of business. It has not stayed that way.",
+      "Villa's problem was never Madjo's ability -- it was FIFA's paperwork. Because Madjo had represented Luxembourg at youth level before switching allegiance to England, his move from Metz was classed as an international transfer involving a minor, a category FIFA restricts until a player turns 18. In practice, that meant Villa would not have been able to register him for competitive football until January 2027, a full year after signing him.",
+      "Villa disputed that ruling on the grounds that Madjo was born in Enfield and holds British citizenship, and took the case to the Court of Arbitration for Sport. On 4 August 2026, CAS upheld the club's appeal, ruling that his British birth and UK citizenship made him instantly eligible to play.",
+      "The timing could not have been scripted better. Villa's first fixture with Madjo available is Wednesday's UEFA Super Cup final against Paris Saint-Germain -- the biggest match of their season so far, and the first time the teenager can even be named among the substitutes.",
+      "What makes the case worth making, beyond the legal drama, is what Unai Emery has already seen in pre-season. Madjo scored four goals across Villa's summer fixtures, including two in a single game against Walsall. At 6'4\", he has the frame of a conventional target man, but reports from inside the club describe close control, link-up play and distribution with both feet that is unusual for a striker his size and age -- giving Emery a genuinely different profile to first-choice forward Ollie Watkins, rather than a like-for-like backup.",
+      "None of that guarantees regular Premier League minutes. Watkins remains first choice, and a 17-year-old with four pre-season goals to his name is still a long way from being a nailed-on starter. But the pathway that looked closed as recently as early August is now wide open, and few teenage forwards arrive at a Super Cup final with a court ruling already behind them and a manager already convinced."
+    ],
+    featured: true,
+    players: ["Brian Madjo"],
+    teams: ["Aston Villa"]
+},
+{
     id: 9,
     title: "UEFA Super Cup Preview: Aston Villa Chase a Second European Trophy Against Champions League Holders PSG",
     type: "Match Preview",
