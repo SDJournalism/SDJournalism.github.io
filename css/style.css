@@ -1444,6 +1444,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .tactical-pitch-wrap.small { max-width: 300px; }
+.tactical-pitch-wrap.tiny { max-width: 190px; }
 
 .tactical-pitch {
   position: relative;
@@ -1527,6 +1528,79 @@ a:focus-visible, button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .formation-dot { transition: none; }
   .buzzword-chip { animation: none; opacity: 1; transform: none; }
+}
+
+/* ---------- Compact formation hero (sits beside intro text, like stats-panel) ---------- */
+
+.lab-section-head {
+  align-items: flex-start;
+}
+
+.lab-section-head .lab-intro-text {
+  margin: 12px 0 0;
+}
+
+.formation-hero.compact {
+  width: 320px;
+  flex-shrink: 0;
+  padding: 22px 18px 20px;
+  margin-bottom: 0;
+}
+
+.formation-hero.compact .tactical-pitch-wrap {
+  max-width: 190px;
+}
+
+.formation-hero.compact .formation-name {
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.formation-hero.compact .buzzword-chip {
+  font-size: 10px;
+  padding: 4px 10px;
+}
+
+.formation-hero.compact .stage-list {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .formation-hero.compact { width: 100%; margin-top: 16px; }
+  .formation-hero.compact .formation-hero-inner { flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
+}
+
+/* ---------- Clickable stage list ---------- */
+
+.stage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.stage-item {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid rgba(245, 246, 241, 0.3);
+  background: transparent;
+  color: rgba(245, 246, 241, 0.7);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.stage-item:hover {
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.stage-item.active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--navy-deep);
 }
 
 /* ---------- Coming soon lab cards ---------- */

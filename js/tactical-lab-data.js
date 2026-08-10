@@ -4,6 +4,13 @@
    Each entry is one Tactical Lab piece. Categories must be exactly
    one of: "Manager DNA", "Player Blueprints", "Tactical Vault".
 
+   team / competition are optional and use the exact same values
+   as articles-data.js (see PREMIER_LEAGUE_CLUBS / COMPETITIONS in
+   site.js) so the same filter dropdowns can be reused here.
+
+   image / imageLink / imageCredit work exactly like on articles --
+   leave them out and the card just renders without a photo.
+
    Set comingSoon: true for a placeholder card with no detail page
    yet (used so the filter row has something under every category
    even before it's been written up). Real entries need a detail
@@ -17,6 +24,11 @@ const tacticalLabEntries = [
     category: "Manager DNA",
     title: "Roberto De Zerbi: The Press-Bait",
     excerpt: "Why De Zerbi's Tottenham park the ball in their own box on purpose -- and how the resulting press-bait turns an opponent's pressure into a route through it.",
+    team: "Tottenham Hotspur",
+    competition: "Premier League",
+    image: "images/RobertoDeZerbiPressConference.JPG",
+    imageLink: "https://www.thetimes.com/sport/football/article/roberto-de-zerbi-stay-tottenham-a-long-time-2g78k2p6g",
+    imageCredit: "Photo: The Times",
     comingSoon: false
   },
   {
@@ -24,6 +36,8 @@ const tacticalLabEntries = [
     category: "Player Blueprints",
     title: "Player Blueprints -- coming soon",
     excerpt: "Deep visual breakdowns of individual players: the movement patterns, receiving angles and decision-making that define their game.",
+    team: null,
+    competition: null,
     comingSoon: true
   },
   {
@@ -31,6 +45,8 @@ const tacticalLabEntries = [
     category: "Tactical Vault",
     title: "Tactical Vault -- coming soon",
     excerpt: "Classic systems from football history, rebuilt as moving diagrams -- from Total Football to tiki-taka to the false nine.",
+    team: null,
+    competition: null,
     comingSoon: true
   }
 ];

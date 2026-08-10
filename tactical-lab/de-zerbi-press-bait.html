@@ -75,18 +75,24 @@
   <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
 
   <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/RobertoDeZerbiPressConference.JPG" alt="Roberto De Zerbi">
+      <figcaption><a href="https://www.thetimes.com/sport/football/article/roberto-de-zerbi-stay-tottenham-a-long-time-2g78k2p6g" target="_blank" rel="noopener nofollow">Photo: The Times</a></figcaption>
+    </figure>
+
     <span class="eyebrow">Manager DNA &middot; Roberto De Zerbi &middot; Tottenham Hotspur</span>
     <h3>The Press-Bait</h3>
 
-    <div class="formation-hero" style="margin: 20px 0 30px;">
+    <div class="formation-hero compact" style="margin: 20px auto 30px;">
       <div class="formation-hero-inner">
-        <div class="tactical-pitch-wrap small">
+        <div class="tactical-pitch-wrap tiny">
           <div class="tactical-pitch" id="press-bait-pitch"></div>
         </div>
         <div class="formation-caption">
           <span class="formation-name" id="press-bait-name"></span>
           <div class="buzzword-row" id="press-bait-buzzwords"></div>
         </div>
+        <div class="stage-list" id="press-bait-stage-list"></div>
       </div>
     </div>
 
@@ -106,7 +112,7 @@
       <p>The pattern showed up clearly away at Villa. Richarlison held a position that blocked Villa's central passing lane, forcing the ball wide into a lower-value area, while Rodrigo Bentancur stepped up from midfield to cover the space Richarlison had vacated. It's coordinated pressing in waves rather than chaotic sprinting -- every player's movement tied to what the man beside him is doing.</p>
 
       <h4 class="body-subheading">The numbers</h4>
-      <p>The scale of it shows up in the data: Spurs have been winning the ball back in the final third 5.3 times per game under De Zerbi this season, the highest figure of any team under a single manager in the league (Premier League, 2026) -- a number worth treating as a snapshot from in-season reporting rather than a fully audited season total, but striking either way.</p>
+      <p>The scale of it shows up in the data: Spurs have been winning the ball back in the final third 5.3 times per game under De Zerbi this season, the highest figure of any team under a single manager in the league (<a href="https://www.premierleague.com/en/news/4623398/analysis-how-will-spurs-look-under-de-zerbi" target="_blank" rel="noopener nofollow" class="citation-link">Premier League, 2026</a>) -- a number worth treating as a snapshot from in-season reporting rather than a fully audited season total, but striking either way.</p>
     </div>
 
     <div class="sources-list">
@@ -123,6 +129,7 @@
       <div class="tag-row">
         <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Press-Bait%3A%20how%20De%20Zerbi%27s%20Tottenham%20turn%20their%20own%20box%20into%20a%20trap%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fde-zerbi-press-bait.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
         <a class="tag" href="https://wa.me/?text=The%20Press-Bait%3A%20how%20De%20Zerbi%27s%20Tottenham%20turn%20their%20own%20box%20into%20a%20trap%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fde-zerbi-press-bait.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
       </div>
     </div>
   </div>
@@ -172,11 +179,29 @@
       ]
     }
   ];
-  initFormationDiagram("press-bait-pitch", "press-bait-name", "press-bait-buzzwords", PRESS_BAIT_FRAMES, 3400);
+  initFormationDiagram("press-bait-pitch", "press-bait-name", "press-bait-buzzwords", PRESS_BAIT_FRAMES, 3400, "press-bait-stage-list");
   renderMegaFooter("mega-footer", "tactical-lab");
   renderKicker();
   initThemeToggle("theme-toggle");
   initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Roberto De Zerbi: The Press-Bait",
+      text: "Roberto De Zerbi: The Press-Bait -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/de-zerbi-press-bait.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
 </script>
 </body>
 </html>

@@ -693,10 +693,11 @@ const FORMATION_FRAMES = [
   }
 ];
 
-function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs) {
+function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stageListId) {
   const pitchEl = document.getElementById(pitchId);
   const nameEl = document.getElementById(nameId);
   const buzzEl = document.getElementById(buzzId);
+  const stageListEl = stageListId ? document.getElementById(stageListId) : null;
   if (!pitchEl || !frames || frames.length === 0) return;
 
   pitchEl.innerHTML = PITCH_SVG_MARKUP;
@@ -706,6 +707,12 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs) {
     pitchEl.appendChild(el);
     return el;
   });
+
+  if (stageListEl) {
+    stageListEl.innerHTML = frames
+      .map((f, i) => `<button type="button" class="stage-item" data-index="${i}">${f.name}</button>`)
+      .join("");
+  }
 
   function toPercent(d) {
     return { left: (d.x / 68) * 100 + "%", top: (d.y / 105) * 100 + "%" };
@@ -726,16 +733,41 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs) {
         .map((w, i) => `<span class="buzzword-chip" style="animation-delay:${i * 0.15}s">${w}</span>`)
         .join("");
     }
+    if (stageListEl) {
+      stageListEl.querySelectorAll(".stage-item").forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+      });
+    }
   }
 
   let current = 0;
-  show(current);
-  if (frames.length > 1) {
-    setInterval(() => {
+  let timer = null;
+
+  function startTimer() {
+    if (frames.length <= 1) return;
+    clearInterval(timer);
+    timer = setInterval(() => {
       current = (current + 1) % frames.length;
       show(current);
     }, intervalMs || 4200);
   }
+
+  function jumpTo(index) {
+    current = ((index % frames.length) + frames.length) % frames.length;
+    show(current);
+    startTimer();
+  }
+
+  if (stageListEl) {
+    stageListEl.addEventListener("click", (e) => {
+      const btn = e.target.closest(".stage-item");
+      if (!btn) return;
+      jumpTo(parseInt(btn.dataset.index, 10));
+    });
+  }
+
+  show(current);
+  startTimer();
 }
 
 /* ---------- Lab entry grid (reuses .article-grid / .card look) ---------- */
@@ -744,10 +776,19 @@ function sortedLabEntries() {
   return [...tacticalLabEntries];
 }
 
+function labThumbHTML(entry) {
+  if (!entry.image) return "";
+  return `<div class="card-thumb">
+      <img src="${entry.image}" alt="${entry.title}" loading="lazy">
+      ${entry.imageLink ? `<span class="photo-credit">${entry.imageCredit || "Photo credit"}</span>` : ""}
+    </div>`;
+}
+
 function labCardHTML(entry) {
   if (entry.comingSoon) {
     return `
       <div class="card coming-soon">
+        ${labThumbHTML(entry)}
         <div class="meta-row">
           <span class="type-pill">${entry.category}</span>
           <span class="coming-soon-badge">Coming Soon</span>
@@ -760,8 +801,10 @@ function labCardHTML(entry) {
   }
   return `
     <a class="card" href="tactical-lab/${entry.id}.html">
+      ${labThumbHTML(entry)}
       <div class="meta-row">
         <span class="type-pill">${entry.category}</span>
+        ${entry.team ? `<span>${entry.team}</span>` : ""}
       </div>
       <h3>${entry.title}</h3>
       <p class="excerpt">${entry.excerpt}</p>
@@ -771,24 +814,151 @@ function labCardHTML(entry) {
 }
 
 let currentLabFilter = "All";
+let currentLabSearch = "";
+let currentLabTeam = "All";
+let currentLabCompetition = "All";
 
 function renderLabGrid(gridId) {
   const el = document.getElementById(gridId);
   if (!el) return;
-  const all = sortedLabEntries().filter(e => currentLabFilter === "All" || e.category === currentLabFilter);
+  const term = currentLabSearch.trim().toLowerCase();
+  const all = sortedLabEntries().filter(e => {
+    const matchesFilter = currentLabFilter === "All" || e.category === currentLabFilter;
+    const matchesSearch = !term || e.title.toLowerCase().includes(term) || e.excerpt.toLowerCase().includes(term);
+    const matchesTeam = currentLabTeam === "All" || e.team === currentLabTeam;
+    const matchesCompetition = currentLabCompetition === "All" ||
+      (currentLabCompetition === "Other"
+        ? Boolean(e.competition) && !COMPETITIONS.slice(0, -1).includes(e.competition)
+        : e.competition === currentLabCompetition);
+    return matchesFilter && matchesSearch && matchesTeam && matchesCompetition;
+  });
   el.innerHTML = all.length
     ? all.map(labCardHTML).join("")
-    : `<p class="no-results">Nothing here yet.</p>`;
+    : `<p class="no-results">Nothing matches "${escapeHtml(currentLabSearch)}". Try a different search or filter.</p>`;
+
+  updateLabFilterControlsVisibility();
 }
+
+function updateLabFilterControlsVisibility() {
+  const resetBtn = document.getElementById("lab-reset-filters");
+  const searchClearBtn = document.getElementById("lab-search-clear");
+  const hasActiveFilters = currentLabFilter !== "All" || currentLabTeam !== "All" ||
+    currentLabCompetition !== "All" || currentLabSearch.trim() !== "";
+  if (resetBtn) resetBtn.hidden = !hasActiveFilters;
+  if (searchClearBtn) searchClearBtn.hidden = currentLabSearch === "";
+}
+
+const LAB_FILTER_HEADINGS = {
+  "All": { eyebrow: "Visual Tactical Analysis", heading: "Tactical Lab" },
+  "Manager DNA": { eyebrow: "Manager DNA", heading: "The systems and principles behind the coaches" },
+  "Player Blueprints": { eyebrow: "Player Blueprints", heading: "The movement patterns that define a player" },
+  "Tactical Vault": { eyebrow: "Tactical Vault", heading: "Classic systems from football history" }
+};
+
+const LAB_SEARCH_PLACEHOLDERS = {
+  "All": "Search Tactical Lab...",
+  "Manager DNA": "Search Manager DNA...",
+  "Player Blueprints": "Search Player Blueprints...",
+  "Tactical Vault": "Search the Tactical Vault..."
+};
 
 function setupLabFilters(gridId) {
   const buttons = document.querySelectorAll(".lab-filter-btn");
+  const eyebrowEl = document.getElementById("lab-eyebrow");
+  const headingEl = document.getElementById("lab-heading");
+  const searchEl = document.getElementById("lab-search");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentLabFilter = btn.dataset.filter;
       renderLabGrid(gridId);
+
+      const copy = LAB_FILTER_HEADINGS[currentLabFilter];
+      if (copy && eyebrowEl && headingEl) {
+        eyebrowEl.textContent = copy.eyebrow;
+        headingEl.textContent = copy.heading;
+      }
+      if (searchEl && LAB_SEARCH_PLACEHOLDERS[currentLabFilter]) {
+        searchEl.placeholder = LAB_SEARCH_PLACEHOLDERS[currentLabFilter];
+      }
     });
+  });
+}
+
+function setupLabSearch(gridId) {
+  const input = document.getElementById("lab-search");
+  const clearBtn = document.getElementById("lab-search-clear");
+  if (input) {
+    input.addEventListener("input", () => {
+      currentLabSearch = input.value;
+      renderLabGrid(gridId);
+    });
+  }
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      currentLabSearch = "";
+      if (input) {
+        input.value = "";
+        input.focus();
+      }
+      renderLabGrid(gridId);
+    });
+  }
+}
+
+function renderLabTeamFilter(selectId, gridId) {
+  const el = document.getElementById(selectId);
+  if (!el) return;
+  el.innerHTML = `<option value="All">All Teams</option>` +
+    PREMIER_LEAGUE_CLUBS.map(t => `<option value="${t}">${t}</option>`).join("");
+  el.addEventListener("change", () => {
+    currentLabTeam = el.value;
+    renderLabGrid(gridId);
+  });
+}
+
+function renderLabCompetitionFilter(selectId, gridId) {
+  const el = document.getElementById(selectId);
+  if (!el) return;
+  el.innerHTML = `<option value="All">All Competitions</option>` +
+    COMPETITIONS.map(c => `<option value="${c}">${c}</option>`).join("");
+  el.addEventListener("change", () => {
+    currentLabCompetition = el.value;
+    renderLabGrid(gridId);
+  });
+}
+
+function setupLabResetFilters(gridId) {
+  const resetBtn = document.getElementById("lab-reset-filters");
+  if (!resetBtn) return;
+
+  resetBtn.addEventListener("click", () => {
+    currentLabFilter = "All";
+    currentLabTeam = "All";
+    currentLabCompetition = "All";
+    currentLabSearch = "";
+
+    document.querySelectorAll(".lab-filter-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.filter === "All");
+    });
+
+    const teamEl = document.getElementById("lab-team-filter");
+    const competitionEl = document.getElementById("lab-competition-filter");
+    const searchEl = document.getElementById("lab-search");
+    if (teamEl) teamEl.value = "All";
+    if (competitionEl) competitionEl.value = "All";
+    if (searchEl) searchEl.value = "";
+
+    const eyebrowEl = document.getElementById("lab-eyebrow");
+    const headingEl = document.getElementById("lab-heading");
+    const copy = LAB_FILTER_HEADINGS["All"];
+    if (copy && eyebrowEl && headingEl) {
+      eyebrowEl.textContent = copy.eyebrow;
+      headingEl.textContent = copy.heading;
+    }
+    if (searchEl) searchEl.placeholder = LAB_SEARCH_PLACEHOLDERS["All"];
+
+    renderLabGrid(gridId);
   });
 }

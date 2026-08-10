@@ -72,22 +72,23 @@
 </header>
 
 <div class="wrap">
-  <div class="section-head">
+  <div class="section-head lab-section-head">
     <div>
-      <span class="eyebrow">Visual Tactical Analysis</span>
-      <h2>Tactical Lab</h2>
+      <span class="eyebrow" id="lab-eyebrow">Visual Tactical Analysis</span>
+      <h2 id="lab-heading">Tactical Lab</h2>
+      <p class="lab-intro-text">Formations, systems and player roles, broken down as moving diagrams instead of walls of text. Watch the shape on the right morph between systems, then dig into a full breakdown in Manager DNA, Player Blueprints or the Tactical Vault.</p>
     </div>
-  </div>
-  <p class="lab-intro-text">Formations, systems and player roles, broken down as moving diagrams instead of walls of text. Watch a shape morph from one system to another below, then dig into a full breakdown in Manager DNA, Player Blueprints or the Tactical Vault.</p>
 
-  <div class="formation-hero">
-    <div class="formation-hero-inner">
-      <div class="tactical-pitch-wrap">
-        <div class="tactical-pitch" id="formation-pitch"></div>
-      </div>
-      <div class="formation-caption">
-        <span class="formation-name" id="formation-name"></span>
-        <div class="buzzword-row" id="buzzword-row"></div>
+    <div class="formation-hero compact">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="formation-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="formation-name"></span>
+          <div class="buzzword-row" id="buzzword-row"></div>
+        </div>
+        <div class="stage-list" id="formation-stage-list"></div>
       </div>
     </div>
   </div>
@@ -97,6 +98,17 @@
     <button class="filter-btn lab-filter-btn" data-filter="Manager DNA">Manager DNA</button>
     <button class="filter-btn lab-filter-btn" data-filter="Player Blueprints">Player Blueprints</button>
     <button class="filter-btn lab-filter-btn" data-filter="Tactical Vault">Tactical Vault</button>
+  </div>
+
+  <div class="dropdown-filter-row">
+    <select id="lab-team-filter" class="dropdown-filter"></select>
+    <select id="lab-competition-filter" class="dropdown-filter"></select>
+    <button id="lab-reset-filters" class="reset-filters-btn" type="button" hidden>Reset all filters &times;</button>
+  </div>
+
+  <div class="search-wrap">
+    <input type="text" id="lab-search" class="search-input" placeholder="Search Tactical Lab...">
+    <button id="lab-search-clear" class="search-clear-btn" type="button" aria-label="Clear search" hidden>&times;</button>
   </div>
 
   <div class="article-grid" id="lab-grid"></div>
@@ -111,7 +123,11 @@
 <script>
   renderLabGrid("lab-grid");
   setupLabFilters("lab-grid");
-  initFormationDiagram("formation-pitch", "formation-name", "buzzword-row", FORMATION_FRAMES);
+  setupLabSearch("lab-grid");
+  setupLabResetFilters("lab-grid");
+  renderLabTeamFilter("lab-team-filter", "lab-grid");
+  renderLabCompetitionFilter("lab-competition-filter", "lab-grid");
+  initFormationDiagram("formation-pitch", "formation-name", "buzzword-row", FORMATION_FRAMES, 4200, "formation-stage-list");
   renderMegaFooter("mega-footer", "tactical-lab");
   renderKicker();
   initThemeToggle("theme-toggle");
