@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="lab-page">
 
 <header class="masthead">
   <div class="wrap masthead-inner">
@@ -80,7 +80,12 @@
       <figcaption><a href="https://www.football.london/tottenham-hotspur-fc/news/roberto-de-zerbi-tottenham-training-33714938" target="_blank" rel="noopener nofollow">Photo: Football London</a></figcaption>
     </figure>
 
-    <span class="eyebrow">Manager DNA &middot; Roberto De Zerbi &middot; Tottenham Hotspur &middot; Premier League</span>
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Roberto De Zerbi</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Tottenham Hotspur</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
     <h3>The Press-Bait</h3>
 
     <div class="formation-hero article">
@@ -93,8 +98,11 @@
           <div class="buzzword-row" id="press-bait-buzzwords"></div>
         </div>
         <div class="stage-list" id="press-bait-stage-list"></div>
+        <div class="annotation-legend" id="press-bait-legend"></div>
       </div>
     </div>
+
+    <div class="stat-panel" id="press-bait-stats"></div>
 
     <div class="body-text">
       <p>Roberto De Zerbi was appointed Tottenham head coach on 31 March 2026, arriving with a footballing identity built at Sassuolo, Shakhtar Donetsk and Brighton &amp; Hove Albion long before he took charge in north London. The clearest signature of that identity is what's become known as "press-baiting" -- and it starts with a decision that looks, on first glance, needlessly risky.</p>
@@ -152,6 +160,10 @@
         { x: 46, y: 84 },
         { x: 50, y: 65 },
         { x: 34, y: 70, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Centre-back holds the ball in a risky area" },
+        { dotIndex: 4, text: "Shadow runner stays just out of the presser's cover" }
       ]
     },
     {
@@ -164,6 +176,9 @@
         { x: 46, y: 84 },
         { x: 52, y: 62 },
         { x: 34, y: 80, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 5, text: "Presser fully commits, weight going forward" }
       ]
     },
     {
@@ -176,10 +191,18 @@
         { x: 46, y: 84 },
         { x: 58, y: 50 },
         { x: 34, y: 80, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Ball bypasses the presser into the space he vacated" }
       ]
     }
   ];
-  initFormationDiagram("press-bait-pitch", "press-bait-name", "press-bait-buzzwords", PRESS_BAIT_FRAMES, 3400, "press-bait-stage-list", "horizontal");
+  const PRESS_BAIT_STATS = [
+    { value: "5.3", label: "Ball recoveries won per 90, final third" },
+    { value: "1st", label: "Highest of any manager in the league" }
+  ];
+  initFormationDiagram("press-bait-pitch", "press-bait-name", "press-bait-buzzwords", PRESS_BAIT_FRAMES, 3400, "press-bait-stage-list", "horizontal", "press-bait-legend");
+  renderStatPanel("press-bait-stats", PRESS_BAIT_STATS);
   renderMegaFooter("mega-footer", "tactical-lab");
   renderKicker();
   initThemeToggle("theme-toggle");

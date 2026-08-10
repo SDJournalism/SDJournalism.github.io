@@ -764,11 +764,12 @@ const FORMATION_FRAMES = [
   }
 ];
 
-function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stageListId, orientation) {
+function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stageListId, orientation, legendListId) {
   const pitchEl = document.getElementById(pitchId);
   const nameEl = document.getElementById(nameId);
   const buzzEl = document.getElementById(buzzId);
   let stageListEl = stageListId ? document.getElementById(stageListId) : null;
+  const legendListEl = legendListId ? document.getElementById(legendListId) : null;
   if (!pitchEl || !frames || frames.length === 0) return;
 
   // initFormationDiagram can be called more than once on the same elements
@@ -794,6 +795,19 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
     pitchEl.appendChild(el);
     return el;
   });
+
+  // Numbered annotation badges, e.g. frame.annotations = [{ dotIndex: 4,
+  // text: "..." }]. Reused across frames rather than recreated each time --
+  // a frame with fewer annotations than the last just hides the extras.
+  const badgeEls = [];
+  function ensureBadges(count) {
+    while (badgeEls.length < count) {
+      const b = document.createElement("div");
+      b.className = "diagram-annotation";
+      pitchEl.appendChild(b);
+      badgeEls.push(b);
+    }
+  }
 
   if (stageListEl) {
     stageListEl.innerHTML = frames
@@ -828,6 +842,26 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
       stageListEl.querySelectorAll(".stage-item").forEach((btn, i) => {
         btn.classList.toggle("active", i === index);
       });
+    }
+
+    const anns = frame.annotations || [];
+    ensureBadges(anns.length);
+    badgeEls.forEach((b, i) => {
+      if (i < anns.length) {
+        const dot = frame.dots[anns[i].dotIndex];
+        const pos = toPercent(dot);
+        b.style.left = pos.left;
+        b.style.top = pos.top;
+        b.textContent = i + 1;
+        b.style.display = "flex";
+      } else {
+        b.style.display = "none";
+      }
+    });
+    if (legendListEl) {
+      legendListEl.innerHTML = anns
+        .map((a, i) => `<div class="annotation-legend-item"><span class="annotation-num">${i + 1}</span>${a.text}</div>`)
+        .join("");
     }
   }
 
@@ -873,6 +907,82 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
 
   show(current);
   startTimer();
+}
+
+/* ---------- Stat panel (Tactical Lab only) ----------
+   Same physical mechanics as renderQuotePanel (arrows, dots,
+   swipe) but deliberately has no setInterval -- it only ever
+   advances when the reader clicks or swipes. Builds its own
+   markup into a single container rather than requiring five
+   separate element IDs per page. */
+
+function renderStatPanel(containerId, stats) {
+  const el = document.getElementById(containerId);
+  if (!el || !stats || stats.length === 0) return;
+
+  el.innerHTML = `
+    <span class="eyebrow stat-panel-eyebrow">Key Figures</span>
+    <div class="stat-panel-body">
+      <button type="button" class="stat-arrow prev" aria-label="Previous figure">&larr;</button>
+      <div class="stat-panel-content">
+        <div class="stat-panel-value"></div>
+        <div class="stat-panel-label"></div>
+      </div>
+      <button type="button" class="stat-arrow next" aria-label="Next figure">&rarr;</button>
+    </div>
+    <div class="stat-panel-dots"></div>
+  `;
+
+  const valueEl = el.querySelector(".stat-panel-value");
+  const labelEl = el.querySelector(".stat-panel-label");
+  const dotsEl = el.querySelector(".stat-panel-dots");
+  const prevBtn = el.querySelector(".stat-arrow.prev");
+  const nextBtn = el.querySelector(".stat-arrow.next");
+
+  dotsEl.innerHTML = stats
+    .map((_, i) => `<button type="button" class="stat-dot" data-index="${i}" aria-label="Show figure ${i + 1}"></button>`)
+    .join("");
+
+  let current = 0;
+
+  function show(index) {
+    current = ((index % stats.length) + stats.length) % stats.length;
+    valueEl.style.opacity = "0";
+    labelEl.style.opacity = "0";
+    setTimeout(() => {
+      valueEl.textContent = stats[current].value;
+      labelEl.textContent = stats[current].label;
+      valueEl.style.opacity = "1";
+      labelEl.style.opacity = "1";
+      dotsEl.querySelectorAll(".stat-dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === current);
+      });
+    }, 150);
+  }
+
+  dotsEl.querySelectorAll(".stat-dot").forEach(dot => {
+    dot.addEventListener("click", () => show(parseInt(dot.dataset.index, 10)));
+  });
+  prevBtn.addEventListener("click", () => show(current - 1));
+  nextBtn.addEventListener("click", () => show(current + 1));
+
+  if (stats.length <= 1) {
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+  }
+
+  let touchStartX = 0;
+  el.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  el.addEventListener("touchend", (e) => {
+    const delta = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(delta) > 40) {
+      if (delta < 0) show(current + 1); else show(current - 1);
+    }
+  }, { passive: true });
+
+  show(current);
 }
 
 /* ---------- Lab entry grid (reuses .article-grid / .card look) ---------- */

@@ -50,7 +50,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="lab-page">
 
 <header class="masthead">
   <div class="wrap masthead-inner">
@@ -80,7 +80,12 @@
       <figcaption><a href="https://www.chelseafc.com/en/eden-hazard" target="_blank" rel="noopener nofollow">Photo: Chelsea FC</a></figcaption>
     </figure>
 
-    <span class="eyebrow">Tactical Vault &middot; Eden Hazard &middot; Chelsea &middot; Premier League</span>
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Eden Hazard</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Chelsea</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
     <h3>The Half-Space Overload</h3>
 
     <div class="formation-hero article">
@@ -93,8 +98,11 @@
           <div class="buzzword-row" id="hazard-buzzwords"></div>
         </div>
         <div class="stage-list" id="hazard-stage-list"></div>
+        <div class="annotation-legend" id="hazard-legend"></div>
       </div>
     </div>
+
+    <div class="stat-panel" id="hazard-stats"></div>
 
     <div class="body-text">
       <p>Antonio Conte's switch to a back three in the autumn of 2016 is remembered for rescuing Chelsea's season, but its most lasting effect was on Eden Hazard. Freed from tracking back down the left touchline, the Belgian was handed a role with really only one job: hurt the opposition in the space between their right-back and their right-centre-back.</p>
@@ -148,6 +156,10 @@
         { x: 14, y: 60 },
         { x: 8, y: 70 },
         { x: 34, y: 35 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Hazard starts wide left, inside forward role" },
+        { dotIndex: 3, text: "Alonso provides the width as wing-back" }
       ]
     },
     {
@@ -159,6 +171,10 @@
         { x: 26, y: 35 },
         { x: 8, y: 38 },
         { x: 32, y: 22 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Hazard drifts into the half-space" },
+        { dotIndex: 3, text: "Alonso overlaps into the space he vacates" }
       ]
     },
     {
@@ -170,10 +186,19 @@
         { x: 30, y: 14 },
         { x: 8, y: 10 },
         { x: 34, y: 8 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Alonso in behind, a 2v1 against the full-back" }
       ]
     }
   ];
-  initFormationDiagram("hazard-pitch", "hazard-name", "hazard-buzzwords", HAZARD_FRAMES, 3600, "hazard-stage-list", "horizontal");
+  const HAZARD_STATS = [
+    { value: "93", label: "Points, Chelsea's 2016/17 title-winning total" },
+    { value: "16", label: "Goals scored by Hazard that season" },
+    { value: "2.4", label: "Key passes per game across the campaign" }
+  ];
+  initFormationDiagram("hazard-pitch", "hazard-name", "hazard-buzzwords", HAZARD_FRAMES, 3600, "hazard-stage-list", "horizontal", "hazard-legend");
+  renderStatPanel("hazard-stats", HAZARD_STATS);
   renderMegaFooter("mega-footer", "tactical-lab");
   renderKicker();
   initThemeToggle("theme-toggle");
