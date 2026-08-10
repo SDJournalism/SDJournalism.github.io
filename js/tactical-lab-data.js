@@ -32,21 +32,27 @@ const tacticalLabEntries = [
     comingSoon: false
   },
   {
-    id: "player-blueprint-placeholder",
+    id: "semenyo-turnover-burst",
     category: "Player Blueprints",
-    title: "Player Blueprints -- coming soon",
-    excerpt: "Deep visual breakdowns of individual players: the movement patterns, receiving angles and decision-making that define their game.",
-    team: null,
-    competition: null,
-    comingSoon: true
+    title: "Antoine Semenyo: The Turnover Burst",
+    excerpt: "How Antoine Semenyo turns an opponent's mistake into three seconds of terror -- the sprint in behind that made him one of the Premier League's most dangerous transition weapons.",
+    team: "Manchester City",
+    competition: "Premier League",
+    image: "images/semenyotaclab.jpg",
+    imageLink: "https://www.manchestereveningnews.co.uk/sport/football/football-news/antoine-semenyo-excited-new-man-34391383",
+    imageCredit: "Photo: Manchester Evening News",
+    comingSoon: false
   },
   {
-    id: "tactical-vault-placeholder",
+    id: "hazard-half-space-overload",
     category: "Tactical Vault",
-    title: "Tactical Vault -- coming soon",
-    excerpt: "Title-winning and era-defining systems from Premier League history, rebuilt as moving diagrams -- from Wenger's Invincibles to Klopp's gegenpress to Guardiola's false nine.",
-    team: null,
-    competition: null,
-    comingSoon: true
+    title: "Eden Hazard: The Half-Space Overload",
+    excerpt: "How Antonio Conte's back three freed Eden Hazard from defensive duty and turned Chelsea's left flank into an unsolvable 2v1 during their 2016/17 title run.",
+    team: "Chelsea",
+    competition: "Premier League",
+    image: "images/hazardtaclab.jpg",
+    imageLink: "https://www.chelseafc.com/en/eden-hazard",
+    imageCredit: "Photo: Chelsea FC",
+    comingSoon: false
   }
 ];

@@ -951,7 +951,7 @@ const LAB_FILTER_HEADINGS = {
   "Tactical Vault": {
     eyebrow: "Tactical Vault",
     heading: "Classic systems from Premier League history",
-    description: "Title-winning and era-defining systems from Premier League history, rebuilt as moving diagrams."
+    description: "Title-winning managers and the players who defined them, rebuilt as moving diagrams from Premier League history."
   }
 };
 
