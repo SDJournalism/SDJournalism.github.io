@@ -1412,7 +1412,7 @@ a:focus-visible, button:focus-visible {
    TACTICAL LAB
    ============================================================ */
 
-.lab-intro-text {
+.section-description {
   font-size: 16px;
   color: var(--ink-soft);
   max-width: 62ch;
@@ -1534,21 +1534,22 @@ a:focus-visible, button:focus-visible {
 
 .lab-section-head {
   align-items: flex-start;
+  margin-bottom: 10px;
 }
 
-.lab-section-head .lab-intro-text {
+.section-head .section-description {
   margin: 12px 0 0;
 }
 
 .formation-hero.compact {
-  width: 320px;
+  width: 280px;
   flex-shrink: 0;
-  padding: 22px 18px 20px;
+  padding: 16px 16px 14px;
   margin-bottom: 0;
 }
 
 .formation-hero.compact .tactical-pitch-wrap {
-  max-width: 190px;
+  max-width: 140px;
 }
 
 .formation-hero.compact .formation-name {
@@ -1562,7 +1563,17 @@ a:focus-visible, button:focus-visible {
 }
 
 .formation-hero.compact .stage-list {
-  margin-top: 12px;
+  margin-top: 10px;
+}
+
+.formation-hero-desc {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: rgba(245, 246, 241, 0.6);
+  text-align: center;
+  max-width: 220px;
+  margin: 10px 0 0;
 }
 
 @media (max-width: 900px) {

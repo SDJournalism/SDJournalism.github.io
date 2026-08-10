@@ -26,9 +26,9 @@ const tacticalLabEntries = [
     excerpt: "Why De Zerbi's Tottenham park the ball in their own box on purpose -- and how the resulting press-bait turns an opponent's pressure into a route through it.",
     team: "Tottenham Hotspur",
     competition: "Premier League",
-    image: "images/RobertoDeZerbiPressConference.JPG",
-    imageLink: "https://www.thetimes.com/sport/football/article/roberto-de-zerbi-stay-tottenham-a-long-time-2g78k2p6g",
-    imageCredit: "Photo: The Times",
+    image: "images/RDZhighline.JPG",
+    imageLink: "https://www.tottenhamhotspur.com/news/1018847/gallery-every-photo-from-roberto-de-zerbis-first-training-session",
+    imageCredit: "Photo: Tottenham Hotspur",
     comingSoon: false
   },
   {
@@ -44,7 +44,7 @@ const tacticalLabEntries = [
     id: "tactical-vault-placeholder",
     category: "Tactical Vault",
     title: "Tactical Vault -- coming soon",
-    excerpt: "Classic systems from football history, rebuilt as moving diagrams -- from Total Football to tiki-taka to the false nine.",
+    excerpt: "Title-winning and era-defining systems from Premier League history, rebuilt as moving diagrams -- from Wenger's Invincibles to Klopp's gegenpress to Guardiola's false nine.",
     team: null,
     competition: null,
     comingSoon: true

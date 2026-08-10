@@ -562,11 +562,13 @@ function setupResetFilters() {
 
     const eyebrowEl = document.getElementById("articles-eyebrow");
     const headingEl = document.getElementById("articles-heading");
+    const descEl = document.getElementById("articles-description");
     const copy = FILTER_HEADINGS["All"];
     if (copy && eyebrowEl && headingEl) {
       eyebrowEl.textContent = copy.eyebrow;
       headingEl.innerHTML = copy.heading;
     }
+    if (copy && descEl) descEl.textContent = copy.description;
     if (searchEl) searchEl.placeholder = SEARCH_PLACEHOLDERS["All"];
 
     renderArticleList();
@@ -596,18 +598,43 @@ function renderCompetitionFilter(selectId) {
 }
 
 const FILTER_HEADINGS = {
-  "All": { eyebrow: "All articles", heading: "Match previews, reports, analysis, scouting &amp; opinion" },
-  "Match Preview": { eyebrow: "Match Previews", heading: "Looking ahead to every fixture" },
-  "Match Report": { eyebrow: "Match Reports", heading: "Recaps from every fixture" },
-  "Scouting Report": { eyebrow: "Scouting Reports", heading: "Identifying the Next Stars" },
-  "Analysis": { eyebrow: "Analysis", heading: "Tactical breakdowns &amp; deep dives" },
-  "Opinion": { eyebrow: "Opinion", heading: "Takes, arguments &amp; perspective" }
+  "All": {
+    eyebrow: "All articles",
+    heading: "Match previews, reports, analysis, scouting &amp; opinion",
+    description: "Every piece published so far, covering the Premier League and Europe's top competitions."
+  },
+  "Match Preview": {
+    eyebrow: "Match Previews",
+    heading: "Looking ahead to every fixture",
+    description: "Team news, form and tactical previews before a ball is kicked."
+  },
+  "Match Report": {
+    eyebrow: "Match Reports",
+    heading: "Recaps from every fixture",
+    description: "What actually happened, broken down after full-time."
+  },
+  "Scouting Report": {
+    eyebrow: "Scouting Reports",
+    heading: "Identifying the Next Stars",
+    description: "Emerging talent, assessed on ability and potential."
+  },
+  "Analysis": {
+    eyebrow: "Analysis",
+    heading: "Tactical breakdowns &amp; deep dives",
+    description: "Systems, patterns and decisions, examined in detail."
+  },
+  "Opinion": {
+    eyebrow: "Opinion",
+    heading: "Takes, arguments &amp; perspective",
+    description: "Where I stand on the game's biggest talking points."
+  }
 };
 
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-btn");
   const eyebrowEl = document.getElementById("articles-eyebrow");
   const headingEl = document.getElementById("articles-heading");
+  const descEl = document.getElementById("articles-description");
   const searchEl = document.getElementById("article-search");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -621,6 +648,7 @@ function setupFilters() {
         eyebrowEl.textContent = copy.eyebrow;
         headingEl.innerHTML = copy.heading;
       }
+      if (copy && descEl) descEl.textContent = copy.description;
       if (searchEl && SEARCH_PLACEHOLDERS[currentFilter]) {
         searchEl.placeholder = SEARCH_PLACEHOLDERS[currentFilter];
       }
@@ -849,10 +877,26 @@ function updateLabFilterControlsVisibility() {
 }
 
 const LAB_FILTER_HEADINGS = {
-  "All": { eyebrow: "Visual Tactical Analysis", heading: "Tactical Lab" },
-  "Manager DNA": { eyebrow: "Manager DNA", heading: "The systems and principles behind the coaches" },
-  "Player Blueprints": { eyebrow: "Player Blueprints", heading: "The movement patterns that define a player" },
-  "Tactical Vault": { eyebrow: "Tactical Vault", heading: "Classic systems from football history" }
+  "All": {
+    eyebrow: "Visual Tactical Analysis",
+    heading: "Tactical Lab",
+    description: "Formations, systems and player roles, broken down as moving diagrams instead of walls of text."
+  },
+  "Manager DNA": {
+    eyebrow: "Manager DNA",
+    heading: "The systems and principles behind the coaches",
+    description: "A head coach's tactical identity and signature patterns, visualised rather than described."
+  },
+  "Player Blueprints": {
+    eyebrow: "Player Blueprints",
+    heading: "The movement patterns that define a player",
+    description: "The receiving angles, off-the-ball runs and decisions that define an individual's game."
+  },
+  "Tactical Vault": {
+    eyebrow: "Tactical Vault",
+    heading: "Classic systems from Premier League history",
+    description: "Title-winning and era-defining systems from Premier League history, rebuilt as moving diagrams."
+  }
 };
 
 const LAB_SEARCH_PLACEHOLDERS = {
@@ -866,6 +910,7 @@ function setupLabFilters(gridId) {
   const buttons = document.querySelectorAll(".lab-filter-btn");
   const eyebrowEl = document.getElementById("lab-eyebrow");
   const headingEl = document.getElementById("lab-heading");
+  const descEl = document.getElementById("lab-description");
   const searchEl = document.getElementById("lab-search");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -879,6 +924,7 @@ function setupLabFilters(gridId) {
         eyebrowEl.textContent = copy.eyebrow;
         headingEl.textContent = copy.heading;
       }
+      if (copy && descEl) descEl.textContent = copy.description;
       if (searchEl && LAB_SEARCH_PLACEHOLDERS[currentLabFilter]) {
         searchEl.placeholder = LAB_SEARCH_PLACEHOLDERS[currentLabFilter];
       }
@@ -952,11 +998,13 @@ function setupLabResetFilters(gridId) {
 
     const eyebrowEl = document.getElementById("lab-eyebrow");
     const headingEl = document.getElementById("lab-heading");
+    const descEl = document.getElementById("lab-description");
     const copy = LAB_FILTER_HEADINGS["All"];
     if (copy && eyebrowEl && headingEl) {
       eyebrowEl.textContent = copy.eyebrow;
       headingEl.textContent = copy.heading;
     }
+    if (copy && descEl) descEl.textContent = copy.description;
     if (searchEl) searchEl.placeholder = LAB_SEARCH_PLACEHOLDERS["All"];
 
     renderLabGrid(gridId);
