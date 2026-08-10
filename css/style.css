@@ -1978,6 +1978,7 @@ body.lab-page > .wrap {
 [data-theme="dark"] body.lab-page > .wrap {
   --bg-card: #202422;
   --line: #33362F;
+  --ink-soft: #A6A9A1;
   --gold: #4CC489;
   --lab-panel-accent: #4CC489;
   --navy: #3A3F39;
