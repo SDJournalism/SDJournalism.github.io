@@ -688,6 +688,23 @@ const PITCH_SVG_MARKUP = `<svg class="pitch-lines" viewBox="0 0 68 105" preserve
   <circle cx="34" cy="94" r="0.4" fill="rgba(245,246,241,0.35)"/>
 </svg>`;
 
+/* Landscape version of the same pitch, used for the smaller
+   in-article diagrams so they make better use of a wide column
+   instead of standing tall and narrow. Attacking direction runs
+   left-to-right: x=0 (own goal) is left, x=105 is right. */
+const PITCH_SVG_MARKUP_HORIZONTAL = `<svg class="pitch-lines" viewBox="0 0 105 68" preserveAspectRatio="none">
+  <rect x="1" y="1" width="103" height="66" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <line x1="52.5" y1="1" x2="52.5" y2="67" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="52.5" cy="34" r="9.15" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="52.5" cy="34" r="0.4" fill="rgba(245,246,241,0.35)"/>
+  <rect x="1" y="13.84" width="16.5" height="40.32" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="1" y="24.84" width="5.5" height="18.32" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="87.5" y="13.84" width="16.5" height="40.32" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <rect x="98.5" y="24.84" width="5.5" height="18.32" fill="none" stroke="rgba(245,246,241,0.35)" stroke-width="0.5"/>
+  <circle cx="12" cy="34" r="0.4" fill="rgba(245,246,241,0.35)"/>
+  <circle cx="93" cy="34" r="0.4" fill="rgba(245,246,241,0.35)"/>
+</svg>`;
+
 const FORMATION_FRAMES = [
   {
     name: "4-3-3",
@@ -721,14 +738,30 @@ const FORMATION_FRAMES = [
   }
 ];
 
-function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stageListId) {
+function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stageListId, orientation) {
   const pitchEl = document.getElementById(pitchId);
   const nameEl = document.getElementById(nameId);
   const buzzEl = document.getElementById(buzzId);
-  const stageListEl = stageListId ? document.getElementById(stageListId) : null;
+  let stageListEl = stageListId ? document.getElementById(stageListId) : null;
   if (!pitchEl || !frames || frames.length === 0) return;
 
-  pitchEl.innerHTML = PITCH_SVG_MARKUP;
+  // initFormationDiagram can be called more than once on the same elements
+  // (e.g. swapping the example shown when a filter tab is clicked) -- stop
+  // any previous run's timer and strip its stage-list click listener so
+  // they don't stack up and fight over the same dots.
+  if (pitchEl._diagramTimer) {
+    clearInterval(pitchEl._diagramTimer);
+    pitchEl._diagramTimer = null;
+  }
+  if (stageListEl) {
+    const freshStageListEl = stageListEl.cloneNode(false);
+    stageListEl.replaceWith(freshStageListEl);
+    stageListEl = freshStageListEl;
+  }
+
+  const horizontal = orientation === "horizontal";
+  pitchEl.classList.toggle("horizontal", horizontal);
+  pitchEl.innerHTML = horizontal ? PITCH_SVG_MARKUP_HORIZONTAL : PITCH_SVG_MARKUP;
   const dotEls = frames[0].dots.map(d => {
     const el = document.createElement("div");
     el.className = "formation-dot" + (d.gk ? " is-gk" : "") + (d.opponent ? " is-opponent" : "");
@@ -743,6 +776,10 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
   }
 
   function toPercent(d) {
+    if (horizontal) {
+      // Own goal (y=105) sits on the left, attacking direction runs left-to-right.
+      return { left: (1 - d.y / 105) * 100 + "%", top: (d.x / 68) * 100 + "%" };
+    }
     return { left: (d.x / 68) * 100 + "%", top: (d.y / 105) * 100 + "%" };
   }
 

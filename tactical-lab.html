@@ -72,14 +72,8 @@
 </header>
 
 <div class="wrap">
-  <div class="section-head lab-section-head">
-    <div>
-      <span class="eyebrow" id="lab-eyebrow">Visual Tactical Analysis</span>
-      <h2 id="lab-heading">Tactical Lab</h2>
-      <p class="section-description" id="lab-description">Formations, systems and player roles, broken down as moving diagrams instead of walls of text.</p>
-    </div>
-
-    <div class="formation-hero compact">
+  <div class="lab-page-head">
+    <div class="formation-hero compact floated">
       <div class="formation-hero-inner">
         <div class="tactical-pitch-wrap">
           <div class="tactical-pitch" id="formation-pitch"></div>
@@ -89,9 +83,13 @@
           <div class="buzzword-row" id="buzzword-row"></div>
         </div>
         <div class="stage-list" id="formation-stage-list"></div>
-        <p class="formation-hero-desc">A live example: a base 4-3-3 inverting into a 3-2-4-1, then stretching into a 3-2-5 as players rotate into the space it opens up.</p>
+        <p class="formation-hero-desc" id="formation-hero-desc">A live example: a base 4-3-3 inverting into a 3-2-4-1, then stretching into a 3-2-5 as players rotate into the space it opens up.</p>
       </div>
     </div>
+
+    <span class="eyebrow" id="lab-eyebrow">Visual Tactical Analysis</span>
+    <h2 id="lab-heading">Tactical Lab</h2>
+    <p class="section-description" id="lab-description">Formations, systems and player roles, broken down as moving diagrams instead of walls of text.</p>
   </div>
 
   <div class="filter-row">
@@ -122,17 +120,166 @@
 <script src="js/site.js"></script>
 <script src="js/theme.js"></script>
 <script>
+  /* ============================================================
+     Hero diagram examples, one per Tactical Lab category.
+     These are illustrative only -- not standalone Tactical Lab
+     pieces, just what the live diagram shows while that filter
+     tab is selected. Same floated panel, same engine
+     (initFormationDiagram), just different frame data swapped in.
+     ============================================================ */
+
+  const MANAGER_DNA_FRAMES = [
+    {
+      name: "4-2-3-1 Base Shape",
+      buzzwords: ["Compact Base"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 10, y: 80 }, { x: 26, y: 83 }, { x: 42, y: 83 }, { x: 58, y: 80 },
+        { x: 24, y: 60 }, { x: 44, y: 60 },
+        { x: 14, y: 35 }, { x: 34, y: 32 }, { x: 54, y: 35 },
+        { x: 34, y: 14 }
+      ]
+    },
+    {
+      name: "3-2-5 In Possession",
+      buzzwords: ["Draw The Press", "Overload"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 17, y: 79 }, { x: 34, y: 76 }, { x: 51, y: 80 }, { x: 62, y: 32 },
+        { x: 26, y: 58 }, { x: 42, y: 58 },
+        { x: 10, y: 24 }, { x: 30, y: 16 }, { x: 46, y: 16 },
+        { x: 34, y: 10 }
+      ]
+    },
+    {
+      name: "4-4-2 Defensive Block",
+      buzzwords: ["Drop Into Block"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 10, y: 82 }, { x: 26, y: 85 }, { x: 42, y: 85 }, { x: 58, y: 82 },
+        { x: 30, y: 55 }, { x: 44, y: 55 },
+        { x: 14, y: 58 }, { x: 24, y: 25 }, { x: 54, y: 58 },
+        { x: 34, y: 25 }
+      ]
+    }
+  ];
+
+  const PLAYER_BLUEPRINT_FRAMES = [
+    {
+      name: "Blindside Start",
+      buzzwords: ["Blindside Start"],
+      dots: [
+        { x: 34, y: 4, gk: true, opponent: true },
+        { x: 26, y: 16, opponent: true },
+        { x: 18, y: 18 },
+        { x: 60, y: 10 }
+      ]
+    },
+    {
+      name: "Decoy",
+      buzzwords: ["Decoy", "Far Post"],
+      dots: [
+        { x: 34, y: 4, gk: true, opponent: true },
+        { x: 16, y: 10, opponent: true },
+        { x: 12, y: 10 },
+        { x: 58, y: 7 }
+      ]
+    },
+    {
+      name: "Near-Post Strike",
+      buzzwords: ["Near-Post Strike"],
+      dots: [
+        { x: 34, y: 4, gk: true, opponent: true },
+        { x: 18, y: 9, opponent: true },
+        { x: 32, y: 6 },
+        { x: 54, y: 5 }
+      ]
+    }
+  ];
+
+  const TACTICAL_VAULT_FRAMES = [
+    {
+      name: "4-4-2 Base Shape",
+      buzzwords: ["Absorb & Hold"],
+      dots: [
+        { x: 34, y: 95, gk: true },
+        { x: 10, y: 78 }, { x: 26, y: 80 }, { x: 42, y: 80 }, { x: 58, y: 78 },
+        { x: 26, y: 58 }, { x: 42, y: 58 },
+        { x: 14, y: 35 }, { x: 54, y: 35 },
+        { x: 30, y: 20 }, { x: 42, y: 16 }
+      ]
+    },
+    {
+      name: "Bergkamp Drops",
+      buzzwords: ["Bergkamp Drops"],
+      dots: [
+        { x: 34, y: 95, gk: true },
+        { x: 10, y: 78 }, { x: 26, y: 80 }, { x: 42, y: 80 }, { x: 58, y: 78 },
+        { x: 26, y: 55 }, { x: 44, y: 50 },
+        { x: 14, y: 30 }, { x: 54, y: 30 },
+        { x: 30, y: 45 }, { x: 44, y: 14 }
+      ]
+    },
+    {
+      name: "Henry Breaks Free",
+      buzzwords: ["Vertical Trigger"],
+      dots: [
+        { x: 34, y: 95, gk: true },
+        { x: 10, y: 78 }, { x: 26, y: 80 }, { x: 42, y: 80 }, { x: 58, y: 78 },
+        { x: 28, y: 55 }, { x: 44, y: 35 },
+        { x: 14, y: 20 }, { x: 54, y: 20 },
+        { x: 30, y: 30 }, { x: 46, y: 6 }
+      ]
+    }
+  ];
+
+  const LAB_HERO_EXAMPLES = {
+    "All": {
+      frames: FORMATION_FRAMES,
+      orientation: undefined,
+      desc: "A live example: a base 4-3-3 inverting into a 3-2-4-1, then stretching into a 3-2-5 as players rotate into the space it opens up."
+    },
+    "Manager DNA": {
+      frames: MANAGER_DNA_FRAMES,
+      orientation: "horizontal",
+      desc: "Unai Emery's Aston Villa: a patient 4-2-3-1 build-up that lures a press, then breaks it with a 3-2-5 overload."
+    },
+    "Player Blueprints": {
+      frames: PLAYER_BLUEPRINT_FRAMES,
+      orientation: "horizontal",
+      desc: "Erling Haaland's blindside run: parked on the last man's shoulder, decoy to the far post, dart back for the near-post strike."
+    },
+    "Tactical Vault": {
+      frames: TACTICAL_VAULT_FRAMES,
+      orientation: "horizontal",
+      desc: "Arsenal's 2003/04 Invincibles: absorb pressure, Bergkamp drops to link, Henry springs the vertical break."
+    }
+  };
+
+  function showLabHeroExample(category) {
+    const example = LAB_HERO_EXAMPLES[category] || LAB_HERO_EXAMPLES["All"];
+    initFormationDiagram("formation-pitch", "formation-name", "buzzword-row", example.frames, 4200, "formation-stage-list", example.orientation);
+    const descEl = document.getElementById("formation-hero-desc");
+    if (descEl) descEl.textContent = example.desc;
+  }
+
   renderLabGrid("lab-grid");
   setupLabFilters("lab-grid");
   setupLabSearch("lab-grid");
   setupLabResetFilters("lab-grid");
   renderLabTeamFilter("lab-team-filter", "lab-grid");
   renderLabCompetitionFilter("lab-competition-filter", "lab-grid");
-  initFormationDiagram("formation-pitch", "formation-name", "buzzword-row", FORMATION_FRAMES, 4200, "formation-stage-list");
   renderMegaFooter("mega-footer", "tactical-lab");
   renderKicker();
   initThemeToggle("theme-toggle");
   initAutoTheme();
+
+  showLabHeroExample("All");
+  document.querySelectorAll(".lab-filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => showLabHeroExample(btn.dataset.filter));
+  });
+  const labResetBtn = document.getElementById("lab-reset-filters");
+  if (labResetBtn) labResetBtn.addEventListener("click", () => showLabHeroExample("All"));
 </script>
 </body>
 </html>

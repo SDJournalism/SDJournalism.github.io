@@ -1452,6 +1452,14 @@ a:focus-visible, button:focus-visible {
   aspect-ratio: 68 / 105;
 }
 
+.tactical-pitch.horizontal {
+  aspect-ratio: 105 / 68;
+}
+
+.tactical-pitch-wrap.wide {
+  max-width: 460px;
+}
+
 .tactical-pitch svg.pitch-lines {
   position: absolute;
   inset: 0;
@@ -1530,26 +1538,35 @@ a:focus-visible, button:focus-visible {
   .buzzword-chip { animation: none; opacity: 1; transform: none; }
 }
 
-/* ---------- Compact formation hero (sits beside intro text, like stats-panel) ---------- */
+/* ---------- Lab page head (diagram floats beside the heading/filters) ----------
+   The compact diagram floats right; the eyebrow/heading/description text
+   and the filter controls that follow all wrap around it in normal flow,
+   so the page doesn't waste vertical space waiting for a tall sidebar
+   panel to end before showing the filter row. #lab-grid clears the float
+   so the card grid always starts on a fresh, full-width line. */
 
-.lab-section-head {
-  align-items: flex-start;
-  margin-bottom: 10px;
+.lab-page-head {
+  margin: 48px 0 4px;
 }
 
-.section-head .section-description {
+.section-head .section-description,
+.lab-page-head .section-description {
   margin: 12px 0 0;
 }
 
 .formation-hero.compact {
-  width: 280px;
-  flex-shrink: 0;
-  padding: 16px 16px 14px;
+  width: 250px;
+  padding: 14px 14px 12px;
   margin-bottom: 0;
 }
 
+.formation-hero.compact.floated {
+  float: right;
+  margin: 0 0 18px 26px;
+}
+
 .formation-hero.compact .tactical-pitch-wrap {
-  max-width: 140px;
+  max-width: 130px;
 }
 
 .formation-hero.compact .formation-name {
@@ -1576,8 +1593,30 @@ a:focus-visible, button:focus-visible {
   margin: 10px 0 0;
 }
 
+#lab-grid {
+  clear: both;
+}
+
+/* ---------- In-article diagram (detail pages) ----------
+   Wider and shorter than the sidebar version, sized to sit
+   comfortably under a headline instead of squeezed into a
+   250px sidebar -- pairs with the horizontal pitch orientation. */
+
+.formation-hero.article {
+  max-width: 480px;
+  margin: 20px auto 30px;
+}
+
+.formation-hero.article .tactical-pitch-wrap {
+  max-width: 440px;
+}
+
+.formation-hero.article .buzzword-chip {
+  font-size: 11px;
+}
+
 @media (max-width: 900px) {
-  .formation-hero.compact { width: 100%; margin-top: 16px; }
+  .formation-hero.compact.floated { float: none; width: 100%; margin: 20px 0 0; }
   .formation-hero.compact .formation-hero-inner { flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
 }
 
