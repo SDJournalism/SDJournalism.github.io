@@ -1538,15 +1538,25 @@ a:focus-visible, button:focus-visible {
   .buzzword-chip { animation: none; opacity: 1; transform: none; }
 }
 
-/* ---------- Lab page head (diagram floats beside the heading/filters) ----------
-   The compact diagram floats right; the eyebrow/heading/description text
-   and the filter controls that follow all wrap around it in normal flow,
-   so the page doesn't waste vertical space waiting for a tall sidebar
-   panel to end before showing the filter row. #lab-grid clears the float
-   so the card grid always starts on a fresh, full-width line. */
+/* ---------- Lab page head (grid: text+filters left, diagram right) ----------
+   A plain two-column grid, not a float -- far more predictable. The left
+   column carries the heading, description, filter row, dropdowns and
+   search box; the right column is the diagram. Both start at the same
+   top edge and the grid's own height is whichever column is taller, but
+   since the left column now holds five stacked pieces of UI rather than
+   just a heading, the two columns end up close in height, so there's no
+   large empty gap before the (separate, always full-width) card grid. */
 
 .lab-page-head {
-  margin: 48px 0 4px;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 28px;
+  align-items: start;
+  margin: 48px 0 32px;
+}
+
+.lab-head-text .filter-row {
+  margin-top: 22px;
 }
 
 .section-head .section-description,
@@ -1554,24 +1564,35 @@ a:focus-visible, button:focus-visible {
   margin: 12px 0 0;
 }
 
+@media (max-width: 900px) {
+  .lab-page-head { grid-template-columns: 1fr; }
+}
+
 .formation-hero.compact {
-  width: 250px;
+  width: 100%;
   padding: 14px 14px 12px;
   margin-bottom: 0;
 }
 
-.formation-hero.compact.floated {
-  float: right;
-  margin: 0 0 18px 26px;
+.formation-hero.compact .tactical-pitch-wrap {
+  max-width: 150px;
+  margin: 0 auto;
 }
 
-.formation-hero.compact .tactical-pitch-wrap {
-  max-width: 130px;
-}
+/* Fixed-height reserves for the parts of the panel that change content
+   depending on which example/frame is showing (Manager DNA vs Player
+   Blueprints, "4-3-3" vs "4-4-2 Defensive Block", one buzzword vs two...).
+   Without these, switching examples changes the panel's height and
+   shunts the card grid below it up and down. */
 
 .formation-hero.compact .formation-name {
   font-size: 11px;
   margin-bottom: 6px;
+  min-height: 14px;
+}
+
+.formation-hero.compact .buzzword-row {
+  min-height: 56px;
 }
 
 .formation-hero.compact .buzzword-chip {
@@ -1581,6 +1602,17 @@ a:focus-visible, button:focus-visible {
 
 .formation-hero.compact .stage-list {
   margin-top: 10px;
+  min-height: 64px;
+  align-content: flex-start;
+}
+
+.formation-hero.compact .stage-item {
+  font-size: 9.5px;
+  padding: 4px 7px;
+}
+
+.formation-hero.compact .formation-hero-desc {
+  min-height: 48px;
 }
 
 .formation-hero-desc {
@@ -1590,17 +1622,13 @@ a:focus-visible, button:focus-visible {
   color: rgba(245, 246, 241, 0.6);
   text-align: center;
   max-width: 220px;
-  margin: 10px 0 0;
-}
-
-#lab-grid {
-  clear: both;
+  margin: 10px auto 0;
 }
 
 /* ---------- In-article diagram (detail pages) ----------
    Wider and shorter than the sidebar version, sized to sit
    comfortably under a headline instead of squeezed into a
-   250px sidebar -- pairs with the horizontal pitch orientation. */
+   260px sidebar -- pairs with the horizontal pitch orientation. */
 
 .formation-hero.article {
   max-width: 480px;
@@ -1615,9 +1643,17 @@ a:focus-visible, button:focus-visible {
   font-size: 11px;
 }
 
-@media (max-width: 900px) {
-  .formation-hero.compact.floated { float: none; width: 100%; margin: 20px 0 0; }
-  .formation-hero.compact .formation-hero-inner { flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; }
+/* ---------- Slower on small screens ----------
+   Same fix as the homepage headline ticker: what reads fine at speed
+   on a big screen feels frantic in a 150px-wide mobile panel, so the
+   dots take longer to glide between positions once the viewport is
+   phone-sized. The cycle interval itself is slowed in JS (see
+   initFormationDiagram in site.js). */
+
+@media (max-width: 600px) {
+  .formation-dot {
+    transition-duration: 1.7s;
+  }
 }
 
 /* ---------- Clickable stage list ---------- */

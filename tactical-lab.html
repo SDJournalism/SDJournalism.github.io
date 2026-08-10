@@ -73,7 +73,31 @@
 
 <div class="wrap">
   <div class="lab-page-head">
-    <div class="formation-hero compact floated">
+    <div class="lab-head-text">
+      <span class="eyebrow" id="lab-eyebrow">Visual Tactical Analysis</span>
+      <h2 id="lab-heading">Tactical Lab</h2>
+      <p class="section-description" id="lab-description">Formations, systems and player roles, broken down as moving diagrams instead of walls of text.</p>
+
+      <div class="filter-row">
+        <button class="filter-btn lab-filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn lab-filter-btn" data-filter="Manager DNA">Manager DNA</button>
+        <button class="filter-btn lab-filter-btn" data-filter="Player Blueprints">Player Blueprints</button>
+        <button class="filter-btn lab-filter-btn" data-filter="Tactical Vault">Tactical Vault</button>
+      </div>
+
+      <div class="dropdown-filter-row">
+        <select id="lab-team-filter" class="dropdown-filter"></select>
+        <select id="lab-competition-filter" class="dropdown-filter"></select>
+        <button id="lab-reset-filters" class="reset-filters-btn" type="button" hidden>Reset all filters &times;</button>
+      </div>
+
+      <div class="search-wrap">
+        <input type="text" id="lab-search" class="search-input" placeholder="Search Tactical Lab...">
+        <button id="lab-search-clear" class="search-clear-btn" type="button" aria-label="Clear search" hidden>&times;</button>
+      </div>
+    </div>
+
+    <div class="formation-hero compact">
       <div class="formation-hero-inner">
         <div class="tactical-pitch-wrap">
           <div class="tactical-pitch" id="formation-pitch"></div>
@@ -86,28 +110,6 @@
         <p class="formation-hero-desc" id="formation-hero-desc">A live example: a base 4-3-3 inverting into a 3-2-4-1, then stretching into a 3-2-5 as players rotate into the space it opens up.</p>
       </div>
     </div>
-
-    <span class="eyebrow" id="lab-eyebrow">Visual Tactical Analysis</span>
-    <h2 id="lab-heading">Tactical Lab</h2>
-    <p class="section-description" id="lab-description">Formations, systems and player roles, broken down as moving diagrams instead of walls of text.</p>
-  </div>
-
-  <div class="filter-row">
-    <button class="filter-btn lab-filter-btn active" data-filter="All">All</button>
-    <button class="filter-btn lab-filter-btn" data-filter="Manager DNA">Manager DNA</button>
-    <button class="filter-btn lab-filter-btn" data-filter="Player Blueprints">Player Blueprints</button>
-    <button class="filter-btn lab-filter-btn" data-filter="Tactical Vault">Tactical Vault</button>
-  </div>
-
-  <div class="dropdown-filter-row">
-    <select id="lab-team-filter" class="dropdown-filter"></select>
-    <select id="lab-competition-filter" class="dropdown-filter"></select>
-    <button id="lab-reset-filters" class="reset-filters-btn" type="button" hidden>Reset all filters &times;</button>
-  </div>
-
-  <div class="search-wrap">
-    <input type="text" id="lab-search" class="search-input" placeholder="Search Tactical Lab...">
-    <button id="lab-search-clear" class="search-clear-btn" type="button" aria-label="Clear search" hidden>&times;</button>
   </div>
 
   <div class="article-grid" id="lab-grid"></div>
@@ -124,7 +126,7 @@
      Hero diagram examples, one per Tactical Lab category.
      These are illustrative only -- not standalone Tactical Lab
      pieces, just what the live diagram shows while that filter
-     tab is selected. Same floated panel, same engine
+     tab is selected. Same panel, same engine
      (initFormationDiagram), just different frame data swapped in.
      ============================================================ */
 

@@ -808,13 +808,19 @@ function initFormationDiagram(pitchId, nameId, buzzId, frames, intervalMs, stage
   let current = 0;
   let timer = null;
 
+  // Same idea as the homepage ticker's slower mobile duration: a change
+  // that reads comfortably on a big screen feels rushed in a small
+  // phone-width panel, so small screens get more time per frame.
+  const isSmallScreen = window.matchMedia && window.matchMedia("(max-width: 600px)").matches;
+  const effectiveInterval = (intervalMs || 4200) * (isSmallScreen ? 1.7 : 1);
+
   function startTimer() {
     if (frames.length <= 1) return;
     clearInterval(timer);
     timer = setInterval(() => {
       current = (current + 1) % frames.length;
       show(current);
-    }, intervalMs || 4200);
+    }, effectiveInterval);
   }
 
   function jumpTo(index) {
