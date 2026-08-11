@@ -46,6 +46,41 @@
 
 const articles = [
 {
+    id: 12,
+    title: "Carabao Cup Round Two: The Shock That's Already Landed, and the Underdogs Dreaming of More",
+    type: "Analysis",
+    competition: "Carabao Cup",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/carabaocupround2.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/aug/07/middlesbrough-wrexham-carabao-cup-match-report",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Walsall's stunning win over Bristol City set the tone for a chaotic first round, and Monday's second round draw has handed several lower-league sides a genuine route to another shock. We look at the result that mattered most, the ties worth circling, and the underdogs with a puncher's chance when round two kicks off on 24 August.",
+    content: [
+      "Round one of the Carabao Cup wrapped up on Monday night, and by 7.20pm the balls were already being pulled for round two. In between, English football's most maligned domestic competition delivered exactly the kind of chaos that makes the early rounds worth paying attention to: a League Two side dumping out a Championship promotion fancy, a string of shootouts, and a second round draw that has left several unfashionable names with a genuine route to Wembley. Here's what actually mattered from round one, and where round two's shocks are most likely to come from.",
+      "The result that set the tone",
+      "The standout scoreline of the entire first round came at Ashton Gate on the opening night, where League Two's Walsall beat Championship promotion hopefuls Bristol City 1-0. Aaron Pressley scored the only goal in the 47th minute, turning in a low cross from Reece Smith, but the game was arguably won by his own goalkeeper: Jed Ward produced a string of saves to deny Jed Wallace and Lorent Tolaj at the other end, while City's new signing Sam Tickle somehow kept out three efforts from a single corner at 0-0. It capped a miserable night for incoming Bristol City boss Michael Skubala, whose first game in charge ended in defeat to a side two divisions below his own (Yahoo Sports, 2026).",
+      "Fine margins across the board",
+      "Walsall's win was the biggest shock by division gap, but it wasn't the only tie decided by fine margins. Barnsley needed penalties to see off Wigan Athletic, Preston North End required the same to beat Huddersfield Town, and Burnley -- one of three clubs relegated from the Premier League last season -- were taken all the way by League Two's Notts County before winning on spot-kicks. Across both sections, VAVEL reported that six ties in total went the distance to a shootout, a reminder that gulfs in league position count for less than the fixture list suggests in the first week of August (VAVEL, 2026).",
+      "Underdogs with a route through",
+      "Monday's draw didn't just pair up whoever was left in the hat -- it handed a genuine run to a handful of lower-league sides. Walsall's reward for beating Bristol City is a trip to Leyton Orient, themselves fresh off a 2-0 win over League One rivals Oxford United, guaranteeing at least one more shock-hunting side reaches round three. Crewe Alexandra, who haven't progressed beyond the second round since 2009, travel to League One's Barnsley in search of a repeat. Fleetwood Town and Shrewsbury Town, both League Two, were drawn together, guaranteeing another lower-league side advances regardless of the result. And Lincoln City, preparing for their first Championship season in over 60 years, take that newfound status to Blackpool looking to make an early statement (VAVEL, 2026).",
+      "Two ties worth circling",
+      "Two fixtures stand out above the rest for genuine shock potential. Bradford City, beaten League Two finalists back in 2013, will host Burnley at a sold-out-in-waiting Valley Parade -- and after needing penalties to get past Notts County in round one, Scott Parker's side will arrive as anything but comfortable favourites. Further south, Doncaster Rovers welcome a Middlesbrough side chasing their first major trophy since winning this very competition in 2004, a Championship promotion contender who will need to be sharper than their round one shootout win over Stockport County suggested if they're to avoid another upset.",
+      "Names to watch when the ties kick off",
+      "It isn't just the sides in League One and League Two with something to prove. Jack Wilshere takes charge of Luton Town's trip to Chelsea, a fixture the two clubs have now played five times in as many years. Neil Harris returns to Millwall, the club he captained and later managed, as Cambridge United's manager. And David Moyes takes Everton to Deepdale to face Preston North End for the first time competitively since 2004, a fixture with more shared history between the two clubs than the gulf in league position might suggest.",
+      "When it's played",
+      "Second round ties are scheduled for the week commencing 24 August, giving every side involved a fortnight to prepare. Waiting at the other end of the draw, eventually, is holders Manchester City, chasing a second successive Carabao Cup and looking to draw level with Liverpool's record of ten League Cup triumphs (GiveMeSport, 2026). For Walsall, Crewe, Fleetwood and the rest, that's a long way off. Getting through round two, against opponents picked out specifically because they offer a route through, is the more immediate and entirely realistic ambition."
+    ],
+    sources: [
+      { label: "Yahoo Sports (PA Media) -- Walsall upset Bristol City as Aaron Pressley seals Carabao Cup progress", url: "https://uk.sports.yahoo.com/news/walsall-upset-bristol-city-aaron-204546000.html" },
+      { label: "VAVEL -- Carabao Cup second round draw in full as Premier League sides enter", url: "https://www.vavel.com/en/football/2026/08/10/1267698-carabao-cup-draw-in-full-as-premier-league-sides-enter.html" },
+      { label: "GiveMeSport -- Carabao Cup 2026/27: Draw, Fixtures & Results", url: "https://www.givemesport.com/carabao-cup-2026-27-draw-fixtures-results/" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
     id: 11,
     title: "Carabao Cup Second Round Draw: Newcastle, Everton, Wolves and Burnley Learn Their Opponents",
     type: "Analysis",
