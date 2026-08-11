@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enzo Maresca: The Inverted Pivot -- Samuel Davies</title>
+<meta name="description" content="Enzo Maresca insists he isn't 'copy and paste' -- but the inverted full-back and short-passing structure he built at Chelsea has more in common with the Manchester City he's inherited than he's letting on.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enzo Maresca: The Inverted Pivot">
+<meta property="og:description" content="Enzo Maresca insists he isn't 'copy and paste' -- but the inverted full-back and short-passing structure he built at Chelsea has more in common with the Manchester City he's inherited than he's letting on.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/marescataclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/maresca-inverted-pivot.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enzo Maresca: The Inverted Pivot">
+<meta name="twitter:description" content="Enzo Maresca insists he isn't 'copy and paste' -- but the inverted full-back and short-passing structure he built at Chelsea has more in common with the Manchester City he's inherited than he's letting on.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/marescataclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/marescataclab.jpg" alt="Enzo Maresca">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/65888753" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Enzo Maresca</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Manchester City</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Inverted Pivot</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="maresca-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="maresca-name"></span>
+          <div class="buzzword-row" id="maresca-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="maresca-stage-list"></div>
+        <div class="annotation-legend" id="maresca-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="maresca-stats"></div>
+
+    <div class="body-text">
+      <p>Enzo Maresca has been careful to draw a line between himself and the man he replaced. "I don't believe in copy and paste," he said on taking over at Manchester City in the summer of 2026. "I'm not here to copy someone, I'm here to do my job, to install my football, the way I see football." Look closely at what that football actually looks like, though, and the line is blurrier than he suggests.</p>
+
+      <h4 class="body-subheading">Short connections, not long possession</h4>
+      <p>Maresca's Chelsea were not the possession monsters their underlying numbers might suggest. Seven games into his first season at Stamford Bridge, Chelsea's average possession sat at 54.9% -- lower than any full Chelsea season in the previous nine years -- but they ranked fourth in the league for passes per minute of possession. The point was never to hold the ball for its own sake; it was to string together enough short, quick connections in the middle third to trigger the rotations behind them.</p>
+
+      <h4 class="body-subheading">The inverted pivot</h4>
+      <p>The mechanism behind those rotations is a full-back stepping into midfield. At Leicester and Chelsea alike, Maresca has used one full-back -- inverting into a double pivot alongside the holding midfielder -- while the centre-backs spread to form a back three underneath, and the goalkeeper adds a spare passing option only when the press demands it. It's the same broad shape Manchester City spent a decade being drilled in under Pep Guardiola, just built from a different starting point <a href="https://learning.coachesvoice.com/cv/enzo-maresca-chelsea-tactics/" target="_blank" rel="noopener nofollow" class="citation-link">(Coaches' Voice, 2024)</a>.</p>
+
+      <h4 class="body-subheading">A free 10, not a fixed winger</h4>
+      <p>At Chelsea, the clearest beneficiary of that structure was Cole Palmer, redeployed from right winger into a central number 10 role despite scoring 22 league goals from the flank the season before. With a full-back inverted alongside the pivot, Palmer could drift into the right inside channel on his stronger left foot, shoot, combine, or drop deep to collect possession the moment a defence pushed up. After seven games under Maresca, only one player in the league had created more chances. Manchester City's equivalent -- whoever ends up occupying that free, roaming 10 role between the lines -- is arguably the single biggest tactical question of his early tenure.</p>
+
+      <h4 class="body-subheading">Counter-press, then reset</h4>
+      <p>Out of possession, Maresca's sides press hard but selectively. Chelsea ranked second in the league for challenge intensity in the minute after losing the ball, yet only 12th for PPDA (passes allowed per defensive action) across a whole passage of play -- a team that hunts the ball back immediately, but drops into a settled 4-4-2 block rather than chasing it if the first counter-press doesn't win it back.</p>
+
+      <h4 class="body-subheading">Why City already speak his language</h4>
+      <p>What makes Maresca's "no copy and paste" claim more nuanced than it sounds is who he's saying it to. City's dressing room has spent ten years inside a positional framework built on exactly the mechanism Maresca favours -- an inverted full-back forming a back three, double pivots rotating to create central overloads, wide players pinning the last line. Maresca was in that building for two of those years himself, first managing City's Elite Development Squad and then working as Guardiola's assistant during the 2022-23 Treble campaign. His task isn't teaching City an unfamiliar language; it's persuading a squad fluent in one dialect of positional football to adopt his own <a href="https://cityxtra.co.uk/49147/how-enzo-maresca-will-opt-to-differ-from-pep-guardiola-as-manchester-city-manager/" target="_blank" rel="noopener nofollow" class="citation-link">(City Xtra, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Building his own squad</h4>
+      <p>Where Maresca is genuinely diverging from his predecessor is off the pitch. He has said he wants a larger squad than the lean group Guardiola preferred, and his first major signing reflected that: a club-record £116m move for Nottingham Forest's Elliot Anderson, brought in on Maresca's recommendation after the midfielder consulted friends who had played under the Italian at Chelsea. More midfield reinforcements are expected to follow before City's rebuild is complete. "I feel back home," Maresca said of his return to the Etihad. Whether that feeling survives contact with the size of the job is the story of his entire first season.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://learning.coachesvoice.com/cv/enzo-maresca-chelsea-tactics/" target="_blank" rel="noopener nofollow">Coaches' Voice -- Enzo Maresca's Chelsea tactics</a></li>
+        <li><a href="https://cityxtra.co.uk/49147/how-enzo-maresca-will-opt-to-differ-from-pep-guardiola-as-manchester-city-manager/" target="_blank" rel="noopener nofollow">City Xtra -- How Enzo Maresca will opt to differ from Pep Guardiola as Manchester City manager</a></li>
+        <li><a href="https://cityxtra.co.uk/50207/i-feel-back-home-enzo-maresca-hails-man-city-organisational-stability-in-first-press-conference-as-manager/" target="_blank" rel="noopener nofollow">City Xtra -- "I feel back home": Maresca's first press conference as Man City manager</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="de-zerbi-press-bait.html">
+          <div class="related-thumb"><img src="../images/RDZtaclab.jpg" alt="Roberto De Zerbi: The Press-Bait" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Roberto De Zerbi: The Press-Bait</span>
+        </a>
+        <a class="related-card" href="hurzeler-touchline-trap.html">
+          <div class="related-thumb"><img src="../images/fabiantaclab.jpg" alt="Fabian Hürzeler: The Touchline Trap" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Fabian Hürzeler: The Touchline Trap</span>
+        </a>
+        <a class="related-card" href="gabriel-set-piece-predator.html">
+          <div class="related-thumb"><img src="../images/gabrieltaclab.jpg" alt="Gabriel Magalhães: The Set-Piece Predator" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Gabriel Magalhães: The Set-Piece Predator</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Inverted%20Pivot%3A%20how%20Enzo%20Maresca%27s%20Chelsea%20system%20is%20translating%20at%20Man%20City%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fmaresca-inverted-pivot.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Inverted%20Pivot%3A%20how%20Enzo%20Maresca%27s%20Chelsea%20system%20is%20translating%20at%20Man%20City%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fmaresca-inverted-pivot.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const MARESCA_FRAMES = [
+    {
+      name: "The Back Four",
+      buzzwords: ["Base Shape", "Settled Possession"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 18, y: 85 },
+        { x: 6, y: 78 },
+        { x: 34, y: 68 },
+        { x: 6, y: 30 }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Winger stays high and wide, pinning the full-back" }
+      ]
+    },
+    {
+      name: "Full-Back Inverts",
+      buzzwords: ["Invert", "Back Three"],
+      dots: [
+        { x: 34, y: 98, gk: true },
+        { x: 18, y: 85 },
+        { x: 26, y: 65 },
+        { x: 42, y: 60 },
+        { x: 6, y: 28 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Full-back inverts to form a back three with the pivot" }
+      ]
+    },
+    {
+      name: "Switch To The Winger",
+      buzzwords: ["Switch", "1v1 Winger"],
+      dots: [
+        { x: 34, y: 95, gk: true },
+        { x: 18, y: 85 },
+        { x: 26, y: 62 },
+        { x: 44, y: 45 },
+        { x: 8, y: 15 }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Switch finds the winger isolated 1v1" }
+      ]
+    }
+  ];
+  const MARESCA_STATS = [
+    { value: "54.9%", label: "Chelsea's average possession in Maresca's first 7 PL games" },
+    { value: "£116m", label: "Club-record fee for Elliot Anderson, his first City signing" },
+    { value: "2029", label: "Year his Manchester City contract runs to" }
+  ];
+  initFormationDiagram("maresca-pitch", "maresca-name", "maresca-buzzwords", MARESCA_FRAMES, 3400, "maresca-stage-list", "horizontal", "maresca-legend");
+  renderStatPanel("maresca-stats", MARESCA_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Enzo Maresca: The Inverted Pivot",
+      text: "Enzo Maresca: The Inverted Pivot -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/maresca-inverted-pivot.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

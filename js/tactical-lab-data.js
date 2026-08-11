@@ -26,6 +26,19 @@
 
 const tacticalLabEntries = [
   {
+    id: "maresca-inverted-pivot",
+    category: "Manager DNA",
+    title: "Enzo Maresca: The Inverted Pivot",
+    excerpt: "Enzo Maresca insists he isn't 'copy and paste' -- but the inverted full-back and short-passing structure he built at Chelsea has more in common with the Manchester City he's inherited than he's letting on.",
+    team: "Manchester City",
+    competition: "Premier League",
+    date: "2026-08-11",
+    image: "images/marescataclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/65888753",
+    imageCredit: "Photo: BBC Sport",
+    comingSoon: false
+  },
+  {
     id: "gabriel-set-piece-predator",
     category: "Player Blueprints",
     title: "Gabriel Magalhães: The Set-Piece Predator",
