@@ -46,6 +46,48 @@
 
 const articles = [
 {
+    id: 14,
+    title: "The Djed Spence Discount: Why Some Players Never Escape Their Reputation",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/djedtransfer.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/jun/08/djed-spence-england-world-cup-broken-jaw",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Djed Spence is heading to Inter Milan for a fee barely bigger than the one Tottenham paid four years ago -- despite becoming an established Premier League right-back, a Europa League winner and a full England international in between. His stagnant price tag says less about his ability than about how football decides what a player is worth in the first place.",
+    content: [
+      "Inter Milan are closing in on a deal for Djed Spence, with reports on Monday putting the fee at around £25-26m (in the region of €30m) plus bonuses (Get Italian Football News, 2026). On paper, that's an unremarkable, mid-market transfer in a summer full of them. Look closer, though, and the number is strange. It's barely more than what Tottenham paid Middlesbrough for Spence four years ago -- for a player who has since become an established Premier League right-back, a European trophy winner, and part of England's World Cup squad this summer.",
+      "That flat trajectory looks even odder set against the market around it. Premier League clubs have put together a record summer, spending crossing £3.19 billion before the window has even closed, headlined by a British-record £117m for Morgan Rogers and £116m for Elliot Anderson (Sky Sports, 2026). Fees are rising everywhere. Spence's, relative to what he's achieved, barely has.",
+      "The same number, four years apart",
+      "Spurs signed Spence from Middlesbrough for £20m in July 2022, off the back of a loan season at Nottingham Forest so good it won him the Championship's Young Player of the Month award twice and a place in the PFA Team of the Year. He was 21, unproven at the top level, essentially a bet on potential. Inter's fee, four years later, is being negotiated for a 25-year-old who has since nailed down a starting right-back spot at a club chasing the top four, won the 2025 Europa League, made his senior England debut, and was part of the Three Lions' squad at this summer's World Cup. On output alone, that CV should be worth a far bigger jump than the one currently on the table.",
+      "The comment that never left",
+      "The gap between Spence's reputation and his output starts almost the moment he signed. Antonio Conte publicly distanced himself from the move within days, calling Spence \"an investment by the club\" rather than his own signing (BBC Sport, 2022). Spence made just six substitute appearances before being loaned out, and later said the comment \"shattered his confidence\" (The Standard, 2025). A transfer market doesn't price a player on ability alone -- it prices him on the story being told about him, and that story was written before Spence had a real chance to write it himself.",
+      "Chaos mistaken for a personality flaw",
+      "What followed did little to correct it. A promising loan at Rennes, including a rare away win at Paris Saint-Germain, ended early through injury. A loan at Leeds was cut short after seven appearances, with manager Daniel Farke citing concerns about his attitude (Yorkshire Post, 2024). Each incident had its own circumstantial explanation. Strung together, though, they hardened into a single, simplified label -- \"problem player\" -- that had almost nothing to do with what Spence could actually do with a football.",
+      "The proof that should have reset the price",
+      "The turnaround, when it came, was thorough. A loan at Genoa in early 2024 repaired his reputation enough that Ange Postecoglou brought him back into the fold; his first Tottenham start finally arrived 881 days after he signed (The Athletic, 2024). He was named Player of the Match against Manchester United in February 2025, scored his first Premier League goal weeks later, and came off the bench in Tottenham's Europa League final win that May. By September, he'd signed a new long-term Spurs contract, made his senior England debut, and become the first Muslim player capped for the men's national team -- before being named in England's World Cup squad this summer. That is not a marginal résumé. It's the CV of a player who should be significantly more expensive than the one Spurs bought in 2022, not roughly the same price.",
+      "Spence isn't a one-off",
+      "This isn't unique to Spence. Arsenal let centre-back Jakub Kiwior leave for Porto this summer for around £14.5m -- less than half his estimated market value, for what was described as \"an experienced, versatile, peak-aged centre-half\" a rival club would likely have paid £40m for (Football365, 2026). Rasmus Hojlund needed to leave a misfiring Manchester United entirely, and score 26 goals in 95 games elsewhere, before Napoli would pay anywhere close to what his output actually suggested he was worth. In both cases, a reputation formed in one specific, difficult context outlived the football evidence that should have replaced it.",
+      "Reputation is sticky, form isn't",
+      "In theory, a transfer market should reprice a player instantly on new evidence -- a good season, a trophy, an international call-up. In practice, it does no such thing. A bad early episode, especially one delivered publicly by a manager, becomes the fixed point every future assessment gets measured against. Reversing it doesn't just take good form. It takes years of it, delivered patiently enough to outlast the story that got there first -- and even then, as Spence's fee suggests, the market can still be strangely slow to catch up.",
+      "This is where the value is",
+      "If Inter do land Spence for anywhere near the reported fee, they are getting an established Premier League right-back and full international at a price that reflects who he was in 2022, not who he's become since. That's not really a story about Djed Spence. It's a story about how football decides what a player is worth -- and how long a reputation can keep collecting rent long after the facts that built it have stopped being true."
+    ],
+    sources: [
+      { label: "Get Italian Football News -- Breaking: Inter close in on €30 million deal for Tottenham star Djed Spence", url: "https://www.getfootballnewsitaly.com/2026/inter-30m-tottenham-spence/" },
+      { label: "BBC Sport -- Spurs: Spence not my signing, says Conte", url: "https://www.bbc.com/sport/articles/cyjmddrr0w7o" },
+      { label: "The Standard -- Spurs star slams Conte as he reveals ex-boss 'shattered my confidence'", url: "https://www.standard.co.uk/sport/football/djed-spence-antonio-conte-tottenham-transfer-b1218539.html" },
+      { label: "Yorkshire Post -- Leeds United transfer latest: Whites exercise recall option on Djed Spence", url: "https://www.yorkshirepost.co.uk/sport/football/leeds-united/leeds-united-transfer-latest-whites-exercise-recall-option-to-allow-djed-spence-to-return-to-premier-league-side-tottenham-hotspur-4466922" },
+      { label: "The Athletic (via The New York Times) -- It took Djed Spence 881 days to make his first start for Tottenham", url: "https://www.nytimes.com/athletic/5996822/2024/12/16/djed-spence-tottenham-hotspur-first-start/" },
+      { label: "Football365 -- The biggest transfer underpays of summer 2026", url: "https://www.football365.com/news/biggest-transfer-underpays-summer-2026-arsenal-manchester-united" },
+      { label: "Sky Sports -- Transfer window trends revealed as Premier League spending hits £3.19bn", url: "https://www.skysports.com/football/news/11661/13423608/transfer-window-trends-revealed-as-premier-league-spending-hits-lb3-19bn-and-domestic-trading-increases" }
+    ],
+    players: ["Djed Spence"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
     id: 13,
     title: "Brennan Johnson and Dwight McNeil Swap: Everton and Palace Finish What January Started",
     type: "Analysis",
