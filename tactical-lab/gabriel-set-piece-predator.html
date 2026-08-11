@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Magalhães: The Set-Piece Predator -- Samuel Davies</title>
+<meta name="description" content="How Arsenal turn corners into a science, using blockers and crowded six-yard boxes to isolate Gabriel -- the centre-back with more Premier League corner goals than any other player.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gabriel Magalhães: The Set-Piece Predator">
+<meta property="og:description" content="How Arsenal turn corners into a science, using blockers and crowded six-yard boxes to isolate Gabriel -- the centre-back with more Premier League corner goals than any other player.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/gabrieltaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/gabriel-set-piece-predator.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gabriel Magalhães: The Set-Piece Predator">
+<meta name="twitter:description" content="How Arsenal turn corners into a science, using blockers and crowded six-yard boxes to isolate Gabriel -- the centre-back with more Premier League corner goals than any other player.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/gabrieltaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/gabrieltaclab.jpg" alt="Gabriel Magalhaes">
+      <figcaption><a href="https://www.skysports.com/transfer/news/11661/13376806/gabriel-contract-arsenal-defender-signs-new-xxx-year-deal-to-remain-at-the-emirates-until-xxx" target="_blank" rel="noopener nofollow">Photo: Sky Sports</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Player Blueprints</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Gabriel Magalhães</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Arsenal</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Set-Piece Predator</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="gabriel-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="gabriel-name"></span>
+          <div class="buzzword-row" id="gabriel-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="gabriel-stage-list"></div>
+        <div class="annotation-legend" id="gabriel-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="gabriel-stats"></div>
+
+    <div class="body-text">
+      <p>Gabriel Magalhães is a centre-back by trade, but at Arsenal's attacking corners he is treated like a striker. Opposition managers now routinely assign two markers to shadow him, and it still isn't enough -- the Brazilian has scored more Premier League corner goals than any other player since the start of the 2023-24 season, all of them headers.</p>
+
+      <h4 class="body-subheading">The delivery</h4>
+      <p>It starts with how Arsenal take their corners. Almost all of them are inswingers -- 96% by one count, whipped in by Bukayo Saka from the right and Declan Rice from the left -- and Arsenal take a lower proportion of short corners than any other Premier League side. When Arsenal win a corner, the ball is going in the box, virtually every time.</p>
+
+      <h4 class="body-subheading">Crowding the box</h4>
+      <p>Before the delivery even arrives, Arsenal pack the opposition's six-yard box with more bodies than any other team in the league -- an average of 3.8 players. Those runners force the defending side to match them, which drags markers away from clean sightlines and clutters the goalkeeper's ability to come and claim the ball.</p>
+
+      <h4 class="body-subheading">The block</h4>
+      <p>Once the box is crowded, Arsenal's other players go to work as decoys and blockers, screening off Gabriel's marker just long enough for him to lose his man. It's a well-drilled routine rather than chaos -- team-mates like Jurriën Timber, Ben White and William Saliba have all been used specifically to occupy defenders and goalkeepers so Gabriel arrives at the six-yard box unmarked <a href="https://theanalyst.com/articles/gabriel-arsenal-corner-analysis" target="_blank" rel="noopener nofollow" class="citation-link">(Opta Analyst, 2024)</a>.</p>
+
+      <h4 class="body-subheading">The predator's instinct</h4>
+      <p>What the system can't fully explain is Gabriel's own hunger to attack the ball. "When I was young I played up front so I scored a lot of goals," he explained. "It's obviously a lot harder to do that as a defender, but I've worked at it and I've learned a lot. Whenever I go forward for a free-kick or a corner, I know it's a big chance for us. I put that thought in my head: 'I can score this one.' It's my mentality at every single corner." <a href="https://www.goal.com/en/lists/gabriel-arsenal-corners-set-pieces/blt841f12fb9b95a1a9" target="_blank" rel="noopener nofollow" class="citation-link">(Goal.com, 2026)</a></p>
+
+      <h4 class="body-subheading">Why it keeps working</h4>
+      <p>Gabriel has also come to see the double-marking as an advantage rather than a problem. "It's getting more and more difficult because when I arrive in the box often there will be two players coming to mark me," he said. "That's really good for us though, because it's not only me who's going to score. It opens up spaces for the others and they can all score too." With defences forced to choose between marking Gabriel and covering everyone else Arsenal send into the box, someone is usually left free.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://theanalyst.com/articles/gabriel-arsenal-corner-analysis" target="_blank" rel="noopener nofollow">Opta Analyst -- Blocking, Decoys and Brute Force: How Arsenal Unleash Gabriel At Corners</a></li>
+        <li><a href="https://www.goal.com/en/lists/gabriel-arsenal-corners-set-pieces/blt841f12fb9b95a1a9" target="_blank" rel="noopener nofollow">Goal.com -- 'TWO players coming to mark me!' Gabriel on Arsenal's corner prowess</a></li>
+        <li><a href="https://www.premierleague.com/en/players/50234/Gabriel-Magalh%C3%A3es/stats" target="_blank" rel="noopener nofollow">Premier League -- Gabriel Magalhães player profile and stats</a></li>
+      </ul>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Set-Piece%20Predator%3A%20how%20Gabriel%20Magalh%C3%A3es%20turns%20corners%20into%20goals%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fgabriel-set-piece-predator.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Set-Piece%20Predator%3A%20how%20Gabriel%20Magalh%C3%A3es%20turns%20corners%20into%20goals%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fgabriel-set-piece-predator.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const GABRIEL_FRAMES = [
+    {
+      name: "Crowding The Box",
+      buzzwords: ["Crowd The Box", "Decoy Runners"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 40, y: 10, opponent: true },
+        { x: 44, y: 14 },
+        { x: 50, y: 18 },
+        { x: 68, y: 1 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Blocker moves to shield Gabriel's marker" },
+        { dotIndex: 3, text: "Gabriel starts his run from deep" }
+      ]
+    },
+    {
+      name: "The Block",
+      buzzwords: ["Blocker", "Near-Post Burst"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 42, y: 9, opponent: true },
+        { x: 42, y: 11 },
+        { x: 38, y: 6 },
+        { x: 66, y: 2 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Blocker seals off the marker" },
+        { dotIndex: 3, text: "Gabriel accelerates to the near post" }
+      ]
+    },
+    {
+      name: "Free Header",
+      buzzwords: ["Free Header", "First Contact"],
+      dots: [
+        { x: 30, y: 1, gk: true, opponent: true },
+        { x: 44, y: 10, opponent: true },
+        { x: 42, y: 12 },
+        { x: 32, y: 3 },
+        { x: 64, y: 3 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Free header, six yards out" }
+      ]
+    }
+  ];
+  const GABRIEL_STATS = [
+    { value: "5", label: "PL corner goals since 2023/24 -- most of any player" },
+    { value: "11", label: "First contacts won at Arsenal's attacking corners, 2024/25 -- a league high" },
+    { value: "17", label: "Premier League goals since his 2020 debut -- most by any defender" }
+  ];
+  initFormationDiagram("gabriel-pitch", "gabriel-name", "gabriel-buzzwords", GABRIEL_FRAMES, 3400, "gabriel-stage-list", "horizontal", "gabriel-legend");
+  renderStatPanel("gabriel-stats", GABRIEL_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Gabriel Magalhães: The Set-Piece Predator",
+      text: "Gabriel Magalhães: The Set-Piece Predator -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/gabriel-set-piece-predator.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

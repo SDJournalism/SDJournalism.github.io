@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leicester City 2015/16: The Counter-Attack Kings -- Samuel Davies</title>
+<meta name="description" content="How Claudio Ranieri turned a 5000-1 shot into champions -- Leicester's 4-4-2, the lowest possession of any Premier League title win, and the Kante-Vardy-Mahrez transitions that beat the league's biggest spenders.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leicester City 2015/16: The Counter-Attack Kings">
+<meta property="og:description" content="How Claudio Ranieri turned a 5000-1 shot into champions -- Leicester's 4-4-2, the lowest possession of any Premier League title win, and the Kante-Vardy-Mahrez transitions that beat the league's biggest spenders.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/leicestertaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/leicester-1516-counter-attack-kings.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leicester City 2015/16: The Counter-Attack Kings">
+<meta name="twitter:description" content="How Claudio Ranieri turned a 5000-1 shot into champions -- Leicester's 4-4-2, the lowest possession of any Premier League title win, and the Kante-Vardy-Mahrez transitions that beat the league's biggest spenders.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/leicestertaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/leicestertaclab.jpg" alt="Leicester City 2015/16">
+      <figcaption><a href="https://www.bbc.co.uk/news/uk-england-leicestershire-36236278" target="_blank" rel="noopener nofollow">Photo: BBC News</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Leicester City, 2015/16</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Leicester City</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Counter-Attack Kings</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="leicester-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="leicester-name"></span>
+          <div class="buzzword-row" id="leicester-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="leicester-stage-list"></div>
+        <div class="annotation-legend" id="leicester-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="leicester-stats"></div>
+
+    <div class="body-text">
+      <p>Leicester City went into the 2015-16 season as favourites for relegation, having survived the previous campaign only by winning seven of their last nine games under Nigel Pearson. Bookmakers priced them at 5000-1 to win the Premier League. Ten months later, Claudio Ranieri's side were champions -- the first title in the club's 132-year history, and still English football's most improbable.</p>
+
+      <h4 class="body-subheading">The tactical reset</h4>
+      <p>Ranieri's first major decision was to abandon the back three that had rescued Leicester the previous spring, switching instead to a compact 4-4-2 that became a 4-4-1-1 without the ball. Leicester used 11 different formations the year before Ranieri arrived; in 2015-16, they stuck with this same shape in 35 of their 38 matches <a href="https://www.premierleague.com/en/news/2748139" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2022)</a>.</p>
+
+      <h4 class="body-subheading">Sitting deep, breaking fast</h4>
+      <p>The plan was simple in theory and relentless in execution: sit in two disciplined banks of four, absorb pressure with centre-backs Wes Morgan and Robert Huth close to their own box, and break at pace the moment possession changed hands. Leicester's average possession that season was 42.4% -- comfortably the lowest recorded by any Premier League champion since such data started being tracked in 2003-04.</p>
+
+      <h4 class="body-subheading">The engine: N'Golo Kanté</h4>
+      <p>None of it worked without N'Golo Kanté. Signed from Caen for just £5.6m, the Frenchman made 175 tackles and 156 interceptions across the season -- both the most in the division -- screening the back four and winning back the ball that fed Leicester's counters in the first place.</p>
+
+      <h4 class="body-subheading">Vardy and Mahrez in transition</h4>
+      <p>Once Leicester won the ball, Jamie Vardy and Riyad Mahrez did the rest. Vardy finished the season with 24 goals and set a Premier League record by scoring in 11 consecutive matches, while Mahrez added 17 goals and 11 assists on his way to the PFA Players' Player of the Year award. Ranieri stayed remarkably consistent with his selection throughout, making just 33 changes to his starting XI all season -- the second-fewest of any title-winning side this century, behind only Manchester United's 1992-93 squad.</p>
+
+      <h4 class="body-subheading">A slip at Stamford Bridge</h4>
+      <p>Leicester lost only three league games all season and went unbeaten over their final 12 matches, but the title was ultimately confirmed without them kicking a ball: Tottenham Hotspur, their closest challengers, threw away a two-goal lead at Chelsea in a bad-tempered 2-2 draw remembered as "The Battle of the Bridge," handing Leicester the championship with two games still to play <a href="https://sports.yahoo.com/articles/decade-leicester-city-5000-1-113000635.html" target="_blank" rel="noopener nofollow" class="citation-link">(Yahoo Sports/Football Muse, 2026)</a>. Leicester finished the season on 81 points, ten clear of second-placed Arsenal.</p>
+
+      <h4 class="body-subheading">Where it led</h4>
+      <p>The years since have not been kind to the class of 2015-16 -- a Champions League run and an FA Cup followed, but Leicester have since been relegated from the Premier League entirely, a decline that stands as a strange coda to the club's greatest achievement. Whatever came after, for one season Ranieri's Leicester proved that a settled squad, a disciplined shape and a willingness to give up the ball could still be enough to out-think the division's biggest spenders.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.premierleague.com/en/news/2748139" target="_blank" rel="noopener nofollow">Premier League -- PL30: How Ranieri masterminded Leicester's title victory</a></li>
+        <li><a href="https://sports.yahoo.com/articles/decade-leicester-city-5000-1-113000635.html" target="_blank" rel="noopener nofollow">Yahoo Sports (via Football Muse) -- A decade on: Leicester City's 5000-1 miracle revisited</a></li>
+        <li><a href="https://www.skysports.com/football/news/11712/10261535/premier-league-2015-16-how-the-odds-changed-as-leicester-claimed-the-title" target="_blank" rel="noopener nofollow">Sky Sports -- Premier League 2015/16: How the odds changed as Leicester claimed the title</a></li>
+      </ul>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Counter-Attack%20Kings%3A%20how%20Leicester%20turned%20a%205000-1%20shot%20into%20champions%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fleicester-1516-counter-attack-kings.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Counter-Attack%20Kings%3A%20how%20Leicester%20turned%20a%205000-1%20shot%20into%20champions%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fleicester-1516-counter-attack-kings.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const LEICESTER_FRAMES = [
+    {
+      name: "Winning It Back",
+      buzzwords: ["Regain", "Compact Shape"],
+      dots: [
+        { x: 34, y: 72, opponent: true },
+        { x: 30, y: 76, opponent: true },
+        { x: 45, y: 55 },
+        { x: 60, y: 50 }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Kanté wins the ball back in Leicester's own half" }
+      ]
+    },
+    {
+      name: "The Vardy Sprint",
+      buzzwords: ["In Behind", "Transition"],
+      dots: [
+        { x: 34, y: 72, opponent: true },
+        { x: 32, y: 68 },
+        { x: 48, y: 30 },
+        { x: 58, y: 35 }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Vardy sprints into the space in behind" }
+      ]
+    },
+    {
+      name: "Mahrez Delivers",
+      buzzwords: ["End Product", "17 & 24"],
+      dots: [
+        { x: 32, y: 20, opponent: true },
+        { x: 36, y: 45 },
+        { x: 30, y: 10 },
+        { x: 52, y: 12 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Mahrez arrives to combine or finish" }
+      ]
+    }
+  ];
+  const LEICESTER_STATS = [
+    { value: "5000/1", label: "Pre-season odds to win the title" },
+    { value: "11", label: "Consecutive games Jamie Vardy scored in -- a PL record" },
+    { value: "42.4%", label: "Average possession -- the lowest ever by a PL champion" }
+  ];
+  initFormationDiagram("leicester-pitch", "leicester-name", "leicester-buzzwords", LEICESTER_FRAMES, 3600, "leicester-stage-list", "horizontal", "leicester-legend");
+  renderStatPanel("leicester-stats", LEICESTER_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Leicester City 2015/16: The Counter-Attack Kings",
+      text: "Leicester City 2015/16: The Counter-Attack Kings -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/leicester-1516-counter-attack-kings.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+</script>
+</body>
+</html>

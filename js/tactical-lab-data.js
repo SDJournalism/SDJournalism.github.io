@@ -26,6 +26,45 @@
 
 const tacticalLabEntries = [
   {
+    id: "gabriel-set-piece-predator",
+    category: "Player Blueprints",
+    title: "Gabriel Magalhães: The Set-Piece Predator",
+    excerpt: "How Arsenal turn corners into a science, using blockers and crowded six-yard boxes to isolate Gabriel -- the centre-back with more Premier League corner goals than any other player.",
+    team: "Arsenal",
+    competition: "Premier League",
+    date: "2026-08-11",
+    image: "images/gabrieltaclab.jpg",
+    imageLink: "https://www.skysports.com/transfer/news/11661/13376806/gabriel-contract-arsenal-defender-signs-new-xxx-year-deal-to-remain-at-the-emirates-until-xxx",
+    imageCredit: "Photo: Sky Sports",
+    comingSoon: false
+  },
+  {
+    id: "mitoma-studied-feint",
+    category: "Player Blueprints",
+    title: "Kaoru Mitoma: The Studied Feint",
+    excerpt: "The winger who wrote his university thesis on dribbling -- how Kaoru Mitoma's body feints and disguised first touch turn a routine 1v1 into a repeatable weapon.",
+    team: "Brighton & Hove Albion",
+    competition: "Premier League",
+    date: "2026-08-11",
+    image: "images/mitomataclab.jpg",
+    imageLink: "https://talksport.com/football/1538882/mitoma-solo-goal-messi-brighton-wolves-premier-league/",
+    imageCredit: "Photo: talkSPORT",
+    comingSoon: false
+  },
+  {
+    id: "leicester-1516-counter-attack-kings",
+    category: "Tactical Vault",
+    title: "Leicester City 2015/16: The Counter-Attack Kings",
+    excerpt: "How Claudio Ranieri turned a 5000-1 shot into champions -- Leicester's 4-4-2, the lowest possession of any Premier League title win, and the Kante-Vardy-Mahrez transitions that beat the league's biggest spenders.",
+    team: "Leicester City",
+    competition: "Premier League",
+    date: "2026-08-11",
+    image: "images/leicestertaclab.jpg",
+    imageLink: "https://www.bbc.co.uk/news/uk-england-leicestershire-36236278",
+    imageCredit: "Photo: BBC News",
+    comingSoon: false
+  },
+  {
     id: "de-zerbi-press-bait",
     category: "Manager DNA",
     title: "Roberto De Zerbi: The Press-Bait",
