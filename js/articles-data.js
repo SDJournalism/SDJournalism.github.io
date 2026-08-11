@@ -46,6 +46,39 @@
 
 const articles = [
 {
+    id: 13,
+    title: "Brennan Johnson and Dwight McNeil Swap: Everton and Palace Finish What January Started",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/johnsonmcneil.jpeg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cgr7lde58glo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Seven months after a £20m move collapsed on deadline day, Dwight McNeil is finally getting his switch to Crystal Palace -- this time as part of a straight, fee-free swap for Brennan Johnson, who arrived at Selhurst Park for a club-record £35m in January and left without scoring a single goal. We look at how the deal came together, and why both clubs think they've won it.",
+    content: [
+      "Everton and Crystal Palace have completed a straight swap deal sending Brennan Johnson to Merseyside and Dwight McNeil to south London, with no fee changing hands in either direction. Both players are set to sign four-year contracts at their new clubs, and in a detail few could have scripted, Everton host Palace on the opening weekend of the season -- meaning both men could face their old side within days of putting pen to paper.",
+      "Undoing January's collapse",
+      "The deal effectively completes a transfer that should have happened seven months ago. Everton, McNeil and Palace agreed a deal in principle on deadline day in January, an initial loan with an obligation to buy worth around £20m, and McNeil had even completed a medical. The move collapsed at the last minute after the necessary paperwork wasn't finalised in time, a delay complicated by Palace simultaneously trying to push through Jean-Philippe Mateta's move to AC Milan, which fell apart during his medical. Palace asked Everton to restructure the McNeil deal as a result; Everton refused, and the transfer died. The fallout was significant enough that McNeil's partner, Megan Sharpley, publicly criticised the process afterwards, writing that the winger had been \"dragged along on an emotional rollercoaster\" only for the move to be \"torn away\" at the last second <a href=\"https://uk.sports.yahoo.com/news/crystal-palace-everton-agree-brennan-100641574.html\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Yahoo Sports/Evening Standard, 2026)</a>.",
+      "Johnson's expensive false start at Selhurst Park",
+      "While McNeil waited for his move to resurface, Palace pressed ahead in January with a club-record £35m signing of their own: Brennan Johnson, signed from Tottenham Hotspur. It has not worked out. Johnson made 26 appearances in all competitions for Palace but did not score a single goal, managing only two assists along the way. He does leave south London with a Europa Conference League winner's medal, though he didn't feature in the final itself -- a fittingly muted end to a seven-month spell that never got going.",
+      "Why Everton think they've got the better profile",
+      "David Moyes has watched McNeil, an Everton player since 2022 and a regular under Sean Dyche, drift out of his plans since taking over at Goodison Park, with the emergence of Jack Grealish and Tyrique George squeezing him out of the left-wing picture despite 122 appearances for the club. Johnson offers a different profile entirely: a proven Premier League goal threat who racked up 41 goals and assists during his time at Nottingham Forest, with more pace and directness in transition than McNeil provides. Where McNeil's game has centred on pinpoint crossing, a style several Everton managers have valued less than Dyche did, Johnson is expected to give Moyes a sharper attacking outlet on the flank <a href=\"https://www.vavel.com/en/football/2026/08/10/everton/1267703-why-everton-have-benefited-from-mcneil-and-johnson-swap-deal.html\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(VAVEL, 2026)</a>.",
+      "Palace's calculation",
+      "The maths could easily have looked very different. Reports over the weekend before the deal was finalised suggested Palace, mindful that Johnson had cost £35m against McNeil's roughly £20m valuation from January, wanted an additional cash top-up from Everton of around £10m to make a swap work <a href=\"https://sports.yahoo.com/articles/evertons-dwight-mcneil-dilemma-explained-061000410.html\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Yahoo Sports/Goodison News, 2026)</a>. That extra fee never materialised. With McNeil entering the final 12 months of his Everton contract and Pierre Sage, Palace's manager since Oliver Glasner's departure, still keen on a player his club had chased since January, a straight swap ultimately suited both boardrooms more than a fee-laden deal would have.",
+      "The reunion no one scripted",
+      "Whatever each club's calculation, the timing hands supporters an immediate storyline. Everton's opening fixture of the season is at home to Crystal Palace, meaning Johnson could make his competitive Everton debut against the club he left a week earlier, while McNeil returns to Goodison Park in Palace colours before he's had time to properly settle in south London. Two players who spent January in transfer limbo now start their season having swapped places entirely -- and almost immediately swapping shirts against each other, too."
+    ],
+    sources: [
+      { label: "Yahoo Sports (via Evening Standard) -- Crystal Palace and Everton agree Brennan Johnson-Dwight McNeil swap deal", url: "https://uk.sports.yahoo.com/news/crystal-palace-everton-agree-brennan-100641574.html" },
+      { label: "VAVEL -- Why Everton have benefited from McNeil and Johnson swap deal", url: "https://www.vavel.com/en/football/2026/08/10/everton/1267703-why-everton-have-benefited-from-mcneil-and-johnson-swap-deal.html" },
+      { label: "Yahoo Sports (via Goodison News) -- Everton's Dwight McNeil dilemma explained as Brennan Johnson swap deal now on cards", url: "https://sports.yahoo.com/articles/evertons-dwight-mcneil-dilemma-explained-061000410.html" }
+    ],
+    players: ["Brennan Johnson", "Dwight McNeil"],
+    teams: ["Everton", "Crystal Palace"],
+    featured: true
+},
+{
     id: 12,
     title: "Carabao Cup Round Two: The Shock That's Already Landed, and the Underdogs Dreaming of More",
     type: "Analysis",
