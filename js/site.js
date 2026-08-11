@@ -588,6 +588,17 @@ function saveToggleHTML(key) {
   return `<button class="save-toggle-btn${saved ? " is-saved" : ""}" data-save-key="${key}" type="button" aria-label="${saved ? "Remove from saved" : "Save for later"}" aria-pressed="${saved}">${saved ? "★" : "☆"}</button>`;
 }
 
+// The "Saved" nav link (present in the static HTML on every page)
+// only shows once there's actually something saved -- otherwise a
+// visitor who's never used the feature sees an empty, pointless
+// page. Runs once when the page loads, and again after every
+// save/unsave so the link appears or disappears immediately without
+// needing a reload.
+function syncSavedNavVisibility() {
+  const show = getSavedKeys().length > 0;
+  document.querySelectorAll(".nav-saved-link").forEach(el => { el.hidden = !show; });
+}
+
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-save-key]");
   if (!btn) return;
@@ -595,7 +606,10 @@ document.addEventListener("click", (e) => {
   e.stopPropagation();
   const nowSaved = toggleSaved(btn.dataset.saveKey);
   updateSaveBtnVisual(btn, nowSaved);
+  syncSavedNavVisibility();
 });
+
+syncSavedNavVisibility();
 
 /* ---------- Reactions ---------- */
 

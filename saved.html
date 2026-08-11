@@ -18,8 +18,8 @@
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found -- Samuel Davies</title>
-<meta name="description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
+<title>Saved -- Samuel Davies</title>
+<meta name="description" content="Articles and Tactical Lab pieces you've saved for later, from Samuel Davies.">
 <meta name="robots" content="noindex">
 
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -28,25 +28,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#14224B">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sdjournalism.github.io/404.html">
-<meta property="og:title" content="Page Not Found -- Samuel Davies">
-<meta property="og:description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
-<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Page Not Found -- Samuel Davies">
-<meta name="twitter:description" content="This page doesn't exist -- head back to the homepage, the Articles page, or the Tactical Lab.">
-<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-F6G9RSG4MN");
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,33 +51,38 @@
       <a href="tactical-lab.html">Tactical Lab</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="saved.html" class="nav-saved-link">Saved</a>
+      <a href="saved.html" class="active nav-saved-link">Saved</a>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
-  <div class="error-page">
-    <span class="eyebrow">Error 404</span>
-    <p class="error-number">404</p>
-    <h1>Offside.</h1>
-    <p>The page you're looking for doesn't exist -- it might have moved, been renamed, or never made it past the last defender. Let's play it back.</p>
-    <div class="error-actions">
-      <a class="mailto-btn" href="index.html">Back to Home &rarr;</a>
-      <a class="read-link" href="articles.html">Read the Articles &rarr;</a>
-      <a class="read-link" href="tactical-lab.html">Visit the Tactical Lab &rarr;</a>
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Your reading list</span>
+      <h2>Saved for later</h2>
+      <p class="section-description">Everything you've bookmarked with the &#9734; on an article or Tactical Lab card. This list only lives in this browser -- it won't follow you to another device.</p>
     </div>
-    <div class="error-pitch-line"></div>
+  </div>
+
+  <div class="article-grid" id="saved-grid"></div>
+
+  <div class="show-more-wrap" id="clear-saved-wrap" hidden>
+    <button id="clear-saved-btn" class="show-more-btn" type="button">Clear all saved</button>
   </div>
 </div>
 
 <footer class="mega-footer" id="mega-footer"></footer>
 
 <script src="js/contact-info.js"></script>
+<script src="js/articles-data.js"></script>
+<script src="js/tactical-lab-data.js"></script>
 <script src="js/site.js"></script>
 <script src="js/theme.js"></script>
 <script>
-  renderMegaFooter("mega-footer");
+  renderSavedGrid("saved-grid");
+  setupClearSaved("saved-grid");
+  renderMegaFooter("mega-footer", "saved");
   renderKicker();
   initThemeToggle("theme-toggle");
   initAutoTheme();
