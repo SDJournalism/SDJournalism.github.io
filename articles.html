@@ -107,6 +107,9 @@
   </div>
 
   <div class="article-grid" id="article-grid"></div>
+  <div class="show-more-wrap">
+    <button id="article-show-more" class="show-more-btn" type="button">Show More</button>
+  </div>
 </div>
 
 <footer class="mega-footer" id="mega-footer"></footer>
@@ -120,6 +123,7 @@
   setupFilters();
   setupSearch();
   setupResetFilters();
+  setupArticleShowMore();
   renderTeamFilter("team-filter");
   renderCompetitionFilter("competition-filter");
   renderStatsPanel("stats-value", "stats-label");

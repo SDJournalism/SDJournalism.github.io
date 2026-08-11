@@ -6,7 +6,7 @@
 
    date is the piece's release date on the site (format: "YYYY-MM-DD"),
    same convention as articles-data.js. The hub grid always sorts by
-   this field (oldest to newest), so entries here don't need to be
+   this field (newest to oldest), so entries here don't need to be
    listed in date order themselves -- just give each new piece a date
    and the grid will place it correctly on its own.
 

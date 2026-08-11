@@ -113,6 +113,9 @@
   </div>
 
   <div class="article-grid" id="lab-grid"></div>
+  <div class="show-more-wrap">
+    <button id="lab-show-more" class="show-more-btn" type="button">Show More</button>
+  </div>
 </div>
 
 <footer class="mega-footer" id="mega-footer"></footer>
@@ -269,6 +272,7 @@
   setupLabFilters("lab-grid");
   setupLabSearch("lab-grid");
   setupLabResetFilters("lab-grid");
+  setupLabShowMore("lab-grid");
   renderLabTeamFilter("lab-team-filter", "lab-grid");
   renderLabCompetitionFilter("lab-competition-filter", "lab-grid");
   renderMegaFooter("mega-footer", "tactical-lab");

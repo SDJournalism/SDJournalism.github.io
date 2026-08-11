@@ -509,6 +509,14 @@ let currentSearch = "";
 let currentTeam = "All";
 let currentCompetition = "All";
 
+// How many cards a "Show More" grid reveals at a time, and how many
+// are visible on first load / immediately after any filter, search
+// or reset action changes the result set. Shared by both the
+// Articles grid and the Tactical Lab grid so the two pages behave
+// identically.
+const CARDS_PER_PAGE = 9;
+let articleVisibleCount = CARDS_PER_PAGE;
+
 function renderArticleList() {
   const el = document.getElementById("article-grid");
   if (!el) return;
@@ -523,11 +531,31 @@ function renderArticleList() {
         : a.competition === currentCompetition);
     return matchesFilter && matchesSearch && matchesTeam && matchesCompetition;
   });
+  const visible = all.slice(0, articleVisibleCount);
   el.innerHTML = all.length
-    ? all.map((a, i) => articleCardHTML(a, i)).join("")
+    ? visible.map((a, i) => articleCardHTML(a, i)).join("")
     : `<p class="no-results">No articles match "${escapeHtml(currentSearch)}". Try a different search.</p>`;
 
   updateFilterControlsVisibility();
+  updateShowMoreButton("article-show-more", all.length, articleVisibleCount);
+}
+
+// Shared by both grids: reveals the button while there's more to load,
+// hides it once every matching card is already on screen (including
+// when a filter narrows the result set below a page's worth of cards).
+function updateShowMoreButton(btnId, totalCount, visibleCount) {
+  const btn = document.getElementById(btnId);
+  if (!btn) return;
+  btn.hidden = visibleCount >= totalCount;
+}
+
+function setupArticleShowMore() {
+  const btn = document.getElementById("article-show-more");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    articleVisibleCount += CARDS_PER_PAGE;
+    renderArticleList();
+  });
 }
 
 function updateFilterControlsVisibility() {
@@ -550,6 +578,7 @@ function setupSearch() {
   if (input) {
     input.addEventListener("input", () => {
       currentSearch = input.value;
+      articleVisibleCount = CARDS_PER_PAGE;
       renderArticleList();
     });
   }
@@ -560,6 +589,7 @@ function setupSearch() {
         input.value = "";
         input.focus();
       }
+      articleVisibleCount = CARDS_PER_PAGE;
       renderArticleList();
     });
   }
@@ -574,6 +604,7 @@ function setupResetFilters() {
     currentTeam = "All";
     currentCompetition = "All";
     currentSearch = "";
+    articleVisibleCount = CARDS_PER_PAGE;
 
     document.querySelectorAll(".filter-btn").forEach(b => {
       b.classList.toggle("active", b.dataset.filter === "All");
@@ -608,6 +639,7 @@ function renderTeamFilter(selectId) {
     PREMIER_LEAGUE_CLUBS.map(t => `<option value="${t}">${t}</option>`).join("");
   el.addEventListener("change", () => {
     currentTeam = el.value;
+    articleVisibleCount = CARDS_PER_PAGE;
     renderArticleList();
   });
 }
@@ -619,6 +651,7 @@ function renderCompetitionFilter(selectId) {
     COMPETITIONS.map(c => `<option value="${c}">${c}</option>`).join("");
   el.addEventListener("change", () => {
     currentCompetition = el.value;
+    articleVisibleCount = CARDS_PER_PAGE;
     renderArticleList();
   });
 }
@@ -667,6 +700,7 @@ function setupFilters() {
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentFilter = btn.dataset.filter;
+      articleVisibleCount = CARDS_PER_PAGE;
       renderArticleList();
 
       const copy = FILTER_HEADINGS[currentFilter];
@@ -988,7 +1022,7 @@ function renderStatPanel(containerId, stats) {
 /* ---------- Lab entry grid (reuses .article-grid / .card look) ---------- */
 
 function sortedLabEntries() {
-  return [...tacticalLabEntries].sort((a, b) => new Date(a.date || 0) - new Date(b.date || 0));
+  return [...tacticalLabEntries].sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 }
 
 function labThumbHTML(entry) {
@@ -1034,6 +1068,7 @@ let currentLabFilter = "All";
 let currentLabSearch = "";
 let currentLabTeam = "All";
 let currentLabCompetition = "All";
+let labVisibleCount = CARDS_PER_PAGE;
 
 function renderLabGrid(gridId) {
   const el = document.getElementById(gridId);
@@ -1049,11 +1084,22 @@ function renderLabGrid(gridId) {
         : e.competition === currentLabCompetition);
     return matchesFilter && matchesSearch && matchesTeam && matchesCompetition;
   });
+  const visible = all.slice(0, labVisibleCount);
   el.innerHTML = all.length
-    ? all.map(labCardHTML).join("")
+    ? visible.map(labCardHTML).join("")
     : `<p class="no-results">Nothing matches "${escapeHtml(currentLabSearch)}". Try a different search or filter.</p>`;
 
   updateLabFilterControlsVisibility();
+  updateShowMoreButton("lab-show-more", all.length, labVisibleCount);
+}
+
+function setupLabShowMore(gridId) {
+  const btn = document.getElementById("lab-show-more");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    labVisibleCount += CARDS_PER_PAGE;
+    renderLabGrid(gridId);
+  });
 }
 
 function updateLabFilterControlsVisibility() {
@@ -1106,6 +1152,7 @@ function setupLabFilters(gridId) {
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentLabFilter = btn.dataset.filter;
+      labVisibleCount = CARDS_PER_PAGE;
       renderLabGrid(gridId);
 
       const copy = LAB_FILTER_HEADINGS[currentLabFilter];
@@ -1127,6 +1174,7 @@ function setupLabSearch(gridId) {
   if (input) {
     input.addEventListener("input", () => {
       currentLabSearch = input.value;
+      labVisibleCount = CARDS_PER_PAGE;
       renderLabGrid(gridId);
     });
   }
@@ -1137,6 +1185,7 @@ function setupLabSearch(gridId) {
         input.value = "";
         input.focus();
       }
+      labVisibleCount = CARDS_PER_PAGE;
       renderLabGrid(gridId);
     });
   }
@@ -1149,6 +1198,7 @@ function renderLabTeamFilter(selectId, gridId) {
     PREMIER_LEAGUE_CLUBS.map(t => `<option value="${t}">${t}</option>`).join("");
   el.addEventListener("change", () => {
     currentLabTeam = el.value;
+    labVisibleCount = CARDS_PER_PAGE;
     renderLabGrid(gridId);
   });
 }
@@ -1160,6 +1210,7 @@ function renderLabCompetitionFilter(selectId, gridId) {
     COMPETITIONS.map(c => `<option value="${c}">${c}</option>`).join("");
   el.addEventListener("change", () => {
     currentLabCompetition = el.value;
+    labVisibleCount = CARDS_PER_PAGE;
     renderLabGrid(gridId);
   });
 }
@@ -1173,6 +1224,7 @@ function setupLabResetFilters(gridId) {
     currentLabTeam = "All";
     currentLabCompetition = "All";
     currentLabSearch = "";
+    labVisibleCount = CARDS_PER_PAGE;
 
     document.querySelectorAll(".lab-filter-btn").forEach(b => {
       b.classList.toggle("active", b.dataset.filter === "All");

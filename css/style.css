@@ -385,6 +385,34 @@ nav.site-nav a.active {
   margin-bottom: 56px;
 }
 
+.show-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin: -32px 0 56px;
+}
+
+.show-more-btn {
+  padding: 12px 32px;
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid var(--navy);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.show-more-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.show-more-btn[hidden] {
+  display: none;
+}
+
 /* ---------- Magazine-style featured split ---------- */
 
 .magazine-split {
