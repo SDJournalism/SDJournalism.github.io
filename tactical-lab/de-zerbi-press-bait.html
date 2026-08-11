@@ -25,6 +25,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Roberto De Zerbi: The Press-Bait">
@@ -67,6 +69,7 @@
       <a href="../tactical-lab.html" class="active">Tactical Lab</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
+      <a href="../saved.html">Saved</a>
     </nav>
   </div>
 </header>
@@ -151,6 +154,20 @@
           <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
         </a>
       </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
     </div>
 
     <div class="share-row">
@@ -246,6 +263,7 @@
       });
     }
   });
+  initEngageRow();
 </script>
 </body>
 </html>

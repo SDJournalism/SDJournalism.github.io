@@ -642,6 +642,152 @@ nav.site-nav a.active {
 
 .card:hover .read-link { color: var(--gold); border-color: var(--gold); }
 
+/* ---------- Loading skeletons ----------
+   Sit inside .article-grid / .card-grid containers in the raw HTML,
+   before site.js has run. As soon as renderArticleList() / renderLabGrid()
+   etc. replace the grid's innerHTML with real cards, these disappear
+   automatically -- no JS needed on this end. They only matter for the
+   brief moment (usually under a second) between the page's HTML
+   appearing and its scripts finishing, e.g. while fonts are still
+   loading on a slow connection. */
+.card-skeleton {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 26px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.skeleton-thumb {
+  margin: -26px -24px 16px;
+  aspect-ratio: 16 / 9;
+}
+
+.skeleton-line {
+  height: 11px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line.title { height: 18px; width: 85%; margin-bottom: 14px; }
+.skeleton-line.short { width: 40%; }
+.skeleton-line:last-child { margin-bottom: 0; }
+
+.skeleton-thumb,
+.skeleton-line {
+  background: linear-gradient(90deg, var(--line) 25%, var(--bg) 37%, var(--line) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-thumb, .skeleton-line { animation: none; }
+}
+
+/* ---------- Save for later (bookmark star on cards) ----------
+   Sits inside .card, which already has position:relative, so this
+   just needs to position itself in the corner. Works whether or
+   not the card has a photo (.card-thumb) underneath it. */
+.save-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: rgba(18, 20, 28, 0.55);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.save-toggle-btn:hover { transform: scale(1.12); }
+.save-toggle-btn.is-saved { color: var(--gold); background: rgba(18, 20, 28, 0.72); }
+
+/* ---------- Save for later + reactions (detail pages) ---------- */
+.engage-row {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reaction-row { display: flex; flex-direction: column; gap: 10px; }
+
+.reaction-prompt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.reaction-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.reaction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.reaction-btn:hover { border-color: var(--gold); color: var(--navy); transform: translateY(-2px); }
+
+.reaction-btn.is-active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--white);
+}
+
+.reaction-emoji { font-size: 15px; line-height: 1; }
+
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.save-btn:hover { background: var(--gold); color: var(--white); transform: translateY(-2px); }
+.save-btn.is-saved { background: var(--gold); color: var(--white); }
+.save-icon { font-size: 15px; line-height: 1; }
+
 /* ---------- Filter tabs (articles page) ---------- */
 .filter-row {
   display: flex;
@@ -2250,3 +2396,83 @@ body.lab-page > .wrap .detail .body-text .body-subheading::before {
 
 .stat-dot:hover { transform: scale(1.4); }
 .stat-dot.active, .stat-dot:hover { background: var(--lab-panel-accent, var(--gold)); }
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================
+   Kicks in automatically whenever a page is printed or "saved as
+   PDF" from the browser's print dialog -- no button needed. Strips
+   out navigation, filters, footer and other on-screen-only chrome
+   so what's left is just the photo, headline and article text.
+   ============================================================ */
+@media print {
+  /* Chrome & navigation */
+  .masthead,
+  .ticker-wrap,
+  .site-nav,
+  .theme-toggle-btn,
+  .mega-footer,
+  .close-detail {
+    display: none !important;
+  }
+
+  /* Grid controls -- meaningless on paper */
+  .filter-row,
+  .dropdown-filter-row,
+  .search-wrap,
+  .show-more-wrap,
+  .section-head .read-link {
+    display: none !important;
+  }
+
+  /* Promo / interactive furniture */
+  .patreon-strip,
+  .quote-panel,
+  .share-row,
+  .related-section,
+  .engage-row,
+  .save-toggle-btn,
+  .hero,
+  .hero-compact {
+    display: none !important;
+  }
+
+  /* Force plain black-on-white regardless of dark mode, and drop
+     the page background so it doesn't print as a solid colour. */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .detail, .body-text, .body-text p, .body-text h4 {
+    color: #000 !important;
+  }
+
+  a, a:visited {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  /* Show the actual web address after every in-text citation link,
+     since a printed link isn't clickable -- readers can still see
+     and copy the source. */
+  .citation-link::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    font-weight: normal;
+  }
+
+  .detail-image,
+  .formation-hero {
+    page-break-inside: avoid;
+  }
+
+  .body-text h4 {
+    page-break-after: avoid;
+  }
+
+  .wrap {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}

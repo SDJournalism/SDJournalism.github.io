@@ -22,6 +22,12 @@
    even before it's been written up). Real entries need a detail
    page at tactical-lab/<id>.html -- there's no generator script
    for these yet, so write/edit that HTML by hand.
+
+   readTime: shows as "X min read" on the card. There's no content
+   array here to count words from automatically (unlike articles),
+   so set this by hand: count the words in the finished page's
+   body-text, divide by 225, round up. Leave it out and the card
+   just won't show a read time.
    ============================================================ */
 
 const tacticalLabEntries = [
@@ -36,6 +42,7 @@ const tacticalLabEntries = [
     image: "images/marescataclab.jpg",
     imageLink: "https://www.bbc.co.uk/sport/football/65888753",
     imageCredit: "Photo: BBC Sport",
+    readTime: 3,
     comingSoon: false
   },
   {
@@ -49,6 +56,7 @@ const tacticalLabEntries = [
     image: "images/gabrieltaclab.jpg",
     imageLink: "https://www.skysports.com/transfer/news/11661/13376806/gabriel-contract-arsenal-defender-signs-new-xxx-year-deal-to-remain-at-the-emirates-until-xxx",
     imageCredit: "Photo: Sky Sports",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -62,6 +70,7 @@ const tacticalLabEntries = [
     image: "images/mitomataclab.jpg",
     imageLink: "https://talksport.com/football/1538882/mitoma-solo-goal-messi-brighton-wolves-premier-league/",
     imageCredit: "Photo: talkSPORT",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -75,6 +84,7 @@ const tacticalLabEntries = [
     image: "images/leicestertaclab.jpg",
     imageLink: "https://www.bbc.co.uk/news/uk-england-leicestershire-36236278",
     imageCredit: "Photo: BBC News",
+    readTime: 3,
     comingSoon: false
   },
   {
@@ -88,6 +98,7 @@ const tacticalLabEntries = [
     image: "images/RDZtaclab.jpg",
     imageLink: "https://www.football.london/tottenham-hotspur-fc/news/roberto-de-zerbi-tottenham-training-33714938",
     imageCredit: "Photo: Football London",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -101,6 +112,7 @@ const tacticalLabEntries = [
     image: "images/semenyotaclab.jpg",
     imageLink: "https://www.manchestereveningnews.co.uk/sport/football/football-news/antoine-semenyo-excited-new-man-34391383",
     imageCredit: "Photo: Manchester Evening News",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -114,6 +126,7 @@ const tacticalLabEntries = [
     image: "images/hazardtaclab.jpg",
     imageLink: "https://www.chelseafc.com/en/eden-hazard",
     imageCredit: "Photo: Chelsea FC",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -127,6 +140,7 @@ const tacticalLabEntries = [
     image: "images/fabiantaclab.jpg",
     imageLink: "https://www.independent.co.uk/sport/football/fabian-hurzeler-brighton-everton-premier-league-b2597852.html",
     imageCredit: "Photo: The Independent",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -140,6 +154,7 @@ const tacticalLabEntries = [
     image: "images/liverpoolcltaclab.jpeg",
     imageLink: "https://www.liverpoolfc.com/news/first-team/351532-jurgen-klopp-champions-league-final-reaction",
     imageCredit: "Photo: Liverpool FC",
+    readTime: 2,
     comingSoon: false
   },
   {
@@ -153,6 +168,7 @@ const tacticalLabEntries = [
     image: "images/deletaclab.jpg",
     imageLink: "https://www.independent.co.uk/sport/football/premier-league/dele-alli-signs-new-tottenham-contract-until-2021-after-impressive-start-to-his-spurs-career-a6807366.html",
     imageCredit: "Photo: The Independent",
+    readTime: 2,
     comingSoon: false
   }
 ];

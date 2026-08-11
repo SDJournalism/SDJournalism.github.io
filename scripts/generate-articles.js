@@ -171,12 +171,6 @@ const THEME_INIT_SCRIPT = `<script>
 })();
 </script>`;
 
-const THEME_TOGGLE_HTML = `<button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
-        <svg class="theme-icon-sun" viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/></g></svg>
-        <svg class="theme-icon-moon" viewBox="0 0 24 24" width="13" height="13"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-        <span class="theme-toggle-label">Dark mode</span>
-      </button>`;
-
 function renderHead(article) {
   const description = truncate(article.excerpt, 200);
   const imageUrl = `${SITE_URL}/${article.image}`;
@@ -195,6 +189,8 @@ ${THEME_INIT_SCRIPT}
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="${article.title}">
@@ -229,7 +225,7 @@ function renderMasthead() {
       <img src="../images/logo-badge.png" alt="" class="logo-badge">
       <span class="logo-name">
         <span class="js-site-name">Samuel Davies</span>
-        <span class="kicker js-tagline">Student Football Writer and Analyst</span>
+        <span class="kicker js-tagline">${siteConfig.tagline}</span>
       </span>
     </a>
     <nav class="site-nav">
@@ -238,6 +234,7 @@ function renderMasthead() {
       <a href="../tactical-lab.html">Tactical Lab</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
+      <a href="../saved.html">Saved</a>
     </nav>
   </div>
 </header>`;
@@ -259,14 +256,29 @@ function renderRelatedSection(article, all) {
   return `    <div class="related-section">
         <span class="eyebrow">Related Articles</span>
         <div class="related-grid">
-          ${related.map(r => `
-            <a class="related-card" href="${r.id}.html">
-              <div class="related-thumb"><img src="../${r.image}" alt="${r.title}" loading="lazy"></div>
-              <span class="type-pill">${r.type}</span>
-              <span class="related-title">${r.title}</span>
-            </a>`).join("")}
+${related.map(r => `          <a class="related-card" href="${r.id}.html">
+            <div class="related-thumb"><img src="../${r.image}" alt="${r.title}" loading="lazy"></div>
+            <span class="type-pill">${r.type}</span>
+            <span class="related-title">${r.title}</span>
+          </a>`).join("\n")}
         </div>
       </div>`;
+}
+
+function renderEngageRow() {
+  return `    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">\u{1F525}</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">\u{1F62E}</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">\u{1F44F}</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>`;
 }
 
 function renderShareRow(article) {
@@ -285,41 +297,14 @@ function renderShareRow(article) {
     </div>`;
 }
 
+// The footer is no longer hardcoded here -- it's built at runtime by
+// renderMegaFooter() in js/site.js (see the script block below), the
+// same way every other page on the site builds its footer. That way
+// a footer change in site.js applies everywhere at once, including
+// pages this generator makes, without this file needing to know
+// what the footer looks like at all.
 function renderFooter() {
-  const year = new Date().getFullYear();
-  return `<footer class="mega-footer">
-  <div class="wrap mega-footer-grid">
-    <div class="footer-col footer-brand">
-      <a href="../index.html" class="footer-name-btn">${siteConfig.name}</a>
-      <p class="footer-tagline">${siteConfig.heroHeadline}</p>
-    </div>
-    <div class="footer-col">
-      <span class="eyebrow">Site Map</span>
-      <nav class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="../articles.html">Articles</a>
-        <a href="../tactical-lab.html">Tactical Lab</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-col">
-      <span class="eyebrow">Community</span>
-      <nav class="footer-links">
-        <a href="${siteConfig.twitter}" target="_blank" rel="noopener">Twitter</a>
-        <a href="${siteConfig.patreon}" target="_blank" rel="noopener">Support Me</a>
-        <a href="mailto:${siteConfig.email}">Contact Me</a>
-      </nav>
-    </div>
-  </div>
-  <div class="wrap mega-footer-bottom">
-    <span>${siteConfig.name} &copy; ${year}</span>
-    <div class="mega-footer-bottom-right">
-      <a href="mailto:${siteConfig.email}">${siteConfig.email}</a>
-      ${THEME_TOGGLE_HTML}
-    </div>
-  </div>
-</footer>`;
+  return `<footer class="mega-footer" id="mega-footer"></footer>`;
 }
 
 function renderArticlePage(article, all) {
@@ -357,6 +342,8 @@ ${renderBody(article)}
 ${renderSourcesList(article.sources)}
 ${renderRelatedSection(article, all)}
 
+${renderEngageRow()}
+
 ${renderShareRow(article)}
   </div>
 </div>
@@ -364,6 +351,7 @@ ${renderShareRow(article)}
 ${renderFooter()}
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
 <script src="../js/theme.js"></script>
 <script>
   document.getElementById("share-more-btn").addEventListener("click", () => {
@@ -379,8 +367,11 @@ ${renderFooter()}
       });
     }
   });
+  renderMegaFooter("mega-footer", "articles");
+  renderKicker();
   initThemeToggle("theme-toggle");
   initAutoTheme();
+  initEngageRow();
 </script>
 </body>
 </html>

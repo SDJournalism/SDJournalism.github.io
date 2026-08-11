@@ -21,6 +21,28 @@ function readVerb(type) {
   return "analysis";
 }
 
+// Average adult reading speed, used to turn a word count into a
+// "X min read" estimate. 225 wpm is the commonly used figure for
+// this kind of on-page estimate.
+const WORDS_PER_MINUTE = 225;
+
+// Articles carry their full body text in `content` (an array of
+// paragraph strings), so their read time is worked out automatically
+// from real word counts -- no extra field to maintain.
+function articleReadTime(article) {
+  const words = (article.content || []).join(" ").trim().split(/\s+/).filter(Boolean).length;
+  if (!words) return "";
+  return `${Math.max(1, Math.ceil(words / WORDS_PER_MINUTE))} min read`;
+}
+
+// Tactical Lab pieces live as hand-built HTML pages rather than a
+// content array, so their read time comes from the optional
+// `readTime` field on the entry (see the field guide at the top of
+// tactical-lab-data.js for how to set it).
+function labReadTime(entry) {
+  return entry.readTime ? `${entry.readTime} min read` : "";
+}
+
 function articleCardHTML(article, index) {
   const scoreline = article.scoreline
     ? `<div class="scoreline">${article.scoreline}</div>`
@@ -34,8 +56,10 @@ function articleCardHTML(article, index) {
   const ghostNum = article.image
     ? ""
     : `<span class="ghost-num">${String(index + 1).padStart(2, "0")}</span>`;
+  const readTime = articleReadTime(article);
   return `
     <a class="card" href="articles/${article.id}.html">
+      ${saveToggleHTML(saveKeyForArticle(article))}
       ${thumb}
       ${ghostNum}
       <div class="meta-row">
@@ -43,6 +67,7 @@ function articleCardHTML(article, index) {
         <span>${article.competition}</span>
         <span>&middot;</span>
         <span>${formatDate(article.date)}</span>
+        ${readTime ? `<span>&middot;</span><span class="read-time">${readTime}</span>` : ""}
         ${article.premium ? `<span class="premium-pill">Premium</span>` : ""}
       </div>
       <h3>${article.title}</h3>
@@ -448,6 +473,7 @@ function renderMegaFooter(containerId, currentPage) {
           <a href="${siteConfig.twitter}" target="_blank" rel="noopener">Twitter</a>
           <a href="${siteConfig.patreon}" target="_blank" rel="noopener">Support Me</a>
           <a href="mailto:${siteConfig.email}">Contact Me</a>
+          <a href="${prefix}rss.xml">RSS Feed</a>
         </nav>
       </div>
       <div class="footer-col">
@@ -475,6 +501,198 @@ const THEME_TOGGLE_HTML = `
     <span class="theme-toggle-label">Dark mode</span>
   </button>
 `;
+
+/* ============================================================
+   SAVE FOR LATER + REACTIONS
+   ============================================================
+   Both features live entirely in the visitor's own browser
+   (localStorage) -- there's no backend, so nothing is shared
+   between devices or visitors. That also means a reaction count
+   like "24 people found this useful" would have to be faked, so
+   these buttons only ever show what THIS visitor picked, never a
+   public tally.
+
+   Every saveable/reactable thing gets a "content key" of the form
+   "article-13" or "lab-maresca-inverted-pivot" -- built from the
+   page's own URL by contentKeyFromPath(), or from the article/lab
+   entry object when rendering a card. Nothing needs to be typed
+   into the article/lab data files for this to work.
+   ============================================================ */
+
+function contentKeyFromPath(pathname) {
+  const path = pathname || window.location.pathname;
+  const m = path.match(/\/(articles|tactical-lab)\/([^/]+)\.html$/);
+  if (!m) return null;
+  return `${m[1] === "articles" ? "article" : "lab"}-${m[2]}`;
+}
+
+function saveKeyForArticle(article) { return `article-${article.id}`; }
+function saveKeyForLabEntry(entry) { return `lab-${entry.id}`; }
+
+function readJSON(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) {
+    return fallback; // storage unavailable -- e.g. private browsing
+  }
+}
+
+function writeJSON(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) { /* fail silently, same reasoning as above */ }
+}
+
+/* ---------- Save for later ---------- */
+
+function getSavedKeys() {
+  return readJSON("sd-saved", []);
+}
+
+function isSaved(key) {
+  return getSavedKeys().includes(key);
+}
+
+function toggleSaved(key) {
+  const saved = getSavedKeys();
+  const i = saved.indexOf(key);
+  if (i === -1) {
+    saved.unshift(key); // most recently saved shows first on the Saved page
+  } else {
+    saved.splice(i, 1);
+  }
+  writeJSON("sd-saved", saved);
+  return saved.includes(key);
+}
+
+function updateSaveBtnVisual(btn, saved) {
+  btn.classList.toggle("is-saved", saved);
+  btn.setAttribute("aria-pressed", String(saved));
+  const icon = btn.querySelector(".save-icon");
+  if (icon) icon.textContent = saved ? "★" : "☆"; // filled / outline star
+  else btn.textContent = saved ? "★" : "☆"; // card buttons have no inner span
+  const label = btn.querySelector(".save-btn-label");
+  if (label) label.textContent = saved ? "Saved" : "Save for later";
+  btn.setAttribute("aria-label", saved ? "Remove from saved" : "Save for later");
+}
+
+// One delegated click handler for the whole page, set up once when
+// site.js first runs. This is what makes the little bookmark star
+// on every card work without having to "re-wire" anything after
+// Show More, filtering or search redraws the grid -- it's always
+// listening on the page itself, not on the (constantly replaced)
+// buttons.
+function saveToggleHTML(key) {
+  const saved = isSaved(key);
+  return `<button class="save-toggle-btn${saved ? " is-saved" : ""}" data-save-key="${key}" type="button" aria-label="${saved ? "Remove from saved" : "Save for later"}" aria-pressed="${saved}">${saved ? "★" : "☆"}</button>`;
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-save-key]");
+  if (!btn) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const nowSaved = toggleSaved(btn.dataset.saveKey);
+  updateSaveBtnVisual(btn, nowSaved);
+});
+
+/* ---------- Reactions ---------- */
+
+const REACTIONS = [
+  { value: "fire", emoji: "🔥", label: "Fire" },
+  { value: "wow", emoji: "😮", label: "Wow" },
+  { value: "class", emoji: "👏", label: "Class" }
+];
+
+function getReaction(key) {
+  return readJSON("sd-reactions", {})[key] || null;
+}
+
+function setReaction(key, value) {
+  const all = readJSON("sd-reactions", {});
+  all[key] = all[key] === value ? undefined : value; // clicking the active one again clears it
+  if (all[key] === undefined) delete all[key];
+  writeJSON("sd-reactions", all);
+  return all[key] || null;
+}
+
+// Called once per detail page (see initEngageRow below). Reaction
+// rows aren't repeated/redrawn like cards are, so plain
+// addEventListener per button (rather than delegation) is fine here.
+function initReactionRow(key) {
+  const row = document.getElementById("reaction-row");
+  if (!row) return;
+  const sync = (active) => {
+    row.querySelectorAll(".reaction-btn").forEach(btn => {
+      const on = btn.dataset.value === active;
+      btn.classList.toggle("is-active", on);
+      btn.setAttribute("aria-pressed", String(on));
+    });
+  };
+  sync(getReaction(key));
+  row.querySelectorAll(".reaction-btn").forEach(btn => {
+    btn.addEventListener("click", () => sync(setReaction(key, btn.dataset.value)));
+  });
+}
+
+// Call this once, on every article/Tactical Lab detail page, after
+// the "engage row" (reactions + Save for later) markup near the
+// bottom of the page exists in the DOM. It works out which
+// article/entry the page is for from the URL, so no arguments are
+// needed and the same call works on every page.
+function initEngageRow() {
+  const key = contentKeyFromPath();
+  if (!key) return;
+  initReactionRow(key);
+  const saveBtn = document.getElementById("save-btn");
+  if (saveBtn) {
+    saveBtn.dataset.saveKey = key;
+    updateSaveBtnVisual(saveBtn, isSaved(key));
+  }
+}
+
+/* ---------- Saved page (saved.html) ----------
+   Looks up each saved key against `articles` and `tacticalLabEntries`
+   and reuses the exact same card templates the Articles and
+   Tactical Lab pages use, so a saved card looks and behaves
+   identically (including its own bookmark star) wherever it's
+   shown. Keys pointing at content that's since been removed from
+   the data files are just skipped. */
+function renderSavedGrid(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const cards = getSavedKeys().map(key => {
+    if (key.startsWith("article-")) {
+      const id = Number(key.slice("article-".length));
+      const article = (typeof articles !== "undefined" ? articles : []).find(a => a.id === id);
+      return article ? articleCardHTML(article, 0) : null;
+    }
+    if (key.startsWith("lab-")) {
+      const labId = key.slice("lab-".length);
+      const entry = (typeof tacticalLabEntries !== "undefined" ? tacticalLabEntries : []).find(e => e.id === labId);
+      return entry ? labCardHTML(entry) : null;
+    }
+    return null;
+  }).filter(Boolean);
+
+  el.innerHTML = cards.length
+    ? cards.join("")
+    : `<p class="no-results">Nothing saved yet. Browse <a href="articles.html">Articles</a> or the <a href="tactical-lab.html">Tactical Lab</a> and tap the &#9734; on any card to bookmark it here.</p>`;
+
+  const clearWrap = document.getElementById("clear-saved-wrap");
+  if (clearWrap) clearWrap.hidden = cards.length === 0;
+}
+
+function setupClearSaved(gridId) {
+  const btn = document.getElementById("clear-saved-btn");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    writeJSON("sd-saved", []);
+    renderSavedGrid(gridId);
+  });
+}
 
 /* ---------- Articles page ---------- */
 
@@ -1048,14 +1266,17 @@ function labCardHTML(entry) {
       </div>
     `;
   }
+  const labRead = labReadTime(entry);
   return `
     <a class="card" href="tactical-lab/${entry.id}.html">
+      ${saveToggleHTML(saveKeyForLabEntry(entry))}
       ${labThumbHTML(entry)}
       <div class="meta-row">
         <span class="type-pill">${entry.category}</span>
         ${entry.competition ? `<span>${entry.competition}</span>` : ""}
         ${entry.competition && entry.team ? `<span>&middot;</span>` : ""}
         ${entry.team ? `<span>${entry.team}</span>` : ""}
+        ${labRead ? `<span>&middot;</span><span class="read-time">${labRead}</span>` : ""}
       </div>
       <h3>${entry.title}</h3>
       <p class="excerpt">${entry.excerpt}</p>
