@@ -46,6 +46,81 @@
 
 const articles = [
 {
+    id: 16,
+    title: "Micky van de Ven's New Contract Is De Zerbi's Clearest Statement Yet",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/vdvcontract.jpeg",
+    imageLink: "https://www.tottenhamhotspur.com/news/1083617/new-deal-for-micky-van-de-ven",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "Micky van de Ven has signed a new five-year Tottenham contract, personally pushed through by Roberto De Zerbi after interest from Liverpool and Barcelona. Why retaining him matters as much as any of Spurs' big-money arrivals this summer.",
+    content: [
+      "Tottenham moved fast this week to tie down their best defender. Micky van de Ven has signed a new five-year contract at Spurs, running to 2031, ending any lingering uncertainty over his future just as Liverpool and Barcelona were reportedly circling. The deal is reported to be worth around 75 million euros over its length, with Van de Ven's wages rising above 240,000 pounds a week (Read Tottenham, 2026). More revealing than the numbers, though, is who pushed hardest to make it happen.",
+      "De Zerbi's fingerprints",
+      "Roberto De Zerbi personally lobbied the Tottenham board to get the deal over the line, a level of direct involvement that says as much about the new head coach's priorities as it does about Van de Ven himself (beIN Sports, 2026). \"Micky is one of the best centre-backs in Europe and an important player for us,\" De Zerbi said. \"He has the qualities, mentality and ambition that we want at Tottenham, and I am very happy that he has decided to continue his journey with the club\" (Hayters, 2026).",
+      "Why Van de Ven specifically",
+      "The praise is not simply generic manager talk. De Zerbi's Tottenham are built to defend in open space rather than sit deep behind the ball, which puts a premium on a centre-back who can win foot races rather than simply hold a line. Van de Ven's recovery pace is exactly that kind of asset -- across 35 Premier League starts last season he played 3,044 minutes, averaging 1.15 tackles and 3.75 clearances per 90 (FotMob, 2026). He also kept nine clean sheets and scored four Premier League goals, level with Tottenham's third-highest scorer in the league last season (Premier League, 2026).",
+      "Seeing off Liverpool and Barcelona",
+      "That profile is precisely why Liverpool and Barcelona were credibly linked with an approach this summer. Losing a 24-year-old defender already established as a first-team regular, and an occasional goalscorer, would have been a damaging blow to a squad De Zerbi is still rebuilding around. Instead, Spurs got their retention in early, tying Van de Ven down before interest from elsewhere could turn into a formal approach (Yardbarker, 2026).",
+      "The player's side of it",
+      "Van de Ven's own comments suggest the pursuit was not really necessary in the first place. \"It's a special moment to sign a new deal and a proud moment for me and my family,\" he said. \"I've always loved Spurs, from the first day I stepped in here. I love the club, I love the fans and I've developed really well here\" (Goal, 2026).",
+      "What it signals for the new era",
+      "On its own, one contract extension is a squad-management story. In the context of Tottenham's wider summer -- a club-record 100 million pound move for Sandro Tonali, an 85 million pound deal for Mateus Fernandes, 52 million pounds for Jan Paul van Hecke, and free transfers for Andy Robertson, Marcos Senesi and Martin Dubravka, taking their outlay past 237 million pounds -- it reads as something bigger (Sports Mole, 2026). De Zerbi is not just buying a new spine for Tottenham; he is persuading the parts of the old one worth keeping to stay and build it with him. Retaining Van de Ven before a ball has been kicked in anger this season is arguably a stronger early statement than any of the incoming names."
+    ],
+    sources: [
+      { label: "Read Tottenham -- How much will Micky van de Ven earn after bumper new contract?", url: "https://readtottenham.com/2026/08/11/tottenham-news-how-much-will-micky-van-de-ven-earn-after-bumper-new-contract/" },
+      { label: "beIN Sports -- 'I'm excited about what's to come' -- Van de Ven signs new Spurs contract", url: "https://www.beinsports.com/en-us/soccer/premier-league/articles/im-excited-about-whats-to-come--van-de-ven-signs-new-spurs-contract-2026-08-10" },
+      { label: "Hayters -- 'Micky is one of the best centre-backs in Europe' -- De Zerbi praises defender", url: "https://hayters.com/micky-is-one-of-the-best-centre-backs-in-europe-de-zerbi-praises-defender-after-he-signs-new-deal-with-spurs/" },
+      { label: "FotMob -- Micky van de Ven stats, career and market value", url: "https://www.fotmob.com/players/1097466/micky-van-de-ven" },
+      { label: "Premier League -- Micky van de Ven stats this season and career statistics", url: "https://www.premierleague.com/en/players/491279/micky-van-de-ven/stats" },
+      { label: "Yardbarker -- Micky van de Ven commits long-term future to Tottenham", url: "https://www.yardbarker.com/soccer/articles/micky_van_de_ven_commits_long_term_future_to_tottenham_with_new_five_year_contract/s1_17451_44161177" },
+      { label: "Goal -- 'I love this club' -- Micky van de Ven commits future to Tottenham", url: "https://www.goal.com/en-gb/lists/micky-van-de-ven-tottenham-new-contract/blt9022888369b9df6a" },
+      { label: "Sports Mole -- Tottenham summer transfers and net spend", url: "https://www.sportsmole.co.uk/football/spurs/transfer-talk/feature/spurs-summer-transfers-all-confirmed-ins-and-outs-for-2026_599114.html" }
+    ],
+    players: ["Micky van de Ven"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
+    id: 15,
+    title: "Scouting Report: Ayyoub Bouaddi -- The Teenager Manchester City Are Trusting With Rodri's Future",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/bouaddicity.jpg",
+    imageLink: "https://ligue1.com/en/articles/l1_article_1014-profile-ayyoub-bouaddi-lille-s-latest-17-year-old-prodigy",
+    imageCredit: "Photo: Ligue 1",
+    excerpt: "Manchester City are closing in on an 18-year-old Lille midfielder in a deal worth up to 100 million euros. The scanning habit and vertical passing that have him lined up as Rodri's long-term successor -- and what the transfer signals for Omar Marmoush and Savinho's futures at the club.",
+    content: [
+      "Manchester City are closing in on one of the more eye-catching pieces of business of the summer: an agreement worth up to 100 million euros for an 18-year-old who has not yet started 40 senior matches. Ayyoub Bouaddi, Lille's teenage central midfielder, has provisionally agreed personal terms on a six-year contract, and City are reportedly planning to bring him straight into Enzo Maresca's first-team squad rather than loan him back to Ligue 1. With Rodri's long-term future at the club now genuinely uncertain, the timing looks less like coincidence and more like succession planning.",
+      "The read before the pass",
+      "Bouaddi's defining habit happens before he ever touches the ball. Scouting reports consistently note that he checks his shoulder and maps out both his passing options and the nearest presser's position in the moment before the ball reaches him, which lets him play first-time or under minimal control even against a set defence (Total Football Analysis, 2026). It is a habit built on information rather than raw pace, the kind of foundation that tends to age well.",
+      "What the numbers show",
+      "The underlying data backs up the reputation. Bouaddi averages a little under 41 passes per game at roughly 85 percent completion this season, with the emphasis on verticality rather than simply retaining possession -- picking the line-breaking pass into the half-space over the safe ball sideways, with genuine range on both feet (FootyStats, 2026). For a teenager, his defensive engagement and duels-won numbers are also unusually high, closer to a combative Ligue 1 veteran than a raw academy graduate still finding his feet (Breaking The Lines, 2026).",
+      "A World Cup education",
+      "Bouaddi's rise has not gone unnoticed internationally either. He was named in Morocco's 26-man squad for this summer's World Cup, its youngest member, as Mohamed Ouahbi's Atlas Lions reached the quarter-finals -- rare senior tournament exposure for a player still a year removed from a regular starting shirt at club level (Khel Now, 2026).",
+      "What this means for Marmoush and Savinho",
+      "The Bouaddi deal says almost as much about who Manchester City are moving away from as who they are building around. Omar Marmoush and Savinho have both been told their futures are, in Maresca's words, essentially their own decision, with Tottenham and Newcastle both circling and neither player guaranteed regular minutes in a rebuilt attack (ESPN, 2026). Neither directly competes with Bouaddi for a shirt -- he is a central midfielder, they are attackers. But the two situations are connected by where Maresca is choosing to spend his trust and City's transfer budget. A six-year, nine-figure commitment to an unproven teenage midfielder, arriving in the same window City are actively willing to let two established internationals leave, is a clear signal of priority (SportBible, 2026). It fits the pattern already visible in Maresca's early tactical setup at City: a controlling double pivot and patient buildup play rather than the front-footed, interchangeable attacking line Guardiola preferred. A self-sufficient deep midfielder who can both progress the ball and win it back is, on that evidence, a higher priority right now than a third or fourth option in behind Erling Haaland.",
+      "The risk City are taking",
+      "None of this guarantees Bouaddi succeeds. Eighteen-year-olds arriving from Ligue 1 with fewer than 2,500 senior minutes have failed to adapt to the Premier League before, and City are asking him to eventually replace one of the most complete central midfielders of his generation. But the fact that City are willing to fast-track him into the first-team squad rather than ease him in via a loan suggests they see the ceiling as worth the risk. Whether Bouaddi becomes Rodri's long-term successor or an expensive lesson in patience, Manchester City have made their intentions for this midfield unmistakably clear."
+    ],
+    sources: [
+      { label: "Yahoo Sports -- Manchester City reach verbal agreement with Ayyoub Bouaddi", url: "https://sports.yahoo.com/articles/manchester-city-reach-verbal-agreement-with-ayyoub-bouaddi-as-transfer-edges-closer-094500712.html" },
+      { label: "Total Football Analysis -- Ayyoub Bouaddi Scout Report at LOSC Lille 2025/2026", url: "https://totalfootballanalysis.com/player-analysis/ayyoub-bouaddi-scout-report-lille-2025-2026-analysis-tactics" },
+      { label: "FootyStats -- Ayyoub Bouaddi: goals, xG, assists, career stats", url: "https://footystats.org/players/france/ayyoub-bouaddi" },
+      { label: "Breaking The Lines -- Ayoub Bouaddi: Lille's Teenage Prodigy", url: "https://breakingthelines.com/@btl/ayoub-bouaddi-lilles-teenage-prodigy" },
+      { label: "Khel Now -- Morocco name preliminary squad for FIFA World Cup 2026 ft. Bouaddi", url: "https://khelnow.com/football/world-football-morocco-preliminary-squad-fifa-world-cup-202605" },
+      { label: "ESPN -- Enzo Maresca on Omar Marmoush's Man City future: \"He needs to decide\"", url: "https://www.espn.com/soccer/story/_/id/49574541/manchester-city-premier-league-enzo-maresca-omar-marmoush-future-needs-decide" },
+      { label: "SportBible -- Enzo Maresca hints Man City star can leave as Spurs and Newcastle placed on red alert", url: "https://www.sportbible.com/football/transfer-news/omar-marmoush-manchester-city-transfer-news-spurs-newcastle-886651-20260809" }
+    ],
+    players: ["Ayyoub Bouaddi"],
+    teams: ["Manchester City"],
+    featured: true
+  },
+{
     id: 14,
     title: "The Djed Spence Discount: Why Some Players Never Escape Their Reputation",
     type: "Opinion",
