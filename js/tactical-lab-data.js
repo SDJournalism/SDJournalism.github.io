@@ -32,6 +32,48 @@
 
 const tacticalLabEntries = [
   {
+    id: "xabi-alonso-back-three-reset",
+    category: "Manager DNA",
+    title: "Xabi Alonso: The Back-Three Reset",
+    excerpt: "The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.",
+    team: "Chelsea",
+    competition: "Premier League",
+    date: "2026-08-13",
+    image: "images/xabitaclab.jpg",
+    imageLink: "https://www.premierleague.com/en/news/4679662/xabi-alonso",
+    imageCredit: "Photo: Premier League",
+    readTime: 3,
+    comingSoon: false
+  },
+  {
+    id: "saka-sudden-stop",
+    category: "Player Blueprints",
+    title: "Bukayo Saka: The Sudden Stop",
+    excerpt: "It isn't top speed that makes Bukayo Saka unstoppable on the right -- it's how fast he can stop. The elite deceleration and change of direction that has made him Arsenal's most reliable attacking outlet since 2019.",
+    team: "Arsenal",
+    competition: "Premier League",
+    date: "2026-08-13",
+    image: "images/sakataclab.jpg",
+    imageLink: "https://www.theguardian.com/football/blog/2023/mar/01/bukayo-saka-bends-the-day-to-his-will-and-arsenal-can-now-wonder",
+    imageCredit: "Photo: The Guardian",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "arsenal-0304-invincibles",
+    category: "Tactical Vault",
+    title: "Arsenal 2003/04: The Invincibles",
+    excerpt: "The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.",
+    team: "Arsenal",
+    competition: "Premier League",
+    date: "2026-08-13",
+    image: "images/wengertaclab.jpg",
+    imageLink: "https://www.theguardian.com/football/from-the-archive-blog/2018/apr/20/arsene-wenger-arsenal-1996",
+    imageCredit: "Photo: The Guardian",
+    readTime: 3,
+    comingSoon: false
+  },
+  {
     id: "maresca-inverted-pivot",
     category: "Manager DNA",
     title: "Enzo Maresca: The Inverted Pivot",

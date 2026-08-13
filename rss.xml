@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Thu, 13 Aug 2026 07:00:49 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 13 Aug 2026 19:20:29 GMT</lastBuildDate>
+  <item>
+    <title>Vinicius Junior&apos;s New Real Madrid Deal Ends Arsenal&apos;s Chase -- What It Means for Arteta&apos;s Attack</title>
+    <link>https://sdjournalism.github.io/articles/20.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/20.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Vinicius Junior has signed a new six-year contract at Real Madrid, ending months of speculation over a move to Arsenal. We look at how close the chase really was, and what missing out means for a title-defending squad that otherwise had a quiet summer.</description>
+  </item>
+  <item>
+    <title>Manchester United&apos;s Summer Rebuild: Carrick Reshapes the Midfield With Santos and Tielemans</title>
+    <link>https://sdjournalism.github.io/articles/19.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/19.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Michael Carrick&apos;s first full summer window as permanent Manchester United manager has reshaped the midfield around Andrey Santos and Youri Tielemans. We look at how United got here, and what the business says about Carrick&apos;s plans for his own squad.</description>
+  </item>
   <item>
     <title>Tottenham Confirm Two Exits: Cristian Romero Set for Atletico Madrid as Djed Spence Completes Inter Move</title>
     <link>https://sdjournalism.github.io/articles/18.html</link>
@@ -22,6 +38,30 @@
     <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
     <category>Match Report</category>
     <description>Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.</description>
+  </item>
+  <item>
+    <title>Xabi Alonso: The Back-Three Reset (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Manager DNA</category>
+    <description>The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.</description>
+  </item>
+  <item>
+    <title>Bukayo Saka: The Sudden Stop (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Player Blueprints</category>
+    <description>It isn&apos;t top speed that makes Bukayo Saka unstoppable on the right -- it&apos;s how fast he can stop. The elite deceleration and change of direction that has made him Arsenal&apos;s most reliable attacking outlet since 2019.</description>
+  </item>
+  <item>
+    <title>Arsenal 2003/04: The Invincibles (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html</guid>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Tactical Vault</category>
+    <description>The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.</description>
   </item>
   <item>
     <title>Micky van de Ven&apos;s New Contract Is De Zerbi&apos;s Clearest Statement Yet</title>
@@ -206,30 +246,6 @@
     <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>From culture and leadership to tactical identity and recruitment, Roberto De Zerbi&apos;s early press conferences have provided supporters with a clear insight into his vision for Tottenham Hotspur. We break down the key messages shaping the club&apos;s new era and what they could mean for Spurs this season.</description>
-  </item>
-  <item>
-    <title>Eden Hazard: The Half-Space Overload (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/hazard-half-space-overload.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/hazard-half-space-overload.html</guid>
-    <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>How Antonio Conte&apos;s back three freed Eden Hazard from defensive duty and turned Chelsea&apos;s left flank into an unsolvable 2v1 during their 2016/17 title run.</description>
-  </item>
-  <item>
-    <title>Antoine Semenyo: The Turnover Burst (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/semenyo-turnover-burst.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/semenyo-turnover-burst.html</guid>
-    <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>How Antoine Semenyo turns an opponent&apos;s mistake into three seconds of terror -- the sprint in behind that made him one of the Premier League&apos;s most dangerous transition weapons.</description>
-  </item>
-  <item>
-    <title>Roberto De Zerbi: The Press-Bait (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/de-zerbi-press-bait.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/de-zerbi-press-bait.html</guid>
-    <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>Why De Zerbi&apos;s Tottenham park the ball in their own box on purpose -- and how the resulting press-bait turns an opponent&apos;s pressure into a route through it.</description>
   </item>
 </channel>
 </rss>

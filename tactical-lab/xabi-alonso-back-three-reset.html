@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xabi Alonso: The Back-Three Reset -- Samuel Davies</title>
+<meta name="description" content="The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xabi Alonso: The Back-Three Reset">
+<meta property="og:description" content="The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/xabitaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xabi Alonso: The Back-Three Reset">
+<meta name="twitter:description" content="The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/xabitaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/xabitaclab.jpg" alt="Xabi Alonso">
+      <figcaption><a href="https://www.premierleague.com/en/news/4679662/xabi-alonso" target="_blank" rel="noopener nofollow">Photo: Premier League</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Xabi Alonso</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Chelsea</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Back-Three Reset</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="alonso-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="alonso-name"></span>
+          <div class="buzzword-row" id="alonso-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="alonso-stage-list"></div>
+        <div class="annotation-legend" id="alonso-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="alonso-stats"></div>
+
+    <div class="body-text">
+      <p>Chelsea spent heavily rebuilding a squad this summer, but the most important appointment cost them nothing in transfer fees at all. Xabi Alonso arrived at Stamford Bridge in July having just taken Bayer Leverkusen through an entire Bundesliga season without losing a single match -- and he is already trying to rebuild Chelsea around the same principles that made it possible.</p>
+
+      <h4 class="body-subheading">The shape: 3-2-5</h4>
+      <p>At Leverkusen, Alonso's back three built play from deep while two ball-playing centre-backs circulated around a double pivot screening the defence. In possession the team habitually restructured into something closer to a 3-2-5, with the wing-backs providing width high up the pitch and the two attacking midfielders tucking into the half-spaces to overload the box <a href="https://www.soccertutor.com/blogs/inside-football-coaching/xabi-alonso-tactics-bayer-leverkusen-3-2-5-attacking-shape-wing-back-threat" target="_blank" rel="noopener nofollow" class="citation-link">(SoccerTutor, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Why a spare man matters</h4>
+      <p>The logic is defensive as much as attacking. With a spare man permanently behind the ball, Chelsea's wing-backs can push forward without ever leaving the back line outnumbered on the counter, while the double pivot screens the space in behind before an opponent can exploit it. It is a structure built to attack without the usual risk that comes with committing extra bodies forward.</p>
+
+      <h4 class="body-subheading">The numbers behind it</h4>
+      <p>The record Alonso built at Leverkusen is not in question. His side finished the 2023/24 Bundesliga season unbeaten across all 34 matches, racking up 90 points -- a total only bettered once in the competition's history -- and extending their unbeaten run to 51 games across all competitions, breaking a 59-year-old European record previously held by Benfica <a href="https://www.aljazeera.com/sports/2024/5/19/the-statistics-behind-leverkusens-historic-unbeaten-bundesliga-title-win" target="_blank" rel="noopener nofollow" class="citation-link">(Al Jazeera, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Landing it at Chelsea</h4>
+      <p>Installing a fully new structure in a matter of weeks is a different challenge entirely. Chelsea have already shown both a back three and a flatter back four in pre-season, and Alonso has been open about wanting flexibility rather than forcing one system regardless of opponent <a href="https://www.tribalfootball.com/article/soccer-premier-league-xabi-alonso-opens-up-on-chelsea-formation-ahead-of-2026-27-season-909e316e-5a4d-468f-8762-6c4b511d2a5b" target="_blank" rel="noopener nofollow" class="citation-link">(Tribal Football, 2026)</a>. But the pieces for the Leverkusen blueprint -- ball-playing centre-backs, attacking wing-back options, and a double pivot capable of screening the back line -- are already present in west London, on the back of a four-year contract that signals just how long-term Chelsea are willing to think for this rebuild <a href="https://www.aljazeera.com/sports/2026/5/17/chelsea-appoint-xabi-alonso-as-new-manager-premier-league-club-says" target="_blank" rel="noopener nofollow" class="citation-link">(Al Jazeera, 2026)</a>.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.soccertutor.com/blogs/inside-football-coaching/xabi-alonso-tactics-bayer-leverkusen-3-2-5-attacking-shape-wing-back-threat" target="_blank" rel="noopener nofollow">SoccerTutor -- Xabi Alonso Tactics & Formation: 3-2-5 Style of Play at Leverkusen</a></li>
+        <li><a href="https://www.aljazeera.com/sports/2024/5/19/the-statistics-behind-leverkusens-historic-unbeaten-bundesliga-title-win" target="_blank" rel="noopener nofollow">Al Jazeera -- The statistics behind Leverkusen's historic unbeaten Bundesliga title win</a></li>
+        <li><a href="https://www.aljazeera.com/sports/2026/5/17/chelsea-appoint-xabi-alonso-as-new-manager-premier-league-club-says" target="_blank" rel="noopener nofollow">Al Jazeera -- Chelsea appoint Xabi Alonso as new manager</a></li>
+        <li><a href="https://www.tribalfootball.com/article/soccer-premier-league-xabi-alonso-opens-up-on-chelsea-formation-ahead-of-2026-27-season-909e316e-5a4d-468f-8762-6c4b511d2a5b" target="_blank" rel="noopener nofollow">Tribal Football -- Xabi Alonso opens up on Chelsea formation ahead of 2026-27 season</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="maresca-inverted-pivot.html">
+          <div class="related-thumb"><img src="../images/marescataclab.jpg" alt="Enzo Maresca: The Inverted Pivot" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
+        </a>
+        <a class="related-card" href="de-zerbi-press-bait.html">
+          <div class="related-thumb"><img src="../images/RDZtaclab.jpg" alt="Roberto De Zerbi: The Press-Bait" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Roberto De Zerbi: The Press-Bait</span>
+        </a>
+        <a class="related-card" href="hurzeler-touchline-trap.html">
+          <div class="related-thumb"><img src="../images/fabiantaclab.jpg" alt="Fabian Hürzeler: The Touchline Trap" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Fabian Hürzeler: The Touchline Trap</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Back-Three%20Reset%3A%20how%20Xabi%20Alonso%20is%20rebuilding%20Chelsea%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fxabi-alonso-back-three-reset.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Back-Three%20Reset%3A%20how%20Xabi%20Alonso%20is%20rebuilding%20Chelsea%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fxabi-alonso-back-three-reset.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const ALONSO_FRAMES = [
+    {
+      name: "Back Three Builds",
+      buzzwords: ["Back Three", "Double Pivot"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 26, y: 64, opponent: true },
+        { x: 42, y: 61, opponent: true },
+        { x: 34, y: 70 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Two ball-playing centre-backs circulate around a double pivot" }
+      ]
+    },
+    {
+      name: "Wing-Backs Push On",
+      buzzwords: ["Wing-Backs", "Overload"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 14, y: 40, opponent: true },
+        { x: 52, y: 38, opponent: true },
+        { x: 58, y: 34 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "One wing-back holds width high, the other tucks in to help build" }
+      ]
+    },
+    {
+      name: "Five Attackers Pin the Box",
+      buzzwords: ["Front Five", "Rest Defence"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 20, y: 16, opponent: true },
+        { x: 48, y: 14, opponent: true },
+        { x: 34, y: 10 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Front five stretches the box the way Leverkusen did for an unbeaten season" }
+      ]
+    }
+  ];
+  const ALONSO_STATS = [
+    { value: "90", label: "Points in Leverkusen's unbeaten 2023/24 Bundesliga title -- only bettered once in league history" },
+    { value: "51", label: "Consecutive games unbeaten across all competitions at Leverkusen -- a European record" },
+    { value: "4-year", label: "Contract signed at Chelsea from July 2026, signalling a long-term rebuild" }
+  ];
+  initFormationDiagram("alonso-pitch", "alonso-name", "alonso-buzzwords", ALONSO_FRAMES, 3400, "alonso-stage-list", "horizontal", "alonso-legend");
+  renderStatPanel("alonso-stats", ALONSO_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Xabi Alonso: The Back-Three Reset",
+      text: "Xabi Alonso: The Back-Three Reset -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+</script>
+</body>
+</html>

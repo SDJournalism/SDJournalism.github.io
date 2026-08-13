@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsenal 2003/04: The Invincibles -- Samuel Davies</title>
+<meta name="description" content="The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arsenal 2003/04: The Invincibles">
+<meta property="og:description" content="The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/wengertaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arsenal 2003/04: The Invincibles">
+<meta name="twitter:description" content="The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/wengertaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/wengertaclab.jpg" alt="Arsenal 2003/04">
+      <figcaption><a href="https://www.theguardian.com/football/from-the-archive-blog/2018/apr/20/arsene-wenger-arsenal-1996" target="_blank" rel="noopener nofollow">Photo: The Guardian</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Arsenal 2003/04</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Arsenal</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Invincibles</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="invincibles-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="invincibles-name"></span>
+          <div class="buzzword-row" id="invincibles-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="invincibles-stage-list"></div>
+        <div class="annotation-legend" id="invincibles-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="invincibles-stats"></div>
+
+    <div class="body-text">
+      <p>No team before or since has gone an entire 38-game Premier League season unbeaten. Arsene Wenger's Arsenal did it in 2003/04, winning 26 games and drawing 12, finishing 11 points clear of second-placed Chelsea -- and they did it with a team built on defensive discipline as much as attacking talent <a href="https://www.goal.com/en-us/news/arsenal-invincibles-how-wengers-2003-04-gunners-went-a-season-without-defeat/1xkm3tgyvsbjj1wzrewhqz0liu" target="_blank" rel="noopener nofollow" class="citation-link">(Goal, 2026)</a>.</p>
+
+      <h4 class="body-subheading">The double pivot shield</h4>
+      <p>Patrick Vieira and Gilberto Silva sat in front of the back four, with Vieira setting the tone physically and Gilberto playing the quieter, more disciplined role that let others take risks around him. Their positional discipline was the platform everything else was built on <a href="https://breakingthelines.com/tactical-analysis/breaking-down-arsenals-2003-04-invincible-season/" target="_blank" rel="noopener nofollow" class="citation-link">(Breaking The Lines, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Wide players who defended first</h4>
+      <p>Robert Pires and Freddie Ljungberg were not simply attackers stationed out wide. Both were expected to track back and win the ball high up the pitch, turning defence into attack in a matter of seconds rather than waiting for the ball to be worked slowly through midfield.</p>
+
+      <h4 class="body-subheading">Henry, unleashed</h4>
+      <p>That defensive platform existed to serve one man. Thierry Henry scored 30 league goals in 37 appearances that season, more than two-fifths of Arsenal's entire total, winning the Golden Boot by punishing exactly the kind of space Arsenal's structure was designed to create <a href="https://www.arsenal.com/news/explainer-arsenals-200304-invincibles" target="_blank" rel="noopener nofollow" class="citation-link">(Arsenal.com, 2026)</a>.</p>
+
+      <h4 class="body-subheading">A record that still stands</h4>
+      <p>The unbeaten run extended well beyond the 38 games of that single season, reaching 49 consecutive league matches across three campaigns before finally ending in October 2004. More than two decades on, no side has come close to replicating it -- a reminder of how rare it is for control and ruthlessness to coexist in the same team.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.goal.com/en-us/news/arsenal-invincibles-how-wengers-2003-04-gunners-went-a-season-without-defeat/1xkm3tgyvsbjj1wzrewhqz0liu" target="_blank" rel="noopener nofollow">Goal -- Arsenal Invincibles: How Wenger's 2003-04 Gunners went a season without defeat</a></li>
+        <li><a href="https://breakingthelines.com/tactical-analysis/breaking-down-arsenals-2003-04-invincible-season/" target="_blank" rel="noopener nofollow">Breaking The Lines -- Breaking Down Arsenal's 2003/04 Invincible Season</a></li>
+        <li><a href="https://www.arsenal.com/news/explainer-arsenals-200304-invincibles" target="_blank" rel="noopener nofollow">Arsenal.com -- Explainer: Arsenal's 2003/04 Invincibles</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="saka-sudden-stop.html">
+          <div class="related-thumb"><img src="../images/sakataclab.jpg" alt="Bukayo Saka: The Sudden Stop" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Bukayo Saka: The Sudden Stop</span>
+        </a>
+        <a class="related-card" href="leicester-1516-counter-attack-kings.html">
+          <div class="related-thumb"><img src="../images/leicestertaclab.jpg" alt="Leicester City 2015/16: The Counter-Attack Kings" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Leicester City 2015/16: The Counter-Attack Kings</span>
+        </a>
+        <a class="related-card" href="hazard-half-space-overload.html">
+          <div class="related-thumb"><img src="../images/hazardtaclab.jpg" alt="Eden Hazard: The Half-Space Overload" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Eden Hazard: The Half-Space Overload</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Invincibles%3A%20how%20Arsenal%20went%2038%20games%20unbeaten%20in%202003%2F04%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Farsenal-0304-invincibles.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Invincibles%3A%20how%20Arsenal%20went%2038%20games%20unbeaten%20in%202003%2F04%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Farsenal-0304-invincibles.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const INVINCIBLES_FRAMES = [
+    {
+      name: "The Double Pivot Shield",
+      buzzwords: ["Double Pivot", "Control"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 24, y: 64, opponent: true },
+        { x: 44, y: 64, opponent: true },
+        { x: 34, y: 70 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Vieira and Gilberto Silva shield the back four without sacrificing control" }
+      ]
+    },
+    {
+      name: "Pires and Ljungberg Track Back",
+      buzzwords: ["Wide Press", "Turnover"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 12, y: 45, opponent: true },
+        { x: 56, y: 42, opponent: true },
+        { x: 10, y: 48 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Wide players defend first, turning the ball over before it reaches Henry's space" }
+      ]
+    },
+    {
+      name: "Henry in Behind",
+      buzzwords: ["Counter-Attack", "Golden Boot"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 22, y: 16, opponent: true },
+        { x: 44, y: 14, opponent: true },
+        { x: 34, y: 8 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Lethal counter-attacks launched the moment possession is won back" }
+      ]
+    }
+  ];
+  const INVINCIBLES_STATS = [
+    { value: "38-0", label: "Games unbeaten in the 2003/04 Premier League -- 26 wins, 12 draws" },
+    { value: "49", label: "Consecutive unbeaten league games across three seasons, from May 2003 to October 2004" },
+    { value: "30", label: "Thierry Henry's league goals that season -- more than two-fifths of Arsenal's total, and the Golden Boot" }
+  ];
+  initFormationDiagram("invincibles-pitch", "invincibles-name", "invincibles-buzzwords", INVINCIBLES_FRAMES, 3400, "invincibles-stage-list", "horizontal", "invincibles-legend");
+  renderStatPanel("invincibles-stats", INVINCIBLES_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Arsenal 2003/04: The Invincibles",
+      text: "Arsenal 2003/04: The Invincibles -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+</script>
+</body>
+</html>

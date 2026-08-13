@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bukayo Saka: The Sudden Stop -- Samuel Davies</title>
+<meta name="description" content="It isn't top speed that makes Bukayo Saka unstoppable on the right -- it's how fast he can stop. The elite deceleration and change of direction that has made him Arsenal's most reliable attacking outlet since 2019.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bukayo Saka: The Sudden Stop">
+<meta property="og:description" content="It isn't top speed that makes Bukayo Saka unstoppable on the right -- it's how fast he can stop. The elite deceleration and change of direction that has made him Arsenal's most reliable attacking outlet since 2019.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/sakataclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bukayo Saka: The Sudden Stop">
+<meta name="twitter:description" content="It isn't top speed that makes Bukayo Saka unstoppable on the right -- it's how fast he can stop. The elite deceleration and change of direction that has made him Arsenal's most reliable attacking outlet since 2019.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/sakataclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/sakataclab.jpg" alt="Bukayo Saka">
+      <figcaption><a href="https://www.theguardian.com/football/blog/2023/mar/01/bukayo-saka-bends-the-day-to-his-will-and-arsenal-can-now-wonder" target="_blank" rel="noopener nofollow">Photo: The Guardian</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Player Blueprints</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Bukayo Saka</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Arsenal</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Sudden Stop</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="saka-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="saka-name"></span>
+          <div class="buzzword-row" id="saka-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="saka-stage-list"></div>
+        <div class="annotation-legend" id="saka-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="saka-stats"></div>
+
+    <div class="body-text">
+      <p>Bukayo Saka doesn't beat full-backs with raw pace. He beats them by stopping faster than they can react to him stopping -- and it has made him Arsenal's most consistent attacking outlet for the better part of six years.</p>
+
+      <h4 class="body-subheading">Pinning the full-back</h4>
+      <p>Saka's influence starts before he ever receives the ball. By staying wide and threatening the space in behind, he pulls the opposing full-back away from the middle of the pitch, creating exactly the kind of one-on-one situation that suits him.</p>
+
+      <h4 class="body-subheading">The sudden stop</h4>
+      <p>What separates Saka from a typical winger is his deceleration rather than his acceleration. His game relies on elite braking force -- the ability to plant and change direction faster than the defender marking him, rather than simply outrunning them in a straight line <a href="https://thebenchviewsoccer.com/analysis/why-modern-wingers-like-arsenals-bukayo-saka-cut-inside-and-how-it-creates-space" target="_blank" rel="noopener nofollow" class="citation-link">(The Bench View Soccer, 2026)</a>. It is a subtler, more repeatable advantage than raw speed, and far harder for defenders to prepare for.</p>
+
+      <h4 class="body-subheading">Cutting inside to combine</h4>
+      <p>Once he has bought himself half a yard, Saka drives diagonally infield rather than simply going outside. From there he has options: a shot himself, a pass into Martin Odegaard between the lines, or a ball played through for a runner ahead of him <a href="https://readarsenal.com/2026/04/11/arsenal-tactical-evolution-saka-central-odegaard-role/" target="_blank" rel="noopener nofollow" class="citation-link">(Read Arsenal, 2026)</a>. Arsenal's structure is built to give him those options every time, with runners rotating to make sure at least one is available.</p>
+
+      <h4 class="body-subheading">Staying unpredictable</h4>
+      <p>The best version of this movement mixes in genuine unpredictability. Saka doesn't cut inside every time -- he will still drive to the byline often enough that full-backs cannot simply overcommit to jumping the inside lane, which is exactly what keeps the sudden stop so effective play after play. It has already produced 60 Premier League goals and 50 assists for Arsenal, and 13 goal involvements in the league already this season <a href="https://www.premierleague.com/en/players/223340/bukayo-saka/stats" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2026)</a>.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://thebenchviewsoccer.com/analysis/why-modern-wingers-like-arsenals-bukayo-saka-cut-inside-and-how-it-creates-space" target="_blank" rel="noopener nofollow">The Bench View Soccer -- Why Modern Wingers Like Arsenal's Bukayo Saka Cut Inside</a></li>
+        <li><a href="https://readarsenal.com/2026/04/11/arsenal-tactical-evolution-saka-central-odegaard-role/" target="_blank" rel="noopener nofollow">Read Arsenal -- Arsenal tactical evolution: why Saka moving centrally could unlock Arteta's next step</a></li>
+        <li><a href="https://www.premierleague.com/en/players/223340/bukayo-saka/stats" target="_blank" rel="noopener nofollow">Premier League -- Bukayo Saka stats this season and career statistics</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="mitoma-studied-feint.html">
+          <div class="related-thumb"><img src="../images/mitomataclab.jpg" alt="Kaoru Mitoma: The Studied Feint" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Kaoru Mitoma: The Studied Feint</span>
+        </a>
+        <a class="related-card" href="gabriel-set-piece-predator.html">
+          <div class="related-thumb"><img src="../images/gabrieltaclab.jpg" alt="Gabriel Magalhães: The Set-Piece Predator" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Gabriel Magalhães: The Set-Piece Predator</span>
+        </a>
+        <a class="related-card" href="arsenal-0304-invincibles.html">
+          <div class="related-thumb"><img src="../images/wengertaclab.jpg" alt="Arsenal 2003/04: The Invincibles" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Arsenal 2003/04: The Invincibles</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Sudden%20Stop%3A%20how%20Bukayo%20Saka%27s%20deceleration%20beats%20full-backs%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fsaka-sudden-stop.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Sudden%20Stop%3A%20how%20Bukayo%20Saka%27s%20deceleration%20beats%20full-backs%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fsaka-sudden-stop.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const SAKA_FRAMES = [
+    {
+      name: "Pinning the Full-back",
+      buzzwords: ["Width", "1v1"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 60, y: 20, opponent: true },
+        { x: 50, y: 14, opponent: true },
+        { x: 64, y: 24 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Stays wide to pull the full-back away from the middle" }
+      ]
+    },
+    {
+      name: "The Sudden Stop",
+      buzzwords: ["Deceleration", "Change of Direction"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 54, y: 18, opponent: true },
+        { x: 46, y: 12, opponent: true },
+        { x: 52, y: 16 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Brakes and plants to change direction faster than his marker can react" }
+      ]
+    },
+    {
+      name: "Cutting Inside to Combine",
+      buzzwords: ["Cut Inside", "Combination"],
+      dots: [
+        { x: 34, y: 2, gk: true, opponent: true },
+        { x: 40, y: 14, opponent: true },
+        { x: 28, y: 10, opponent: true },
+        { x: 36, y: 12 }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Drives infield to shoot or find Odegaard between the lines" }
+      ]
+    }
+  ];
+  const SAKA_STATS = [
+    { value: "60", label: "Premier League goals for Arsenal -- plus 50 assists in 226 appearances" },
+    { value: "13", label: "Goal involvements already this season -- 7 goals and 5 assists in the Premier League" },
+    { value: "2019", label: "Year Saka broke into Arsenal's first team -- still Arteta's most consistent attacking outlet since" }
+  ];
+  initFormationDiagram("saka-pitch", "saka-name", "saka-buzzwords", SAKA_FRAMES, 3400, "saka-stage-list", "horizontal", "saka-legend");
+  renderStatPanel("saka-stats", SAKA_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Bukayo Saka: The Sudden Stop",
+      text: "Bukayo Saka: The Sudden Stop -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+</script>
+</body>
+</html>

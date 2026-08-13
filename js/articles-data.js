@@ -46,6 +46,71 @@
 
 const articles = [
 {
+    id: 20,
+    title: "Vinicius Junior's New Real Madrid Deal Ends Arsenal's Chase -- What It Means for Arteta's Attack",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/arsenalvinicius.jpg",
+    imageLink: "https://www.premierleague.com/en/news/4294270",
+    imageCredit: "Photo: Premier League",
+    excerpt: "Vinicius Junior has signed a new six-year contract at Real Madrid, ending months of speculation over a move to Arsenal. We look at how close the chase really was, and what missing out means for a title-defending squad that otherwise had a quiet summer.",
+    content: [
+      "Arsenal's pursuit of Vinicius Junior is over before it ever really became a transfer. Real Madrid have confirmed the Brazilian winger has agreed a new contract running until 2032, ending months of speculation over his future and closing the door on what would have been one of the signings of the summer anywhere in Europe (ESPN, 2026).",
+      "A closely-run contract saga",
+      "The two sides had been in talks since January, and Real Madrid were reportedly open to a departure this summer had no agreement been reached. The breakthrough came after the club proposed an improved offer beyond their previous proposal, believed to have been worth around 22 million euros a year, with a fresh round of talks this week finally settling the matter in Madrid's favour (Sky Sports, 2026).",
+      "Why Arsenal were credible suitors",
+      "This was not a speculative long-shot. Fresh off ending a 22-year wait for the Premier League title, Arsenal have been operating like a club willing to spend big to strengthen a squad that is already the best in England, and Vinicius represented exactly the kind of marquee attacking upgrade a champion looks for (NBC Sports, 2026). That Real Madrid felt the need to move off their original valuation to secure the extension is itself a sign of how real the interest was.",
+      "A quiet window otherwise",
+      "Missing out matters more because of how restrained the rest of Arsenal's business has been. Bruno Guimaraes arrived from Newcastle for 75 million pounds and Piero Hincapie's loan was made permanent, but beyond that Mikel Arteta's incomings have been selective rather than transformative, with Leandro Trossard among the more notable departures. A marquee wide addition would have been the headline move of the summer. Instead, Arsenal go into their title defence with largely the same attacking options that won them the league.",
+      "What it means for the attack",
+      "None of this means Arsenal's attack is short of quality. But it does mean the improvement Arsenal are banking on this season has to come from within the existing squad rather than from a marquee wide addition, at exactly the moment every other contender is trying to close the gap that opened up last season. Whether that is enough will be one of the defining questions of Arsenal's title defence."
+    ],
+    sources: [
+      { label: "ESPN -- Vinicius Junior agrees Real Madrid contract, ending Arsenal interest", url: "https://www.espn.com/soccer/story/_/id/49546343/vinicius-junior-agrees-real-madrid-contract-arsenal" },
+      { label: "Sky Sports -- Vinicius Junior: Arsenal target signs Real Madrid contract extension", url: "https://www.skysports.com/football/news/11095/13570470/vinicius-junior-arsenal-target-signs-real-madrid-contract-extension-to-end-uncertainty-over-future" },
+      { label: "NBC Sports -- Arsenal transfer target Vinicius Junior to sign new Real Madrid contract", url: "https://www.nbcsports.com/soccer/news/arsenal-transfer-target-vinicius-junior-to-sign-new-real-madrid-contract" }
+    ],
+    players: ["Vinicius Junior"],
+    teams: ["Arsenal"],
+    featured: true
+  },
+{
+    id: 19,
+    title: "Manchester United's Summer Rebuild: Carrick Reshapes the Midfield With Santos and Tielemans",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/carrickrebuild.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/ckgyg2n10q0o",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Michael Carrick's first full summer window as permanent Manchester United manager has reshaped the midfield around Andrey Santos and Youri Tielemans. We look at how United got here, and what the business says about Carrick's plans for his own squad.",
+    content: [
+      "Manchester United's summer has been defined by a midfield rebuild, and by a manager finally getting the chance to shape a squad he was not originally hired to lead. Michael Carrick's first full transfer window in permanent charge has brought in Andrey Santos, Youri Tielemans, Karl Darlow and Tynan Thompson, with the midfield additions in particular pointing to a clear change in direction.",
+      "From Amorim to Carrick",
+      "Carrick's path to the job was not straightforward. Ruben Amorim was sacked in January 2026 after 14 months in charge, following just three wins in United's previous 11 matches and the club sitting sixth in the Premier League (Goal, 2026). Carrick, a club legend from his playing days, was appointed interim manager and turned the second half of the season around well enough that United's hierarchy handed him the job permanently in May (Al Jazeera, 2026).",
+      "Santos: the marquee midfield addition",
+      "The clearest statement of intent was the signing of Andrey Santos from Chelsea for a fee in the region of 48 million pounds, with a further 2 million in potential add-ons. The Brazil international signed a deal running until 2031, with an option for a further year, and represents the kind of long-term midfield investment United have lacked in recent windows (Sky Sports, 2026).",
+      "Tielemans arrives from a rival's cup-winning squad",
+      "Youri Tielemans followed in a 35 million pound deal from Aston Villa, joining on a five-year contract (ESPN, 2026). The move carries a sharp edge given where he has come from: Tielemans was among the scorers as Villa beat Freiburg to win their first-ever Europa League title in May, before losing him just months later as one of the summer's departures from Unai Emery's squad.",
+      "Squad depth signings",
+      "The rest of United's midfield business has been about depth and cover rather than headlines. Karl Darlow arrived on a free transfer after his contract at Leeds United expired, while 18-year-old winger Tynan Thompson joined from Tottenham Hotspur as one for the future rather than an immediate first-team option.",
+      "What it means for United",
+      "Taken together, the business points to Carrick building a younger, more technical central midfield than the one he inherited from Amorim, with Santos and Tielemans offering a different balance of physicality and progressive passing. It is a squad now being shaped in his own image for the first time, rather than one he took over midway through a crisis. Whether that translates into results will be the real test of his permanent appointment."
+    ],
+    sources: [
+      { label: "ESPN -- Inside Man United's summer transfer rebuild, as Santos and Tielemans bolster midfield", url: "https://www.espn.com/soccer/story/_/id/49354932/inside-manchester-united-summer-transfer-rebuild-santos-tielemans-bolster-midfield" },
+      { label: "Sky Sports -- Andrey Santos: Man Utd complete 50 million pound signing from Chelsea", url: "https://www.skysports.com/football/news/11667/13562081/andrey-santos-man-utd-complete-lb50m-signing-of-brazil-international-midfielder-from-chelsea" },
+      { label: "Al Jazeera -- Man Utd appoint Michael Carrick as permanent manager", url: "https://www.aljazeera.com/sports/2026/5/22/man-utd-appoint-michael-carrick-as-permanent-manager" },
+      { label: "Goal -- Man Utd confirm return of Michael Carrick as caretaker manager after Ruben Amorim sacking", url: "https://www.goal.com/en/lists/man-utd-confirm-michael-carrick--caretaker-manager-ole-gunnar-solskjaer-ruben-amorim-sacking/blt60ce7dc477414b8b" }
+    ],
+    players: [],
+    teams: ["Manchester United"],
+    featured: true
+  },
+{
     id: 18,
     title: "Tottenham Confirm Two Exits: Cristian Romero Set for Atletico Madrid as Djed Spence Completes Inter Move",
     type: "Analysis",
