@@ -46,6 +46,71 @@
 
 const articles = [
 {
+    id: 18,
+    title: "Tottenham Confirm Two Exits: Cristian Romero Set for Atletico Madrid as Djed Spence Completes Inter Move",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/romerotransfer.jpg",
+    imageLink: "PLACEHOLDER",
+    imageCredit: "PLACEHOLDER",
+    excerpt: "Tottenham's back line looks very different to the one that started last season. Cristian Romero is closing in on a move to Atletico Madrid days after Djed Spence completed his switch to Inter Milan -- we look at both exits, and what they mean for a defence being rebuilt around Micky van de Ven.",
+    content: [
+      "Tottenham's defensive rebuild took a significant turn this week, with two first-team regulars confirmed to be leaving within days of each other. Cristian Romero is set to join Atletico Madrid in a deal worth up to 40 million euros including add-ons, while Djed Spence has already completed his move to Inter Milan. Between them, the two exits remove a captain and a first-team right-back from Roberto De Zerbi's squad before a ball has been kicked in the Premier League this season.",
+      "Romero: an unexpected turn",
+      "Romero's exit has moved quickly once the pieces fell into place. Spurs had previously discussed a similar fee with Napoli, but Romero could not agree personal terms there, while a move to Inter Milan collapsed in July and Barcelona chose not to proceed with an approach days ago. Atletico Madrid stepped in and finalised the paperwork quickly once personal terms were agreed, with the deal reportedly including a 15 percent sell-on clause for Tottenham should Romero move on again in the future (CaughtOffside, 2026). The 28-year-old World Cup winner leaves as club captain, having made 156 appearances across all competitions and played a central role in Tottenham's 2024/25 Europa League triumph.",
+      "The Arsenal contradiction",
+      "There is a pointed footnote to all of this. Only recently, Tottenham drew a hard line refusing to sell Romero to Arsenal, a stance we covered in detail at the time. Selling to Atletico Madrid instead does not undo the logic of that decision -- there is a meaningful difference between strengthening a direct Premier League rival and doing business with a club outside the division entirely. But it does confirm that Romero's future was never really about staying at Tottenham long-term, only about which suitor Spurs were prepared to deal with.",
+      "Spence's exit, in brief",
+      "Spence's departure for Inter Milan has already been covered in detail elsewhere on this site, including the wider question of why his valuation barely moved in four years despite becoming an established Premier League right-back, a Europa League winner and a full England international. The short version: he leaves for a fee close to what Tottenham paid Middlesbrough for him in 2021, closing a chapter that never quite delivered on that early promise in north London.",
+      "What it means for the defence",
+      "Taken together, the two exits strip out a captain and a first-choice right-back from the same summer Tottenham moved fastest to protect Micky van de Ven, tying their first-choice centre-back down to a new five-year contract personally pushed through by De Zerbi. The message from the club's business this window is not subtle: some parts of last season's back line are considered essential to the new era, and others are not. With Marcos Senesi arriving on a free transfer and Jan Paul van Hecke signed from Brighton for 52 million pounds, Spurs already have the beginnings of a replacement pairing in place. Whether either can replicate what Romero offered as both a leader and a ball-winner is the question De Zerbi's first season will have to answer."
+    ],
+    sources: [
+      { label: "CaughtOffside -- Cristian Romero's agent appears to confirm Tottenham exit as Romano drops major update", url: "https://www.caughtoffside.com/2026/08/12/cristian-romero-atletico-madrid-tottenham-40m-transfer/" },
+      { label: "CaughtOffside -- Tottenham and Atletico Madrid discussing Cristian Romero transfer", url: "https://www.caughtoffside.com/2026/08/10/tottenham-are-closing-in-sky-journalist-delivers-update-on-a-move-for-28-year-old-star/" },
+      { label: "CaughtOffside -- Tottenham agree deal to sell Cristian Romero", url: "https://www.caughtoffside.com/2026/08/03/tottenham-agree-deal-in-principle-as-28-year-old-edges-closer-to-summer-move/" }
+    ],
+    players: ["Cristian Romero", "Djed Spence"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
+    id: 17,
+    title: "PSG 2-1 Aston Villa: Brian Madjo's Record-Breaking Goal Wasn't Enough in Salzburg",
+    type: "Match Report",
+    competition: "UEFA Super Cup",
+    date: "2026-08-13",
+    scoreline: "PSG 2-1 Aston Villa",
+    image: "images/supercup.jpg",
+    imageLink: "PLACEHOLDER",
+    imageCredit: "PLACEHOLDER",
+    excerpt: "Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.",
+    content: [
+      "Paris Saint-Germain are UEFA Super Cup champions for the second year running after a 2-1 win over Aston Villa at the Red Bull Arena in Salzburg, becoming the first side to defend the trophy since Real Madrid in 2016 and 2017 (UEFA.com, 2026). But for long spells on Wednesday night, this was Brian Madjo's occasion far more than it was Luis Enrique's.",
+      "Kvaratskhelia's early statement",
+      "PSG made the perfect start. Khvicha Kvaratskhelia cut in from the left in the 20th minute and lashed a fierce, rising shot inside the near post, becoming the first Georgian player ever to score in a UEFA Super Cup (UEFA.com, 2026). It was the kind of goal that suggested a routine European night for the Champions League holders, nine of whom started this final having also started May's Champions League final in Budapest (ESPN, 2026).",
+      "Emery's gamble",
+      "Unai Emery had already signalled his intentions with his team selection. Emiliano Martinez, Ollie Watkins and Ezri Konsa were all left out entirely, with Marco Bizot deputising in goal and summer signing Joao Gomes handed a competitive debut alongside 17-year-old Brian Madjo, who started ahead of Watkins up front (Sports Mole, 2026). Alejandro Garnacho, ruled out through concussion protocols, was the only enforced absence -- the rest of the selection was a deliberate bet on Villa's future over the result in front of them (bet365 News, 2026).",
+      "Madjo makes history",
+      "That bet paid off within a half. Right at the end of the first period, Madjo met a chance with a clean volley to draw Villa level, and in doing so became the youngest player ever to score in a UEFA Super Cup final at 17 years and 212 days old (UEFA.com, 2026). It is exactly the kind of moment this site's scouting report on Madjo suggested was coming, and it arrived on one of the biggest stages in European club football rather than in a youth fixture few people were watching.",
+      "Doue's contentious winner",
+      "PSG regained the lead just after the hour mark. Desire Doue finished off a pass from substitute Ousmane Dembele, who had been withheld from the starting line-up as part of his own late return from the World Cup. The goal was initially ruled out for offside before being awarded on video review (ESPN, 2026), and it proved to be the difference -- Villa pushed for a second equaliser but could not find one, with Madjo's fairytale debut ending in defeat rather than a famous result.",
+      "History for PSG, and a night to build on for Villa",
+      "For PSG, the win extends a period of total dominance in Europe's biggest games, with the continuity in personnel from Budapest to Salzburg -- Warren Zaire-Emery and Maghnes Akliouche were the only players in the XI who did not start the Champions League final -- underlining how little Luis Enrique feels he needs to change (Sports Mole, 2026). For Aston Villa, the story of the night was never really going to be the scoreline. A 17-year-old scoring within minutes of his senior debut, on the losing side of a European final, is the kind of night that gets talked about for entirely different reasons a few years from now."
+    ],
+    sources: [
+      { label: "UEFA.com -- Paris 2-1 Aston Villa: European champions win back-to-back Super Cups", url: "https://www.uefa.com/uefasupercup/news/02a8-215538a51719-2eeabf96b5c7-1000--paris-2-1-aston-villa-european-champions-win-back-to-back/" },
+      { label: "ESPN -- PSG 2-1 Aston Villa (Aug 12, 2026) Game Analysis", url: "https://www.espn.com/soccer/report/_/gameId/401873624" },
+      { label: "Sports Mole -- PSG vs. Aston Villa team news: UEFA Super Cup final starting lineups confirmed", url: "https://www.sportsmole.co.uk/football/aston-villa/news/psg-aston-villa-starting-lineups-confirmed-how-many-new-signings-feature-in-super-cup-final_602859.html" },
+      { label: "bet365 News -- Paris Saint-Germain v Aston Villa team news: Garnacho absent from Villa squad", url: "https://news.bet365.com/en-gb/article/paris-saint-germain-v-aston-villa-team-news/2026081217334478576" }
+    ],
+    players: ["Brian Madjo"],
+    teams: ["Aston Villa"],
+    featured: true
+  },
+{
     id: 16,
     title: "Micky van de Ven's New Contract Is De Zerbi's Clearest Statement Yet",
     type: "Analysis",
