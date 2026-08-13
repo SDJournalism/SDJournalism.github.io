@@ -53,8 +53,8 @@ const articles = [
     date: "2026-08-13",
     scoreline: "",
     image: "images/romerotransfer.jpg",
-    imageLink: "PLACEHOLDER",
-    imageCredit: "PLACEHOLDER",
+    imageLink: "https://www.theguardian.com/football/2026/aug/12/atletico-madrid-agree-deal-tottenham-cristian-romero#img-1",
+    imageCredit: "Photo: The Guardian",
     excerpt: "Tottenham's back line looks very different to the one that started last season. Cristian Romero is closing in on a move to Atletico Madrid days after Djed Spence completed his switch to Inter Milan -- we look at both exits, and what they mean for a defence being rebuilt around Micky van de Ven.",
     content: [
       "Tottenham's defensive rebuild took a significant turn this week, with two first-team regulars confirmed to be leaving within days of each other. Cristian Romero is set to join Atletico Madrid in a deal worth up to 40 million euros including add-ons, while Djed Spence has already completed his move to Inter Milan. Between them, the two exits remove a captain and a first-team right-back from Roberto De Zerbi's squad before a ball has been kicked in the Premier League this season.",
@@ -84,8 +84,8 @@ const articles = [
     date: "2026-08-13",
     scoreline: "PSG 2-1 Aston Villa",
     image: "images/supercup.jpg",
-    imageLink: "PLACEHOLDER",
-    imageCredit: "PLACEHOLDER",
+    imageLink: "https://www.theguardian.com/football/live/2026/aug/12/european-super-cup-paris-saint-germain-v-aston-villa-live",
+    imageCredit: "Photo: The Guardian",
     excerpt: "Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.",
     content: [
       "Paris Saint-Germain are UEFA Super Cup champions for the second year running after a 2-1 win over Aston Villa at the Red Bull Arena in Salzburg, becoming the first side to defend the trophy since Real Madrid in 2016 and 2017 (UEFA.com, 2026). But for long spells on Wednesday night, this was Brian Madjo's occasion far more than it was Luis Enrique's.",
