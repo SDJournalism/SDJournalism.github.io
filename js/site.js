@@ -430,6 +430,22 @@ function renderKicker() {
   });
 }
 
+// Renders field-notes.html's full glossary list, A-Z, from
+// js/field-notes-data.js. Each entry gets id="<slug>" so
+// initJargonLinks() (below) can deep-link straight to it.
+function renderFieldNotes(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el || typeof fieldNotes === "undefined") return;
+
+  const sorted = [...fieldNotes].sort((a, b) => a.term.localeCompare(b.term));
+  el.innerHTML = sorted.map(entry => `
+    <div class="field-note-item" id="${entry.id}">
+      <h2 class="field-note-term">${entry.term}</h2>
+      <p class="field-note-definition">${entry.definition}</p>
+    </div>
+  `).join("");
+}
+
 /* ============================================================
    DETAIL-PAGE HELPERS
    ============================================================
@@ -597,6 +613,64 @@ function initKickoffCountdown() {
 
   update();
   timer = setInterval(update, 1000);
+}
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Scans an article/Tactical Lab piece's body paragraphs for the
+// first mention of each term in js/field-notes-data.js and turns
+// just that first mention into a link to its Field Notes entry.
+// Only the FIRST occurrence of each term gets linked (not every
+// mention), and it never touches text that's already inside a link
+// (like a citation), so it can't break an existing citation-link.
+function initJargonLinks() {
+  if (typeof fieldNotes === "undefined") return;
+  const container = document.querySelector(".detail.open .body-text");
+  if (!container) return;
+
+  // Longest term first, so e.g. "Front Three" can't get half-matched
+  // by a shorter term that happens to share a word with it.
+  const terms = [...fieldNotes].sort((a, b) => b.term.length - a.term.length);
+  const linked = new Set();
+
+  container.querySelectorAll("p").forEach(p => {
+    if (linked.size === terms.length) return;
+
+    terms.forEach(entry => {
+      if (linked.has(entry.id)) return;
+
+      const regex = new RegExp(`\\b(${escapeRegExp(entry.term)})\\b`, "i");
+      const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        if (node.parentElement && node.parentElement.closest("a")) continue;
+        const match = node.textContent.match(regex);
+        if (!match) continue;
+
+        const idx = match.index;
+        const matchedText = match[0];
+        const before = node.textContent.slice(0, idx);
+        const after = node.textContent.slice(idx + matchedText.length);
+
+        const link = document.createElement("a");
+        link.href = `../field-notes.html#${entry.id}`;
+        link.className = "jargon-term";
+        link.title = `Field Notes: ${entry.term}`;
+        link.textContent = matchedText;
+
+        const parent = node.parentNode;
+        parent.insertBefore(document.createTextNode(before), node);
+        parent.insertBefore(link, node);
+        parent.insertBefore(document.createTextNode(after), node);
+        parent.removeChild(node);
+
+        linked.add(entry.id);
+        break;
+      }
+    });
+  });
 }
 
 function injectArticleSchema() {

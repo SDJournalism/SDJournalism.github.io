@@ -1699,6 +1699,50 @@ nav.site-nav a.active {
   margin: 0;
 }
 
+/* ---------- Field Notes (glossary) ---------- */
+.field-notes-list {
+  max-width: 720px;
+  margin: 20px 0 56px;
+}
+
+.field-note-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  /* Offsets the jump-to-anchor landing spot so the sticky masthead
+     doesn't cover the term someone just clicked through to. */
+  scroll-margin-top: 100px;
+}
+
+.field-note-item:first-child { border-top: 1px solid var(--line); }
+
+.field-note-term {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+
+.field-note-definition {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Highlighted jargon terms inside article/Tactical Lab body text --
+   built automatically by initJargonLinks() in site.js. Deliberately
+   distinct from .citation-link (dotted rather than solid underline)
+   so it reads as "background info" rather than a source. */
+.jargon-term {
+  color: inherit;
+  border-bottom: 1px dotted var(--gold);
+  text-decoration: none;
+  cursor: help;
+}
+
+.jargon-term:hover { color: var(--gold); border-bottom-style: solid; }
+
 /* ---------- Footer ---------- */
 .mega-footer {
   background: var(--navy);
@@ -2183,6 +2227,7 @@ a:focus-visible, button:focus-visible {
 [data-theme="dark"] .stat-number,
 [data-theme="dark"] .perk-list li,
 [data-theme="dark"] .faq-question,
+[data-theme="dark"] .field-note-term,
 [data-theme="dark"] .error-page h1,
 [data-theme="dark"] .error-number {
   color: var(--ink);
