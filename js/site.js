@@ -155,7 +155,7 @@ function renderQuotePanel(textId, attrId, dotsId, panelId) {
   const panelEl = panelId ? document.getElementById(panelId) : null;
   if (!textEl || !attrEl || !dotsEl) return;
 
-  const pool = sortedArticles().filter(a => a.excerpt);
+  const pool = shuffleArray(sortedArticles().filter(a => a.excerpt)).slice(0, 7);
   if (pool.length === 0) return;
 
   let current = 0;
