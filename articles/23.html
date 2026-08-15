@@ -53,6 +53,7 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <header class="masthead">
   <div class="wrap masthead-inner">
@@ -74,7 +75,7 @@
   </div>
 </header>
 
-<div class="wrap">
+<div id="main-content" class="wrap">
   <a href="../articles.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Articles</a>
 
   <div class="detail open" style="margin-top: 16px;">
@@ -184,6 +185,7 @@
   initReadingProgress();
   initBreadcrumb();
   initStalenessBanner();
+  initKickoffCountdown();
   injectArticleSchema();
   initPdfButton();
   renderSmartRelated();

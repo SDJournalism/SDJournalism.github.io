@@ -42,6 +42,14 @@
                      Powers the team filter dropdown on the Articles
                      page. Leave as [] if the piece isn't focused on
                      one club.
+   - kickoff      : optional, only used on type: "Match Preview" pieces.
+                     Format "YYYY-MM-DDTHH:MM:SS+01:00" (that last bit
+                     is the UK time offset -- "+01:00" for BST/summer,
+                     "+00:00" for GMT/winter). When set, the article
+                     page shows a live "Kicks off in..." countdown
+                     that automatically switches to "Kick-off has
+                     passed" once the time's up. Leave it out entirely
+                     for anything that isn't a match preview.
    ============================================================ */
 
 const articles = [
@@ -52,6 +60,7 @@ const articles = [
     competition: "Community Shield",
     date: "2026-08-15",
     scoreline: "",
+    kickoff: "2026-08-16T15:00:00+01:00",
     image: "images/cuppreview.jpg",
     imageLink: "https://www.bbc.co.uk/sport/football/articles/ce8kp6k3p1no",
     imageCredit: "Photo: BBC Sport",
@@ -523,6 +532,7 @@ const articles = [
     competition: "UEFA Super Cup",
     date: "2026-08-10",
     scoreline: "",
+    kickoff: "2026-08-12T21:00:00+02:00",
     image: "images/villapsgsupercup.jpg",
     imageLink: "https://www.goal.com/en/lists/alejandro-garnacho-dig-chelsea-aston-villa-indonesia/blt3a0e7605d0f892a0",
     imageCredit: "Photo: GOAL",

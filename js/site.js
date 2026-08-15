@@ -547,6 +547,58 @@ function initStalenessBanner() {
   titleEl.insertAdjacentElement("afterend", banner);
 }
 
+function formatCountdown(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  const parts = [];
+  if (days) parts.push(`${days}d`);
+  if (days || hours) parts.push(`${hours}h`);
+  parts.push(`${String(minutes).padStart(2, "0")}m`);
+  parts.push(`${String(seconds).padStart(2, "0")}s`);
+  return parts.join(" ");
+}
+
+// Only does anything on Match Preview pieces that have a "kickoff"
+// field set in articles-data.js (see the field guide at the top of
+// that file). Ticks live every second, and switches itself over to
+// a static "has passed" message on its own once kick-off arrives --
+// nothing to come back and update by hand once a match has been
+// played.
+function initKickoffCountdown() {
+  const meta = getCurrentContentMeta();
+  if (!meta || meta.kind !== "article") return;
+  const item = meta.item;
+  if (item.type !== "Match Preview" || !item.kickoff) return;
+
+  const kickoffDate = new Date(item.kickoff);
+  if (isNaN(kickoffDate.getTime())) return;
+
+  const detailEl = document.querySelector(".detail.open");
+  const titleEl = detailEl ? detailEl.querySelector("h3") : null;
+  if (!titleEl) return;
+
+  const box = document.createElement("div");
+  box.className = "kickoff-countdown";
+  titleEl.insertAdjacentElement("afterend", box);
+
+  let timer;
+  function update() {
+    const diff = kickoffDate.getTime() - Date.now();
+    if (diff <= 0) {
+      box.innerHTML = `<span class="kickoff-icon" aria-hidden="true">&#9917;</span><span>Kick-off has passed -- this preview is now historical.</span>`;
+      if (timer) clearInterval(timer);
+      return;
+    }
+    box.innerHTML = `<span class="kickoff-icon" aria-hidden="true">&#9917;</span><span>Kicks off in <strong>${formatCountdown(diff)}</strong></span>`;
+  }
+
+  update();
+  timer = setInterval(update, 1000);
+}
+
 function injectArticleSchema() {
   if (!document.querySelector(".detail.open")) return;
 
