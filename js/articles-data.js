@@ -46,6 +46,102 @@
 
 const articles = [
 {
+    id: 23,
+    title: "Community Shield Preview: Arsenal vs Manchester City -- Maresca's First Test",
+    type: "Match Preview",
+    competition: "Community Shield",
+    date: "2026-08-15",
+    scoreline: "",
+    image: "images/cuppreview.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/ce8kp6k3p1no",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal and Manchester City meet at the Principality Stadium on Sunday with more than a trophy at stake -- it's Enzo Maresca's first competitive match in charge of City, and Arsenal's title defence begins with Saliba and Timber both missing.",
+    content: [
+      "The 2026/27 season's first piece of silverware is up for grabs on Sunday, when Premier League champions Arsenal face FA Cup winners Manchester City in the Community Shield at the Principality Stadium in Cardiff -- the first time the fixture has been played there in two decades.",
+      "Maresca's first competitive test",
+      "For Manchester City, the occasion carries extra weight. Enzo Maresca takes charge of a competitive City match for the first time, and will become the first City manager in the club's history to open his tenure with the Community Shield. He has already dismissed suggestions the game is a glorified friendly, saying he is targeting silverware from his very first game in the dugout (Sky Sports, 2026).",
+      "Arteta's endorsement",
+      "Mikel Arteta, meanwhile, offered a striking compliment to his opposite number ahead of the match, rating Maresca as good as Pep Guardiola. It's a notable statement given the season Arsenal have just had, and underlines how highly regarded Maresca's methods already are inside the league (Sky Sports, 2026).",
+      "Recent history favours City",
+      "Manchester City go into the match with the psychological edge in this specific fixture. City beat Arsenal 2-1 at the Etihad in April, and have lost just once in their last six meetings with the Gunners. Their pre-season form has also been strong under Maresca, unbeaten across a 1-1 draw with Inter Milan and back-to-back 3-1 wins over a K-League XI and Atletico Madrid, with Omar Marmoush scoring twice in the win over Atletico (Al Jazeera, 2026).",
+      "Arsenal's defensive crisis",
+      "Arsenal's preparation has been considerably more difficult. Jurrien Timber and William Saliba, two first-choice defenders, are both expected to miss out through injury -- Timber with a groin problem, Saliba with a back issue -- leaving Arteta light at the exact position that has to face down Erling Haaland and City's front line (Sports Mole, 2026).",
+      "Team news elsewhere",
+      "City have their own selection questions. Wing-back Rayan Ait-Nouri has recovered from a minor issue and is available, but Haaland is unlikely to start, and both Savinho and Rodri are set to miss out through injury -- with Ayyoub Bouaddi, City's marquee summer midfield signing, waiting for the eventual chance to make his mark in exactly the kind of role Rodri would ordinarily occupy (101 Great Goals, 2026).",
+      "Kick-off is at 3pm BST on Sunday. Whatever happens, it is the first proper look at both a title defence and a new era -- and after the summer both clubs have had, few fixtures on the calendar carry this much curiosity before a ball is even kicked."
+    ],
+    sources: [
+      { label: "Sky Sports -- Arsenal vs Man City in Community Shield: Maresca vows to 'close the gap' on champions", url: "https://www.skysports.com/football/news/11670/13572888/arsenal-vs-man-city-in-community-shield-enzo-maresca-vows-to-close-the-gap-on-champions-as-mikel-arteta-says-man-city-boss-is-as-good-as-pep-guardiola" },
+      { label: "Al Jazeera -- Arsenal vs Manchester City: Community Shield -- prediction, lineups, teams", url: "https://www.aljazeera.com/sports/2026/8/15/arsenal-vs-manchester-city-community-shield-prediction-lineups-teams" },
+      { label: "Sports Mole -- Preview: Arsenal vs Manchester City", url: "https://www.sportsmole.co.uk/football/arsenal/preview/arsenal-vs-man-city-prediction-team-news-lineups_602989.html" },
+      { label: "101 Great Goals -- Arsenal v Manchester City: Expected line-ups, stats, preview", url: "https://www.101greatgoals.com/match-previews/arsenal-v-manchester-city-expected-line-ups-stats-preview-stream-where-to-watch-community-shield/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Manchester City"],
+    featured: true
+  },
+{
+    id: 22,
+    title: "Cody Gakpo Closing In On £60m Tottenham Move as Liverpool Eye Barcola",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-15",
+    scoreline: "",
+    image: "images/gakpospurs.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/c98vnel56q6o",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Tottenham have reached an agreement in principle with Liverpool over a 60 million pound deal for Cody Gakpo, with the Dutch international believed to have already agreed personal terms. We look at the move, and why Liverpool are willing to sell to fund a run at Bradley Barcola.",
+    content: [
+      "Tottenham are closing in on a 60 million pound deal for Liverpool forward Cody Gakpo, with the two clubs having reached an agreement in principle and Gakpo himself understood to have agreed personal terms on a five-year contract in north London (This Is Anfield, 2026).",
+      "De Zerbi's next attacking piece",
+      "The move would mark another significant statement from Roberto De Zerbi's rebuild, adding a proven Premier League and Champions League forward to a squad that has already spent heavily on Sandro Tonali, Mateus Fernandes and Jan Paul van Hecke this summer. Gakpo offers De Zerbi a versatile forward comfortable through the middle or from the left, with over three years of Anfield first-team experience behind him (FootballTransfers, 2026).",
+      "Why Liverpool are willing to sell",
+      "Liverpool's willingness to do business appears to be directly connected to their own summer plans. The Reds are believed to be using funds raised from a permanent Gakpo sale to fund a move for PSG winger Bradley Barcola, continuing Andoni Iraola's reshaping of the forward line following his appointment after Arne Slot's exit in May (This Is Anfield, 2026).",
+      "The final hurdle",
+      "The one remaining obstacle is the fee and structure of the deal itself, rather than any reluctance from the player. Personal terms are understood to be agreed, but Liverpool and Tottenham still need to finalise the exact package before the transfer can be confirmed (FourFourTwo, 2026).",
+      "What it means for Spurs",
+      "If completed, Gakpo would become the latest name in what is shaping up to be one of the most aggressive rebuilds in the Premier League this summer, alongside a defence that has already lost both Cristian Romero and Djed Spence and a midfield reshaped around Tonali. For a squad that has changed this much before a ball has been kicked competitively, adding a proven attacking outlet like Gakpo would be a coherent next step rather than business for its own sake."
+    ],
+    sources: [
+      { label: "This Is Anfield -- Cody Gakpo 'agrees Tottenham deal': Claims of £60m+ bid to Liverpool", url: "https://www.thisisanfield.com/2026/08/cody-gakpo-tottenham-deal-claims-60m-bid-liverpool/" },
+      { label: "FootballTransfers -- Liverpool transfer news: Cody Gakpo reaches Tottenham agreement", url: "https://www.footballtransfers.com/en/transfer-news/uk-premier-league/2026/08/liverpool-transfer-news-cody-gakpo-tottenham-agreement-contract-summer-2026" },
+      { label: "FourFourTwo -- Tottenham Hotspur strike agreement for Cody Gakpo deal", url: "https://www.fourfourtwo.com/transfer/tottenham-hotspur-strike-agreement-for-cody-gakpo-deal-report" }
+    ],
+    players: ["Cody Gakpo"],
+    teams: ["Tottenham Hotspur", "Liverpool"],
+    featured: true
+  },
+{
+    id: 21,
+    title: "Twelve Signings In: Inside Xabi Alonso's Chelsea Rebuild",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-15",
+    scoreline: "",
+    image: "images/xabichelsea.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/may/12/chelsea-optimistic-about-luring-xabi-alonso-but-are-also-eyeing-andoni-iraola",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Chelsea have spent more than any club in world football this summer, reshaping the squad from back to front under new manager Xabi Alonso. We look at the full picture of ins, outs, and what it says about the size of the job after finishing 10th last season.",
+    content: [
+      "No club in world football has spent more this summer than Chelsea. Since appointing Xabi Alonso in May, the club has added a dozen new faces to the squad, a rebuild that reflects just how far off the pace Chelsea fell last season, when they finished 10th in the Premier League.",
+      "The headline arrival",
+      "The marquee signing is Morgan Rogers, who arrived from Aston Villa in a British-record deal after starring in Villa's run to their first Europa League title. Alongside him, Chelsea have added Marco Palestra from Atalanta, Geovany Quenda from Sporting Lisbon, and Emanuel Emegha from Racing Strasbourg, spreading the investment across defence, midfield and attack rather than concentrating it in one area (Sports Mole, 2026).",
+      "Experience alongside youth",
+      "Alonso has not built purely around potential. Jordan Henderson arrived on a free transfer to add leadership and Premier League experience to the dressing room, while Danny Welbeck joined from Brighton for a modest fee as competition and cover up front. Spanish left-back Pep Chavarria completed a separate move, signing a contract through to 2031 (TeamTalk, 2026).",
+      "Funding it through outgoings",
+      "Some of the spending has been offset by sales. Andrey Santos left for Manchester United, Marc Cucurella moved to Real Madrid, and youngster Tyrique George was sold to Everton -- all deals that helped balance a summer in which Chelsea's gross spend has run into the hundreds of millions (Sports Mole, 2026).",
+      "What it says about the job",
+      "The scale of the rebuild is itself a message. A club spending more than anyone else in world football, across a dozen separate deals, is not the profile of a squad that merely needs fine-tuning -- it is the profile of one being rebuilt close to the foundations. Combined with the tactical reset already under way, built around the back-three principles Alonso perfected at Bayer Leverkusen, this is as complete a summer overhaul as any club in the Premier League has undertaken. Whether it translates into results will depend on how quickly twelve new faces can be turned into a settled team."
+    ],
+    sources: [
+      { label: "Sports Mole -- Chelsea summer transfers and net spend: Every confirmed signing and sale", url: "https://www.sportsmole.co.uk/football/chelsea/transfer-talk/feature/chelsea-summer-transfers-all-confirmed-ins-and-outs-for-2026_598977.html" },
+      { label: "TeamTalk -- Every Chelsea done deal in the summer 2026 transfer window", url: "https://www.teamtalk.com/chelsea/every-completed-chelsea-transfer-summer-2026-signings-sales-loans" }
+    ],
+    players: [],
+    teams: ["Chelsea"],
+    featured: true
+  },
+{
     id: 20,
     title: "Vinicius Junior's New Real Madrid Deal Ends Arsenal's Chase -- What It Means for Arteta's Attack",
     type: "Analysis",

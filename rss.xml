@@ -6,7 +6,31 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Thu, 13 Aug 2026 19:20:29 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 15 Aug 2026 17:35:48 GMT</lastBuildDate>
+  <item>
+    <title>Community Shield Preview: Arsenal vs Manchester City -- Maresca&apos;s First Test</title>
+    <link>https://sdjournalism.github.io/articles/23.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/23.html</guid>
+    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Preview</category>
+    <description>Arsenal and Manchester City meet at the Principality Stadium on Sunday with more than a trophy at stake -- it&apos;s Enzo Maresca&apos;s first competitive match in charge of City, and Arsenal&apos;s title defence begins with Saliba and Timber both missing.</description>
+  </item>
+  <item>
+    <title>Cody Gakpo Closing In On £60m Tottenham Move as Liverpool Eye Barcola</title>
+    <link>https://sdjournalism.github.io/articles/22.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/22.html</guid>
+    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Tottenham have reached an agreement in principle with Liverpool over a 60 million pound deal for Cody Gakpo, with the Dutch international believed to have already agreed personal terms. We look at the move, and why Liverpool are willing to sell to fund a run at Bradley Barcola.</description>
+  </item>
+  <item>
+    <title>Twelve Signings In: Inside Xabi Alonso&apos;s Chelsea Rebuild</title>
+    <link>https://sdjournalism.github.io/articles/21.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/21.html</guid>
+    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Chelsea have spent more than any club in world football this summer, reshaping the squad from back to front under new manager Xabi Alonso. We look at the full picture of ins, outs, and what it says about the size of the job after finishing 10th last season.</description>
+  </item>
   <item>
     <title>Vinicius Junior&apos;s New Real Madrid Deal Ends Arsenal&apos;s Chase -- What It Means for Arteta&apos;s Attack</title>
     <link>https://sdjournalism.github.io/articles/20.html</link>
@@ -222,30 +246,6 @@
     <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
     <category>Opinion</category>
     <description>Data has changed the way football clubs discover talent, assess players and make transfer decisions. While traditional scouting remains vital, performance analysis has become one of the most influential tools in modern recruitment. We explore how clubs are combining human expertise with technology to gain an advantage in an increasingly competitive transfer market.</description>
-  </item>
-  <item>
-    <title>Spurs&apos; High Line Is Back -- And So Is the Risk</title>
-    <link>https://sdjournalism.github.io/articles/3.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/3.html</guid>
-    <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Roberto De Zerbi&apos;s arrival has brought an immediate return to the aggressive defensive approach Tottenham fans became familiar with under Ange Postecoglou. But while the high line promises greater control and attacking intent, it also reintroduces the same defensive vulnerabilities that have divided opinion in recent seasons. We examine why Spurs are embracing the risk once again, and whether this squad is better equipped to make it work.</description>
-  </item>
-  <item>
-    <title>Tottenham Hotspur&apos;s Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi</title>
-    <link>https://sdjournalism.github.io/articles/2.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/2.html</guid>
-    <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>A summer of significant change has reshaped Tottenham&apos;s squad. From marquee signings to smart free transfers, we examine how Spurs have approached the market and whether their recruitment has laid the foundations for a new era.</description>
-  </item>
-  <item>
-    <title>Inside Roberto De Zerbi&apos;s Tottenham Revolution: The Key Themes From His Early Press Conferences</title>
-    <link>https://sdjournalism.github.io/articles/1.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/1.html</guid>
-    <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>From culture and leadership to tactical identity and recruitment, Roberto De Zerbi&apos;s early press conferences have provided supporters with a clear insight into his vision for Tottenham Hotspur. We break down the key messages shaping the club&apos;s new era and what they could mean for Spurs this season.</description>
   </item>
 </channel>
 </rss>
