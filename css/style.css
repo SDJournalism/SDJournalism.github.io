@@ -1700,33 +1700,47 @@ nav.site-nav a.active {
 }
 
 /* ---------- Field Notes (glossary) ---------- */
-.field-notes-list {
-  max-width: 720px;
-  margin: 20px 0 56px;
+/* A compact card grid rather than a long scrolling list -- there's
+   no reason 15+ short definitions should read as one continuous
+   page. Cards reflow themselves (auto-fill) so this holds up
+   whether there are 15 terms or 50. */
+.field-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 24px 0 56px;
 }
 
-.field-note-item {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
+.field-note-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 20px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   /* Offsets the jump-to-anchor landing spot so the sticky masthead
      doesn't cover the term someone just clicked through to. */
   scroll-margin-top: 100px;
 }
 
-.field-note-item:first-child { border-top: 1px solid var(--line); }
+/* Whichever card matches the current #hash (i.e. the term someone
+   just clicked through from an article) gets a brief gold outline,
+   so it's obvious which one they landed on in a full grid. */
+.field-note-card:target {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
 
 .field-note-term {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--navy);
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 .field-note-definition {
   color: var(--ink-soft);
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 13.5px;
+  line-height: 1.6;
   margin: 0;
 }
 

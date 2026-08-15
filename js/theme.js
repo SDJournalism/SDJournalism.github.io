@@ -1,19 +1,23 @@
 /* ============================================================
-   DARK MODE -- toggle, time-based auto-switching, persistence.
+   DARK MODE -- toggle, system/time-based auto-switching, persistence.
    ============================================================
    The flash-prevention snippet (a tiny inline <script> right
    after <meta charset> on every page) already applies the right
-   theme before the page paints, using the same rules as below:
-   a saved manual choice wins if there is one, otherwise it's
-   dark from 9pm to 7am on the visitor's own device clock.
+   theme before the page paints, using the same priority as below:
+     1. a saved manual choice (the footer toggle), if there is one
+     2. the visitor's OS/browser dark-mode setting, if it reports one
+     3. otherwise, dark from 9pm to 7am on the visitor's own device
+        clock -- for the rare browser that exposes neither
 
    This file wires up two things -- call both once their targets
    exist on the page:
      initThemeToggle("theme-toggle")  -- the footer button
      initAutoTheme()                  -- keeps the auto (non-
-                                          manual) theme correct
-                                          if a tab is left open
-                                          across the 9pm/7am mark
+                                          manual) theme correct if a
+                                          tab is left open across the
+                                          9pm/7am mark, or if the
+                                          visitor changes their OS
+                                          setting mid-session
    ============================================================ */
 
 function applyTheme(theme) {
@@ -45,6 +49,22 @@ function timeBasedTheme() {
   return (hour >= 21 || hour < 7) ? "dark" : "light";
 }
 
+// Reads the OS/browser's own dark-mode setting, if the browser
+// exposes one. Returns "dark", "light", or null (old browsers, or
+// a device with no preference set either way) -- null means "fall
+// back to timeBasedTheme() instead".
+function systemTheme() {
+  try {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
+  } catch (e) {}
+  return null;
+}
+
+function autoTheme() {
+  return systemTheme() || timeBasedTheme();
+}
+
 function initThemeToggle(buttonId) {
   const btn = document.getElementById(buttonId || "theme-toggle");
   if (!btn) return;
@@ -59,7 +79,7 @@ function initThemeToggle(buttonId) {
 function initAutoTheme() {
   function tick() {
     if (manualTheme()) return; // a manual choice always wins
-    applyTheme(timeBasedTheme());
+    applyTheme(autoTheme());
   }
   tick();
   setInterval(tick, 60000);

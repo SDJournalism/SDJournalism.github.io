@@ -9,6 +9,10 @@
     var dark;
     if (t === "dark" || t === "light") {
       dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
     } else {
       var h = new Date().getHours();
       dark = h >= 21 || h < 7;
@@ -82,7 +86,7 @@
     <p>You've landed here by clicking a highlighted word in an article or Tactical Lab piece -- this page doesn't have its own link in the menu. Plain-English explanations of the jargon used across the site, so nothing gets in the way of the analysis.</p>
   </div>
 
-  <div class="field-notes-list" id="field-notes-list"></div>
+  <div class="field-notes-grid" id="field-notes-list"></div>
 </div>
 
 <footer class="mega-footer" id="mega-footer"></footer>

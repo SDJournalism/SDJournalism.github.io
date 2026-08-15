@@ -437,9 +437,10 @@ function renderFieldNotes(containerId) {
   const el = document.getElementById(containerId);
   if (!el || typeof fieldNotes === "undefined") return;
 
+  el.className = "field-notes-grid";
   const sorted = [...fieldNotes].sort((a, b) => a.term.localeCompare(b.term));
   el.innerHTML = sorted.map(entry => `
-    <div class="field-note-item" id="${entry.id}">
+    <div class="field-note-card" id="${entry.id}">
       <h2 class="field-note-term">${entry.term}</h2>
       <p class="field-note-definition">${entry.definition}</p>
     </div>

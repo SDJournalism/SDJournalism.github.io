@@ -9,6 +9,10 @@
     var dark;
     if (t === "dark" || t === "light") {
       dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
     } else {
       var h = new Date().getHours();
       dark = h >= 21 || h < 7;
