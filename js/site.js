@@ -430,6 +430,236 @@ function renderKicker() {
   });
 }
 
+/* ============================================================
+   DETAIL-PAGE HELPERS
+   ============================================================
+   Everything below powers a handful of features that appear on
+   every article and Tactical Lab detail page: the reading progress
+   bar, the breadcrumb trail, the "this piece is X old" banner, the
+   search-engine structured data, the Download PDF button, and the
+   "actually related" cards at the bottom of the page.
+
+   All of it is automatic -- these functions read data that's
+   already on the page (or already in articles-data.js /
+   tactical-lab-data.js) and build/insert their own HTML. There's
+   nothing to hand-edit per page; new articles and Tactical Lab
+   pieces get all of this for free as soon as they're added to
+   their data file.
+   ============================================================ */
+
+// Works out which article or Tactical Lab entry the current page
+// is, by matching the URL against the id (articles) or slug
+// (Tactical Lab) used in the data files. Returns null on any page
+// that isn't a detail page (or if the matching data file wasn't
+// loaded on this page).
+function getCurrentContentMeta() {
+  const path = window.location.pathname;
+
+  const articleMatch = path.match(/\/articles\/(\d+)\.html$/);
+  if (articleMatch && typeof articles !== "undefined") {
+    const id = parseInt(articleMatch[1], 10);
+    const item = articles.find(a => a.id === id);
+    if (item) return { kind: "article", item };
+  }
+
+  const labMatch = path.match(/\/tactical-lab\/([^/]+)\.html$/);
+  if (labMatch && typeof tacticalLabEntries !== "undefined") {
+    const slug = labMatch[1];
+    const item = tacticalLabEntries.find(e => e.id === slug);
+    if (item) return { kind: "lab", item };
+  }
+
+  return null;
+}
+
+function initReadingProgress() {
+  const detailEl = document.querySelector(".detail.open");
+  if (!detailEl) return;
+
+  const bar = document.createElement("div");
+  bar.className = "reading-progress-bar";
+  const fill = document.createElement("div");
+  fill.className = "reading-progress-fill";
+  bar.appendChild(fill);
+  document.body.prepend(bar);
+
+  function update() {
+    const total = detailEl.offsetHeight - window.innerHeight;
+    const scrolled = -detailEl.getBoundingClientRect().top;
+    const pct = total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : 0;
+    fill.style.width = pct + "%";
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+}
+
+function initBreadcrumb() {
+  const detailEl = document.querySelector(".detail.open");
+  const backLink = document.querySelector(".close-detail");
+  const titleEl = detailEl ? detailEl.querySelector("h3") : null;
+  if (!detailEl || !backLink || !titleEl) return;
+
+  const inLab = /\/tactical-lab\//.test(window.location.pathname);
+  const hubHref = inLab ? "../tactical-lab.html" : "../articles.html";
+  const hubLabel = inLab ? "Tactical Lab" : "Articles";
+
+  const nav = document.createElement("nav");
+  nav.className = "breadcrumb-nav";
+  nav.setAttribute("aria-label", "Breadcrumb");
+  nav.innerHTML = `
+    <a href="../index.html">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="${hubHref}">${hubLabel}</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">${titleEl.textContent}</span>
+  `;
+  backLink.insertAdjacentElement("afterend", nav);
+}
+
+function initStalenessBanner() {
+  const meta = getCurrentContentMeta();
+  if (!meta || !meta.item.date) return;
+
+  const detailEl = document.querySelector(".detail.open");
+  const titleEl = detailEl ? detailEl.querySelector("h3") : null;
+  if (!titleEl) return;
+
+  const published = new Date(meta.item.date + "T00:00:00");
+  const days = Math.floor((Date.now() - published.getTime()) / 86400000);
+  if (days < 7) return;
+
+  const weeks = Math.floor(days / 7);
+  const months = Math.floor(days / 30);
+  let label;
+  if (weeks < 4) {
+    label = weeks === 1 ? "over a week old" : `over ${weeks} weeks old`;
+  } else if (months < 2) {
+    label = "over a month old";
+  } else {
+    label = `over ${months} months old`;
+  }
+
+  const banner = document.createElement("div");
+  banner.className = "staleness-banner";
+  banner.innerHTML = `<span class="staleness-icon" aria-hidden="true">&#9201;</span><span>This piece is ${label} -- some details may have moved on since publication.</span>`;
+  titleEl.insertAdjacentElement("afterend", banner);
+}
+
+function injectArticleSchema() {
+  if (!document.querySelector(".detail.open")) return;
+
+  const getMeta = (selector) => {
+    const el = document.querySelector(selector);
+    return el ? el.getAttribute("content") : "";
+  };
+
+  const title = getMeta('meta[property="og:title"]') || document.title;
+  const description = getMeta('meta[name="description"]');
+  const image = getMeta('meta[property="og:image"]');
+  const url = getMeta('meta[property="og:url"]') || window.location.href;
+  const authorName = (typeof siteConfig !== "undefined" && siteConfig.name) || "Samuel Davies";
+  const meta = getCurrentContentMeta();
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    url: url,
+    author: { "@type": "Person", name: authorName },
+    publisher: { "@type": "Person", name: authorName }
+  };
+  if (image) schema.image = [image];
+  if (meta && meta.item.date) schema.datePublished = meta.item.date;
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+function initPdfButton() {
+  const tagRow = document.querySelector(".share-row .tag-row");
+  if (!tagRow) return;
+
+  const btn = document.createElement("button");
+  btn.className = "tag";
+  btn.type = "button";
+  btn.id = "pdf-download-btn";
+  btn.innerHTML = `<span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span> Download PDF`;
+  btn.addEventListener("click", () => window.print());
+  tagRow.appendChild(btn);
+}
+
+// Scores every OTHER article and Tactical Lab entry against the
+// current one by shared teams/players (a mention in a Tactical Lab
+// title counts as a player match, since those entries don't carry
+// a separate players list), then falls back to whatever's most
+// recent if there simply isn't enough overlap to fill 3 cards --
+// so a page never ends up with an empty Related section.
+function computeRelated(meta) {
+  const current = meta.item;
+  const currentTeams = new Set(meta.kind === "article" ? (current.teams || []) : (current.team ? [current.team] : []));
+  const currentPlayers = meta.kind === "article" ? (current.players || []) : [];
+  const currentTitle = (current.title || "").toLowerCase();
+
+  const nodes = [];
+  if (typeof articles !== "undefined") {
+    articles.forEach(a => {
+      nodes.push({ kind: "article", id: a.id, title: a.title, image: a.image, pill: a.type, date: a.date, teams: a.teams || [], players: a.players || [] });
+    });
+  }
+  if (typeof tacticalLabEntries !== "undefined") {
+    tacticalLabEntries.forEach(e => {
+      if (e.comingSoon) return;
+      nodes.push({ kind: "lab", id: e.id, title: e.title, image: e.image, pill: e.category, date: e.date, teams: e.team ? [e.team] : [], players: [] });
+    });
+  }
+
+  const candidates = nodes.filter(n => !(n.kind === meta.kind && String(n.id) === String(current.id)));
+
+  candidates.forEach(n => {
+    let score = 0;
+    n.teams.forEach(t => { if (currentTeams.has(t)) score += 2; });
+    currentPlayers.forEach(p => { if (n.title.toLowerCase().includes(p.toLowerCase())) score += 3; });
+    n.players.forEach(p => { if (currentTitle.includes(p.toLowerCase())) score += 3; });
+    n.score = score;
+  });
+
+  candidates.sort((a, b) => (b.score !== a.score) ? b.score - a.score : new Date(b.date) - new Date(a.date));
+
+  return candidates.slice(0, 3);
+}
+
+function relatedCardHTML(node, fromKind) {
+  const sameKind = node.kind === fromKind;
+  const href = sameKind
+    ? `${node.id}.html`
+    : (node.kind === "article" ? `../articles/${node.id}.html` : `../tactical-lab/${node.id}.html`);
+  const thumb = node.image
+    ? `<div class="related-thumb"><img src="../images/${node.image.replace(/^images\//, "")}" alt="${node.title}" loading="lazy"></div>`
+    : "";
+  return `
+    <a class="related-card" href="${href}">
+      ${thumb}
+      <span class="type-pill">${node.pill}</span>
+      <span class="related-title">${node.title}</span>
+    </a>
+  `;
+}
+
+function renderSmartRelated() {
+  const meta = getCurrentContentMeta();
+  if (!meta) return;
+  const grid = document.querySelector(".related-section .related-grid");
+  if (!grid) return;
+  const related = computeRelated(meta);
+  if (related.length === 0) return;
+  grid.innerHTML = related.map(n => relatedCardHTML(n, meta.kind)).join("");
+}
+
 const SITEMAP_PAGES = [
   { key: "index", label: "Home", href: "index.html" },
   { key: "articles", label: "Articles", href: "articles.html" },
