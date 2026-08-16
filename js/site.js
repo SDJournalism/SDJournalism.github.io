@@ -364,6 +364,49 @@ function renderPatreonPromo(containerId) {
   `;
 }
 
+/* ============================================================
+   NEWSLETTER SIGNUP
+   ============================================================
+   Uses Buttondown (buttondown.com) -- a free tool that both hosts
+   your subscriber list AND lets you write and send the actual
+   emails, so it's more than just a signup box. The form below
+   posts straight to Buttondown; nothing on this site stores or
+   sees the email addresses people type in.
+
+   Set siteConfig.newsletter.buttondownUsername in contact-info.js
+   before telling anyone about this -- see the instructions there.
+   Until that's set, the form is replaced with a quiet placeholder
+   note instead of a broken signup box.
+   ============================================================ */
+
+function newsletterFormHTML(idPrefix) {
+  const username = siteConfig.newsletter && siteConfig.newsletter.buttondownUsername;
+  if (!username || username === "PLACEHOLDER-USERNAME") {
+    return `<p class="newsletter-note">Newsletter signups open soon.</p>`;
+  }
+  return `
+    <form action="https://buttondown.com/api/emails/embed-subscribe/${username}"
+          method="post" target="popupwindow" class="newsletter-form"
+          onsubmit="window.open('https://buttondown.com/confirm-subscription?tag=${username}', 'popupwindow')">
+      <input type="email" name="email" id="${idPrefix}-email" aria-label="Email address" placeholder="you@email.com" required>
+      <input type="hidden" value="1" name="embed">
+      <button type="submit" class="newsletter-submit">Subscribe</button>
+    </form>
+  `;
+}
+
+// Big promo box -- used on the homepage.
+function renderNewsletterSignup(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = `
+    <span class="eyebrow">Stay in the loop</span>
+    <h2>Get every new piece by email</h2>
+    <p class="contact-note" style="margin-bottom:18px;">No algorithm, no noise -- just an email whenever I publish a new article or Tactical Lab piece.</p>
+    ${newsletterFormHTML("newsletter")}
+  `;
+}
+
 function renderSupportTags(containerId, sectionId) {
   const el = document.getElementById(containerId);
   const section = document.getElementById(sectionId);
@@ -820,6 +863,11 @@ function renderMegaFooter(containerId, currentPage) {
         <a href="${prefix}index.html" class="footer-name-btn">${siteConfig.name}</a>
         <p class="footer-tagline">${siteConfig.heroHeadline}</p>
       </div>
+      <div class="footer-col footer-col-subscribe">
+        <span class="eyebrow">Subscribe</span>
+        <p class="footer-newsletter-note">Get new pieces by email.</p>
+        ${newsletterFormHTML("footer-newsletter")}
+      </div>
       <div class="footer-col">
         <span class="eyebrow">Site Map</span>
         <nav class="footer-links">${sitemapLinks}</nav>
@@ -845,6 +893,7 @@ function renderMegaFooter(containerId, currentPage) {
       <span>${siteConfig.name} &copy; ${new Date().getFullYear()}</span>
       <div class="mega-footer-bottom-right">
         <a href="mailto:${siteConfig.email}">${siteConfig.email}</a>
+        ${textSizeToggleHTML()}
         ${THEME_TOGGLE_HTML}
       </div>
     </div>
@@ -858,6 +907,80 @@ const THEME_TOGGLE_HTML = `
     <span class="theme-toggle-label">Dark mode</span>
   </button>
 `;
+
+/* ============================================================
+   TEXT SIZE TOGGLE
+   ============================================================
+   Cycles the whole page between normal / large / larger sizing,
+   for anyone who finds the default text small. Saved per-browser
+   (localStorage) so it stays put next time this visitor returns.
+
+   Unlike the dark mode toggle, this doesn't need an "init" call
+   added to every page's script block -- it listens for clicks on
+   the whole page (event delegation) and applies the saved size
+   itself as soon as this file loads, so the button just works
+   wherever renderMegaFooter() puts it.
+
+   Implementation note: this stylesheet sets font sizes in px, not
+   rem, throughout -- so instead of scaling a root rem value (which
+   would do nothing here), this uses the CSS `zoom` property, which
+   scales the whole page the same way a phone/trackpad pinch-zoom
+   does. Supported in all current major browsers.
+   ============================================================ */
+
+const TEXT_SIZE_STEPS = ["", "lg", "xl"];
+const TEXT_SIZE_LABELS = { "": "A", lg: "A+", xl: "A++" };
+
+function currentTextSize() {
+  return document.documentElement.getAttribute("data-text-size") || "";
+}
+
+function applyTextSize(size) {
+  if (size) {
+    document.documentElement.setAttribute("data-text-size", size);
+  } else {
+    document.documentElement.removeAttribute("data-text-size");
+  }
+  const label = TEXT_SIZE_LABELS[size] || "A";
+  document.querySelectorAll(".text-size-value").forEach(el => { el.textContent = label; });
+}
+
+function storedTextSize() {
+  try {
+    const v = localStorage.getItem("sd-text-size") || "";
+    return TEXT_SIZE_STEPS.includes(v) ? v : "";
+  } catch (e) {
+    return "";
+  }
+}
+
+function cycleTextSize() {
+  const idx = TEXT_SIZE_STEPS.indexOf(currentTextSize());
+  const next = TEXT_SIZE_STEPS[(idx + 1) % TEXT_SIZE_STEPS.length];
+  applyTextSize(next);
+  try { localStorage.setItem("sd-text-size", next); } catch (e) {}
+}
+
+function textSizeToggleHTML() {
+  const label = TEXT_SIZE_LABELS[currentTextSize()] || "A";
+  return `
+    <button class="text-size-toggle-btn" id="text-size-toggle" type="button" aria-label="Change text size (currently ${label})">
+      <span class="text-size-toggle-label">Text size</span>
+      <span class="text-size-value">${label}</span>
+    </button>
+  `;
+}
+
+// Applied immediately (not wrapped in DOMContentLoaded) so the page
+// is already the right size by the time renderMegaFooter() builds
+// the button and reads currentTextSize() for its starting label.
+applyTextSize(storedTextSize());
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("#text-size-toggle");
+  if (!btn) return;
+  cycleTextSize();
+});
 
 /* ============================================================
    SAVE FOR LATER + REACTIONS
@@ -1843,3 +1966,40 @@ function setupLabResetFilters(gridId) {
     renderLabGrid(gridId);
   });
 }
+
+/* ============================================================
+   INSTALLABLE / OFFLINE SUPPORT (PWA)
+   ============================================================
+   Registers sw.js (the "service worker" -- a small background
+   script the browser keeps around) so the site can be "installed"
+   from the browser's address bar / share menu like an app, and so
+   pages a visitor has already opened still load with no internet
+   connection.
+
+   This runs on its own as soon as site.js loads -- no per-page
+   script call needed, same as the text size toggle above.
+   ============================================================ */
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+
+  // Service workers only work when a page is served over http/https
+  // by a real server -- not when a file is opened by double-clicking
+  // it (a "file://" address). Checking the protocol here means
+  // double-clicking index.html to preview the site locally still
+  // works exactly as before, with no console errors.
+  if (window.location.protocol !== "http:" && window.location.protocol !== "https:") return;
+
+  // Same "how deep is this page?" check renderMegaFooter() uses, so
+  // this finds sw.js correctly whether the page is at the site root
+  // (index.html) or one folder down (articles/1.html).
+  const inSubfolder = /\/(articles|tactical-lab)\/[^/]+$/.test(window.location.pathname);
+  const prefix = inSubfolder ? "../" : "";
+
+  navigator.serviceWorker.register(prefix + "sw.js").catch(() => {
+    // Fails quietly (e.g. an older browser) -- the site works fine
+    // without it, this is a bonus, not a requirement.
+  });
+}
+
+registerServiceWorker();

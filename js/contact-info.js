@@ -34,6 +34,23 @@ const siteConfig = {
     "Private Premier League community chatroom"
   ],
   fplLeague: "https://fantasy.premierleague.com/leagues/auto-join/zgax70",
+
+  // NEWSLETTER -- lets visitors sign up to get an email every time
+  // you publish something new. This uses a free tool called
+  // Buttondown (buttondown.com) -- it hosts your subscriber list
+  // AND lets you write and send the actual emails, so it's more
+  // than just a signup box.
+  //   1. Go to buttondown.com and make a free account.
+  //   2. During setup it asks you to pick a username -- that's the
+  //      only thing this site needs from it.
+  //   3. Replace PLACEHOLDER-USERNAME below with that username
+  //      (keep the quote marks).
+  // Until you do that, the signup form still shows on the site but
+  // won't actually deliver signups anywhere -- so do this before
+  // telling anyone the newsletter exists.
+  newsletter: {
+    buttondownUsername: "PLACEHOLDER-USERNAME"
+  },
   // This shows on the Home page intro AND the About page.
   bio: "I am a sport student based in Manchester, UK with a passion for football, storytelling and analysis. My work focuses on delivering thoughtful, well-researched content that goes beyond the scoreline, exploring the tactics, people and narratives that shape the modern game. I aim to create engaging articles that inform, challenge and connect with football audiences",
   coverage: [

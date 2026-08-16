@@ -549,6 +549,98 @@ nav.site-nav a.active {
 
 .patreon-strip .mailto-btn { margin-top: 0; }
 
+/* ---------- Newsletter signup (homepage box) ---------- */
+
+.newsletter-box {
+  border: 1px solid var(--navy);
+  background: var(--bg-card);
+  padding: 32px 36px;
+  margin-bottom: 40px;
+}
+
+.newsletter-box .eyebrow { margin-bottom: 10px; display: block; }
+
+.newsletter-box h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+/* Shared by the homepage box and the compact footer version. */
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1 1 220px;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.newsletter-submit {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.newsletter-submit:hover { background: var(--gold); transform: translateY(-2px); }
+
+.newsletter-note {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Newsletter signup (footer column) ---------- */
+
+.footer-col-subscribe .footer-newsletter-note {
+  font-size: 13px;
+  color: rgba(245, 246, 241, 0.65);
+  margin: 0 0 14px;
+}
+
+.footer-col-subscribe .newsletter-form { max-width: none; }
+
+.footer-col-subscribe .newsletter-form input[type="email"] {
+  background: rgba(245, 246, 241, 0.08);
+  border: 1px solid rgba(245, 246, 241, 0.25);
+  color: var(--white);
+}
+
+.footer-col-subscribe .newsletter-form input[type="email"]::placeholder {
+  color: rgba(245, 246, 241, 0.4);
+}
+
+.footer-col-subscribe .newsletter-submit {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.footer-col-subscribe .newsletter-submit:hover { background: var(--white); }
+
+.footer-col-subscribe .newsletter-note { color: rgba(245, 246, 241, 0.5); }
+
 .card {
   position: relative;
   background: var(--bg-card);
@@ -1766,8 +1858,8 @@ nav.site-nav a.active {
 
 .mega-footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.3fr 1.2fr 1fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(245, 246, 241, 0.15);
 }
@@ -2284,6 +2376,41 @@ a:focus-visible, button:focus-visible {
 [data-theme="dark"] .theme-toggle-btn .theme-icon-sun { display: none; }
 [data-theme="dark"] .theme-toggle-btn .theme-icon-moon { display: block; }
 
+/* ---------- Text size toggle (footer) ---------- */
+.text-size-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 241, 0.45);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.text-size-toggle-btn:hover { color: var(--gold); transform: translateY(-2px); }
+
+.text-size-toggle-btn .text-size-value {
+  font-weight: 600;
+  border: 1px solid rgba(245, 246, 241, 0.35);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.text-size-toggle-btn:hover .text-size-value { border-color: var(--gold); }
+
+/* Applied to <html> by the text size toggle in site.js. Uses CSS
+   `zoom` (a whole-page scale, like pinch-zoom) rather than a root
+   rem size, because this stylesheet sets font sizes in px
+   throughout -- scaling a root rem value wouldn't reach them. */
+html[data-text-size="lg"] { zoom: 1.15; }
+html[data-text-size="xl"] { zoom: 1.3; }
+
 /* ============================================================
    TACTICAL LAB THEME
    ------------------------------------------------------------
@@ -2598,6 +2725,7 @@ body.lab-page > .wrap .detail .body-text .body-subheading::before {
   .ticker-wrap,
   .site-nav,
   .theme-toggle-btn,
+  .text-size-toggle-btn,
   .mega-footer,
   .close-detail,
   .reading-progress-bar,
@@ -2619,6 +2747,7 @@ body.lab-page > .wrap .detail .body-text .body-subheading::before {
 
   /* Promo / interactive furniture */
   .patreon-strip,
+  .newsletter-box,
   .quote-panel,
   .share-row,
   .related-section,
