@@ -49,7 +49,7 @@ const siteConfig = {
   // won't actually deliver signups anywhere -- so do this before
   // telling anyone the newsletter exists.
   newsletter: {
-    buttondownUsername: "PLACEHOLDER-USERNAME"
+    buttondownUsername: "samueldavies"
   },
   // This shows on the Home page intro AND the About page.
   bio: "I am a sport student based in Manchester, UK with a passion for football, storytelling and analysis. My work focuses on delivering thoughtful, well-researched content that goes beyond the scoreline, exploring the tactics, people and narratives that shape the modern game. I aim to create engaging articles that inform, challenge and connect with football audiences",
