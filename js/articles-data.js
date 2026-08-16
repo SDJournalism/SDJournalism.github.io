@@ -54,6 +54,61 @@
 
 const articles = [
 {
+    id: 25,
+    title: "Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-16",
+    scoreline: "",
+    image: "images/dowmanscoutingreport.jpg",
+    imageLink: "https://www.nytimes.com/athletic/6572800/2025/08/25/max-dowman-premier-league-youngest-scorer-record/",
+    imageCredit: "Photo: The New York Times",
+    excerpt: "Max Dowman is 16 years old and already the youngest player to score in, start, and win the Premier League. Ahead of a title-defence season at Arsenal, we look at what he actually offers on the pitch -- and how Mikel Arteta is trying to protect him from his own hype.",
+    content: [
+      "Most scouting reports exist to explain why a player might be good one day. This one is different, because Max Dowman has already spent the last twelve months rewriting the Premier League's record books before he was legally allowed to change in Arsenal's first-team dressing room.",
+      "A record-breaking rise",
+      "Dowman joined Arsenal's academy at eight years old and was training with the first team by 14. On 23 August 2025 he came off the bench against Leeds United to become the second-youngest player in Premier League history, behind only his own teammate Ethan Nwaneri. By the end of that season he had become the youngest player to start a match for Arsenal, the youngest player ever to appear in the Champions League, and -- with a stoppage-time winner against Everton in March -- the youngest goalscorer in Premier League history at 16 years and 73 days old, beating a record that had stood since 2005 <a href=\"https://www.bbc.com/sport/football/articles/crm4p9xkwlko\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2025)</a> <a href=\"https://www.espn.co.uk/football/story/_/id/48207115/premier-league-youngest-goalscorers-max-dowman-wayne-rooney-cesc-fabregas-more\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2026)</a>.",
+      "What he actually offers",
+      "Strip away the records and Dowman is a right-sided attacker comfortable through the middle as a number 10, with the ball-carrying and set-piece delivery of a much older player. Academy coaches have compared him to Kaká; supporters have reached for Bukayo Saka. What stands out watching him is less the pace than the composure -- a willingness to slow the game down, draw a defender in, and beat them with a single change of direction rather than a burst of speed.",
+      "Arteta's balancing act",
+      "Arsenal's title-winning campaign gave Mikel Arteta a genuine selection problem: how much of a 16-year-old do you actually play, even one this good? After Dowman's breakout Carabao Cup start against Brighton, Arteta praised how naturally he handled the occasion: \"For him, everything is natural, for him everything is OK. It is the way he plays. That's the secret, that he doesn't make a big fuss of it. He just does what he does best which is to play football with a lot of courage and determination\" <a href=\"https://www.espn.in/football/story/_/id/46772481/max-dowman-arsenal-youngest-starter-carabao-cup-brighton\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2025)</a>. But Arteta has also been consistently cautious about managing the noise around him, saying: \"We just need to bring the temperature down and understand what is the best thing for this boy at his age... let's keep it down a little bit and respect his nature to do what he has to do, which I'm sure is going to be something really good\" <a href=\"https://www.espn.com/soccer/story/_/id/48226466/max-dowman-youthful-exuberance-inspire-arsenal-mikel-arteta\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2026)</a>.",
+      "Protected by more than tactics",
+      "Some of the safeguards around Dowman aren't tactical at all. Because of his age, FA rules require he be chaperoned around the first-team squad and he isn't permitted to change in the main dressing room -- a reminder, alongside the record-breaking headlines, that Arsenal are still managing the development of a schoolboy <a href=\"https://www.bbc.co.uk/sport/football/articles/cp94e0d531go\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2025)</a>.",
+      "The 2026/27 question",
+      "Dowman closed last season by becoming the youngest player ever to win the Premier League, at 16 years and 139 days old, and started Arsenal's final-day win over Crystal Palace as the league's youngest ever starter while Arteta rotated ahead of the Champions League final <a href=\"https://www.premierleague.com/en/news/4658279/who-are-the-youngest-ever-players-to-win-the-premier-league-title\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Premier League, 2026)</a>. None of that guarantees regular minutes in a title defence against a fully fit squad. But few 16-year-olds have ever arrived at a new season with this much already proven -- and Arsenal's biggest challenge with Dowman may no longer be developing his talent, but managing everyone else's expectations of it."
+    ],
+    featured: true,
+    players: ["Max Dowman"],
+    teams: ["Arsenal"]
+},
+{
+    id: 24,
+    title: "Scouting Report: Rio Ngumoha -- Liverpool's Teenager Already Writing Club History",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-16",
+    scoreline: "",
+    image: "images/rioscoutingreport.jpg",
+    imageLink: "https://www.liverpoolfc.com/news/rio-ngumoha-makes-history-liverpools-youngest-appearance-maker-europe",
+    imageCredit: "Photo: Liverpool FC",
+    excerpt: "A last-minute winner at Newcastle. The youngest goal at Anfield in the club's history. A senior England debut before his 18th birthday. Rio Ngumoha's rise at Liverpool has been remarkable -- now the question is whether he keeps his place under a new manager.",
+    content: [
+      "Rio Ngumoha's move to Liverpool in the summer of 2024 was contentious enough to sour relations between two clubs -- a tribunal later ordered Liverpool to pay Chelsea at least £2.8m in compensation for the winger's development <a href=\"https://www.bbc.co.uk/sport/football/articles/c1dkvy56vn3o\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2026)</a>. Two years on, it's hard to argue Liverpool got the wrong player.",
+      "An immediate impact",
+      "Ngumoha's Premier League debut, in August last season, is the kind aspiring academy players dream about but almost never get: introduced as a stoppage-time substitute away at Newcastle, he scored a 100th-minute winner in a 3-2 victory, becoming Liverpool's youngest ever Premier League goalscorer and setting the club's record for the latest winning goal in the competition's history <a href=\"https://www.liverpoolfc.com/news/rio-ngumohas-100th-minute-winner-gives-liverpool-thrilling-3-2-win-newcastle\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Liverpool FC, 2025)</a>. A month later he became the youngest player ever to appear for Liverpool in the Champions League <a href=\"https://www.liverpoolfc.com/news/rio-ngumoha-makes-history-liverpools-youngest-appearance-maker-europe\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Liverpool FC, 2025)</a>.",
+      "What kind of player he is",
+      "Ngumoha plays as a left winger who cuts inside onto his stronger foot, but what separates him from a typical academy dribbler is his composure in the final third -- both of his headline moments, the Newcastle winner and a first Anfield goal against Fulham in April, came from staying calm in a crowded box rather than simply beating a man for pace. The Fulham goal made him the youngest player ever to score at Anfield, beating a record held by Raheem Sterling, and prompted a memorable line from TNT Sports describing how he \"ignored Andy Robertson's screams\" to go it alone rather than square the ball <a href=\"https://www.theguardian.com/football/2026/apr/11/liverpool-fulham-premier-league-match-report\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(The Guardian, 2026)</a> <a href=\"https://www.tntsports.co.uk/football/premier-league/2025-2026/rio-ngumoha-liverpool-fulham-andy-robertson-youngest-goalscorer-anfield_sto23289547/story.shtml\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(TNT Sports, 2026)</a>.",
+      "Recognition beyond the club",
+      "The wider game has taken notice. In May, Ngumoha won the Premier League's Debutant of the Season award, and weeks later he was named in England's senior squad ahead of the 2026 World Cup, making his debut as a substitute against New Zealand and winning Player of the Match -- becoming the fifth-youngest debutant in England men's history in the process <a href=\"https://www.skysports.com/football/news/11095/13407507/rio-ngumoha-who-is-16-year-old-liverpool-winger-and-how-did-he-break-into-arne-slots-first-team-squad\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Sky Sports, 2025)</a>.",
+      "The Iraola question",
+      "Everything above happened under Arne Slot, the manager who first trusted Ngumoha with a first-team squad number. What happens next is less certain. Liverpool's switch to Andoni Iraola resets the trust a breakout academy player has to earn all over again, and pre-season form guarantees nothing once the games start to matter. Ngumoha's case for regular minutes, though, is no longer about potential -- it's a season-long body of record-breaking evidence that a new manager will have to actively choose to ignore.",
+      "For a player who wasn't even a first-team regular this time last year, that's about as strong a starting position as a teenager could ask for heading into 2026/27."
+    ],
+    featured: true,
+    players: ["Rio Ngumoha"],
+    teams: ["Liverpool"]
+},
+{
     id: 23,
     title: "Community Shield Preview: Arsenal vs Manchester City -- Maresca's First Test",
     type: "Match Preview",
