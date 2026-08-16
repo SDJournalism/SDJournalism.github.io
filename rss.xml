@@ -6,7 +6,7 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Sun, 16 Aug 2026 07:08:06 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 16 Aug 2026 13:45:57 GMT</lastBuildDate>
   <item>
     <title>Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League</title>
     <link>https://sdjournalism.github.io/articles/25.html</link>
@@ -22,6 +22,30 @@
     <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
     <category>Scouting Report</category>
     <description>A last-minute winner at Newcastle. The youngest goal at Anfield in the club&apos;s history. A senior England debut before his 18th birthday. Rio Ngumoha&apos;s rise at Liverpool has been remarkable -- now the question is whether he keeps his place under a new manager.</description>
+  </item>
+  <item>
+    <title>Mikel Arteta: The Rest Defence (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html</guid>
+    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Manager DNA</category>
+    <description>How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta&apos;s side to the 2025/26 title.</description>
+  </item>
+  <item>
+    <title>Alexander Isak: The Blindside Curve (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/isak-blindside-curve.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/isak-blindside-curve.html</guid>
+    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Player Blueprints</category>
+    <description>The bent run and double movement that turns a straight sprint into an unstoppable blindside curve -- and why Alexander Isak&apos;s £125m Liverpool move is only now getting a fair test.</description>
+  </item>
+  <item>
+    <title>Manchester City 2017/18: The Centurions (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html</guid>
+    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Tactical Vault</category>
+    <description>How Pep Guardiola&apos;s inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.</description>
   </item>
   <item>
     <title>Community Shield Preview: Arsenal vs Manchester City -- Maresca&apos;s First Test</title>
@@ -222,30 +246,6 @@
     <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
     <category>Tactical Vault</category>
     <description>How Jürgen Klopp&apos;s gegenpress freed Trent Alexander-Arnold and Andy Robertson to become auxiliary wingers on Liverpool&apos;s run to the 2019 Champions League.</description>
-  </item>
-  <item>
-    <title>Dele Alli: The Box Crasher (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/dele-alli-box-crasher.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/dele-alli-box-crasher.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>How Dele Alli&apos;s blindside runs off Harry Kane&apos;s dropped movement turned him into Tottenham&apos;s second striker in a midfielder&apos;s shirt.</description>
-  </item>
-  <item>
-    <title>Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated</title>
-    <link>https://sdjournalism.github.io/articles/7.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/7.html</guid>
-    <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Opinion</category>
-    <description>Tottenham&apos;s ownership has blocked Cristian Romero from joining Arsenal on rivalry grounds alone, even as their captain looks open to the move and better financial offers sit elsewhere. It&apos;s a decision most Spurs fans will cheer. It&apos;s also, increasingly, the wrong way to run a football club.</description>
-  </item>
-  <item>
-    <title>Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around</title>
-    <link>https://sdjournalism.github.io/articles/6.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/6.html</guid>
-    <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Scouting Report</category>
-    <description>Signed from Manchester City&apos;s academy just over a year ago, Jayden Lienou has gone from a name few outside West Yorkshire recognised to a first-team bench regular and a full Wales international. We look at what makes him one of the more compelling under-the-radar prospects in the country.</description>
   </item>
 </channel>
 </rss>

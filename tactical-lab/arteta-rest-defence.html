@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mikel Arteta: The Rest Defence -- Samuel Davies</title>
+<meta name="description" content="How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta's side to the 2025/26 title.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mikel Arteta: The Rest Defence">
+<meta property="og:description" content="How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta's side to the 2025/26 title.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/artetataclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mikel Arteta: The Rest Defence">
+<meta name="twitter:description" content="How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta's side to the 2025/26 title.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/artetataclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/artetataclab.jpg" alt="Mikel Arteta">
+      <figcaption><a href="https://www.premierleague.com/en/news/4363420/arteta-nine-clubs-could-be-premier-league-champions" target="_blank" rel="noopener nofollow">Photo: Premier League</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Mikel Arteta</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Arsenal</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Rest Defence</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="arteta-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="arteta-name"></span>
+          <div class="buzzword-row" id="arteta-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="arteta-stage-list"></div>
+        <div class="annotation-legend" id="arteta-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="arteta-stats"></div>
+
+    <div class="body-text">
+      <p>Arsenal won the 2025/26 title conceding fewer goals than anyone else in the league -- not because they sat back, but because every attack is built with the ball's eventual return already accounted for.</p>
+
+      <h4 class="body-subheading">Building attacks backwards</h4>
+      <p>The idea, sometimes called a rest defence, is that Arsenal's control isn't judged by possession totals or the volume of chances they create alone. Full-backs and midfielders deliberately hold positions during an attack so the team can apply pressure the instant it loses the ball, rather than committing bodies forward and getting caught stretched when a move breaks down <a href="https://youaremyarsenal.com/arsenal-2025-26-tactical-analysis-transition-control-defensive-structure/" target="_blank" rel="noopener nofollow" class="citation-link">(You Are My Arsenal, 2026)</a>. Wide areas are used to funnel opponents toward pressure zones that have already been set, so the press feels less like chasing the game and more like a trap sprung on cue.</p>
+
+      <h4 class="body-subheading">The double pivot</h4>
+      <p>Martin Zubimendi's arrival gave Arteta a second body to pair with Declan Rice in front of the back four, deployed in a 4-2-3-1 in 13 matches last season rather than the usual 4-3-3. It's an extra layer of central cover that lets Arsenal progress the ball through midfield without leaving the space directly behind it open <a href="https://the-footballanalyst.com/arsenal-mikel-arteta-tactical-analysis/" target="_blank" rel="noopener nofollow" class="citation-link">(The Football Analyst, 2026)</a>, and it gives Arteta a second look he can switch to depending on the opponent.</p>
+
+      <h4 class="body-subheading">Numbers that back it up</h4>
+      <p>26 goals conceded across the whole 2025/26 Premier League season, the lowest in the division, with 19 clean sheets in 37 matches and only 87 shots on target faced all season -- 35 fewer than Manchester City had to deal with over the same campaign <a href="https://www.premierleague.com/en/news/4662597/arsenal" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Winning it in the last twenty minutes</h4>
+      <p>The structure is a fitness demand as much as a tactical one. Arsenal outran 35 of their 37 opponents across the season and finished with a second-half goal difference of plus 24, more than double Manchester City's tally over the same span -- proof the pressing traps were still springing shut when everyone else had started to tire.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://youaremyarsenal.com/arsenal-2025-26-tactical-analysis-transition-control-defensive-structure/" target="_blank" rel="noopener nofollow">You Are My Arsenal -- Arsenal 2025-26 Tactical Analysis: Transition Control and Defensive Structure Under Arteta</a></li>
+        <li><a href="https://the-footballanalyst.com/arsenal-mikel-arteta-tactical-analysis/" target="_blank" rel="noopener nofollow">The Football Analyst -- Arsenal: Mikel Arteta Tactical Analysis</a></li>
+        <li><a href="https://www.premierleague.com/en/news/4662597/arsenal" target="_blank" rel="noopener nofollow">Premier League -- Analysis: the tactics that defined Arsenal's title-winning season</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="maresca-inverted-pivot.html">
+          <div class="related-thumb"><img src="../images/marescataclab.jpg" alt="Enzo Maresca: The Inverted Pivot" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
+        </a>
+        <a class="related-card" href="gabriel-set-piece-predator.html">
+          <div class="related-thumb"><img src="../images/gabrieltaclab.jpg" alt="Gabriel Magalhães: The Set-Piece Predator" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Gabriel Magalhães: The Set-Piece Predator</span>
+        </a>
+        <a class="related-card" href="arsenal-0304-invincibles.html">
+          <div class="related-thumb"><img src="../images/wengertaclab.jpg" alt="Arsenal 2003/04: The Invincibles" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Arsenal 2003/04: The Invincibles</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Rest%20Defence%3A%20how%20Mikel%20Arteta%20builds%20Arsenal%27s%20attacks%20backwards%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Farteta-rest-defence.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Rest%20Defence%3A%20how%20Mikel%20Arteta%20builds%20Arsenal%27s%20attacks%20backwards%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Farteta-rest-defence.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const ARTETA_FRAMES = [
+    {
+      name: "In Possession",
+      buzzwords: ["Rest Defence", "Structure"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 20, y: 80 },
+        { x: 44, y: 70 },
+        { x: 30, y: 62 },
+        { x: 50, y: 30 },
+        { x: 60, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Full-back tucks infield instead of overlapping" },
+        { dotIndex: 3, text: "Rice and Zubimendi both sit ready to cover" }
+      ]
+    },
+    {
+      name: "Ball Is Lost",
+      buzzwords: ["Turnover"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 22, y: 78 },
+        { x: 42, y: 68 },
+        { x: 30, y: 60 },
+        { x: 52, y: 28 },
+        { x: 58, y: 22, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 5, text: "Opponent wins the ball in a dangerous area" }
+      ]
+    },
+    {
+      name: "Instant Recovery",
+      buzzwords: ["Counter-Press", "Trap Sprung"],
+      dots: [
+        { x: 34, y: 97, gk: true },
+        { x: 26, y: 74 },
+        { x: 40, y: 58 },
+        { x: 32, y: 56 },
+        { x: 50, y: 34 },
+        { x: 54, y: 30, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Zubimendi and Rice close the passing lanes instantly" },
+        { dotIndex: 1, text: "The tucked full-back is already there to press" }
+      ]
+    }
+  ];
+  const ARTETA_STATS = [
+    { value: "26", label: "Goals conceded in the 2025/26 Premier League season -- the fewest of any club" },
+    { value: "19", label: "Clean sheets in 37 Premier League matches during the title-winning campaign" },
+    { value: "+24", label: "Arsenal's second-half goal difference last season -- more than double Manchester City's" }
+  ];
+  initFormationDiagram("arteta-pitch", "arteta-name", "arteta-buzzwords", ARTETA_FRAMES, 3400, "arteta-stage-list", "horizontal", "arteta-legend");
+  renderStatPanel("arteta-stats", ARTETA_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Mikel Arteta: The Rest Defence",
+      text: "Mikel Arteta: The Rest Defence -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

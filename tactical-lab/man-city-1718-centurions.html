@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manchester City 2017/18: The Centurions -- Samuel Davies</title>
+<meta name="description" content="How Pep Guardiola's inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manchester City 2017/18: The Centurions">
+<meta property="og:description" content="How Pep Guardiola's inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/centurionstaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manchester City 2017/18: The Centurions">
+<meta name="twitter:description" content="How Pep Guardiola's inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/centurionstaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/centurionstaclab.jpg" alt="Pep Guardiola celebrates Manchester City's 2017/18 Premier League title">
+      <figcaption><a href="https://www.skysports.com/football/news/11661/11371688/premier-league-2017-18-sixty-stats-to-tell-your-mates" target="_blank" rel="noopener nofollow">Photo: Sky Sports</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Pep Guardiola</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Manchester City</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Centurions</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="city-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="city-name"></span>
+          <div class="buzzword-row" id="city-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="city-stage-list"></div>
+        <div class="annotation-legend" id="city-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="city-stats"></div>
+
+    <div class="body-text">
+      <p>No team before or since has reached 100 points in a single English top-flight season. Manchester City's 2017/18 side didn't just win the title -- they won it while sat at home, sealed by a result going on somewhere else entirely.</p>
+
+      <h4 class="body-subheading">The false full-back</h4>
+      <p>Pep Guardiola spent more than £100m rebuilding his full-backs specifically so they could do something other full-backs at the time weren't asked to do. Kyle Walker, Benjamin Mendy, Danilo and Fabian Delph would invert into midfield once City had the ball, turning a back four into a back three in possession and freeing an extra central body to play alongside Fernandinho -- a mechanism that felt genuinely new to an English top flight still built largely around orthodox wing-backs <a href="https://thefootballfaithful.com/guardiola-manchester-city-centurions/" target="_blank" rel="noopener nofollow" class="citation-link">(The Football Faithful, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Five up, five back</h4>
+      <p>Guardiola described the resulting shape as a five-five split: five players committed to attack, five holding defensive shape, at every moment of the game. David Silva and Kevin De Bruyne dropped short to combine centrally and progress the ball through pressure, while Leroy Sane and Raheem Sterling stayed high and wide to stretch defences and create the one-on-one space that Sergio Aguero thrived on <a href="https://thefootballfaithful.com/guardiola-manchester-city-centurions/" target="_blank" rel="noopener nofollow" class="citation-link">(The Football Faithful, 2026)</a>.</p>
+
+      <h4 class="body-subheading">A goalkeeper who could pass</h4>
+      <p>Underneath all of it was a goalkeeper who could pass. Ederson's distribution was the piece that let the whole structure work at real speed -- accurate enough over long range to bypass an entire press in a single ball, and comfortable enough in possession to support an extremely high defensive line that would have been reckless behind almost any other goalkeeper in the league at the time.</p>
+
+      <h4 class="body-subheading">The numbers</h4>
+      <p>The final tally still reads like a misprint: 100 points from 32 wins, 4 draws and just 2 defeats all season, with 106 goals scored, 27 conceded and a goal difference of plus 79 <a href="https://en.wikipedia.org/wiki/2017%E2%80%9318_Manchester_City_F.C._season" target="_blank" rel="noopener nofollow" class="citation-link">(Wikipedia, 2026)</a>. The title was confirmed on 15 April 2018, with five matches still to play, the moment Manchester United lost 1-0 away at West Bromwich Albion <a href="https://www.mancity.com/news/first-team/first-team-news/2018/april/man-city-premier-league-story" target="_blank" rel="noopener nofollow" class="citation-link">(Man City, 2026)</a>.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://thefootballfaithful.com/guardiola-manchester-city-centurions/" target="_blank" rel="noopener nofollow">The Football Faithful -- Guardiola's Manchester City: Inside the Centurions</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/2017%E2%80%9318_Manchester_City_F.C._season" target="_blank" rel="noopener nofollow">Wikipedia -- 2017-18 Manchester City F.C. season</a></li>
+        <li><a href="https://www.mancity.com/news/first-team/first-team-news/2018/april/man-city-premier-league-story" target="_blank" rel="noopener nofollow">Man City -- The story of how City won the 2017/18 Premier League</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="maresca-inverted-pivot.html">
+          <div class="related-thumb"><img src="../images/marescataclab.jpg" alt="Enzo Maresca: The Inverted Pivot" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
+        </a>
+        <a class="related-card" href="arsenal-0304-invincibles.html">
+          <div class="related-thumb"><img src="../images/wengertaclab.jpg" alt="Arsenal 2003/04: The Invincibles" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Arsenal 2003/04: The Invincibles</span>
+        </a>
+        <a class="related-card" href="leicester-1516-counter-attack-kings.html">
+          <div class="related-thumb"><img src="../images/leicestertaclab.jpg" alt="Leicester City 2015/16: The Counter-Attack Kings" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Leicester City 2015/16: The Counter-Attack Kings</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Centurions%3A%20how%20Pep%20Guardiola%27s%20inverted%20full-backs%20built%20the%20only%20100-point%20season%20in%20English%20football%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fman-city-1718-centurions.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Centurions%3A%20how%20Pep%20Guardiola%27s%20inverted%20full-backs%20built%20the%20only%20100-point%20season%20in%20English%20football%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fman-city-1718-centurions.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const CITY_FRAMES = [
+    {
+      name: "Back Four",
+      buzzwords: ["Build-Up"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 10, y: 80 },
+        { x: 26, y: 85 },
+        { x: 42, y: 85 },
+        { x: 58, y: 80 },
+        { x: 34, y: 65 }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Walker starts as an orthodox right-back" }
+      ]
+    },
+    {
+      name: "Walker Inverts",
+      buzzwords: ["False Full-Back"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 40, y: 68 },
+        { x: 26, y: 85 },
+        { x: 42, y: 85 },
+        { x: 58, y: 78 },
+        { x: 34, y: 60 }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Walker tucks infield to form a back three" },
+        { dotIndex: 5, text: "Fernandinho gains a free central passer alongside him" }
+      ]
+    },
+    {
+      name: "Five Up, Five Back",
+      buzzwords: ["Silva & De Bruyne Drop", "Sane & Sterling Stretch"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 40, y: 68 },
+        { x: 26, y: 85 },
+        { x: 42, y: 85 },
+        { x: 12, y: 25 },
+        { x: 34, y: 40 }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Wide forwards stretch the last line" },
+        { dotIndex: 5, text: "Silva and De Bruyne combine short through the middle" }
+      ]
+    }
+  ];
+  const CITY_STATS = [
+    { value: "100", label: "Points in the 2017/18 Premier League season -- the only 100-point campaign in English football" },
+    { value: "106", label: "Goals scored across the season, with a goal difference of plus 79" },
+    { value: "2", label: "Defeats in 38 league matches, sealing the title with five games still to play" }
+  ];
+  initFormationDiagram("city-pitch", "city-name", "city-buzzwords", CITY_FRAMES, 3400, "city-stage-list", "horizontal", "city-legend");
+  renderStatPanel("city-stats", CITY_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Manchester City 2017/18: The Centurions",
+      text: "Manchester City 2017/18: The Centurions -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

@@ -32,6 +32,48 @@
 
 const tacticalLabEntries = [
   {
+    id: "arteta-rest-defence",
+    category: "Manager DNA",
+    title: "Mikel Arteta: The Rest Defence",
+    excerpt: "How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta's side to the 2025/26 title.",
+    team: "Arsenal",
+    competition: "Premier League",
+    date: "2026-08-16",
+    image: "images/artetataclab.jpg",
+    imageLink: "https://www.premierleague.com/en/news/4363420/arteta-nine-clubs-could-be-premier-league-champions",
+    imageCredit: "Photo: Premier League",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "isak-blindside-curve",
+    category: "Player Blueprints",
+    title: "Alexander Isak: The Blindside Curve",
+    excerpt: "The bent run and double movement that turns a straight sprint into an unstoppable blindside curve -- and why Alexander Isak's £125m Liverpool move is only now getting a fair test.",
+    team: "Liverpool",
+    competition: "Premier League",
+    date: "2026-08-16",
+    image: "images/isaktaclab.jpg",
+    imageLink: "https://www.liverpoolfc.com/news/good-night-alexander-isak-reacts-his-first-liverpool-goal",
+    imageCredit: "Photo: Liverpool FC",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "man-city-1718-centurions",
+    category: "Tactical Vault",
+    title: "Manchester City 2017/18: The Centurions",
+    excerpt: "How Pep Guardiola's inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.",
+    team: "Manchester City",
+    competition: "Premier League",
+    date: "2026-08-16",
+    image: "images/centurionstaclab.jpg",
+    imageLink: "https://www.skysports.com/football/news/11661/11371688/premier-league-2017-18-sixty-stats-to-tell-your-mates",
+    imageCredit: "Photo: Sky Sports",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
     id: "xabi-alonso-back-three-reset",
     category: "Manager DNA",
     title: "Xabi Alonso: The Back-Three Reset",
