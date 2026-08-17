@@ -32,6 +32,48 @@
 
 const tacticalLabEntries = [
   {
+    id: "iraola-hybrid-press",
+    category: "Manager DNA",
+    title: "Andoni Iraola: The Hybrid Press",
+    excerpt: "Liverpool didn't hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League's biggest clubs off the pitch. How that identity is being transplanted to Anfield.",
+    team: "Liverpool",
+    competition: "Premier League",
+    date: "2026-08-17",
+    image: "images/iraolataclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cy071ngvnzzo",
+    imageCredit: "Photo: BBC Sport",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "palmer-shift-and-shoot",
+    category: "Player Blueprints",
+    title: "Cole Palmer: The Shift and Shoot",
+    excerpt: "Cole Palmer's finishing doesn't look rushed, even in the split-second before it happens -- and that's the whole trick. The technique behind Chelsea's record-breaking rookie scorer.",
+    team: "Chelsea",
+    competition: "Premier League",
+    date: "2026-08-17",
+    image: "images/palmertaclab.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/cole-palmer-chelsea-fc-champions-league-b1248365.html",
+    imageCredit: "Photo: Evening Standard",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "chelsea-0405-impossible-defence",
+    category: "Tactical Vault",
+    title: "Chelsea 2004/05: The Impossible Defence",
+    excerpt: "No Premier League team has conceded fewer than 15 goals in a season since -- and two decades on, nobody's got especially close. How Jose Mourinho's first Chelsea side redefined what a defence could look like.",
+    team: "Chelsea",
+    competition: "Premier League",
+    date: "2026-08-17",
+    image: "images/mourinhotaclab.jpg",
+    imageLink: "https://www.premierleague.com/en/news/2737934",
+    imageCredit: "Photo: Premier League",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
     id: "arteta-rest-defence",
     category: "Manager DNA",
     title: "Mikel Arteta: The Rest Defence",

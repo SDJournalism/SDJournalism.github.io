@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cole Palmer: The Shift and Shoot -- Samuel Davies</title>
+<meta name="description" content="Cole Palmer's finishing doesn't look rushed, even in the split-second before it happens -- and that's the whole trick. The technique behind Chelsea's record-breaking rookie scorer.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cole Palmer: The Shift and Shoot">
+<meta property="og:description" content="Cole Palmer's finishing doesn't look rushed, even in the split-second before it happens -- and that's the whole trick. The technique behind Chelsea's record-breaking rookie scorer.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/palmertaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cole Palmer: The Shift and Shoot">
+<meta name="twitter:description" content="Cole Palmer's finishing doesn't look rushed, even in the split-second before it happens -- and that's the whole trick. The technique behind Chelsea's record-breaking rookie scorer.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/palmertaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/palmertaclab.jpg" alt="Cole Palmer celebrates a goal for Chelsea">
+      <figcaption><a href="https://www.standard.co.uk/sport/football/cole-palmer-chelsea-fc-champions-league-b1248365.html" target="_blank" rel="noopener nofollow">Photo: Evening Standard</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Player Blueprints</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Cole Palmer</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Chelsea</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Shift and Shoot</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="palmer-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="palmer-name"></span>
+          <div class="buzzword-row" id="palmer-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="palmer-stage-list"></div>
+        <div class="annotation-legend" id="palmer-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="palmer-stats"></div>
+
+    <div class="body-text">
+      <p>Cole Palmer's finishing doesn't look rushed, even in the split-second before it happens -- and that's the whole trick. The technique that broke Chelsea's rookie scoring record starts with a shift of the hips, not a burst of pace.</p>
+
+      <h4 class="body-subheading">The shift and shoot</h4>
+      <p>Instead of shooting first-time, Palmer takes an extra half-touch to move the ball across his own body and his marker's, opening up the far corner before the defender or goalkeeper can react. It sacrifices power for disguise, and it works because he can finish comfortably off either side once the space appears <a href="https://learning.coachesvoice.com/cv/cole-palmer-position-style-of-play-chelsea/" target="_blank" rel="noopener nofollow" class="citation-link">(Coaches' Voice, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Built to receive on the half-turn</h4>
+      <p>The technique only works because of what happens before it. Palmer is comfortable receiving on the half-turn in the inside-right channel, already facing goal before a marker can close him down, and his passing range -- particularly bending through balls into the gap between full-back and centre-back -- means defenders can never fully commit to standing goal-side of him <a href="https://learning.coachesvoice.com/cv/cole-palmer-position-style-of-play-chelsea/" target="_blank" rel="noopener nofollow" class="citation-link">(Coaches' Voice, 2026)</a>.</p>
+
+      <h4 class="body-subheading">A record-breaking debut season</h4>
+      <p>That combination produced one of the great debut seasons in Chelsea history: 22 goals and 11 assists in 2023/24, making him the first Chelsea player aged 21 or under to reach 10 Premier League goals in a season and only the third to score 20 in a debut campaign, after Jimmy Floyd Hasselbaink and Diego Costa <a href="https://en.wikipedia.org/wiki/Cole_Palmer" target="_blank" rel="noopener nofollow" class="citation-link">(Wikipedia, 2026)</a>.</p>
+
+      <h4 class="body-subheading">A tougher second act</h4>
+      <p>His follow-up season was more stop-start -- 15 goals in 2024/25, including a run of 18 games and over 1,000 minutes without scoring -- a reminder that a technique built on disguise and timing is harder to sustain when a team's overall rhythm dips. The shift-and-shoot itself, though, hasn't gone anywhere; Chelsea's whole approach in the final third is still built around getting him the ball facing forward, in that same inside-right pocket, as often as possible.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://learning.coachesvoice.com/cv/cole-palmer-position-style-of-play-chelsea/" target="_blank" rel="noopener nofollow">Coaches' Voice -- Cole Palmer: position and style of play</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Cole_Palmer" target="_blank" rel="noopener nofollow">Wikipedia -- Cole Palmer</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="chelsea-0405-impossible-defence.html">
+          <div class="related-thumb"><img src="../images/mourinhotaclab.jpg" alt="Chelsea 2004/05: The Impossible Defence" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Chelsea 2004/05: The Impossible Defence</span>
+        </a>
+        <a class="related-card" href="hazard-half-space-overload.html">
+          <div class="related-thumb"><img src="../images/hazardtaclab.jpg" alt="Eden Hazard: The Half-Space Overload" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Eden Hazard: The Half-Space Overload</span>
+        </a>
+        <a class="related-card" href="gabriel-set-piece-predator.html">
+          <div class="related-thumb"><img src="../images/gabrieltaclab.jpg" alt="Gabriel Magalhães: The Set-Piece Predator" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Gabriel Magalhães: The Set-Piece Predator</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Shift%20and%20Shoot%3A%20the%20finishing%20technique%20behind%20Cole%20Palmer%27s%20record-breaking%20Chelsea%20debut%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fpalmer-shift-and-shoot.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Shift%20and%20Shoot%3A%20the%20finishing%20technique%20behind%20Cole%20Palmer%27s%20record-breaking%20Chelsea%20debut%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fpalmer-shift-and-shoot.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const PALMER_FRAMES = [
+    {
+      name: "Receiving on the Half-Turn",
+      buzzwords: ["Starting Position"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 46, y: 28 },
+        { x: 52, y: 20 },
+        { x: 40, y: 16, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Palmer receives facing goal in the inside-right channel" }
+      ]
+    },
+    {
+      name: "The Shift",
+      buzzwords: ["Shift and Shoot"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 48, y: 24 },
+        { x: 52, y: 20 },
+        { x: 42, y: 14, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "The ball is shifted across his body and the marker's" }
+      ]
+    },
+    {
+      name: "Far Corner",
+      buzzwords: ["Disguised Finish", "Goal"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 50, y: 18 },
+        { x: 52, y: 20 },
+        { x: 44, y: 10, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Finish curls into the far corner" },
+        { dotIndex: 3, text: "Goalkeeper is already committed the wrong way" }
+      ]
+    }
+  ];
+  const PALMER_STATS = [
+    { value: "22", label: "Goals in his 2023/24 debut Premier League season for Chelsea" },
+    { value: "3rd", label: "Youngest-ever Chelsea player to reach 20 goals in a debut season, after Hasselbaink and Costa" },
+    { value: "11", label: "Assists in that same record-breaking debut campaign" }
+  ];
+  initFormationDiagram("palmer-pitch", "palmer-name", "palmer-buzzwords", PALMER_FRAMES, 3400, "palmer-stage-list", "horizontal", "palmer-legend");
+  renderStatPanel("palmer-stats", PALMER_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Cole Palmer: The Shift and Shoot",
+      text: "Cole Palmer: The Shift and Shoot -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andoni Iraola: The Hybrid Press -- Samuel Davies</title>
+<meta name="description" content="Liverpool didn't hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League's biggest clubs off the pitch. How that identity is being transplanted to Anfield.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Andoni Iraola: The Hybrid Press">
+<meta property="og:description" content="Liverpool didn't hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League's biggest clubs off the pitch. How that identity is being transplanted to Anfield.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/iraolataclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Andoni Iraola: The Hybrid Press">
+<meta name="twitter:description" content="Liverpool didn't hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League's biggest clubs off the pitch. How that identity is being transplanted to Anfield.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/iraolataclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/iraolataclab.jpg" alt="Andoni Iraola">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/articles/cy071ngvnzzo" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Andoni Iraola</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Liverpool</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Hybrid Press</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="iraola-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="iraola-name"></span>
+          <div class="buzzword-row" id="iraola-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="iraola-stage-list"></div>
+        <div class="annotation-legend" id="iraola-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="iraola-stats"></div>
+
+    <div class="body-text">
+      <p>Liverpool didn't hire Andoni Iraola for continuity. They hired him because Bournemouth, on a fraction of the budget, pressed the Premier League's biggest clubs off the pitch -- and now that same identity is being transplanted to Anfield.</p>
+
+      <h4 class="body-subheading">Zonal shape, man-to-man trigger</h4>
+      <p>Iraola's press works in stages rather than a single instruction. Bournemouth held a compact zonal shape through the middle of the pitch, using the forward's run to force the goalkeeper's pass wide -- the moment that flips the system into full man-to-man marking, with wide traps designed to isolate whoever receives it <a href="https://totalfootballanalysis.com/head-coach-analysis/andoni-iraola-tactics-pressing-bournemouth-2025-2026-tactical-analysis" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">High risk by design</h4>
+      <p>The approach depends on centre-backs following opposing forwards aggressively even when it means stepping out of position, a trade-off Iraola has always defended in public: "The better the opposition, the more risk you have to take if you want to press them... if you are afraid, if you change your identity, it is only a matter of time until they score against you" <a href="https://www.skysports.com/football/news/11095/13235389/andoni-iraola-explains-the-high-risk-tactics-behind-his-bournemouth-transformation-before-arsenal-test" target="_blank" rel="noopener nofollow" class="citation-link">(Sky Sports, 2026)</a>.</p>
+
+      <h4 class="body-subheading">The numbers behind it</h4>
+      <p>It isn't just bravado. Bournemouth led the Premier League in PPDA at 8.53 and ball recoveries per 90 at 47.92 last season, generating 10 high-turnover goals -- while somehow conceding the fewest fast-break shots in the entire division. Pressing this aggressively is supposed to leave space in behind; Iraola's version consistently didn't <a href="https://totalfootballanalysis.com/head-coach-analysis/andoni-iraola-tactics-pressing-bournemouth-2025-2026-tactical-analysis" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Arriving at Anfield</h4>
+      <p>Liverpool's own squad is built for exactly this kind of work rate, and Iraola has already been candid about the adjustment: "For me, as coach, it was a change arriving in the Premier League... here, I would say it's more transitional" <a href="https://www.skysports.com/football/news/11095/13235389/andoni-iraola-explains-the-high-risk-tactics-behind-his-bournemouth-transformation-before-arsenal-test" target="_blank" rel="noopener nofollow" class="citation-link">(Sky Sports, 2026)</a>. Whether a Bournemouth-sized press can survive a full season of Champions League football and a squad accustomed to a more controlled possession game is the question Anfield spends 2026/27 finding the answer to.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://totalfootballanalysis.com/head-coach-analysis/andoni-iraola-tactics-pressing-bournemouth-2025-2026-tactical-analysis" target="_blank" rel="noopener nofollow">Total Football Analysis -- Andoni Iraola Tactics At AFC Bournemouth 2025/2026</a></li>
+        <li><a href="https://www.skysports.com/football/news/11095/13235389/andoni-iraola-explains-the-high-risk-tactics-behind-his-bournemouth-transformation-before-arsenal-test" target="_blank" rel="noopener nofollow">Sky Sports -- Andoni Iraola explains the high-risk tactics behind his Bournemouth transformation</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="de-zerbi-press-bait.html">
+          <div class="related-thumb"><img src="../images/RDZtaclab.jpg" alt="Roberto De Zerbi: The Press-Bait" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Roberto De Zerbi: The Press-Bait</span>
+        </a>
+        <a class="related-card" href="liverpool-1819-full-back-overload.html">
+          <div class="related-thumb"><img src="../images/liverpoolcltaclab.jpeg" alt="Liverpool 2018/19: The Full-Back Overload" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Liverpool 2018/19: The Full-Back Overload</span>
+        </a>
+        <a class="related-card" href="hurzeler-touchline-trap.html">
+          <div class="related-thumb"><img src="../images/fabiantaclab.jpg" alt="Fabian Hürzeler: The Touchline Trap" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Fabian Hürzeler: The Touchline Trap</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Hybrid%20Press%3A%20how%20Andoni%20Iraola%27s%20Bournemouth%20identity%20is%20being%20transplanted%20to%20Anfield%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Firaola-hybrid-press.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Hybrid%20Press%3A%20how%20Andoni%20Iraola%27s%20Bournemouth%20identity%20is%20being%20transplanted%20to%20Anfield%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Firaola-hybrid-press.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const IRAOLA_FRAMES = [
+    {
+      name: "Zonal Compression",
+      buzzwords: ["Zonal Shape", "Central Block"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 20, y: 35 },
+        { x: 48, y: 35 },
+        { x: 34, y: 45 },
+        { x: 34, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Central block compresses the middle of the pitch" }
+      ]
+    },
+    {
+      name: "Forward Forces Wide",
+      buzzwords: ["Curved Run"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 24, y: 30 },
+        { x: 44, y: 30 },
+        { x: 34, y: 40 },
+        { x: 15, y: 18, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Forward's curved run forces the pass wide" }
+      ]
+    },
+    {
+      name: "Man-to-Man Trap Sprung",
+      buzzwords: ["Wide Trap", "Turnover"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 16, y: 22 },
+        { x: 44, y: 34 },
+        { x: 34, y: 42 },
+        { x: 14, y: 16, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Full-back jumps to trap the wide receiver" },
+        { dotIndex: 2, text: "Central midfielder cuts the return pass" }
+      ]
+    }
+  ];
+  const IRAOLA_STATS = [
+    { value: "8.53", label: "PPDA -- the fewest passes per defensive action allowed by any Premier League side last season" },
+    { value: "47.92", label: "Ball recoveries per 90 minutes, the most in the division" },
+    { value: "19", label: "Fast-break shots allowed all season -- the Premier League minimum" }
+  ];
+  initFormationDiagram("iraola-pitch", "iraola-name", "iraola-buzzwords", IRAOLA_FRAMES, 3400, "iraola-stage-list", "horizontal", "iraola-legend");
+  renderStatPanel("iraola-stats", IRAOLA_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Andoni Iraola: The Hybrid Press",
+      text: "Andoni Iraola: The Hybrid Press -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>
