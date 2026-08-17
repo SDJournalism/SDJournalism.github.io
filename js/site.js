@@ -285,12 +285,18 @@ function shuffleArray(arr) {
   return a;
 }
 
+// 1 lead card (left) + 6 list rows (right) -- six rows keeps the
+// right-hand column's total height roughly matching the taller lead
+// card on the left, so the section doesn't end with a big gap of
+// empty space under the shorter side.
+const MAGAZINE_ROW_COUNT = 6;
+
 function renderMagazine(leadId, listId) {
   const leadEl = document.getElementById(leadId);
   const listEl = document.getElementById(listId);
   if (!leadEl || !listEl) return;
 
-  const picked = shuffleArray(articles).slice(0, 4);
+  const picked = shuffleArray(articles).slice(0, MAGAZINE_ROW_COUNT + 1);
   if (picked.length === 0) return;
 
   const [lead, ...rest] = picked;
@@ -1197,7 +1203,7 @@ const PREMIER_LEAGUE_CLUBS = [
   "Manchester United", "Newcastle United", "Nottingham Forest", "Sunderland", "Tottenham Hotspur"
 ];
 
-const COMPETITIONS = ["Premier League", "FA Cup", "EFL Cup", "Champions League", "Europa League", "Conference League", "Other"];
+const COMPETITIONS = ["Premier League", "FA Cup", "Carabao Cup", "Champions League", "Europa League", "Conference League", "Other"];
 
 const SEARCH_PLACEHOLDERS = {
   "All": "Search all articles...",
