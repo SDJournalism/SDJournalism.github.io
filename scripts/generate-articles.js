@@ -162,6 +162,10 @@ const THEME_INIT_SCRIPT = `<script>
     var dark;
     if (t === "dark" || t === "light") {
       dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
     } else {
       var h = new Date().getHours();
       dark = h >= 21 || h < 7;
@@ -234,7 +238,7 @@ function renderMasthead() {
       <a href="../tactical-lab.html">Tactical Lab</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-      <a href="../saved.html">Saved</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
     </nav>
   </div>
 </header>`;
@@ -321,10 +325,11 @@ function renderArticlePage(article, all) {
 
   return `${renderHead(article)}
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 ${renderMasthead()}
 
-<div class="wrap">
+<div id="main-content" class="wrap">
   <a href="../articles.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Articles</a>
 
   <div class="detail open" style="margin-top: 16px;">
@@ -351,6 +356,9 @@ ${renderShareRow(article)}
 ${renderFooter()}
 
 <script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
 <script src="../js/site.js"></script>
 <script src="../js/theme.js"></script>
 <script>
@@ -372,6 +380,14 @@ ${renderFooter()}
   initThemeToggle("theme-toggle");
   initAutoTheme();
   initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
 </script>
 </body>
 </html>

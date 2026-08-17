@@ -54,6 +54,76 @@
 
 const articles = [
 {
+    id: 27,
+    title: "Guglielmo Vicario's Tottenham Exit: How Kinsky's Rise Ended His Spurs Career",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-17",
+    scoreline: "",
+    image: "images/vicario.jpg",
+    imageLink: "https://www.goal.com/en-gb/lists/tottenham-player-ratings-monaco-guglielmo-vicario-champions-league-spurs/blt69b0377df6861509",
+    imageCredit: "Photo: GOAL",
+    excerpt: "Guglielmo Vicario is heading to Juventus on loan, the clearest sign yet that Antonin Kinsky's rise has ended his time as Tottenham's number one. Here's how three years unravelled into a Turin medical.",
+    content: [
+      "A little over three years after signing from Empoli as one of Serie A's most promising young goalkeepers, Guglielmo Vicario's time at Tottenham Hotspur is ending in Turin -- Juventus have agreed a season-long loan for the Italian, with an option to make the move permanent for a further £8.5m (Sky Sports, 2026).",
+      "A season derailed",
+      "Vicario's exit has its roots in March, when Tottenham confirmed the goalkeeper would need surgery for a hernia problem. The club described it at the time as a minor procedure, timed to have as little impact on the season as possible, with Vicario expected back within roughly a month (Tottenham Hotspur, 2026).",
+      "Kinsky's chance",
+      "The recovery took longer to translate into regular football than that timeline suggested, and in Vicario's continued absence, Antonin Kinsky was handed an extended run in goal. The Czech goalkeeper made the most of it -- a strong run of form across the final seven matches of the season was enough to convince Tottenham to tear up the pecking order (Sky Sports, 2026).",
+      "A new number one",
+      "Kinsky signed a new five-year contract in June, with the club holding an option to extend it by a further year, and Roberto De Zerbi has made clear since taking over as head coach that the young goalkeeper is his first-choice option between the posts. Teammate Dominic Solanke has been similarly effusive, describing Kinsky as \"phenomenal\" (GiveMeSport, 2026).",
+      "Juventus come calling",
+      "For Juventus, Vicario represents a pivot rather than a first choice. The Italian champions spent the early part of the summer pursuing Aston Villa's Emiliano Martinez, but that pursuit collapsed after Villa rejected an opening bid and Martinez's recurring finger problems raised fresh fitness concerns. Vicario, a full Italy international with Euro 2024 experience, offered Juventus a proven Serie A-ready alternative at a fraction of the cost (Sky Sports, 2026).",
+      "What it means for Spurs",
+      "For Tottenham, letting Vicario leave on loan -- rather than trying to keep two senior goalkeepers competing for one shirt -- is as much a statement about Kinsky's ceiling as it is about Vicario's misfortune. A player signed three years ago as Tottenham's long-term number one now heads into the new season fighting to be Juventus's, while the goalkeeper who inherited his shirt in his absence prepares to start Tottenham's Premier League opener as first choice."
+    ],
+    sources: [
+      { label: "Sky Sports -- Guglielmo Vicario transfer news: Juventus agree deal to sign Spurs goalkeeper on loan as Emi Martinez alternative", url: "https://www.skysports.com/football/news/11661/13573938/guglielmo-vicario-transfer-news-juventus-agree-deal-to-sign-spurs-goalkeeper-on-loan-as-emi-martinez-alternative" },
+      { label: "Tottenham Hotspur -- Vicario to undergo surgery", url: "https://www.tottenhamhotspur.com/news/2026/march/vicario-to-undergo-surgery/" },
+      { label: "GiveMeSport -- Tottenham's Antonin Kinsky signs 5-year contract extension", url: "https://www.givemesport.com/breaking-tottenham-antonin-kinsky-5-year-deal-romano-update/" }
+    ],
+    players: ["Guglielmo Vicario"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+},
+{
+    id: 26,
+    title: "Arsenal 3-0 Manchester City: Maresca's Debut Ends in a Cardiff Mauling",
+    type: "Match Report",
+    competition: "Community Shield",
+    date: "2026-08-16",
+    scoreline: "Arsenal 3-0 Manchester City",
+    image: "images/comshield.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/articles/c88v2p1vzlyo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal needed just 24 seconds to set the tone in Cardiff, brushing aside Manchester City 3-0 in Enzo Maresca's first competitive game as City boss to lift the Community Shield.",
+    content: [
+      "Arsenal's title defence began with a trophy after all, as Mikel Arteta's side brushed aside Manchester City 3-0 in the Community Shield at Cardiff's Principality Stadium on Sunday -- scoring the earliest goal in the fixture's history since 1968 along the way.",
+      "Twenty-four seconds",
+      "Riccardo Calafiori needed less than half a minute to put Arsenal ahead, latching onto a Myles Lewis-Skelly delivery on the edge of the box to stun a Manchester City side making its first competitive appearance under new manager Enzo Maresca (The FA, 2026).",
+      "Havertz doubles the lead",
+      "Kai Havertz made it two just before the half-hour mark, turning in a Christos Tzolis header at the back post to cap a well-worked move and leave City chasing the game before half-time (The FA, 2026).",
+      "Odegaard's nutmeg seals it",
+      "Arsenal's captain put the result beyond doubt three minutes into the second half, rounding Josko Gvardiol and nutmegging Gianluigi Donnarumma to roll the ball into an empty net -- a goal that also earned him the match's player-of-the-match award (Man City, 2026).",
+      "A tough afternoon for Maresca",
+      "It was a chastening first experience of management for Maresca, who admitted the early setback shaped the whole afternoon: \"Unfortunately after 30 seconds we conceded the first one... the reaction was good, before they scored the second goal we had three or four chances\" (Man City, 2026). \"It's a defeat that hurts us,\" he added, \"but it's only the beginning\" (NBC New York, 2026).",
+      "A quiet return for Haaland",
+      "Erling Haaland, only just back in training after his World Cup recovery, was substituted after 53 minutes having managed just seven touches -- a reminder that Community Shield results, however chastening, are rarely the full picture this early in pre-season conditioning (NBC New York, 2026).",
+      "Arsenal's statement of intent",
+      "For Arsenal, the manner of the win mattered as much as the trophy. Odegaard called it proof the team is ready and serious about defending the title, and a first piece of silverware before a ball has been kicked in the league is exactly the kind of statement Arteta will have wanted (NBC New York, 2026).",
+      "What's next",
+      "Arsenal begin the defence of their Premier League title at home to newly promoted Coventry City on Friday, while Maresca gets his first league test at the Etihad against Bournemouth two days later -- with considerably more time to work with a squad that is still, by his own admission, finding its identity (NBC New York, 2026)."
+    ],
+    sources: [
+      { label: "The FA -- FA Community Shield 2026 match report", url: "https://www.thefa.com/news/2026/aug/16/fa-community-shield-2026-report-16082026" },
+      { label: "Man City -- City defeated in 2026 Community Shield", url: "https://www.mancity.com/news/mens/arsenal-manchester-city-community-shield-match-report-63922483" },
+      { label: "NBC New York -- Arsenal outclasses Manchester City 3-0 in Community Shield", url: "https://www.nbcnewyork.com/news/sports/soccer/arsenal-manchester-city-community-shield-score/6537338/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Manchester City"],
+    featured: true
+},
+{
     id: 25,
     title: "Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League",
     type: "Scouting Report",

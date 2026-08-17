@@ -36,6 +36,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://sdjournalism.github.io/articles/27.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sdjournalism.github.io/articles/26.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sdjournalism.github.io/articles/25.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>

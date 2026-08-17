@@ -45,7 +45,8 @@ const STATIC_PAGES = [
   { loc: "/tactical-lab.html", changefreq: "weekly", priority: "0.9" },
   { loc: "/about.html", changefreq: "monthly", priority: "0.5" },
   { loc: "/contact.html", changefreq: "monthly", priority: "0.4" },
-  { loc: "/faq.html", changefreq: "monthly", priority: "0.3" }
+  { loc: "/faq.html", changefreq: "monthly", priority: "0.3" },
+  { loc: "/field-notes.html", changefreq: "monthly", priority: "0.4" }
 ];
 
 const articleUrls = articles.map(a => ({

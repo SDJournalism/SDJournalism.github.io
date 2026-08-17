@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Sun, 16 Aug 2026 13:45:57 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 17 Aug 2026 19:05:53 GMT</lastBuildDate>
+  <item>
+    <title>Guglielmo Vicario&apos;s Tottenham Exit: How Kinsky&apos;s Rise Ended His Spurs Career</title>
+    <link>https://sdjournalism.github.io/articles/27.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/27.html</guid>
+    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Guglielmo Vicario is heading to Juventus on loan, the clearest sign yet that Antonin Kinsky&apos;s rise has ended his time as Tottenham&apos;s number one. Here&apos;s how three years unravelled into a Turin medical.</description>
+  </item>
+  <item>
+    <title>Arsenal 3-0 Manchester City: Maresca&apos;s Debut Ends in a Cardiff Mauling</title>
+    <link>https://sdjournalism.github.io/articles/26.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/26.html</guid>
+    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Arsenal needed just 24 seconds to set the tone in Cardiff, brushing aside Manchester City 3-0 in Enzo Maresca&apos;s first competitive game as City boss to lift the Community Shield.</description>
+  </item>
   <item>
     <title>Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League</title>
     <link>https://sdjournalism.github.io/articles/25.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Two British transfer records broken inside a month, and Newcastle United banking more than £240 million in sales. We break down what the completed moves for Elliot Anderson, Morgan Rogers and Bruno Guimaraes actually tell us about where Premier League money is going this summer.</description>
-  </item>
-  <item>
-    <title>Fabian Hürzeler: The Touchline Trap (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/hurzeler-touchline-trap.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/hurzeler-touchline-trap.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>How Fabian Hürzeler turns Brighton&apos;s wide press into a trap -- using the touchline itself as an extra defender.</description>
-  </item>
-  <item>
-    <title>Liverpool 2018/19: The Full-Back Overload (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/liverpool-1819-full-back-overload.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/liverpool-1819-full-back-overload.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>How Jürgen Klopp&apos;s gegenpress freed Trent Alexander-Arnold and Andy Robertson to become auxiliary wingers on Liverpool&apos;s run to the 2019 Champions League.</description>
   </item>
 </channel>
 </rss>
