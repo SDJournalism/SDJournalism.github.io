@@ -54,6 +54,78 @@
 
 const articles = [
 {
+    id: 29,
+    title: "Arsenal vs Coventry City Preview: Arteta's Champions Open Title Defence Against Lampard's Sky Blues",
+    type: "Match Preview",
+    competition: "Premier League",
+    date: "2026-08-19",
+    scoreline: "",
+    kickoff: "2026-08-21T20:00:00+01:00",
+    image: "images/arsenalcov.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/teams/arsenal",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal open the defence of their Premier League title at home to newly promoted Coventry City on Friday night, with Mikel Arteta missing two first-choice defenders against Frank Lampard's Sky Blues.",
+    content: [
+      "The 2026/27 Premier League season kicks off on Friday night, with champions Arsenal hosting newly promoted Coventry City at the Emirates Stadium in the traditional curtain-raiser to the new campaign (Goal, 2026).",
+      "Lampard's return to the top flight",
+      "Coventry arrive in the Premier League under Frank Lampard, who guided the club to the Championship title last season and, with it, a first crack at English football's top division in years. It is exactly the kind of opening fixture that offers little except difficulty for a newly promoted side, with Arsenal fresh off a first piece of silverware of the season (Goal, 2026).",
+      "Arsenal's summer additions",
+      "Mikel Arteta has strengthened an already title-winning squad over the summer, with Bruno Guimaraes arriving from Newcastle United for a reported £75m after a season in which he scored nine Premier League goals. Winger Christos Tzolis has joined from Club Brugge on the back of 17 goals and 23 assists in the Belgian Pro League, while Piero Hincapie's loan spell has been converted into a permanent deal and Illan Meslier has signed on a free transfer from Leeds United (Goal, 2026).",
+      "Coventry's own rebuild",
+      "Lampard has been similarly busy strengthening his own squad for the step up. Goalkeeper Carl Rushworth has arrived for around £22m from Brighton & Hove Albion, Gustavo Hamer has returned to the club from Sheffield United, Frank Onyeka has signed permanently after a loan spell from Brentford, and further additions include Loum Tchaouna from Burnley, Caleb Yirenkyi from Nordsjaelland and Aurele Amenda from Eintracht Frankfurt (Goal, 2026).",
+      "Team news",
+      "Arteta will be without two first-choice defenders for the opener, with both Jurrien Timber and William Saliba sidelined through injury -- a considerable blow against a Coventry side who will fancy their chances of causing an upset if Arsenal's back line looks unsettled. Coventry, in turn, are missing defender Luke Woolfenden (Goal, 2026).",
+      "Arteta's ambition",
+      "Arsenal go into the season as the team to beat, and Arteta has made no secret of his ambitions for the club beyond simply retaining the title, saying: \"It's certainly the ambition of the club and the owners to be the best club in the world\" and that doing so requires \"the best squad and the best players in the world\" (Sports Mole, 2026).",
+      "Momentum from Cardiff",
+      "Arsenal's pre-season form and Sunday's 3-0 Community Shield win over Manchester City -- scored inside the first 24 seconds through Riccardo Calafiori, before further goals from Kai Havertz and Martin Odegaard -- have provided about as strong a platform as a title defence could hope to begin from.",
+      "Kick-off at the Emirates is 8pm on Friday, with Arsenal overwhelming favourites on paper but Coventry arriving with nothing to lose and a manager who has already proven he can get a team promoted playing without fear."
+    ],
+    sources: [
+      { label: "Goal -- Arsenal vs Coventry City Premier League match preview", url: "https://www.goal.com/en/news/arsenal-coventry-city-premier-league-preview/blt77a9fa95aeb86284" },
+      { label: "Sports Mole -- Arsenal vs. Coventry: Mikel Arteta reveals how he aims to build \"best\" club in world as Premier League opener assessed", url: "https://www.sportsmole.co.uk/football/arsenal/title-race/news/arteta-reveals-how-to-build-best-club-in-world-as-opener-vs-coventry-assessed_603247.html" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Coventry City"],
+    featured: true
+},
+{
+    id: 28,
+    title: "Rodri's Manchester City Exit: Barcelona Complete £65.4m Deal for Spain's World Cup Captain",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-19",
+    scoreline: "",
+    image: "images/rodribarca.jpg",
+    imageLink: "https://www.mancity.com/news/mens/six-and-the-city-for-rodri-63887228",
+    imageCredit: "Photo: Manchester City FC",
+    excerpt: "Barcelona have completed a £65.4m deal for Rodri, ending the Spain captain's seven-year stay at Manchester City. Here's how the move unfolded, and what it means for the club he leaves behind.",
+    content: [
+      "Rodri's seven years at Manchester City are over. Barcelona have completed the signing of the Spain captain and 2024 Ballon d'Or winner on a four-year contract, with the World Cup winner telling Barcelona supporters: \"Playing for Barcelona is a dream come true. I am extremely happy and excited to work with my teammates\" (Goal, 2026).",
+      "A bidding war that escalated fast",
+      "The deal moved quickly once Barcelona made their move. An opening bid of around £40m was rejected, as was a follow-up offer of £55m, before a final package worth £65.4m was accepted -- despite Rodri having a year still to run on his existing City contract and the club's own hopes of tying him down to a new one (Sky Sports, 2026).",
+      "A season already disrupted",
+      "The end of Rodri's Manchester City career was overshadowed by fitness problems even before the transfer went through. He underwent minor back surgery over the summer and only returned to full training on 15 August, missing City's 3-0 Community Shield defeat to Arsenal days later as a result (Sky Sports, 2026).",
+      "Seven years, twelve trophies",
+      "Rodri joined City from Atletico Madrid in 2019 for what was then a club-record £62.8m. He leaves having made 298 appearances and won 12 major honours, including four Premier League titles, two FA Cups, three League Cups and the Champions League -- a trophy haul that culminated in his 2024 Ballon d'Or award as Spain's World Cup-winning captain (Al Jazeera, 2026).",
+      "A farewell letter to the club",
+      "In a message to City supporters confirming his departure, Rodri reflected on his time at the club: \"It's hard to find the words to express how much gratitude, love and support me and my family have experienced all these years,\" crediting the club with helping him grow \"as a human\" as well as a footballer (Sky Sports, 2026).",
+      "The hole he leaves behind",
+      "City's numbers without Rodri tell their own story -- their win percentage in matches he doesn't start has been reported at 62.1%, compared with 71.5% when he plays (Sky Sports, 2026). New manager Enzo Maresca has already been blunt about the scale of the loss, saying simply: \"All teams need a player like Rodri\" (Sky Sports, 2026).",
+      "Replacing the irreplaceable",
+      "With the World Cup winner gone, City are moving quickly in the market, with reports linking the club to Lille's Ayyoub Bouaddi and Chelsea's Enzo Fernandez as they search for a way to fill the gap in central midfield before deadline day (Sky Sports, 2026).",
+      "Whether either arrival can replicate what Rodri offered -- the control, the leadership, the sheer weight of trophies -- is a question City now have very little time left to answer before the season starts in earnest."
+    ],
+    sources: [
+      { label: "Sky Sports -- Rodri transfer news: Barcelona complete £65.4m signing of Spain midfielder from Man City", url: "https://www.skysports.com/football/news/11095/13574286/rodri-transfer-news-barcelona-complete-lb65-4m-signing-of-spain-midfielder-from-man-city" },
+      { label: "Goal -- The big deal is done: Barcelona officially announce the signing of Rodri", url: "https://www.goal.com/en/news/big-money-signing-complete-barcelona-officially-announce-rodri-s-arrival/blt890fcaac6de7f576" },
+      { label: "Al Jazeera -- Rodri headed to Barcelona after Man City accepts transfer bid", url: "https://www.aljazeera.com/sports/2026/8/17/rodri-headed-to-barcelona-after-man-city-accepts-transfer-bid" }
+    ],
+    players: ["Rodri"],
+    teams: ["Manchester City"],
+    featured: true
+},
+{
     id: 27,
     title: "Guglielmo Vicario's Tottenham Exit: How Kinsky's Rise Ended His Spurs Career",
     type: "Analysis",

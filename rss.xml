@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Mon, 17 Aug 2026 19:05:53 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 19 Aug 2026 08:46:44 GMT</lastBuildDate>
+  <item>
+    <title>Arsenal vs Coventry City Preview: Arteta&apos;s Champions Open Title Defence Against Lampard&apos;s Sky Blues</title>
+    <link>https://sdjournalism.github.io/articles/29.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/29.html</guid>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Preview</category>
+    <description>Arsenal open the defence of their Premier League title at home to newly promoted Coventry City on Friday night, with Mikel Arteta missing two first-choice defenders against Frank Lampard&apos;s Sky Blues.</description>
+  </item>
+  <item>
+    <title>Rodri&apos;s Manchester City Exit: Barcelona Complete £65.4m Deal for Spain&apos;s World Cup Captain</title>
+    <link>https://sdjournalism.github.io/articles/28.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/28.html</guid>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Barcelona have completed a £65.4m deal for Rodri, ending the Spain captain&apos;s seven-year stay at Manchester City. Here&apos;s how the move unfolded, and what it means for the club he leaves behind.</description>
+  </item>
   <item>
     <title>Guglielmo Vicario&apos;s Tottenham Exit: How Kinsky&apos;s Rise Ended His Spurs Career</title>
     <link>https://sdjournalism.github.io/articles/27.html</link>
@@ -14,6 +30,30 @@
     <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Guglielmo Vicario is heading to Juventus on loan, the clearest sign yet that Antonin Kinsky&apos;s rise has ended his time as Tottenham&apos;s number one. Here&apos;s how three years unravelled into a Turin medical.</description>
+  </item>
+  <item>
+    <title>Andoni Iraola: The Hybrid Press (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html</guid>
+    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Manager DNA</category>
+    <description>Liverpool didn&apos;t hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League&apos;s biggest clubs off the pitch. How that identity is being transplanted to Anfield.</description>
+  </item>
+  <item>
+    <title>Cole Palmer: The Shift and Shoot (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html</guid>
+    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Player Blueprints</category>
+    <description>Cole Palmer&apos;s finishing doesn&apos;t look rushed, even in the split-second before it happens -- and that&apos;s the whole trick. The technique behind Chelsea&apos;s record-breaking rookie scorer.</description>
+  </item>
+  <item>
+    <title>Chelsea 2004/05: The Impossible Defence (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/chelsea-0405-impossible-defence.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/chelsea-0405-impossible-defence.html</guid>
+    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Tactical Vault</category>
+    <description>No Premier League team has conceded fewer than 15 goals in a season since -- and two decades on, nobody&apos;s got especially close. How Jose Mourinho&apos;s first Chelsea side redefined what a defence could look like.</description>
   </item>
   <item>
     <title>Arsenal 3-0 Manchester City: Maresca&apos;s Debut Ends in a Cardiff Mauling</title>
@@ -206,46 +246,6 @@
     <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
     <category>Player Blueprints</category>
     <description>The winger who wrote his university thesis on dribbling -- how Kaoru Mitoma&apos;s body feints and disguised first touch turn a routine 1v1 into a repeatable weapon.</description>
-  </item>
-  <item>
-    <title>Leicester City 2015/16: The Counter-Attack Kings (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/leicester-1516-counter-attack-kings.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/leicester-1516-counter-attack-kings.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>How Claudio Ranieri turned a 5000-1 shot into champions -- Leicester&apos;s 4-4-2, the lowest possession of any Premier League title win, and the Kante-Vardy-Mahrez transitions that beat the league&apos;s biggest spenders.</description>
-  </item>
-  <item>
-    <title>Carabao Cup Second Round Draw: Newcastle, Everton, Wolves and Burnley Learn Their Opponents</title>
-    <link>https://sdjournalism.github.io/articles/11.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/11.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Newcastle United were sent to West Bromwich Albion and Nottingham Forest drew Leeds United at home as the Carabao Cup second round draw was made on Monday night, while Chelsea host Luton and Tottenham were handed a London derby against Charlton. We run through every confirmed tie from both sections.</description>
-  </item>
-  <item>
-    <title>Scouting Report: Brian Madjo -- The 17-Year-Old Aston Villa Had to Fight FIFA to Register</title>
-    <link>https://sdjournalism.github.io/articles/10.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/10.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Scouting Report</category>
-    <description>Aston Villa signed Brian Madjo from Metz in January for £10m, but FIFA&apos;s rules on international transfers involving minors meant the 17-year-old striker couldn&apos;t play a single competitive minute -- until a Court of Arbitration for Sport ruling changed everything days before the UEFA Super Cup final.</description>
-  </item>
-  <item>
-    <title>UEFA Super Cup Preview: Aston Villa Chase a Second European Trophy Against Champions League Holders PSG</title>
-    <link>https://sdjournalism.github.io/articles/9.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/9.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Match Preview</category>
-    <description>Three months after their first-ever Europa League triumph, Aston Villa face the toughest test imaginable: back-to-back Champions League winners PSG in the UEFA Super Cup. We look at how both sides got here, the Premier League&apos;s uneasy recent history in this fixture, and the World Cup hangover complicating team news on both sides.</description>
-  </item>
-  <item>
-    <title>Transfer Round-Up: Anderson, Rogers and Guimaraes Redraw the Premier League&apos;s Spending Rules</title>
-    <link>https://sdjournalism.github.io/articles/8.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/8.html</guid>
-    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Two British transfer records broken inside a month, and Newcastle United banking more than £240 million in sales. We break down what the completed moves for Elliot Anderson, Morgan Rogers and Bruno Guimaraes actually tell us about where Premier League money is going this summer.</description>
   </item>
 </channel>
 </rss>
