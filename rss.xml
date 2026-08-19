@@ -6,7 +6,7 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Wed, 19 Aug 2026 08:46:44 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 19 Aug 2026 09:25:54 GMT</lastBuildDate>
   <item>
     <title>Arsenal vs Coventry City Preview: Arteta&apos;s Champions Open Title Defence Against Lampard&apos;s Sky Blues</title>
     <link>https://sdjournalism.github.io/articles/29.html</link>
@@ -22,6 +22,30 @@
     <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Barcelona have completed a £65.4m deal for Rodri, ending the Spain captain&apos;s seven-year stay at Manchester City. Here&apos;s how the move unfolded, and what it means for the club he leaves behind.</description>
+  </item>
+  <item>
+    <title>Michael Carrick: The Shape-Shift (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/carrick-shape-shift.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/carrick-shape-shift.html</guid>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Manager DNA</category>
+    <description>Manchester United finished 15th last season. Since Michael Carrick took interim charge in January, no side in the Premier League has taken more points -- built on a formation that quietly changes shape depending on whether United have the ball.</description>
+  </item>
+  <item>
+    <title>Erling Haaland: The One-Touch Kill (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/haaland-one-touch-kill.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/haaland-one-touch-kill.html</guid>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Player Blueprints</category>
+    <description>Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.</description>
+  </item>
+  <item>
+    <title>Manchester United 1998/99: The Impact Bench (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/man-utd-9899-impact-bench.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/man-utd-9899-impact-bench.html</guid>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Tactical Vault</category>
+    <description>No English club has won the treble since. How Sir Alex Ferguson rotated a squad deep enough to survive three competitions at once -- and how two substitutes, sent on with the game seemingly gone, settled the biggest night of all in stoppage time.</description>
   </item>
   <item>
     <title>Guglielmo Vicario&apos;s Tottenham Exit: How Kinsky&apos;s Rise Ended His Spurs Career</title>
@@ -222,30 +246,6 @@
     <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Walsall&apos;s stunning win over Bristol City set the tone for a chaotic first round, and Monday&apos;s second round draw has handed several lower-league sides a genuine route to another shock. We look at the result that mattered most, the ties worth circling, and the underdogs with a puncher&apos;s chance when round two kicks off on 24 August.</description>
-  </item>
-  <item>
-    <title>Enzo Maresca: The Inverted Pivot (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/maresca-inverted-pivot.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/maresca-inverted-pivot.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>Enzo Maresca insists he isn&apos;t &apos;copy and paste&apos; -- but the inverted full-back and short-passing structure he built at Chelsea has more in common with the Manchester City he&apos;s inherited than he&apos;s letting on.</description>
-  </item>
-  <item>
-    <title>Gabriel Magalhães: The Set-Piece Predator (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/gabriel-set-piece-predator.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/gabriel-set-piece-predator.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>How Arsenal turn corners into a science, using blockers and crowded six-yard boxes to isolate Gabriel -- the centre-back with more Premier League corner goals than any other player.</description>
-  </item>
-  <item>
-    <title>Kaoru Mitoma: The Studied Feint (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/mitoma-studied-feint.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/mitoma-studied-feint.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>The winger who wrote his university thesis on dribbling -- how Kaoru Mitoma&apos;s body feints and disguised first touch turn a routine 1v1 into a repeatable weapon.</description>
   </item>
 </channel>
 </rss>

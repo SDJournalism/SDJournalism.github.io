@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Carrick: The Shape-Shift -- Samuel Davies</title>
+<meta name="description" content="Manchester United finished 15th last season. Since Michael Carrick took interim charge in January, no side in the Premier League has taken more points -- built on a formation that quietly changes shape depending on whether United have the ball.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Michael Carrick: The Shape-Shift">
+<meta property="og:description" content="Manchester United finished 15th last season. Since Michael Carrick took interim charge in January, no side in the Premier League has taken more points -- built on a formation that quietly changes shape depending on whether United have the ball.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/carricktaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/carrick-shape-shift.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michael Carrick: The Shape-Shift">
+<meta name="twitter:description" content="Manchester United finished 15th last season. Since Michael Carrick took interim charge in January, no side in the Premier League has taken more points -- built on a formation that quietly changes shape depending on whether United have the ball.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/carricktaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/carricktaclab.jpg" alt="Michael Carrick">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/articles/cg5l9p58dv6o" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Michael Carrick</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Manchester United</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Shape-Shift</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="carrick-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="carrick-name"></span>
+          <div class="buzzword-row" id="carrick-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="carrick-stage-list"></div>
+        <div class="annotation-legend" id="carrick-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="carrick-stats"></div>
+
+    <div class="body-text">
+      <p>Manchester United finished 15th last season. Since Michael Carrick took interim charge in January 2026, no side in the Premier League has taken more points -- and the turnaround has been built on a formation that quietly changes shape depending on whether United have the ball.</p>
+
+      <h4 class="body-subheading">A back four that isn't always a back four</h4>
+      <p>Carrick inherited Ruben Amorim's back three and moved away from it within weeks, returning to an orthodox 4-2-3-1. But the shape doesn't stay a back four once United have the ball: one full-back tucks inside or drops deep to form a temporary back three, while the wingers hold their width high up the pitch. It converts the team into a 3-2-5 in attack without United ever looking like they've changed formation at all <a href="https://totalfootballanalysis.com/head-coach-analysis/michael-carrick-manchester-united" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Repositioning Bruno Fernandes</h4>
+      <p>The clearest individual change has been Bruno Fernandes, pulled out of the deeper central role Amorim had used him in and pushed back between the lines, screening Casemiro and Kobbie Mainoo's double pivot and directing play out to the wings. Matheus Cunha tucks infield from the left early to add a fourth central body, turning what used to be a flat midfield into a fluid, overlapping attacking line <a href="https://totalfootballanalysis.com/head-coach-analysis/michael-carrick-manchester-united" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">The numbers behind the run</h4>
+      <p>The form has been extraordinary by any measure: 12 wins from 17 Premier League matches in interim charge, worth 2.29 points per game -- a pace that would be worth 87 points across a full season, and more points than champions Arsenal collected over the same run of fixtures. Wins over Manchester City, Arsenal, Liverpool and Chelsea followed, along with Champions League qualification after a two-year absence <a href="https://www.planetfootball.com/manchester-united/amazing-premier-league-table-carrick-manager" target="_blank" rel="noopener nofollow" class="citation-link">(Planet Football, 2026)</a>.</p>
+
+      <h4 class="body-subheading">What the dressing room says</h4>
+      <p>Harry Maguire has pointed to an early turning point: "We managed to get six points and from then on everyone has believed in it and we've got confidence" <a href="https://www.aljazeera.com/sports/2026/5/22/man-utd-appoint-michael-carrick-as-permanent-manager" target="_blank" rel="noopener nofollow" class="citation-link">(Al Jazeera, 2026)</a>. Bruno Fernandes has been just as direct about Carrick's own game intelligence: "When, as a player, you can see and think about the game like him, you can also do it from the bench... He's done a fantastic job" <a href="https://www.aljazeera.com/sports/2026/5/22/man-utd-appoint-michael-carrick-as-permanent-manager" target="_blank" rel="noopener nofollow" class="citation-link">(Al Jazeera, 2026)</a>. United made the appointment permanent on 22 May 2026. The next test is whether an interim-manager bounce can survive a full pre-season and a first complete campaign in charge.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://totalfootballanalysis.com/head-coach-analysis/michael-carrick-manchester-united" target="_blank" rel="noopener nofollow">Total Football Analysis -- Michael Carrick's Manchester United</a></li>
+        <li><a href="https://www.planetfootball.com/manchester-united/amazing-premier-league-table-carrick-manager" target="_blank" rel="noopener nofollow">Planet Football -- The amazing Premier League table since Michael Carrick took charge of Man Utd</a></li>
+        <li><a href="https://www.aljazeera.com/sports/2026/5/22/man-utd-appoint-michael-carrick-as-permanent-manager" target="_blank" rel="noopener nofollow">Al Jazeera -- Man Utd appoint Michael Carrick as permanent manager</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="xabi-alonso-back-three-reset.html">
+          <div class="related-thumb"><img src="../images/xabitaclab.jpg" alt="Xabi Alonso: The Back-Three Reset" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Xabi Alonso: The Back-Three Reset</span>
+        </a>
+        <a class="related-card" href="arteta-rest-defence.html">
+          <div class="related-thumb"><img src="../images/artetataclab.jpg" alt="Mikel Arteta: The Rest Defence" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Mikel Arteta: The Rest Defence</span>
+        </a>
+        <a class="related-card" href="man-utd-9899-impact-bench.html">
+          <div class="related-thumb"><img src="../images/mutd9899taclab.jpg" alt="Manchester United 1998/99: The Impact Bench" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Manchester United 1998/99: The Impact Bench</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Shape-Shift%3A%20how%20Michael%20Carrick%27s%20Manchester%20United%20quietly%20change%20formation%20with%20the%20ball%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fcarrick-shape-shift.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Shape-Shift%3A%20how%20Michael%20Carrick%27s%20Manchester%20United%20quietly%20change%20formation%20with%20the%20ball%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fcarrick-shape-shift.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const CARRICK_FRAMES = [
+    {
+      name: "4-2-3-1 Base",
+      buzzwords: ["Build-Up", "Back Four"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 10, y: 78 },
+        { x: 58, y: 78 },
+        { x: 34, y: 62 },
+        { x: 34, y: 35 },
+        { x: 55, y: 30, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Right-back starts flat in an orthodox back four" }
+      ]
+    },
+    {
+      name: "Full-Back Inverts",
+      buzzwords: ["Shape-Shift", "Back Three"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 30, y: 65 },
+        { x: 62, y: 70 },
+        { x: 40, y: 55 },
+        { x: 34, y: 32 },
+        { x: 50, y: 28, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Full-back tucks infield to form a back three" },
+        { dotIndex: 3, text: "Casemiro and Mainoo's pivot gains a spare passer" }
+      ]
+    },
+    {
+      name: "3-2-5 in Possession",
+      buzzwords: ["Fluid Front Five"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 30, y: 65 },
+        { x: 66, y: 20 },
+        { x: 40, y: 55 },
+        { x: 34, y: 30 },
+        { x: 46, y: 22, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 2, text: "Left-back provides width high up the pitch" },
+        { dotIndex: 4, text: "Bruno Fernandes screens the pivot from between the lines" }
+      ]
+    }
+  ];
+  const CARRICK_STATS = [
+    { value: "2.29", label: "Points per game in interim charge from January 2026 -- an 87-point pace across a full season" },
+    { value: "12", label: "Wins from 17 Premier League matches, more points than champions Arsenal over the same run" },
+    { value: "4", label: "Wins over Manchester City, Arsenal, Liverpool and Chelsea during that run" }
+  ];
+  initFormationDiagram("carrick-pitch", "carrick-name", "carrick-buzzwords", CARRICK_FRAMES, 3400, "carrick-stage-list", "horizontal", "carrick-legend");
+  renderStatPanel("carrick-stats", CARRICK_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Michael Carrick: The Shape-Shift",
+      text: "Michael Carrick: The Shape-Shift -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/carrick-shape-shift.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

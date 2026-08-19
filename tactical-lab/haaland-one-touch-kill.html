@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erling Haaland: The One-Touch Kill -- Samuel Davies</title>
+<meta name="description" content="Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Erling Haaland: The One-Touch Kill">
+<meta property="og:description" content="Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/haalandtaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/haaland-one-touch-kill.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Erling Haaland: The One-Touch Kill">
+<meta name="twitter:description" content="Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/haalandtaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/haalandtaclab.jpg" alt="Erling Haaland">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/articles/cdjz1py0xg7o" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Player Blueprints</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Erling Haaland</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Manchester City</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The One-Touch Kill</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="haaland-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="haaland-name"></span>
+          <div class="buzzword-row" id="haaland-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="haaland-stage-list"></div>
+        <div class="annotation-legend" id="haaland-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="haaland-stats"></div>
+
+    <div class="body-text">
+      <p>Erling Haaland touches the ball less than almost any other regular starter in the Premier League. He also just won his third Golden Boot in four seasons, with 27 goals in 2025/26 -- one short of the all-time record of four, shared by Thierry Henry and Mohamed Salah <a href="https://www.premierleague.com/en/news/4591856/haaland-wins-202526-premier-league-golden-boot-award" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Built to need one touch, not two</h4>
+      <p>The trick is that Haaland's job barely involves the ball until the moment it matters. His average of 24.2 touches per 90 minutes sits among the lowest of any regular Premier League forward, yet he still records 103 touches inside the penalty box per season -- more than any other player in the division. The gap between those two numbers is the whole method: almost everything happens in the six-yard box, and almost nothing happens outside it <a href="https://totalfootballanalysis.com/thought-analysis/erling-haalands-off-ball-movement-and-finishing-efficiency" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Pinning the backline, then disappearing off it</h4>
+      <p>Haaland's positioning is built around the blindside of the last centre-back, holding a defender's attention just long enough to stay onside before accelerating off their shoulder the instant the ball is played. It's a method that leaves him arriving at the ball already facing goal, needing only a single touch to finish rather than a touch to control and a second to shoot -- reflected in a conversion rate of one goal every 4.64 shots, comfortably outperforming his expected-goals total of 21.87 <a href="https://totalfootballanalysis.com/thought-analysis/erling-haalands-off-ball-movement-and-finishing-efficiency" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Built into the system, not around it</h4>
+      <p>Pep Guardiola has been explicit that this is by design rather than a compromise: "Always I say to try and make Erling as close to the box to score goals" <a href="https://www.mancity.com/news/mens/pep-guardiola-pre-leeds-embargo-written-63907784" target="_blank" rel="noopener nofollow" class="citation-link">(Man City, 2026)</a>. Haaland himself has pushed back on the idea that a low touch count means a quiet game: "My job isn't to be like Rodri, to control a game, it's being in the box and finishing the attacks... You can play football without touching the ball, even if it sounds funny for some to hear that" <a href="https://sports.yahoo.com/erling-haaland-hits-back-critics-153656929.html" target="_blank" rel="noopener nofollow" class="citation-link">(Yahoo Sports, 2026)</a>.</p>
+
+      <h4 class="body-subheading">One Golden Boot from history</h4>
+      <p>With Manchester City's build-up increasingly designed to feed him in exactly the right positions rather than involve him in it, Haaland's model keeps producing at a rate few strikers in Premier League history have matched -- and a fourth Golden Boot would put him level with the best goalscoring record English football has ever seen.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.premierleague.com/en/news/4591856/haaland-wins-202526-premier-league-golden-boot-award" target="_blank" rel="noopener nofollow">Premier League -- Haaland wins 2025/26 Premier League Golden Boot award</a></li>
+        <li><a href="https://totalfootballanalysis.com/thought-analysis/erling-haalands-off-ball-movement-and-finishing-efficiency" target="_blank" rel="noopener nofollow">Total Football Analysis -- Erling Haaland's Off-Ball Movement And Finishing Efficiency</a></li>
+        <li><a href="https://www.mancity.com/news/mens/pep-guardiola-pre-leeds-embargo-written-63907784" target="_blank" rel="noopener nofollow">Man City -- Pep Guardiola pre-Leeds press conference</a></li>
+        <li><a href="https://sports.yahoo.com/erling-haaland-hits-back-critics-153656929.html" target="_blank" rel="noopener nofollow">Yahoo Sports -- Erling Haaland hits back at critics over his touches in games</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="palmer-shift-and-shoot.html">
+          <div class="related-thumb"><img src="../images/palmertaclab.jpg" alt="Cole Palmer: The Shift and Shoot" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Cole Palmer: The Shift and Shoot</span>
+        </a>
+        <a class="related-card" href="isak-blindside-curve.html">
+          <div class="related-thumb"><img src="../images/isaktaclab.jpg" alt="Alexander Isak: The Blindside Curve" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Alexander Isak: The Blindside Curve</span>
+        </a>
+        <a class="related-card" href="man-city-1718-centurions.html">
+          <div class="related-thumb"><img src="../images/centurionstaclab.jpg" alt="Manchester City 2017/18: The Centurions" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Manchester City 2017/18: The Centurions</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20One-Touch%20Kill%3A%20the%20movement%20and%20finishing%20mechanics%20behind%20Erling%20Haaland%27s%20third%20Golden%20Boot%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fhaaland-one-touch-kill.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20One-Touch%20Kill%3A%20the%20movement%20and%20finishing%20mechanics%20behind%20Erling%20Haaland%27s%20third%20Golden%20Boot%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fhaaland-one-touch-kill.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const HAALAND_FRAMES = [
+    {
+      name: "Pinning the Backline",
+      buzzwords: ["Blindside Start"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 40, y: 20 },
+        { x: 34, y: 10, opponent: true },
+        { x: 55, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Haaland holds position on the last defender's blindside" }
+      ]
+    },
+    {
+      name: "Blindside Run",
+      buzzwords: ["Explosive Burst"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 28, y: 12 },
+        { x: 34, y: 10, opponent: true },
+        { x: 55, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Accelerates off the defender's shoulder as the pass is played" }
+      ]
+    },
+    {
+      name: "One-Touch Kill",
+      buzzwords: ["Single Touch", "Goal"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 24, y: 6 },
+        { x: 34, y: 10, opponent: true },
+        { x: 55, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Arrives already facing goal -- one touch is all it takes" }
+      ]
+    }
+  ];
+  const HAALAND_STATS = [
+    { value: "27", label: "Goals in the 2025/26 Premier League season -- a third Golden Boot in four years" },
+    { value: "24.2", label: "Touches per 90 minutes -- among the lowest of any regular Premier League starter" },
+    { value: "103", label: "Touches inside the penalty box across the season, the most of any player in the division" }
+  ];
+  initFormationDiagram("haaland-pitch", "haaland-name", "haaland-buzzwords", HAALAND_FRAMES, 3400, "haaland-stage-list", "horizontal", "haaland-legend");
+  renderStatPanel("haaland-stats", HAALAND_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Erling Haaland: The One-Touch Kill",
+      text: "Erling Haaland: The One-Touch Kill -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/haaland-one-touch-kill.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

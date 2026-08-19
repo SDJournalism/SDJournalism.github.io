@@ -32,6 +32,48 @@
 
 const tacticalLabEntries = [
   {
+    id: "carrick-shape-shift",
+    category: "Manager DNA",
+    title: "Michael Carrick: The Shape-Shift",
+    excerpt: "Manchester United finished 15th last season. Since Michael Carrick took interim charge in January, no side in the Premier League has taken more points -- built on a formation that quietly changes shape depending on whether United have the ball.",
+    team: "Manchester United",
+    competition: "Premier League",
+    date: "2026-08-19",
+    image: "images/carricktaclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cg5l9p58dv6o",
+    imageCredit: "Photo: BBC Sport",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "haaland-one-touch-kill",
+    category: "Player Blueprints",
+    title: "Erling Haaland: The One-Touch Kill",
+    excerpt: "Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.",
+    team: "Manchester City",
+    competition: "Premier League",
+    date: "2026-08-19",
+    image: "images/haalandtaclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cdjz1py0xg7o",
+    imageCredit: "Photo: BBC Sport",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "man-utd-9899-impact-bench",
+    category: "Tactical Vault",
+    title: "Manchester United 1998/99: The Impact Bench",
+    excerpt: "No English club has won the treble since. How Sir Alex Ferguson rotated a squad deep enough to survive three competitions at once -- and how two substitutes, sent on with the game seemingly gone, settled the biggest night of all in stoppage time.",
+    team: "Manchester United",
+    competition: "Premier League",
+    date: "2026-08-19",
+    image: "images/mutd9899taclab.jpg",
+    imageLink: "https://www.premierleague.com/en/news/59010",
+    imageCredit: "Photo: Premier League",
+    readTime: 3,
+    comingSoon: false
+  },
+  {
     id: "iraola-hybrid-press",
     category: "Manager DNA",
     title: "Andoni Iraola: The Hybrid Press",
