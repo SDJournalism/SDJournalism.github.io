@@ -79,7 +79,9 @@ function articleCardHTML(article, index) {
 }
 
 function firstSentence(text) {
-  const match = text.match(/^[^.!?]*[.!?]/);
+  // A "." inside a number (like "£65.4m") doesn't end a sentence --
+  // only count it as a full stop if the next character isn't a digit.
+  const match = text.match(/^(?:[^.!?]|\.(?=\d))*[.!?]/);
   return match ? match[0].trim() : text;
 }
 

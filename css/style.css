@@ -148,6 +148,15 @@ nav.site-nav a {
   transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
+/* site.js sets the "hidden" attribute on the Saved nav link when
+   nothing is saved yet -- but "nav.site-nav a" above sets its own
+   "display", which normally wins over the browser's built-in
+   [hidden] rule and makes the link show anyway. This rule is more
+   specific than "nav.site-nav a", so [hidden] actually hides it. */
+nav.site-nav a[hidden] {
+  display: none;
+}
+
 nav.site-nav a:hover { transform: translateY(-2px); }
 
 nav.site-nav a:hover { color: var(--ink); }
@@ -234,7 +243,7 @@ nav.site-nav a.active {
   background: var(--navy);
   border: 1px solid var(--navy);
   padding: 32px 26px 24px;
-  min-height: 260px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   touch-action: pan-y;
@@ -262,6 +271,13 @@ nav.site-nav a.active {
   margin: 0 0 18px;
   flex-grow: 1;
   transition: opacity 0.2s ease;
+  /* Fixed number of lines so a long quote gets a "..." instead of
+     growing the box -- this is what keeps .quote-panel's height
+     constant no matter which quote is showing. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
 }
 
 .quote-attribution {
