@@ -2846,3 +2846,262 @@ body.lab-page > .wrap .detail .body-text .body-subheading::before {
     padding: 0 !important;
   }
 }
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================
+   A small round button, fixed to the bottom-right corner of the
+   viewport, that fades in once the reader has scrolled down a
+   bit (see initBackToTop() in site.js) and smooth-scrolls back
+   to the top when clicked. Same on every page, light or dark. */
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: var(--navy);
+  color: var(--white);
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease, color 0.15s ease, visibility 0.2s;
+  box-shadow: 0 6px 16px rgba(20, 34, 75, 0.25);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ============================================================
+   CONTINUE WHERE YOU LEFT OFF
+   ============================================================
+   Two pieces, both driven by initContinueReadingTracker() /
+   initResumeBar() / initContinueReadingCard() in site.js:
+
+   .resume-bar     -- sits at the top of an article/lab piece the
+                      reader has already made progress on, offering
+                      to jump them back down to where they stopped.
+   .continue-reading-card -- sits under the homepage hero, pointing
+                      back to whatever piece is still in progress
+                      anywhere on the site. */
+
+.resume-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  padding: 12px 16px;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+
+.resume-bar span { flex: 1 1 auto; }
+
+.resume-jump-btn,
+.resume-dismiss-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.resume-jump-btn {
+  color: var(--gold);
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid var(--gold);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.resume-jump-btn:hover { background: var(--gold); color: var(--white); }
+
+.resume-dismiss-btn {
+  color: var(--ink-soft);
+  font-size: 18px;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.resume-dismiss-btn:hover { color: var(--ink); }
+
+.continue-reading-card {
+  position: relative;
+  margin: 0 auto 40px;
+  max-width: 1080px;
+  padding: 0 20px;
+}
+
+.continue-reading-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.continue-reading-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(20, 34, 75, 0.14);
+}
+
+.continue-reading-thumb {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+
+.continue-reading-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.continue-reading-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.continue-reading-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.continue-reading-track {
+  width: 100%;
+  max-width: 220px;
+  height: 3px;
+  background: var(--line);
+}
+
+.continue-reading-fill {
+  height: 100%;
+  background: var(--gold);
+}
+
+.continue-reading-dismiss {
+  position: absolute;
+  top: 8px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.continue-reading-dismiss:hover { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .continue-reading-thumb { display: none; }
+  .continue-reading-title { white-space: normal; }
+}
+
+/* ============================================================
+   CLICK-TO-ENLARGE TACTICAL DIAGRAMS
+   ============================================================
+   Adds a small expand button to the big pitch-diagram panel on
+   Tactical Lab pages (.formation-hero.article) -- see
+   initFormationLightbox() in site.js. Clicking it moves that
+   same panel (not a copy -- so the animated dots and cycling
+   frames keep running exactly as they were) into a full-screen
+   dark overlay, and puts it back on close. */
+
+.formation-hero { position: relative; }
+
+.formation-expand-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 246, 241, 0.08);
+  border: 1px solid rgba(245, 246, 241, 0.35);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+
+.formation-expand-btn:hover { background: rgba(245, 246, 241, 0.2); }
+
+.formation-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 7, 10, 0.92);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.formation-hero.is-lightboxed {
+  max-width: 640px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.formation-hero.is-lightboxed .tactical-pitch-wrap,
+.formation-hero.is-lightboxed .tactical-pitch-wrap.wide {
+  max-width: 560px;
+}
+
+@media (max-width: 640px) {
+  .formation-lightbox-backdrop { padding: 20px 12px; }
+}

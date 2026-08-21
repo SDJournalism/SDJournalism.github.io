@@ -2011,3 +2011,269 @@ function registerServiceWorker() {
 }
 
 registerServiceWorker();
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================
+   A small round button that appears in the bottom-right corner
+   once the reader has scrolled down a bit, and smooth-scrolls
+   back to the top of the page when clicked. Runs on its own as
+   soon as site.js loads on every page -- no per-page script call
+   needed, same as the text size toggle and service worker
+   registration above. */
+
+function initBackToTop() {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "back-to-top";
+  btn.setAttribute("aria-label", "Back to top");
+  btn.innerHTML = "&uarr;";
+  document.body.appendChild(btn);
+
+  let visible = false;
+  function update() {
+    const shouldShow = window.scrollY > 500;
+    if (shouldShow === visible) return;
+    visible = shouldShow;
+    btn.classList.toggle("is-visible", visible);
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+initBackToTop();
+
+/* ============================================================
+   CONTINUE WHERE YOU LEFT OFF
+   ============================================================
+   Remembers how far through an article or Tactical Lab piece a
+   reader has scrolled, using the same kind of localStorage the
+   Saved tab already relies on -- just one slot, for the single
+   most recent piece still in progress. Two halves:
+
+   1. On the article/lab page itself, scroll position is tracked
+      quietly in the background. If the reader comes back to that
+      exact page later with progress still saved, a small bar
+      near the top offers to jump them back to where they left
+      off (initResumeBar()).
+   2. On the homepage, if a piece anywhere on the site is still in
+      progress, a "Continue reading" card under the hero points
+      back to it (initContinueReadingCard()).
+
+   Both run automatically on every relevant page, no per-page
+   script call needed. */
+
+const CONTINUE_READING_KEY = "continueReadingProgress";
+
+function readContinueReading() {
+  try {
+    const raw = localStorage.getItem(CONTINUE_READING_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeContinueReading(entry) {
+  try {
+    localStorage.setItem(CONTINUE_READING_KEY, JSON.stringify(entry));
+  } catch (e) {
+    // Storage full or unavailable (e.g. private browsing) -- the
+    // feature just quietly doesn't remember anything rather than
+    // throwing an error the reader would never see anyway.
+  }
+}
+
+function clearContinueReading() {
+  try { localStorage.removeItem(CONTINUE_READING_KEY); } catch (e) {}
+}
+
+function continueReadingHref(entry) {
+  const folder = entry.kind === "article" ? "articles" : "tactical-lab";
+  return `${folder}/${entry.id}.html`;
+}
+
+function initContinueReadingTracker() {
+  const detailEl = document.querySelector(".detail.open");
+  if (!detailEl) return;
+  const meta = getCurrentContentMeta();
+  if (!meta) return;
+
+  function currentPercent() {
+    const total = detailEl.offsetHeight - window.innerHeight;
+    const scrolled = -detailEl.getBoundingClientRect().top;
+    return total > 0 ? Math.min(100, Math.max(0, (scrolled / total) * 100)) : 0;
+  }
+
+  let ticking = false;
+  function save() {
+    ticking = false;
+    const percent = currentPercent();
+
+    if (percent >= 92) {
+      // Close enough to finished -- clear the saved slot so the
+      // homepage stops nudging about a piece they've essentially
+      // completed, but only if this page is the one it was tracking.
+      const existing = readContinueReading();
+      if (existing && existing.path === window.location.pathname) clearContinueReading();
+      return;
+    }
+    if (percent < 8) return; // too early to be worth remembering yet
+
+    writeContinueReading({
+      kind: meta.kind,
+      id: meta.item.id,
+      title: meta.item.title,
+      image: meta.item.image,
+      percent,
+      path: window.location.pathname,
+      ts: Date.now()
+    });
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(save);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("pagehide", save);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") save();
+  });
+}
+
+function initResumeBar() {
+  const detailEl = document.querySelector(".detail.open");
+  if (!detailEl) return;
+
+  const entry = readContinueReading();
+  if (!entry || entry.path !== window.location.pathname) return;
+  if (entry.percent < 8 || entry.percent > 90) return;
+
+  const bar = document.createElement("div");
+  bar.className = "resume-bar";
+  bar.innerHTML = `
+    <span>You were ${Math.round(entry.percent)}% through this piece.</span>
+    <button type="button" class="resume-jump-btn">Jump back in &darr;</button>
+    <button type="button" class="resume-dismiss-btn" aria-label="Dismiss">&times;</button>
+  `;
+  detailEl.prepend(bar);
+
+  bar.querySelector(".resume-jump-btn").addEventListener("click", () => {
+    const total = detailEl.offsetHeight - window.innerHeight;
+    const target = detailEl.getBoundingClientRect().top + window.scrollY + (total * (entry.percent / 100));
+    window.scrollTo({ top: target, behavior: "smooth" });
+    bar.remove();
+  });
+  bar.querySelector(".resume-dismiss-btn").addEventListener("click", () => bar.remove());
+}
+
+function initContinueReadingCard() {
+  const isHome = /\/(index\.html)?$/.test(window.location.pathname);
+  if (!isHome) return;
+
+  const entry = readContinueReading();
+  if (!entry) return;
+
+  const heroEl = document.querySelector(".hero");
+  if (!heroEl) return;
+
+  const card = document.createElement("section");
+  card.className = "continue-reading-card";
+  const thumb = entry.image
+    ? `<div class="continue-reading-thumb"><img src="${entry.image}" alt="" loading="lazy"></div>`
+    : "";
+  card.innerHTML = `
+    <a href="${continueReadingHref(entry)}" class="continue-reading-link">
+      ${thumb}
+      <div class="continue-reading-body">
+        <span class="eyebrow">Continue reading</span>
+        <span class="continue-reading-title">${entry.title}</span>
+        <div class="continue-reading-track"><div class="continue-reading-fill" style="width:${Math.round(entry.percent)}%"></div></div>
+      </div>
+    </a>
+    <button type="button" class="continue-reading-dismiss" aria-label="Dismiss">&times;</button>
+  `;
+  heroEl.insertAdjacentElement("afterend", card);
+
+  card.querySelector(".continue-reading-dismiss").addEventListener("click", (e) => {
+    e.preventDefault();
+    clearContinueReading();
+    card.remove();
+  });
+}
+
+initContinueReadingTracker();
+initResumeBar();
+initContinueReadingCard();
+
+/* ============================================================
+   CLICK-TO-ENLARGE TACTICAL DIAGRAMS
+   ============================================================
+   Adds a small expand button to the big pitch-diagram panel on
+   Tactical Lab pages (.formation-hero.article). Clicking it moves
+   that same panel -- not a copy -- into a full-screen dark
+   overlay, so the animated dots and cycling frames just keep
+   running exactly as they were, only bigger. Closing (the button
+   again, clicking the backdrop, or Escape) puts it straight back
+   where it came from. Runs automatically on every page; it simply
+   finds nothing to do on pages without a diagram. */
+
+function initFormationLightbox() {
+  const panels = document.querySelectorAll(".formation-hero.article");
+  if (!panels.length) return;
+
+  panels.forEach(panel => {
+    const originalParent = panel.parentNode;
+    const originalNextSibling = panel.nextSibling;
+    let backdrop = null;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "formation-expand-btn";
+    btn.setAttribute("aria-label", "Enlarge diagram");
+    btn.innerHTML = "&#x26F6;";
+    panel.appendChild(btn);
+
+    function close() {
+      panel.classList.remove("is-lightboxed");
+      originalParent.insertBefore(panel, originalNextSibling);
+      if (backdrop) { backdrop.remove(); backdrop = null; }
+      document.removeEventListener("keydown", onKeydown);
+      btn.setAttribute("aria-label", "Enlarge diagram");
+      btn.focus();
+    }
+
+    function open() {
+      backdrop = document.createElement("div");
+      backdrop.className = "formation-lightbox-backdrop";
+      backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) close();
+      });
+      document.body.appendChild(backdrop);
+      backdrop.appendChild(panel);
+      panel.classList.add("is-lightboxed");
+      document.addEventListener("keydown", onKeydown);
+      btn.setAttribute("aria-label", "Close enlarged diagram");
+      btn.focus();
+    }
+
+    function onKeydown(e) {
+      if (e.key === "Escape") close();
+    }
+
+    btn.addEventListener("click", () => {
+      if (panel.classList.contains("is-lightboxed")) close();
+      else open();
+    });
+  });
+}
+
+initFormationLightbox();
