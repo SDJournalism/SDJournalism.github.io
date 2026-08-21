@@ -60,8 +60,9 @@ const articles = [
     competition: "Premier League",
     date: "2026-08-21",
     scoreline: "",
-    image: "images/taclab-placeholder.jpg",
-    imageCredit: "Photo: placeholder",
+    image: "images/balebautd.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/carlos-baleba-manchester-united-transfer-news-brighton-b3035819.html",
+    imageCredit: "Photo: The Independent",
     excerpt: "Manchester United are closing in on a deal worth up to £65m for Brighton's Carlos Baleba, their third midfield signing of the summer. Here's where the deal stands, and why the Cameroon international may take time to make an impact.",
     content: [
       "Manchester United are close to a full agreement with Brighton for Carlos Baleba, with the Cameroon international expected to travel for a medical once the paperwork is finalised on a deal reported to be worth in excess of £60m (Sky Sports, 2026).",
@@ -91,8 +92,9 @@ const articles = [
     competition: "Premier League",
     date: "2026-08-21",
     scoreline: "",
-    image: "images/taclab-placeholder.jpg",
-    imageCredit: "Photo: placeholder",
+    image: "images/savinhospurs.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/clyddxxgx9wo",
+    imageCredit: "Photo: BBC Sport",
     excerpt: "Tottenham have agreed an £85m deal for Manchester City winger Savinho and are closing in on a second signing in Omar Marmoush, as Spurs pursue a double swoop on the champions to strengthen their attack.",
     content: [
       "Tottenham have agreed an £85m deal to sign Savinho from Manchester City, with the Brazil winger undergoing his medical on Friday afternoon -- and Spurs are simultaneously closing in on a second City player, Omar Marmoush, in what is shaping up as a genuine double swoop on the champions (Sky Sports, 2026).",
