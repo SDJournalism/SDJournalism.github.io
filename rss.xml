@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Wed, 19 Aug 2026 09:25:54 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 18:23:38 GMT</lastBuildDate>
+  <item>
+    <title>Carlos Baleba to Manchester United: Third Midfield Signing Nears Completion in Deal Worth Up to £65m</title>
+    <link>https://sdjournalism.github.io/articles/31.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/31.html</guid>
+    <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Manchester United are closing in on a deal worth up to £65m for Brighton&apos;s Carlos Baleba, their third midfield signing of the summer. Here&apos;s where the deal stands, and why the Cameroon international may take time to make an impact.</description>
+  </item>
+  <item>
+    <title>Tottenham&apos;s Double Manchester City Swoop: Spurs Agree £85m Savinho Deal, Close In on Omar Marmoush</title>
+    <link>https://sdjournalism.github.io/articles/30.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/30.html</guid>
+    <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Tottenham have agreed an £85m deal for Manchester City winger Savinho and are closing in on a second signing in Omar Marmoush, as Spurs pursue a double swoop on the champions to strengthen their attack.</description>
+  </item>
   <item>
     <title>Arsenal vs Coventry City Preview: Arteta&apos;s Champions Open Title Defence Against Lampard&apos;s Sky Blues</title>
     <link>https://sdjournalism.github.io/articles/29.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
     <category>Opinion</category>
     <description>Djed Spence is heading to Inter Milan for a fee barely bigger than the one Tottenham paid four years ago -- despite becoming an established Premier League right-back, a Europa League winner and a full England international in between. His stagnant price tag says less about his ability than about how football decides what a player is worth in the first place.</description>
-  </item>
-  <item>
-    <title>Brennan Johnson and Dwight McNeil Swap: Everton and Palace Finish What January Started</title>
-    <link>https://sdjournalism.github.io/articles/13.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/13.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Seven months after a £20m move collapsed on deadline day, Dwight McNeil is finally getting his switch to Crystal Palace -- this time as part of a straight, fee-free swap for Brennan Johnson, who arrived at Selhurst Park for a club-record £35m in January and left without scoring a single goal. We look at how the deal came together, and why both clubs think they&apos;ve won it.</description>
-  </item>
-  <item>
-    <title>Carabao Cup Round Two: The Shock That&apos;s Already Landed, and the Underdogs Dreaming of More</title>
-    <link>https://sdjournalism.github.io/articles/12.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/12.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Walsall&apos;s stunning win over Bristol City set the tone for a chaotic first round, and Monday&apos;s second round draw has handed several lower-league sides a genuine route to another shock. We look at the result that mattered most, the ties worth circling, and the underdogs with a puncher&apos;s chance when round two kicks off on 24 August.</description>
   </item>
 </channel>
 </rss>

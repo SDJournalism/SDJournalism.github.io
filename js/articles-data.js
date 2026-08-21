@@ -54,6 +54,69 @@
 
 const articles = [
 {
+    id: 31,
+    title: "Carlos Baleba to Manchester United: Third Midfield Signing Nears Completion in Deal Worth Up to £65m",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-21",
+    scoreline: "",
+    image: "images/taclab-placeholder.jpg",
+    imageCredit: "Photo: placeholder",
+    excerpt: "Manchester United are closing in on a deal worth up to £65m for Brighton's Carlos Baleba, their third midfield signing of the summer. Here's where the deal stands, and why the Cameroon international may take time to make an impact.",
+    content: [
+      "Manchester United are close to a full agreement with Brighton for Carlos Baleba, with the Cameroon international expected to travel for a medical once the paperwork is finalised on a deal reported to be worth in excess of £60m (Sky Sports, 2026).",
+      "A third midfield addition",
+      "Baleba would become United's third midfield signing of the summer, following the arrivals of Andrey Santos from Chelsea and Youri Tielemans from Aston Villa -- and, according to journalist Fabrizio Romano, the club remain \"optimistic to get one more\" before the transfer window shuts (football365, 2026).",
+      "From Lille breakout to Brighton mainstay",
+      "The 22-year-old joined Brighton from Lille in 2023 and has made 112 appearances for the club since, with a breakout 2024/25 season establishing him as one of the most coveted young defensive midfielders in Europe (Sky Sports, 2026).",
+      "A dip in form, and an ankle problem",
+      "That reputation has taken a knock more recently -- Sky Sports reported his form has \"dipped dramatically\" since that breakout campaign, and he is currently working his way back from an ankle ligament injury picked up in pre-season, a recovery that could delay his Manchester United debut even once the move goes through (Sky Sports, 2026).",
+      "Personal terms already agreed",
+      "Baleba has reportedly agreed personal terms on a five-year contract, with a medical already pencilled in. Manager Michael Carrick stopped short of confirming the deal by name but was clear about the club's approach to the market this summer: \"I just think we're looking to strengthen the squad. We're certainly working towards that, making the most of the situation that we have and trying to improve things and trying to move forward... And I think we're a good way to doing that, so far\" (Yahoo Sports, 2026).",
+      "With Andrey Santos and Youri Tielemans already through the door, Baleba's arrival would put Manchester United's midfield rebuild under Carrick within touching distance of complete -- at a cost approaching £65m for a player who, fitness permitting, gives the manager exactly the defensive athleticism his reshaped shape has been built to use."
+    ],
+    sources: [
+      { label: "Sky Sports -- Carlos Baleba transfer: Manchester United close to full agreement with Brighton for Cameroon midfielder", url: "https://www.skysports.com/football/news/11095/13574619/carlos-baleba-transfer-manchester-united-close-to-full-agreement-with-brighton-for-cameroon-midfielder" },
+      { label: "football365 -- Man Utd: Jacobs confirms fourth midfield signing after Romano gives Baleba update", url: "https://www.football365.com/news/man-utd-jacobs-confirms-fourth-midfield-signing-romano-baleba-update" },
+      { label: "Yahoo Sports -- Michael Carrick confirms Manchester United transfer target as Carlos Baleba 'agrees' personal terms", url: "https://uk.sports.yahoo.com/news/michael-carrick-confirms-manchester-united-172101711.html" }
+    ],
+    players: ["Carlos Baleba"],
+    teams: ["Manchester United", "Brighton & Hove Albion"],
+    featured: true
+},
+{
+    id: 30,
+    title: "Tottenham's Double Manchester City Swoop: Spurs Agree £85m Savinho Deal, Close In on Omar Marmoush",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-21",
+    scoreline: "",
+    image: "images/taclab-placeholder.jpg",
+    imageCredit: "Photo: placeholder",
+    excerpt: "Tottenham have agreed an £85m deal for Manchester City winger Savinho and are closing in on a second signing in Omar Marmoush, as Spurs pursue a double swoop on the champions to strengthen their attack.",
+    content: [
+      "Tottenham have agreed an £85m deal to sign Savinho from Manchester City, with the Brazil winger undergoing his medical on Friday afternoon -- and Spurs are simultaneously closing in on a second City player, Omar Marmoush, in what is shaping up as a genuine double swoop on the champions (Sky Sports, 2026).",
+      "A club-record sale for City",
+      "The Savinho deal is worth £75m up front plus £10m in add-ons, with around £80m of that effectively guaranteed -- a fee that would make it Manchester City's record sale, surpassing the £82m Julian Alvarez fetched when he left for Atletico Madrid in 2024 (Sky Sports, 2026).",
+      "Another player who wants out",
+      "Manchester City manager Enzo Maresca offered a blunt explanation for why the champions are willing to sell a player of Savinho's quality: \"It happened with Rodri and the same thing is happening with Savinho. Since day one, he has asked me that he wants to leave\" (Sky Sports, 2026).",
+      "Marmoush still to be finalised",
+      "Unlike Savinho, no fee has been confirmed for Marmoush's move, but talks are described as advanced and \"progressing in the right direction,\" with the Egypt international said to be \"on board with the move to north London\" (CaughtOffside, 2026).",
+      "Funding City's own rebuild",
+      "Manchester City's willingness to sanction both sales fits a wider pattern this summer -- the champions are looking to raise funds to strengthen their own midfield, having already sold their World Cup-winning captain Rodri earlier in the window (CaughtOffside, 2026).",
+      "A busy window for Spurs",
+      "The double deal would be a significant statement of intent from Tottenham, and reports suggest a move for Liverpool's Cody Gakpo could follow depending on how Liverpool's own business shapes up before deadline day (CaughtOffside, 2026).",
+      "With Savinho's medical already done and Marmoush's move edging closer, Tottenham look set to end the window with two ready-made Manchester City attackers -- continuing a market dynamic in which selling to fund a rebuild is becoming as central to Enzo Maresca's Manchester City project as buying."
+    ],
+    sources: [
+      { label: "Sky Sports -- Savinho transfer: Tottenham agree £85m deal to sign Man City winger as Spurs close in on Omar Marmoush", url: "https://www.skysports.com/transfer/news/12691/13575264/savinho-transfer-tottenham-agree-lb85m-deal-to-sign-man-city-winger-as-spurs-close-in-on-omar-marmoush" },
+      { label: "CaughtOffside -- Tottenham in advanced talks with Manchester City over double swoop for Savinho and Omar Marmoush", url: "https://www.caughtoffside.com/2026/08/19/tottenham-savinho-omar-marmoush-man-city-transfer/" }
+    ],
+    players: ["Savinho", "Omar Marmoush"],
+    teams: ["Tottenham Hotspur", "Manchester City"],
+    featured: true
+},
+{
     id: 29,
     title: "Arsenal vs Coventry City Preview: Arteta's Champions Open Title Defence Against Lampard's Sky Blues",
     type: "Match Preview",
