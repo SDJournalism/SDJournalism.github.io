@@ -17,6 +17,10 @@
   --line: #D7D9CE;
   --white: #FFFFFF;
 
+  /* Barely-there tint used for the background stripe texture below --
+     just a faint shade of ink on top of --bg, not a colour of its own. */
+  --bg-stripe: rgba(18, 20, 28, 0.03);
+
   --font-display: 'Newsreader', serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
@@ -34,7 +38,18 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  /* A very faint diagonal stripe -- like the mowing pattern on a pitch --
+     sits under everything on every page, since every page shares this
+     one body rule. It's built from --bg-stripe (see :root above), which
+     is just a low-opacity tint of the theme's own ink colour, so it
+     stays subtle and correct in both light and dark mode automatically. */
+  background-color: var(--bg);
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0px,
+    var(--bg-stripe) 45px,
+    transparent 90px
+  );
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.55;
@@ -2321,6 +2336,10 @@ a:focus-visible, button:focus-visible {
   --ink: #E9EAF2;
   --ink-soft: #9CA2BE;
   --line: #2A3560;
+  /* Same idea as the light-mode --bg-stripe, but a faint tint of the
+     dark-mode ink colour (near-white) instead, so the stripes still
+     read as a subtle lightening rather than vanishing or going murky. */
+  --bg-stripe: rgba(233, 234, 242, 0.035);
 }
 
 [data-theme="dark"] .search-input,
