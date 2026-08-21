@@ -2474,8 +2474,22 @@ html[data-text-size="xl"] { zoom: 1.3; }
    [data-theme="dark"] pair, same as the site's existing dark
    mode. */
 
-body.lab-page { background: #D6D7D2; }
-[data-theme="dark"] body.lab-page { background: #17191B; }
+/* Lab pages use their own solid grey (not the site's cream/navy --bg),
+   so the subtle background pattern has to be re-applied here explicitly --
+   the base "body" rule's background-image doesn't reach these pages
+   because this rule sets its own background-color. --bg-stripe still
+   does the light/dark switching automatically since it's the same
+   variable used site-wide. */
+body.lab-page {
+  background-color: #D6D7D2;
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0px,
+    var(--bg-stripe) 45px,
+    transparent 90px
+  );
+}
+[data-theme="dark"] body.lab-page { background-color: #17191B; }
 
 /* --gold and --ink-soft are tuned per mode for contrast against
    grey rather than the site's usual very-light cream: a mid-tone
