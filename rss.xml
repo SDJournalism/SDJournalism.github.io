@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Fri, 21 Aug 2026 18:23:38 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 22 Aug 2026 06:48:53 GMT</lastBuildDate>
+  <item>
+    <title>Arsenal 3-0 Coventry City: Havertz, Saka and Odegaard Launch the Title Defence in Style</title>
+    <link>https://sdjournalism.github.io/articles/33.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/33.html</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Arsenal opened the defence of their Premier League title with a comfortable 3-0 win over newly promoted Coventry City at the Emirates, with Kai Havertz, Bukayo Saka and Martin Odegaard doing the damage inside the opening hour.</description>
+  </item>
+  <item>
+    <title>Premier League Weekend Preview: Iraola&apos;s Liverpool Era Begins at Newcastle as Matchweek One Continues</title>
+    <link>https://sdjournalism.github.io/articles/32.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/32.html</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Arsenal&apos;s win over Coventry got the season started on Friday night -- here&apos;s what to expect from the eight Premier League fixtures still to come across the rest of the opening weekend, headlined by Andoni Iraola&apos;s first game in charge of Liverpool at Newcastle.</description>
+  </item>
   <item>
     <title>Carlos Baleba to Manchester United: Third Midfield Signing Nears Completion in Deal Worth Up to £65m</title>
     <link>https://sdjournalism.github.io/articles/31.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Micky van de Ven has signed a new five-year Tottenham contract, personally pushed through by Roberto De Zerbi after interest from Liverpool and Barcelona. Why retaining him matters as much as any of Spurs&apos; big-money arrivals this summer.</description>
-  </item>
-  <item>
-    <title>Scouting Report: Ayyoub Bouaddi -- The Teenager Manchester City Are Trusting With Rodri&apos;s Future</title>
-    <link>https://sdjournalism.github.io/articles/15.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/15.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Scouting Report</category>
-    <description>Manchester City are closing in on an 18-year-old Lille midfielder in a deal worth up to 100 million euros. The scanning habit and vertical passing that have him lined up as Rodri&apos;s long-term successor -- and what the transfer signals for Omar Marmoush and Savinho&apos;s futures at the club.</description>
-  </item>
-  <item>
-    <title>The Djed Spence Discount: Why Some Players Never Escape Their Reputation</title>
-    <link>https://sdjournalism.github.io/articles/14.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/14.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Opinion</category>
-    <description>Djed Spence is heading to Inter Milan for a fee barely bigger than the one Tottenham paid four years ago -- despite becoming an established Premier League right-back, a Europa League winner and a full England international in between. His stagnant price tag says less about his ability than about how football decides what a player is worth in the first place.</description>
   </item>
 </channel>
 </rss>

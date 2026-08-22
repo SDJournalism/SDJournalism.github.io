@@ -54,6 +54,83 @@
 
 const articles = [
 {
+    id: 33,
+    title: "Arsenal 3-0 Coventry City: Havertz, Saka and Odegaard Launch the Title Defence in Style",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-22",
+    scoreline: "Arsenal 3-0 Coventry City",
+    image: "images/arsenalcovreport.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/arsenal-fc-vs-coventry-live-stream-latest-score-updates-result-premier-league-2026-b1294243.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Arsenal opened the defence of their Premier League title with a comfortable 3-0 win over newly promoted Coventry City at the Emirates, with Kai Havertz, Bukayo Saka and Martin Odegaard doing the damage inside the opening hour.",
+    content: [
+      "Arsenal began the defence of their Premier League title with a routine 3-0 win over newly promoted Coventry City at the Emirates Stadium, goals from Kai Havertz, Bukayo Saka and Martin Odegaard putting Mikel Arteta's side out of sight before half-time was even over (Sky Sports, 2026).",
+      "Havertz breaks the deadlock",
+      "Havertz gave Arsenal the lead in the 15th minute, sweeping in a fine finish after Riccardo Calafiori's low cross from the left picked him out inside the box. The goal briefly went to a VAR review for offside before being confirmed (Sky Sports, 2026) (Heavy.com, 2026).",
+      "Saka doubles the lead",
+      "Saka made it two just eight minutes later, tucking in after Coventry goalkeeper Carl Rushworth could only parry a fierce cross-shot from summer signing Christos Tzolis into his path. It capped an eye-catching Premier League debut for the Greek winger, who was directly involved in both of Arsenal's first-half goals (Sky Sports, 2026).",
+      "Odegaard adds gloss after the break",
+      "Arsenal's captain put the result beyond any realistic doubt four minutes into the second half, his shot from the right-hand channel deceiving Rushworth on its way in for a 3-0 lead that Coventry never threatened to overturn (Sky Sports, 2026).",
+      "A record no side wants",
+      "Coventry's afternoon was summed up by one remarkable statistic: Frank Lampard's side failed to make a single tackle in the entire first half, the first team to manage that since Opta began tracking the data in 2007. Their first challenge of the match did not arrive until the 69th minute, by which point the game was already gone. Gabriel Magalhaes and Coventry's Caleb Yirenkyi were both booked, and a Coventry penalty appeal in the 38th minute was waved away on review (Heavy.com, 2026).",
+      "What Arteta and Lampard said",
+      "\"We were really dominant and we flowed with the ball. Overall the performance was positive, with some big individual performances,\" Arteta said afterwards, pointing to the early understanding already forming between Saka, Odegaard and Ben White (Sky Sports, 2026). Odegaard was similarly satisfied with the platform his side has set: \"It was solid. We looked good, and the quality in the squad is unbelievable,\" he said, while also flagging room to improve (Sky Sports, 2026). For Lampard, the result was a reality check delivered on the biggest possible stage. \"It was a big learning curve,\" the Coventry manager admitted. \"There are Premier League debuts, there's noise here -- those are things you have to handle as a player\" (Sky Sports, 2026).",
+      "It is exactly the kind of statement win a champion is supposed to make on the opening weekend, and a reminder of the gap Coventry -- back in the top flight after 25 years away -- now have to close. Arsenal's title defence is up and running; theirs is only just beginning."
+    ],
+    sources: [
+      { label: "Sky Sports -- Arsenal 3-0 Coventry City: Match report & highlights", url: "https://www.skysports.com/football/arsenal-vs-coventry-city/559444" },
+      { label: "Heavy.com -- Arsenal vs Coventry Highlights: Gunners Leave Sky Blues With a Bitter Start", url: "https://heavy.com/sports/soccer/premier-league/arensal-fc/arsenal-vs-coventry-highlights-gunners-leave-sky-blues-with-a-bitter-start/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Coventry City"],
+    featured: true
+},
+{
+    id: 32,
+    title: "Premier League Weekend Preview: Iraola's Liverpool Era Begins at Newcastle as Matchweek One Continues",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-22",
+    scoreline: "",
+    image: "images/matchweek1.jpg",
+    imageLink: "https://www.reuters.com/sports/soccer/new-liverpool-boss-iraola-says-club-need-more-signings-ahead-new-season-2026-07-13/",
+    imageCredit: "Photo: Reuters",
+    excerpt: "Arsenal's win over Coventry got the season started on Friday night -- here's what to expect from the eight Premier League fixtures still to come across the rest of the opening weekend, headlined by Andoni Iraola's first game in charge of Liverpool at Newcastle.",
+    content: [
+      "Arsenal's 3-0 win over Coventry City on Friday night got the 2026/27 Premier League season under way, but the vast majority of Matchweek One is still to be played. Eight more fixtures unfold across Saturday and Sunday before Fulham host Chelsea on Monday night to close the round out -- here's what to expect from all of them.",
+      "Newcastle vs Liverpool: two new eras collide",
+      "Sunday's late-afternoon kick-off at St James' Park is the standout fixture of the weekend, and it pits two sides going through genuine transition against each other. Liverpool have appointed Andoni Iraola as their new head coach, poaching him from Bournemouth to replace Arne Slot after last season's disappointing fifth-place finish (Sky Sports, 2026). Iraola's first competitive game in charge arrives with Liverpool still working out life after Mohamed Salah, who is in talks to leave for Trabzonspor, and further departures in Ibrahima Konate and Andy Robertson (ESPN, 2026). Newcastle, meanwhile, hand German coach Matthias Jaissle his own Premier League bow after losing Anthony Gordon, Sandro Tonali and Bruno Guimaraes over the summer, with 20-year-old Bazoumana Toure -- a club-record £42.8m signing -- expected to be central to how they replace that creativity (Goal.com Newcastle, 2026). Liverpool have not lost any of their last 19 league meetings with Newcastle, but Newcastle have won six of their last nine home games in the fixture, a reminder that St James' Park is rarely straightforward (Goal.com Newcastle, 2026).",
+      "Manchester City look for an immediate response",
+      "Manchester City host Bournemouth on Sunday looking to put right their Community Shield defeat to Arsenal, a 3-0 loss in which Enzo Maresca's side conceded early and could not find a way back (Goal.com City, 2026). City will be without Rodri, Jack Grealish, Jeremy Doku and Matheus Nunes, while Bournemouth arrive with an even longer absentee list under new boss Marco Rose -- notable timing, given it was Bournemouth's own outgoing manager who has just taken over at Anfield (Goal.com City, 2026).",
+      "Carrick takes his Manchester United revival to Hull",
+      "Michael Carrick's first Premier League game since being handed the Manchester United job on a permanent basis comes away at newly promoted Hull City on Saturday lunchtime (Premier League, 2026). United's form under Carrick -- 12 wins from 17 Premier League games in interim charge, a run already covered in detail on this site -- makes Hull's return to the top flight after 25 years away as tough a re-entry as the fixture list could have handed them (Planet Football, 2026).",
+      "Spurs' new arrivals will have to wait",
+      "Tottenham's own summer business -- the £85m deal for Savinho and a continuing pursuit of Omar Marmoush, both covered on this site last week -- will not be on show at Brentford on Saturday. Reports suggest Savinho may not even have been registered in time to feature, and with Roberto De Zerbi's game plan for the trip already set, a full debut is regarded as more likely the following weekend, at home to Newcastle, once he has had a proper week of training with his new teammates (Yahoo Sports, 2026).",
+      "New managers, new tests",
+      "Saturday's early kick-off brings a first competitive test for Crystal Palace's Pierre Sage, who arrives at Everton having won a trophy at RC Lens last season and taking over a Palace squad that reports a clean bill of health heading into the opener (Goal.com Everton, 2026). David Moyes' Everton go in as the form side of the two, with pre-season wins that included a 3-1 win over Newcastle (Goal.com Everton, 2026). Elsewhere, Fabian Hurzeler's Brighton host Unai Emery's Aston Villa on Sunday off the back of three straight pre-season wins, though Villa hold the recent head-to-head edge, including a 4-3 comeback win in December 2025 (Goal.com Brighton, 2026). Brighton's absentee list is a long one, and includes Carlos Baleba -- still working his way back from the ankle injury that has delayed his move to Manchester United (Goal.com Brighton, 2026).",
+      "Two promoted sides, and a Yorkshire test",
+      "Newly promoted Ipswich Town host Sunderland at Portman Road on Saturday under Gary O'Neil, who arrives with rather better pre-season momentum than Regis Le Bris's visitors (Goal.com Ipswich, 2026). And at the City Ground, Oliver Glasner's Nottingham Forest welcome Daniel Farke's Leeds United, who head into the weekend on the back of four wins from five pre-season friendlies, including a 4-2 win over Liverpool, and will fancy their chances of an opening-day upset (Goal.com Forest, 2026).",
+      "Add Friday's Arsenal win to the mix, and it is as busy and unpredictable an opening weekend as the Premier League has served up in years -- three promoted clubs finding their feet, brand-new head coaches making their away-day bows at Newcastle and Everton, and Manchester City looking to shake off their Community Shield hangover. Fulham and Chelsea close the round out on Monday night."
+    ],
+    sources: [
+      { label: "Sky Sports -- Andoni Iraola: Liverpool appoint former Bournemouth boss as Arne Slot's successor", url: "https://www.skysports.com/football/news/11669/13550174/andoni-iraola-liverpool-appoint-former-bournemouth-boss-as-arne-slots-successor-on-two-year-deal" },
+      { label: "ESPN -- Ex-Liverpool star Mohamed Salah in talks to join Trabzonspor", url: "https://www.espn.com/soccer/story/_/id/49531510/mohamed-salah-transfer-trabzonspor-liverpool-egypt" },
+      { label: "Goal.com Newcastle -- Newcastle United vs Liverpool Premier League preview", url: "https://www.goal.com/en/news/newcastle-united-liverpool-premier-league-preview/blt8a1b76d6d787990e" },
+      { label: "Premier League -- All 380 fixtures for the 2026/27 Premier League season", url: "https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season" },
+      { label: "Goal.com City -- Manchester City vs AFC Bournemouth Premier League preview", url: "https://www.goal.com/en/news/manchester-city-afc-bournemouth-premier-league-preview/blt76e24fd099ffbe3b" },
+      { label: "Planet Football -- The amazing Premier League table since Michael Carrick took charge of Man Utd", url: "https://www.planetfootball.com/manchester-united/amazing-premier-league-table-carrick-manager" },
+      { label: "Yahoo Sports -- When could Savinho realistically make his Tottenham debut?", url: "https://sports.yahoo.com/articles/could-savinho-realistically-tottenham-debut-183001598.html" },
+      { label: "Goal.com Everton -- Everton vs Crystal Palace Premier League preview", url: "https://www.goal.com/en/news/everton-crystal-palace-premier-league-preview/bltb73d4fb734c12f69" },
+      { label: "Goal.com Brighton -- Brighton & Hove Albion vs Aston Villa Premier League preview", url: "https://www.goal.com/en/news/brighton-hove-albion-aston-villa-premier-league-preview/bltb8ba3290b85ca95b" },
+      { label: "Goal.com Ipswich -- Ipswich Town vs Sunderland Premier League preview", url: "https://www.goal.com/en/news/ipswich-town-sunderland-premier-league-preview/blt2859b8b04a2bb2bd" },
+      { label: "Goal.com Forest -- Nottingham Forest vs Leeds United Premier League preview", url: "https://www.goal.com/en/news/nottingham-forest-leeds-united-premier-league-preview/blt2fe4c478298a6ee1" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
     id: 31,
     title: "Carlos Baleba to Manchester United: Third Midfield Signing Nears Completion in Deal Worth Up to £65m",
     type: "Analysis",
