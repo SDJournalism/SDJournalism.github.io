@@ -54,6 +54,73 @@
 
 const articles = [
 {
+    id: 35,
+    title: "Brentford 3-0 Tottenham Hotspur: Bees Stun De Zerbi on Opening Day",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-23",
+    scoreline: "Brentford 3-0 Tottenham Hotspur",
+    image: "images/spursbrentford.jpg",
+    imageLink: "https://www.skysports.com/football/news/11675/13565665/brentford-3-0-tottenham-big-spending-spurs-start-new-premier-league-season-with-dismal-defeat",
+    imageCredit: "Photo: Sky Sports",
+    excerpt: "Roberto De Zerbi's first game in charge of Tottenham ended in a chastening 3-0 defeat at Brentford, with Keane Lewis-Potter, Vitaly Janelt and Michael Kayode all scoring as Keith Andrews began life after Thomas Frank in perfect fashion.",
+    content: [
+      "Tottenham's Roberto De Zerbi era began with a chastening defeat as Brentford won 3-0 at the Gtech Community Stadium, Keane Lewis-Potter, Vitaly Janelt and Michael Kayode all scoring inside the first 49 minutes of Keith Andrews' first competitive game in charge (VAVEL, 2026).",
+      "Lewis-Potter strikes early",
+      "Brentford were ahead inside 12 minutes, Keane Lewis-Potter converting from close range after a mistake in the Tottenham half was worked into a clear sight of goal (VAVEL, 2026).",
+      "A Kinsky error doubles the lead",
+      "Vitaly Janelt made it two just after the half-hour mark, pouncing after Tottenham goalkeeper Antonin Kinsky was unable to hold a shot from distance (VAVEL, 2026). Lucas Bergvall was heavily involved in the build-up to both goals, one of several De Zerbi selection calls that backfired -- James Maddison and Mateus Fernandes were left out of the starting eleven altogether (NBC Sports Reaction, 2026).",
+      "Kayode adds a third after the break",
+      "Four minutes into the second half, Michael Kayode made it 3-0 with a spectacular finish from a corner, by which point Tottenham's afternoon had effectively been settled (VAVEL, 2026). Brentford almost had a fourth from the penalty spot, but Igor Thiago struck the post from twelve yards, sparing Tottenham further embarrassment (VAVEL, 2026).",
+      "De Zerbi makes changes, too late to matter",
+      "De Zerbi withdrew Bergvall and Callum Gallagher at half-time for Mateus Fernandes and Rodrigo Bentancur, and Tottenham did show some improvement without ever threatening a way back into the game -- they failed to register a single shot on target all afternoon, with Caoimhin Kelleher untroubled in the Brentford goal for long periods (NBC Sports Reaction, 2026).",
+      "What De Zerbi and Andrews said",
+      "\"We suffered physically but we knew that before the game. We were not ready to fight the duels... we didn't fight in the right way,\" De Zerbi admitted afterwards. \"We arrived too many times late and we lost too many duels to compete with Brentford... I expected better for sure. I didn't expect this result but I knew the problems we would find today\" (Goal.com, 2026). For Andrews, in his first Premier League game as a manager, the response from his players mattered as much as the result: energy and enthusiasm, he said, are \"the bare minimum for me\" (NBC Sports Andrews, 2026).",
+      "It is an alarming start for a Tottenham side that spent heavily over the summer with top-five ambitions, and De Zerbi -- inheriting a squad that finished 17th last season -- now has a fortnight before facing Newcastle to find some answers. For Brentford and Keith Andrews, life after Thomas Frank could not have started much better."
+    ],
+    sources: [
+      { label: "VAVEL -- A solid victory for the Bees: Highlights and goals of Brentford 3-0 Tottenham", url: "https://www.vavel.com/en-us/soccer/2026/08/22/1268685-brentford-vs-tottenham-live-score-premier-league.html" },
+      { label: "NBC Sports Reaction -- Roberto De Zerbi reaction: Tottenham Hotspur 'were not ready to fight' in Week 1 rout at Brentford", url: "https://www.nbcsports.com/soccer/news/roberto-de-zerbi-reaction-what-did-tottenham-hotspur-boss-say-after-brutal-debut-blowout" },
+      { label: "Goal.com -- Tottenham vs Brentford: Roberto De Zerbi quotes", url: "https://www.goal.com/en-ca/lists/tottenham-brentford-roberto-de-zerbi-quotes-/blt1e5662bd3192d3d2" },
+      { label: "NBC Sports Andrews -- Keith Andrews on Brentford: Energy and enthusiasm 'the bare minimum for me'", url: "https://www.nbcsports.com/watch/soccer/premier-league/keith-andrews-on-brentford-energy-and-enthusiasm-the-bare-minimum-for-me" }
+    ],
+    players: [],
+    teams: ["Brentford", "Tottenham Hotspur"],
+    featured: true
+},
+{
+    id: 34,
+    title: "Premier League Transfer Round-Up: Tottenham's Double Swoop Nears Completion as Baleba's Manchester United Move Gets There",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-23",
+    scoreline: "",
+    image: "images/aug23transferroundup.jpg",
+    imageLink: "https://www.aljazeera.com/sports/2026/8/18/barcelona-seal-deal-for-world-cup-winner-rodri-from-manchester-city",
+    imageCredit: "Photo: Al Jazeera",
+    excerpt: "With the summer window closing on 1 September, the past week has brought Savinho's Tottenham medical, real movement on Omar Marmoush, confirmation on Carlos Baleba's move to Manchester United, and fresh business at Villa Park, Old Trafford and Anfield.",
+    content: [
+      "With the Premier League window closing at 11pm on 1 September, the last week has moved several ongoing sagas closer to the finish line, plus a handful of fresh deals elsewhere in the division. Here's the latest on Tottenham's two pending arrivals, Carlos Baleba's move to Manchester United, and what else has been confirmed since.",
+      "Tottenham's double swoop nears completion",
+      "Savinho has completed his medical at Tottenham and is \"ready to proceed\", with an official announcement and media unveiling expected imminently, confirming the £85m deal first covered on this site last week (Yardbarker, 2026). Fellow arrival Omar Marmoush is further behind: personal terms with the Manchester City forward are already agreed as part of a swoop reported to be worth up to £140m combined, but the move is contingent on City coming through their next fixture without further injury setbacks (Yardbarker, 2026).",
+      "Baleba's Manchester United move gets there in the end",
+      "Carlos Baleba's move to Manchester United, also covered on this site, has been confirmed as done in all but formalities: Fabrizio Romano gave his trademark \"here we go\" on Friday, with an improved package of £65m plus £5m in add-ons agreed after United's original £65m bid was rejected. Baleba has been authorised to travel for a medical, with a long-term contract to follow (CaughtOffside, 2026).",
+      "Villa Park business continues",
+      "Aston Villa have added Johan Manzambi from Freiburg for £59.5m, days after selling defender Ezri Konsa to Arsenal for £55m as Unai Emery continues to reshape his squad (Sky Sports, 2026).",
+      "Midfield reinforcements at Old Trafford and Anfield",
+      "Manchester United's rebuild under Michael Carrick continues with Andrey Santos arriving from Chelsea for £50m and Youri Tielemans signing from Aston Villa for £35m, while Liverpool have added defender Jeremy Jacquet from Rennes for £60m and winger Victor Munoz from Osasuna for £34.5m as Andoni Iraola shapes his squad for the season ahead (Sky Sports, 2026).",
+      "With the window shutting on 1 September, expect plenty more to be confirmed before it does -- not least how Tottenham's two remaining deals are resolved. We'll have updates as they land."
+    ],
+    sources: [
+      { label: "Yardbarker -- Reports: Savinho completes Tottenham medical as Omar Marmoush deal hinges on Manchester City injury status", url: "https://www.yardbarker.com/soccer/articles/reports_savinho_completes_tottenham_medical_as_omar_marmoush_deal_hinges_on_manchester_city_injury_status/s1_17451_44206852" },
+      { label: "CaughtOffside -- Carlos Baleba to Manchester United: Fabrizio Romano confirms 'Here We Go'", url: "https://www.caughtoffside.com/2026/08/21/carlos-baleba-manchester-united-here-we-go-fabrizio-romano/" },
+      { label: "Sky Sports -- Transfer news: Summer transfer window 2026 - Premier League deals, ins and outs", url: "https://www.skysports.com/football/news/11095/13546618/transfer-news-summer-transfer-window-2026-premier-league-deals-ins-and-outs" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
     id: 33,
     title: "Arsenal 3-0 Coventry City: Havertz, Saka and Odegaard Launch the Title Defence in Style",
     type: "Match Report",

@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Sat, 22 Aug 2026 06:48:53 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 23 Aug 2026 07:08:29 GMT</lastBuildDate>
+  <item>
+    <title>Brentford 3-0 Tottenham Hotspur: Bees Stun De Zerbi on Opening Day</title>
+    <link>https://sdjournalism.github.io/articles/35.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/35.html</guid>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Roberto De Zerbi&apos;s first game in charge of Tottenham ended in a chastening 3-0 defeat at Brentford, with Keane Lewis-Potter, Vitaly Janelt and Michael Kayode all scoring as Keith Andrews began life after Thomas Frank in perfect fashion.</description>
+  </item>
+  <item>
+    <title>Premier League Transfer Round-Up: Tottenham&apos;s Double Swoop Nears Completion as Baleba&apos;s Manchester United Move Gets There</title>
+    <link>https://sdjournalism.github.io/articles/34.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/34.html</guid>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>With the summer window closing on 1 September, the past week has brought Savinho&apos;s Tottenham medical, real movement on Omar Marmoush, confirmation on Carlos Baleba&apos;s move to Manchester United, and fresh business at Villa Park, Old Trafford and Anfield.</description>
+  </item>
   <item>
     <title>Arsenal 3-0 Coventry City: Havertz, Saka and Odegaard Launch the Title Defence in Style</title>
     <link>https://sdjournalism.github.io/articles/33.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
     <category>Player Blueprints</category>
     <description>It isn&apos;t top speed that makes Bukayo Saka unstoppable on the right -- it&apos;s how fast he can stop. The elite deceleration and change of direction that has made him Arsenal&apos;s most reliable attacking outlet since 2019.</description>
-  </item>
-  <item>
-    <title>Arsenal 2003/04: The Invincibles (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/arsenal-0304-invincibles.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>The only team to go an entire 38-game Premier League season unbeaten. How Arsene Wenger built a side that defended first through Vieira and Gilberto Silva, then let Thierry Henry punish teams on the counter.</description>
-  </item>
-  <item>
-    <title>Micky van de Ven&apos;s New Contract Is De Zerbi&apos;s Clearest Statement Yet</title>
-    <link>https://sdjournalism.github.io/articles/16.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/16.html</guid>
-    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Micky van de Ven has signed a new five-year Tottenham contract, personally pushed through by Roberto De Zerbi after interest from Liverpool and Barcelona. Why retaining him matters as much as any of Spurs&apos; big-money arrivals this summer.</description>
   </item>
 </channel>
 </rss>
