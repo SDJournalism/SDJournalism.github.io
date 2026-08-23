@@ -85,6 +85,32 @@ function firstSentence(text) {
   return match ? match[0].trim() : text;
 }
 
+// Fills el with `text`, then -- if it overflows el's own fixed CSS height --
+// trims it word by word (checking against el.scrollHeight each time) until
+// it fits, adding a "..." at the end. Used instead of -webkit-line-clamp
+// for the homepage quote panel, because line-clamp doesn't reliably
+// recompute when JS swaps the text content of an already-laid-out box: it
+// can leave a stale line count behind and show a jagged partial line
+// instead of a clean cut. Measuring real pixel overflow and trimming words
+// ourselves always lands on a clean boundary, whatever the text or font.
+function fitTextToHeight(el, text) {
+  el.textContent = text;
+  if (el.scrollHeight <= el.clientHeight + 1) return;
+  const words = text.split(/\s+/);
+  let lo = 0;
+  let hi = words.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi + 1) / 2);
+    el.textContent = words.slice(0, mid).join(" ") + "…";
+    if (el.scrollHeight <= el.clientHeight + 1) {
+      lo = mid;
+    } else {
+      hi = mid - 1;
+    }
+  }
+  el.textContent = words.slice(0, lo).join(" ") + "…";
+}
+
 // Powers the "By the numbers" panel on the Articles page only. Deliberately
 // reads from `articles` (articles-data.js) alone -- Tactical Lab pieces
 // live in a separate `tacticalLabEntries` array (tactical-lab-data.js) and
@@ -167,7 +193,7 @@ function renderQuotePanel(textId, attrId, dotsId, panelId) {
     attrEl.style.opacity = "0";
     setTimeout(() => {
       const article = pool[index];
-      textEl.textContent = firstSentence(article.excerpt);
+      fitTextToHeight(textEl, firstSentence(article.excerpt));
       attrEl.textContent = article.title;
       attrEl.href = `articles/${article.id}.html`;
       textEl.style.opacity = "1";

@@ -103,7 +103,7 @@ const articles = [
       "With the Premier League window closing at 11pm on 1 September, the last week has moved several ongoing sagas closer to the finish line, plus a handful of fresh deals elsewhere in the division. Here's the latest on Tottenham's two pending arrivals, Carlos Baleba's move to Manchester United, and what else has been confirmed since.",
       "Tottenham's double swoop nears completion",
       "Savinho has completed his medical at Tottenham and is \"ready to proceed\", with an official announcement and media unveiling expected imminently, confirming the £85m deal first covered on this site last week (Yardbarker, 2026). Fellow arrival Omar Marmoush is further behind: personal terms with the Manchester City forward are already agreed as part of a swoop reported to be worth up to £140m combined, but the move is contingent on City coming through their next fixture without further injury setbacks (Yardbarker, 2026).",
-      "Baleba's Manchester United move gets there in the end",
+      "Baleba's move to Manchester United gets there",
       "Carlos Baleba's move to Manchester United, also covered on this site, has been confirmed as done in all but formalities: Fabrizio Romano gave his trademark \"here we go\" on Friday, with an improved package of £65m plus £5m in add-ons agreed after United's original £65m bid was rejected. Baleba has been authorised to travel for a medical, with a long-term contract to follow (CaughtOffside, 2026).",
       "Villa Park business continues",
       "Aston Villa have added Johan Manzambi from Freiburg for £59.5m, days after selling defender Ezri Konsa to Arsenal for £55m as Unai Emery continues to reshape his squad (Sky Sports, 2026).",

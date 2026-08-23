@@ -258,7 +258,12 @@ nav.site-nav a.active {
   background: var(--navy);
   border: 1px solid var(--navy);
   padding: 32px 26px 24px;
-  height: 400px;
+  /* min-height (not height) -- a long article title can push
+     .quote-attribution to 2-3 lines, and a hard height here would force
+     the flexbox to shrink .quote-text to make room, undoing its own
+     fixed height below and clipping the quote mid-line. Letting the
+     panel grow a little instead keeps the quote box always intact. */
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   touch-action: pan-y;
@@ -284,14 +289,17 @@ nav.site-nav a.active {
   line-height: 1.4;
   color: var(--white);
   margin: 0 0 18px;
-  flex-grow: 1;
   transition: opacity 0.2s ease;
-  /* Fixed number of lines so a long quote gets a "..." instead of
-     growing the box -- this is what keeps .quote-panel's height
-     constant no matter which quote is showing. */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  /* Fixed pixel height (6 lines at this font-size/line-height) so a long
+     quote gets a "..." instead of growing the box. We deliberately do NOT
+     use -webkit-line-clamp here: it's unreliable when JS swaps the text
+     content on an already-laid-out box -- it can leave a stale internal
+     line count that renders a jagged partial line instead of a clean cut,
+     depending on the specific text. site.js's fitTextToHeight() does the
+     truncation itself (word by word, measured against this fixed height),
+     which always lands on a clean whole-line boundary. */
+  height: 160px;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -302,6 +310,7 @@ nav.site-nav a.active {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gold);
+  margin-top: auto;
   border-top: 1px solid rgba(245, 246, 241, 0.2);
   padding-top: 14px;
   margin-bottom: 16px;
