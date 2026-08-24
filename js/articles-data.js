@@ -54,6 +54,75 @@
 
 const articles = [
 {
+    id: 37,
+    title: "The Alexander Isak Backlash: Newcastle's Anger Is Aimed at the Wrong Target",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-24",
+    scoreline: "",
+    image: "images/isakreception.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/alexander-isak-booed-newcastle-liverpool-premier-league-b3037808.html",
+    imageCredit: "Photo: The Independent",
+    excerpt: "Alexander Isak was jeered from his first touch on his return to St James' Park, cheered when his shot went wide, and accused online of bottling a penalty he wasn't even asked to take. None of that changes who actually forced this transfer to drag on all summer.",
+    content: [
+      "Alexander Isak's first touch back at St James' Park on Sunday was met with a chorus of boos that carried on, on and off, for the full ninety-plus minutes. When his one clear sight of goal drifted wide of the far post, the home end cheered louder than it had for almost anything else in the match (Shields Gazette, 2026). By full time, some supporters were accusing him online of \"bottling\" the stoppage-time penalty that earned Liverpool their point -- even though it was Dominik Szoboszlai, not Isak, who took it (Shields Gazette, 2026). None of it seemed to bother him much: as he trooped down the tunnel after the equaliser, Isak gave the crowd a small, deliberate wink (AOL, 2026).",
+      "How the transfer actually broke down",
+      "The anger has been building since last summer, when Isak's British-record £125m move from Newcastle to Liverpool turned into one of the ugliest transfer sagas the Premier League has seen in years (ESPN, 2026). Eddie Howe left Isak out of Newcastle's pre-season tour of Asia, citing a minor thigh injury, and the striker spent the following weeks training at his old club Real Sociedad rather than with his Newcastle teammates, missing the entire pre-season and the opening game of the campaign (ESPN, 2026). Isak eventually broke his silence on Instagram, writing that \"promises were made and the club has known my position for a long time... when promises are broken and trust is lost, the relationship can't continue\" (ESPN, 2026) -- a claim Newcastle's own statement at the time flatly denied, insisting no such promises had ever been made.",
+      "Even Howe wasn't told what was happening",
+      "What made the situation genuinely dysfunctional wasn't Isak's absence alone -- it was that Newcastle's own manager was reportedly left almost as in the dark as everyone else. \"The situation is far from ideal. It is quite complex,\" Howe said in early August, admitting he had learned about Liverpool's opening £110m bid through media reports rather than from the club (BBC Sport, 2026). Howe also said he had no direct contact with Isak during the standoff and was relying on the same news coverage as supporters to find out where his own player was training (BBC Sport, 2026). If the manager picking the team didn't know what was going on, it's hard to see why the anger over how messily it played out should land on the player rather than the executives running the process.",
+      "A ceiling almost no player turns down",
+      "Strip away the acrimony and the outcome was, for Isak, close to the best case a player in his position could hope for: a British transfer record, roughly £125m, and a move to a club that had just won the league the previous year, all while Newcastle's own statement insisted he was going nowhere (ESPN, 2026). Wanting that move, and pushing hard to get it once talks had stalled, is not an unusual response to a release clause and a boyhood-sized paycheque -- it is closer to how almost every big-money transfer saga in the modern game eventually resolves, however uncomfortable the middle part looks from the outside.",
+      "The wink was the only answer needed",
+      "Isak did not have a vintage game on Sunday -- Iraola admitted afterwards that his forward had \"a couple of situations to finish inside the box\" that weren't the clearest chances either of them wanted, while acknowledging the striker \"expected a little bit the atmosphere\" and that it \"has not been a big surprise for him\" (Shields Gazette, 2026). But the reception was never really about Sunday's ninety minutes. It was about a summer of frustration finally finding a target it could see in person, in a stadium, close enough to boo. Isak's answer was to keep working for the full match and then wink on his way down the tunnel -- which, given the actual chain of events that got him there, is a considerably more measured response than the one he received."
+    ],
+    sources: [
+      { label: "Shields Gazette -- Alexander Isak's hostile Newcastle United reception on return with Liverpool", url: "https://www.shieldsgazette.com/sport/football/newcastle-united/alexander-isak-newcastle-united-liverpool-st-james-park-return-8937088" },
+      { label: "AOL -- Alexander Isak's subtle action to Newcastle fans after Liverpool's late equaliser", url: "https://www.aol.co.uk/articles/alexander-isaks-subtle-action-newcastle-210656000.html" },
+      { label: "ESPN -- Alexander Isak, Liverpool and Newcastle United: the transfer saga, so far", url: "https://global.espn.com/football/story/_/id/46027433/alexander-isak-liverpool-line-newcastle-united-star-transfer-saga-far" },
+      { label: "BBC Sport -- Isak transfer situation 'far from ideal' -- Howe", url: "https://feeds.bbci.co.uk/sport/football/articles/ckgynrnyklxo" }
+    ],
+    players: ["Alexander Isak"],
+    teams: ["Newcastle United", "Liverpool"],
+    featured: true
+},
+{
+    id: 36,
+    title: "Newcastle 2-2 Liverpool: Szoboszlai's Late Penalty Rescues a Point on Iraola's Debut",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-24",
+    scoreline: "Newcastle United 2-2 Liverpool",
+    image: "images/newcastleliverpool.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/newcastle-vs-liverpool-fc-live-stream-latest-score-updates-result-premier-league-b1294360.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Dominik Szoboszlai's stoppage-time penalty rescued a 2-2 draw for Liverpool at St James' Park, as Andoni Iraola's first game in charge and Matthias Jaissle's competitive Newcastle debut both ended in chaotic, contentious fashion.",
+    content: [
+      "Dominik Szoboszlai's penalty deep into stoppage time salvaged a 2-2 draw for Liverpool at St James' Park on Sunday, as Andoni Iraola's first game in permanent charge and Matthias Jaissle's competitive debut as Newcastle manager both ended in chaotic, contentious fashion (Sky Sports, 2026). Both sides fielded heavily reshaped line-ups: Iraola's new-look Liverpool started summer signings Florian Wirtz, Milos Kerkez, Jeremie Frimpong and Alexander Isak, while Jaissle handed a full debut to new goalkeeper Hornicek (NBC Sports, 2026).",
+      "Elanga punishes an early mix-up",
+      "Newcastle were ahead inside five minutes, Anthony Elanga finishing after a mistake in the Liverpool half was worked into a clear sight of goal on the opening weekend of Iraola's reign (Sky Sports, 2026). It was the perfect start for Jaissle in his first game since replacing Eddie Howe, and it set the tone for a helter-skelter afternoon in the north-east.",
+      "Gakpo levels, Willock restores the lead",
+      "Liverpool's response came just after the hour, Cody Gakpo drilling a low finish from 20 yards to make it 1-1 (Sky Sports, 2026). The parity lasted three minutes: Joe Willock restored Newcastle's lead almost immediately, converting after good work down the left from summer signing Yoane Wissa, who arrived from Brentford (Sky Sports, 2026).",
+      "A 96th-minute penalty and a long VAR check",
+      "With Newcastle seemingly set to hold on for a first win of Jaissle's reign, Lewis Hall brought down Victor Munoz inside the penalty area deep into stoppage time, and the referee was sent to a lengthy VAR review before pointing to the spot (Sky Sports, 2026). Sky Sports also reported some gamesmanship from Newcastle's players in the moments before Szoboszlai stepped up (Sky Sports, 2026); the Hungarian was not to be put off, sending Hornicek the wrong way in the ninth minute of stoppage time to make it 2-2 (Sky Sports, 2026).",
+      "Isak's toughest audience gives him a wink back",
+      "The result meant Alexander Isak avoided defeat on his first return to St James' Park since his British-record £125m move from Newcastle to Liverpool last summer, though the reception from the home crowd was hostile throughout (Shields Gazette, 2026). Isak struggled to make a telling impact -- his best sight of goal, a second-half effort from the edge of the box, drifted wide to loud cheers from the stands -- but as he left the field after Szoboszlai's equaliser, he offered the crowd a small, pointed wink on his way down the tunnel (AOL, 2026). \"I think he expected a little bit the atmosphere, I don't think it has been a big surprise for him,\" Iraola said afterwards, adding that his forward \"has tried everything, has given us good positions... has continued pushing on in the game, fighting\" (Shields Gazette, 2026).",
+      "What Jaissle and Iraola said afterwards",
+      "\"Hard luck, I would say. I'm really, really happy with the performance after such a short amount of time,\" Jaissle said of a debut that had promised more than a point (Sky Sports, 2026). Iraola, for his part, pointed to a familiar problem even amid the relief of a leveller: \"There are different reasons why we conceded both goals, even though both are transitions... You don't want to concede transitions\" (Liverpool FC, 2026).",
+      "Both managers were making competitive bows in the job: Jaissle, poached from Saudi champions Al-Ahli to replace Eddie Howe (Yahoo Sports, 2026), and Iraola, who succeeded Arne Slot after leaving Bournemouth over the summer (Sky Sports, 2026). Two sides in transition shared the spoils on an afternoon that had almost everything -- goals, controversy and a stoppage-time twist neither manager could have scripted for their first game in charge."
+    ],
+    sources: [
+      { label: "Sky Sports -- Newcastle 2-2 Liverpool: Match Report & Highlights", url: "https://www.skysports.com/football/newcastle-united-vs-liverpool/report/559452" },
+      { label: "NBC Sports -- Newcastle vs Liverpool live updates: Score, goals, highlights, stats", url: "https://www.nbcsports.com/soccer/live/newcastle-vs-liverpool-live-updates-score-goals-highlights-stats-2026-august-23" },
+      { label: "Liverpool FC -- In full: Andoni Iraola's press conference after Newcastle United 2-2 Liverpool", url: "https://www.liverpoolfc.com/news/full-andoni-iraolas-press-conference-after-newcastle-united-2-2-liverpool" },
+      { label: "Shields Gazette -- Alexander Isak's hostile Newcastle United reception on return with Liverpool", url: "https://www.shieldsgazette.com/sport/football/newcastle-united/alexander-isak-newcastle-united-liverpool-st-james-park-return-8937088" },
+      { label: "AOL -- Alexander Isak's subtle action to Newcastle fans after Liverpool's late equaliser", url: "https://www.aol.co.uk/articles/alexander-isaks-subtle-action-newcastle-210656000.html" },
+      { label: "Yahoo Sports -- Insight into new Newcastle United boss Matthias Jaissle", url: "https://sports.yahoo.com/articles/insight-newcastle-united-boss-matthias-074011284.html" }
+    ],
+    players: [],
+    teams: ["Newcastle United", "Liverpool"],
+    featured: true
+},
+{
     id: 35,
     title: "Brentford 3-0 Tottenham Hotspur: Bees Stun De Zerbi on Opening Day",
     type: "Match Report",

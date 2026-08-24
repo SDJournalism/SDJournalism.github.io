@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Sun, 23 Aug 2026 07:08:29 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 09:25:29 GMT</lastBuildDate>
+  <item>
+    <title>The Alexander Isak Backlash: Newcastle&apos;s Anger Is Aimed at the Wrong Target</title>
+    <link>https://sdjournalism.github.io/articles/37.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/37.html</guid>
+    <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Opinion</category>
+    <description>Alexander Isak was jeered from his first touch on his return to St James&apos; Park, cheered when his shot went wide, and accused online of bottling a penalty he wasn&apos;t even asked to take. None of that changes who actually forced this transfer to drag on all summer.</description>
+  </item>
+  <item>
+    <title>Newcastle 2-2 Liverpool: Szoboszlai&apos;s Late Penalty Rescues a Point on Iraola&apos;s Debut</title>
+    <link>https://sdjournalism.github.io/articles/36.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/36.html</guid>
+    <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Dominik Szoboszlai&apos;s stoppage-time penalty rescued a 2-2 draw for Liverpool at St James&apos; Park, as Andoni Iraola&apos;s first game in charge and Matthias Jaissle&apos;s competitive Newcastle debut both ended in chaotic, contentious fashion.</description>
+  </item>
   <item>
     <title>Brentford 3-0 Tottenham Hotspur: Bees Stun De Zerbi on Opening Day</title>
     <link>https://sdjournalism.github.io/articles/35.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
     <category>Match Report</category>
     <description>Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.</description>
-  </item>
-  <item>
-    <title>Xabi Alonso: The Back-Three Reset (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/xabi-alonso-back-three-reset.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>The manager who took Bayer Leverkusen through an entire Bundesliga season unbeaten is now rebuilding Chelsea around the same back-three principles. How the system that produced a 51-game unbeaten run is landing at Stamford Bridge.</description>
-  </item>
-  <item>
-    <title>Bukayo Saka: The Sudden Stop (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/saka-sudden-stop.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>It isn&apos;t top speed that makes Bukayo Saka unstoppable on the right -- it&apos;s how fast he can stop. The elite deceleration and change of direction that has made him Arsenal&apos;s most reliable attacking outlet since 2019.</description>
   </item>
 </channel>
 </rss>
