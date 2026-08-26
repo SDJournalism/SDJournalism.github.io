@@ -183,34 +183,10 @@ nav.site-nav a.active {
   border-bottom-color: var(--gold);
 }
 
-/* ---------- Quick search (header button + Cmd/Ctrl+K modal) ----------
-   Built entirely by initQuickSearch() in site.js -- the button and
-   modal are both injected by JS, nothing to add to any HTML file. */
-.quick-search-trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-left: 4px;
-  padding: 4px 7px;
-  background: none;
-  border: 1px solid var(--line);
-  color: var(--ink-soft);
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.quick-search-trigger:hover { color: var(--ink); border-color: var(--ink-soft); }
-
-.quick-search-kbd {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.04em;
-}
-
-@media (max-width: 640px) {
-  .quick-search-kbd { display: none; }
-}
-
+/* ---------- Quick search (Cmd/Ctrl+K modal, no visible button) ----------
+   Built entirely by initQuickSearch() in site.js -- deliberately has
+   no header/nav button, keyboard shortcut only. Nothing to add to
+   any HTML file. */
 .quick-search-backdrop {
   display: none;
   position: fixed;

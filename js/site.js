@@ -2484,19 +2484,11 @@ function quickSearchMatches(query) {
 }
 
 function initQuickSearch() {
-  const nav = document.querySelector(".site-nav");
-  if (!nav || document.getElementById("quick-search-trigger")) return;
+  // No visible button anywhere -- Cmd/Ctrl+K only, on purpose.
+  if (document.querySelector(".quick-search-backdrop")) return;
 
   const inSubfolder = /\/(articles|tactical-lab)\/[^/]+$/.test(window.location.pathname);
   const prefix = inSubfolder ? "../" : "";
-
-  const trigger = document.createElement("button");
-  trigger.type = "button";
-  trigger.id = "quick-search-trigger";
-  trigger.className = "quick-search-trigger";
-  trigger.setAttribute("aria-label", "Search the site");
-  trigger.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="quick-search-kbd">\u2318K</span>`;
-  nav.appendChild(trigger);
 
   const backdrop = document.createElement("div");
   backdrop.className = "quick-search-backdrop";
@@ -2568,7 +2560,6 @@ function initQuickSearch() {
   input.addEventListener("input", () => renderResults(quickSearchMatches(input.value)));
   backdrop.addEventListener("click", (e) => { if (e.target === backdrop) close(); });
   backdrop.querySelector(".quick-search-close").addEventListener("click", close);
-  trigger.addEventListener("click", open);
 
   document.addEventListener("keydown", (e) => {
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {
