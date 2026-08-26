@@ -869,6 +869,7 @@ const SITEMAP_PAGES = [
   { key: "articles", label: "Articles", href: "articles.html" },
   { key: "tactical-lab", label: "Tactical Lab", href: "tactical-lab.html" },
   { key: "about", label: "About", href: "about.html" },
+  { key: "work-with-me", label: "Work With Me", href: "work-with-me.html" },
   { key: "contact", label: "Contact", href: "contact.html" }
 ];
 
@@ -928,6 +929,7 @@ function renderMegaFooter(containerId, currentPage) {
       <div class="mega-footer-bottom-right">
         <a href="mailto:${siteConfig.email}">${siteConfig.email}</a>
         ${textSizeToggleHTML()}
+        ${focusModeToggleHTML()}
         ${THEME_TOGGLE_HTML}
       </div>
     </div>
@@ -1014,6 +1016,51 @@ document.addEventListener("click", (e) => {
   const btn = e.target.closest("#text-size-toggle");
   if (!btn) return;
   cycleTextSize();
+});
+
+/* ============================================================
+   FOCUS MODE (footer toggle, sitewide)
+   ------------------------------------------------------------
+   Hides the top nav bar and, on an article/Tactical Lab page,
+   the related-articles, share and reactions/save blocks too -- a
+   quieter, distraction-free reading view. Persisted the same way
+   as dark mode and text size, and lives right next to those two
+   toggles in the footer (see renderMegaFooter). Self-initializing,
+   no per-page setup needed.
+   ============================================================ */
+
+function isFocusModeOn() {
+  try { return localStorage.getItem("sd-focus-mode") === "on"; } catch (e) { return false; }
+}
+
+function applyFocusMode(on) {
+  if (on) document.documentElement.setAttribute("data-focus", "on");
+  else document.documentElement.removeAttribute("data-focus");
+
+  const btn = document.getElementById("focus-mode-toggle");
+  if (!btn) return;
+  const label = btn.querySelector(".focus-toggle-label");
+  if (label) label.textContent = on ? "Exit focus mode" : "Focus mode";
+  btn.setAttribute("aria-pressed", String(on));
+}
+
+function focusModeToggleHTML() {
+  const on = isFocusModeOn();
+  return `
+    <button class="focus-toggle-btn" id="focus-mode-toggle" type="button" aria-pressed="${on}" aria-label="Toggle focus mode (hides the nav bar for distraction-free reading)">
+      <span class="focus-toggle-label">${on ? "Exit focus mode" : "Focus mode"}</span>
+    </button>
+  `;
+}
+
+applyFocusMode(isFocusModeOn());
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("#focus-mode-toggle");
+  if (!btn) return;
+  const next = !isFocusModeOn();
+  try { localStorage.setItem("sd-focus-mode", next ? "on" : "off"); } catch (err) {}
+  applyFocusMode(next);
 });
 
 /* ============================================================
@@ -2303,3 +2350,261 @@ function initFormationLightbox() {
 }
 
 initFormationLightbox();
+
+/* ============================================================
+   FORM GUIDE (Match Report pages only)
+   ------------------------------------------------------------
+   Reads every Match Report in articles-data.js and, only on a
+   Match Report page, shows each of that match's two teams' recent
+   results here on the site (NOT a full real-world record -- just
+   however many Match Reports exist for that team so far) as a
+   strip of coloured W/D/L dots, ending with the match this page is
+   about. Runs automatically on every page; finds nothing to do
+   anywhere else. Keep a team's name spelled exactly the same way
+   in every scoreline (always "Manchester United", never sometimes
+   "Man Utd") or the guide won't recognise it's the same team.
+   ============================================================ */
+
+function parseScoreline(scoreline) {
+  if (!scoreline) return null;
+  const m = scoreline.match(/^(.+?)\s+(\d+)\s*[-\u2013]\s*(\d+)\s+(.+)$/);
+  if (!m) return null;
+  return { teamA: m[1].trim(), scoreA: parseInt(m[2], 10), scoreB: parseInt(m[3], 10), teamB: m[4].trim() };
+}
+
+function resultForTeam(parsed, teamName) {
+  if (!parsed || !teamName) return null;
+  const norm = s => s.trim().toLowerCase();
+  if (norm(parsed.teamA) === norm(teamName)) {
+    return parsed.scoreA > parsed.scoreB ? "W" : parsed.scoreA < parsed.scoreB ? "L" : "D";
+  }
+  if (norm(parsed.teamB) === norm(teamName)) {
+    return parsed.scoreB > parsed.scoreA ? "W" : parsed.scoreB < parsed.scoreA ? "L" : "D";
+  }
+  return null;
+}
+
+function teamFormStrip(teamName, currentArticleId) {
+  const rows = (typeof articles !== "undefined" ? articles : [])
+    .filter(a => a.type === "Match Report")
+    .map(a => ({ a, result: resultForTeam(parseScoreline(a.scoreline), teamName) }))
+    .filter(x => x.result)
+    .sort((x, y) => new Date(x.a.date) - new Date(y.a.date));
+
+  return rows.slice(-5).map(x => ({ result: x.result, isCurrent: x.a.id === currentArticleId }));
+}
+
+const FORM_RESULT_LABEL = { W: "Win", D: "Draw", L: "Loss" };
+
+function formGuideTeamHTML(teamName, currentArticleId) {
+  const dots = teamFormStrip(teamName, currentArticleId);
+  if (!dots.length) return "";
+  const dotsHtml = dots.map(d => {
+    const title = FORM_RESULT_LABEL[d.result] + (d.isCurrent ? " -- this match" : "");
+    return `<span class="form-dot form-dot-${d.result}${d.isCurrent ? " form-dot-current" : ""}" title="${title}">${d.result}</span>`;
+  }).join("");
+  return `
+    <div class="form-guide-team">
+      <span class="form-guide-team-name">${escapeHtml(teamName)}</span>
+      <span class="form-guide-dots">${dotsHtml}</span>
+    </div>`;
+}
+
+function initFormGuide() {
+  const meta = getCurrentContentMeta();
+  if (!meta || meta.kind !== "article" || meta.item.type !== "Match Report") return;
+
+  const parsed = parseScoreline(meta.item.scoreline);
+  if (!parsed) return;
+
+  const teamsHtml = [
+    formGuideTeamHTML(parsed.teamA, meta.item.id),
+    formGuideTeamHTML(parsed.teamB, meta.item.id)
+  ].join("");
+  if (!teamsHtml) return;
+
+  const bodyText = document.querySelector(".detail.open .body-text");
+  if (!bodyText) return;
+
+  bodyText.insertAdjacentHTML("beforebegin", `
+    <div class="form-guide">
+      <span class="eyebrow">Recent Form</span>
+      ${teamsHtml}
+      <p class="form-guide-note">Based on matches covered on this site -- most recent (including this one) on the right.</p>
+    </div>
+  `);
+}
+
+initFormGuide();
+
+/* ============================================================
+   QUICK SEARCH (Cmd/Ctrl+K, sitewide)
+   ------------------------------------------------------------
+   Searches whatever article/Tactical Lab data the CURRENT page
+   happens to have loaded (some pages only load one data file, or
+   neither -- see the <script> tags at the bottom of each page).
+   Self-initializing: builds its own header button and modal, no
+   per-page setup needed.
+   ============================================================ */
+
+function quickSearchIndex() {
+  const items = [];
+  if (typeof articles !== "undefined") {
+    articles.forEach(a => items.push({
+      title: a.title,
+      excerpt: a.excerpt || "",
+      type: a.type,
+      href: `articles/${a.id}.html`
+    }));
+  }
+  if (typeof tacticalLabEntries !== "undefined") {
+    tacticalLabEntries.forEach(e => {
+      if (e.comingSoon) return;
+      items.push({
+        title: e.title,
+        excerpt: e.excerpt || "",
+        type: "Tactical Lab",
+        href: `tactical-lab/${e.id}.html`
+      });
+    });
+  }
+  return items;
+}
+
+function quickSearchMatches(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  return quickSearchIndex()
+    .filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.excerpt.toLowerCase().includes(q) ||
+      item.type.toLowerCase().includes(q)
+    )
+    .slice(0, 8);
+}
+
+function initQuickSearch() {
+  const nav = document.querySelector(".site-nav");
+  if (!nav || document.getElementById("quick-search-trigger")) return;
+
+  const inSubfolder = /\/(articles|tactical-lab)\/[^/]+$/.test(window.location.pathname);
+  const prefix = inSubfolder ? "../" : "";
+
+  const trigger = document.createElement("button");
+  trigger.type = "button";
+  trigger.id = "quick-search-trigger";
+  trigger.className = "quick-search-trigger";
+  trigger.setAttribute("aria-label", "Search the site");
+  trigger.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="quick-search-kbd">\u2318K</span>`;
+  nav.appendChild(trigger);
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "quick-search-backdrop";
+  backdrop.innerHTML = `
+    <div class="quick-search-modal" role="dialog" aria-modal="true" aria-label="Search">
+      <div class="quick-search-input-row">
+        <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="text" class="quick-search-input" placeholder="Search articles and Tactical Lab..." aria-label="Search">
+        <button type="button" class="quick-search-close">Esc</button>
+      </div>
+      <div class="quick-search-results"></div>
+    </div>
+  `;
+  document.body.appendChild(backdrop);
+
+  const input = backdrop.querySelector(".quick-search-input");
+  const resultsEl = backdrop.querySelector(".quick-search-results");
+  let activeIndex = -1;
+
+  function renderResults(matches) {
+    activeIndex = matches.length ? 0 : -1;
+    if (!input.value.trim()) {
+      resultsEl.innerHTML = `<p class="quick-search-empty">Start typing to search every article and Tactical Lab piece.</p>`;
+      return;
+    }
+    if (!matches.length) {
+      resultsEl.innerHTML = `<p class="quick-search-empty">No matches.</p>`;
+      return;
+    }
+    resultsEl.innerHTML = matches.map((m, i) => `
+      <a class="quick-search-result${i === 0 ? " is-active" : ""}" href="${prefix}${m.href}">
+        <span class="type-pill">${escapeHtml(m.type)}</span>
+        <span class="quick-search-result-title">${escapeHtml(m.title)}</span>
+      </a>
+    `).join("");
+  }
+
+  function setActive(index) {
+    const links = resultsEl.querySelectorAll(".quick-search-result");
+    if (!links.length) return;
+    activeIndex = (index + links.length) % links.length;
+    links.forEach((el, i) => el.classList.toggle("is-active", i === activeIndex));
+    links[activeIndex].scrollIntoView({ block: "nearest" });
+  }
+
+  function open() {
+    backdrop.classList.add("open");
+    input.value = "";
+    renderResults([]);
+    document.addEventListener("keydown", onKeydown);
+    setTimeout(() => input.focus(), 10);
+  }
+
+  function close() {
+    backdrop.classList.remove("open");
+    document.removeEventListener("keydown", onKeydown);
+  }
+
+  function onKeydown(e) {
+    if (e.key === "Escape") { close(); return; }
+    if (e.key === "ArrowDown") { e.preventDefault(); setActive(activeIndex + 1); return; }
+    if (e.key === "ArrowUp") { e.preventDefault(); setActive(activeIndex - 1); return; }
+    if (e.key === "Enter") {
+      const active = resultsEl.querySelector(".quick-search-result.is-active");
+      if (active) { e.preventDefault(); window.location.href = active.getAttribute("href"); }
+    }
+  }
+
+  input.addEventListener("input", () => renderResults(quickSearchMatches(input.value)));
+  backdrop.addEventListener("click", (e) => { if (e.target === backdrop) close(); });
+  backdrop.querySelector(".quick-search-close").addEventListener("click", close);
+  trigger.addEventListener("click", open);
+
+  document.addEventListener("keydown", (e) => {
+    if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      if (backdrop.classList.contains("open")) close(); else open();
+    }
+  });
+}
+
+initQuickSearch();
+
+/* ============================================================
+   "WORK WITH ME" NAV LINK (injected everywhere)
+   ------------------------------------------------------------
+   Added via JS, the same way the footer is, so every current page
+   -- and any new article/Tactical Lab page created from now on --
+   picks it up automatically without the <nav class="site-nav">
+   block needing to be hand-edited in dozens of HTML files.
+   ============================================================ */
+
+(function injectWorkWithMeNavLink() {
+  const nav = document.querySelector(".site-nav");
+  if (!nav || nav.querySelector(".nav-work-link")) return;
+
+  const inSubfolder = /\/(articles|tactical-lab)\/[^/]+$/.test(window.location.pathname);
+  const href = `${inSubfolder ? "../" : ""}work-with-me.html`;
+  const isActive = /\/work-with-me\.html$/.test(window.location.pathname);
+
+  const link = document.createElement("a");
+  link.href = href;
+  link.className = "nav-work-link" + (isActive ? " active" : "");
+  link.textContent = "Work With Me";
+
+  const contactLink = Array.from(nav.querySelectorAll("a"))
+    .find(a => /contact\.html$/.test(a.getAttribute("href") || ""));
+
+  if (contactLink) nav.insertBefore(link, contactLink);
+  else nav.appendChild(link);
+})();

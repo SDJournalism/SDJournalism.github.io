@@ -27,6 +27,18 @@
    - excerpt      : a short 1-2 sentence summary shown on the card
    - content      : the full article. Write each paragraph inside
                      its own set of quote marks, separated by commas.
+                     To make one line stand out as a big styled
+                     pull quote, add it a SECOND time as its own
+                     paragraph starting with ">> " -- right after
+                     the paragraph it came from. E.g. if a paragraph
+                     already contains: he said "it's now or never"
+                     -- add a new paragraph straight after it that
+                     just says: ">> It's now or never." Use this
+                     VERY sparingly -- one, maybe two per article,
+                     only for the single best-worded, most important
+                     line. This only takes effect when the article
+                     is (re)generated with the generator script, not
+                     for hand-edited pages.
    - featured     : true or false
    - premium      : optional, true or false. If true, only the first
                      paragraph shows publicly.

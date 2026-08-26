@@ -22,8 +22,8 @@
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact -- Samuel Davies</title>
-<meta name="description" content="Get in touch with Samuel Davies -- football writer, available for story tips, feedback and freelance work.">
+<title>Work With Me -- Samuel Davies</title>
+<meta name="description" content="Samuel Davies is available for freelance football writing -- match reports, tactical analysis, previews and opinion pieces.">
 
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -33,13 +33,13 @@
 <meta name="theme-color" content="#14224B">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://sdjournalism.github.io/contact.html">
-<meta property="og:title" content="Contact -- Samuel Davies">
-<meta property="og:description" content="Get in touch with Samuel Davies -- football writer, available for story tips, feedback and freelance work.">
+<meta property="og:url" content="https://sdjournalism.github.io/work-with-me.html">
+<meta property="og:title" content="Work With Me -- Samuel Davies">
+<meta property="og:description" content="Samuel Davies is available for freelance football writing -- match reports, tactical analysis, previews and opinion pieces.">
 <meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact -- Samuel Davies">
-<meta name="twitter:description" content="Get in touch with Samuel Davies -- football writer, available for story tips, feedback and freelance work.">
+<meta name="twitter:title" content="Work With Me -- Samuel Davies">
+<meta name="twitter:description" content="Samuel Davies is available for freelance football writing -- match reports, tactical analysis, previews and opinion pieces.">
 <meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
 
 <!-- Google Analytics -- replace G-F6G9RSG4MN with your real Measurement ID from analytics.google.com -->
@@ -73,33 +73,35 @@
       <a href="articles.html">Articles</a>
       <a href="tactical-lab.html">Tactical Lab</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
       <a href="saved.html" class="nav-saved-link">Saved</a>
     </nav>
   </div>
 </header>
 
 <div id="main-content" class="wrap contact-layout">
-  <div class="contact-hero">
-    <span class="eyebrow">Get in touch</span>
-    <h1>Story tip, feedback, or just want to talk football?</h1>
-    <a class="mailto-btn" id="mailto-button" href="#">Email me &rarr;</a>
-    <p class="contact-note">Clicking this opens your own email app with my address already filled in -- nothing gets sent from here directly.</p>
+  <div class="contact-hero freelance-hero">
+    <span class="eyebrow">Work with me</span>
+    <a href="contact.html" class="availability-badge"><span class="pulse-dot"></span> Available for freelance work</a>
+    <h1>Open for freelance football writing</h1>
+    <p class="contact-note" style="margin-bottom:18px;">Match reports, tactical analysis, previews and opinion pieces -- available for commission or ongoing contributor work.</p>
+    <a class="mailto-btn" href="contact.html">Get in touch &rarr;</a>
   </div>
 
-  <div class="tag-row" id="contact-tags"></div>
-
-  <div class="contact-hero patreon-hero" id="patreon-promo"></div>
-
-  <div id="support-section">
+  <div id="coverage-section">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Prefer a one-off?</span>
-        <h2>Send a tip</h2>
+        <span class="eyebrow">What I cover</span>
+        <h2>Coverage</h2>
       </div>
     </div>
-    <p class="contact-note" style="margin-bottom:16px;">If you enjoy what I write, you can support it directly here -- no obligation at all.</p>
-    <div class="tag-row" id="support-tags"></div>
+    <ul class="coverage-list" id="coverage-list"></ul>
+  </div>
+
+  <div class="contact-hero" style="margin-top:60px;">
+    <span class="eyebrow">Prefer to support instead?</span>
+    <h2>Back the writing directly</h2>
+    <p class="contact-note">If you'd rather support independent coverage than commission a piece, Patreon membership and one-off tips are on the <a href="contact.html#support-section" class="read-link">support page &rarr;</a></p>
   </div>
 </div>
 
@@ -111,12 +113,9 @@
 <script src="js/site.js"></script>
 <script src="js/theme.js"></script>
 <script>
-  const mailBtn = document.getElementById("mailto-button");
-  mailBtn.href = `mailto:${siteConfig.email}?subject=Hello%20from%20your%20website`;
-  renderContactTags("contact-tags");
-  renderPatreonPromo("patreon-promo");
-  renderSupportTags("support-tags", "support-section");
-  renderMegaFooter("mega-footer", "contact");
+  document.getElementById("coverage-list").innerHTML =
+    (siteConfig.coverage || []).map(item => `<li>${item}</li>`).join("");
+  renderMegaFooter("mega-footer", "work-with-me");
   renderKicker();
   initThemeToggle("theme-toggle");
   initAutoTheme();
