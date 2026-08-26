@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles -- Samuel Davies</title>
+<meta name="description" content="Match previews, match reports, tactical analysis and opinion pieces from Samuel Davies, football writer.">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14224B">
+<link rel="alternate" type="application/rss+xml" title="Samuel Davies -- RSS Feed" href="rss.xml">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjournalism.github.io/articles.html">
+<meta property="og:title" content="Articles -- Samuel Davies">
+<meta property="og:description" content="Match previews, match reports, tactical analysis and opinion pieces from Samuel Davies, football writer.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Articles -- Samuel Davies">
+<meta name="twitter:description" content="Match previews, match reports, tactical analysis and opinion pieces from Samuel Davies, football writer.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -- replace G-F6G9RSG4MN with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="index.html">
+      <img src="images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html" class="active">Articles</a>
+      <a href="tactical-lab.html">Tactical Lab</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow" id="articles-eyebrow">All articles</span>
+      <h2 id="articles-heading">Match previews, reports, analysis, scouting &amp; opinion</h2>
+      <p class="section-description" id="articles-description">Every piece published so far, covering the Premier League and Europe's top competitions.</p>
+    </div>
+
+    <aside class="stats-panel" id="stats-panel">
+      <span class="eyebrow">By the numbers</span>
+      <div class="stats-panel-value" id="stats-value"></div>
+      <div class="stats-panel-label" id="stats-label"></div>
+    </aside>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" data-filter="All">All</button>
+    <button class="filter-btn" data-filter="Match Preview">Match Preview</button>
+    <button class="filter-btn" data-filter="Match Report">Match Report</button>
+    <button class="filter-btn" data-filter="Analysis">Analysis</button>
+    <button class="filter-btn" data-filter="Opinion">Opinion</button>
+    <button class="filter-btn" data-filter="Scouting Report">Scouting Report</button>
+  </div>
+
+  <div class="dropdown-filter-row">
+    <select id="team-filter" class="dropdown-filter"></select>
+    <select id="competition-filter" class="dropdown-filter"></select>
+    <button id="reset-filters" class="reset-filters-btn is-inactive" type="button">Reset all filters &times;</button>
+  </div>
+
+  <div class="search-wrap">
+    <input type="text" id="article-search" class="search-input" placeholder="Search all articles...">
+    <button id="search-clear" class="search-clear-btn" type="button" aria-label="Clear search" hidden>&times;</button>
+  </div>
+
+  <div class="article-grid" id="article-grid">
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+  </div>
+  <div class="show-more-wrap">
+    <button id="article-show-more" class="show-more-btn" type="button">Show More</button>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="js/contact-info.js"></script>
+<script src="js/articles-data.js"></script>
+<script src="js/tactical-lab-data.js"></script>
+<script src="js/site.js"></script>
+<script src="js/theme.js"></script>
+<script>
+  renderArticleList();
+  setupFilters();
+  setupSearch();
+  setupResetFilters();
+  setupArticleShowMore();
+  renderTeamFilter("team-filter");
+  renderCompetitionFilter("competition-filter");
+  renderStatsPanel("stats-value", "stats-label");
+  renderMegaFooter("mega-footer", "articles");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+</script>
+</body>
+</html>

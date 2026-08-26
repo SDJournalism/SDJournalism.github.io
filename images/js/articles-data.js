@@ -1,0 +1,1434 @@
+/* ============================================================
+   ARTICLES -- EDIT THIS FILE TO ADD OR CHANGE YOUR ARTICLES
+   ============================================================
+   Every article on the site (home page "featured" section and
+   the full Articles page) comes from the list below.
+
+   HOW TO ADD A NEW ARTICLE:
+   1. Copy one whole block, from the opening { to the closing },
+      including the comma after it.
+   2. Paste it at the TOP of the list below (just after
+      "const articles = [").
+   3. Give it a new, unique id number (one higher than the
+      highest one currently used).
+   4. Fill in your own title, date, type, text etc. between the
+      quote marks.
+   5. Set "featured" to true if you want it to show on the home
+      page, or false if it should only appear on the Articles page.
+   6. Save the file. Refresh your website to see the new article.
+
+   FIELD GUIDE:
+   - id           : a unique number, never repeat one
+   - title        : the headline of your article
+   - type         : "Match Preview", "Match Report", "Analysis", "Opinion", or "Scouting Report"
+   - competition  : e.g. "Premier League", "Champions League"
+   - date         : format "YYYY-MM-DD" so articles sort correctly
+   - scoreline    : optional, e.g. "Spurs 2-1 Man City" (leave "" if none)
+   - excerpt      : a short 1-2 sentence summary shown on the card
+   - content      : the full article. Write each paragraph inside
+                     its own set of quote marks, separated by commas.
+                     To make one line stand out as a big styled
+                     pull quote, add it a SECOND time as its own
+                     paragraph starting with ">> " -- right after
+                     the paragraph it came from. E.g. if a paragraph
+                     already contains: he said "it's now or never"
+                     -- add a new paragraph straight after it that
+                     just says: ">> It's now or never." Use this
+                     VERY sparingly -- one, maybe two per article,
+                     only for the single best-worded, most important
+                     line. This only takes effect when the article
+                     is (re)generated with the generator script, not
+                     for hand-edited pages.
+   - featured     : true or false
+   - premium      : optional, true or false. If true, only the first
+                     paragraph shows publicly.
+   - players      : optional, only include a player here if the WHOLE
+                     article is specifically about them (a profile,
+                     transfer deep-dive, etc.) -- not every player
+                     mentioned in passing. Powers the "players covered"
+                     stat on your About page. Leave as [] for
+                     articles that aren't focused on one player.
+   - teams        : optional, only include a club here if the WHOLE
+                     article is specifically about them -- not every
+                     club mentioned as an example or in passing.
+                     Powers the team filter dropdown on the Articles
+                     page. Leave as [] if the piece isn't focused on
+                     one club.
+   - kickoff      : optional, only used on type: "Match Preview" pieces.
+                     Format "YYYY-MM-DDTHH:MM:SS+01:00" (that last bit
+                     is the UK time offset -- "+01:00" for BST/summer,
+                     "+00:00" for GMT/winter). When set, the article
+                     page shows a live "Kicks off in..." countdown
+                     that automatically switches to "Kick-off has
+                     passed" once the time's up. Leave it out entirely
+                     for anything that isn't a match preview.
+   ============================================================ */
+
+const articles = [
+{
+    id: 39,
+    title: "Scouting Report: Jack Hinshelwood -- Brighton's Academy Graduate Announces Himself With a Brace",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-25",
+    scoreline: "",
+    image: "images/jackhinshelwood.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cz7w1pn7epvo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Jack Hinshelwood scored twice in four second-half minutes as Brighton put four goals past Aston Villa on the opening weekend -- a breakout moment for a homegrown midfielder Fabian Hurzeler has quietly been building toward first-team importance for two years.",
+    content: [
+      "Jack Hinshelwood scored twice inside a minute as Brighton put four goals past Aston Villa in the opening half-hour of the new season, the loudest possible statement yet from a player Fabian Hurzeler has spent two years building towards first-team importance (VAVEL, 2026).",
+      "Two headers in sixty seconds",
+      "Brighton were already 2-0 up inside 18 minutes -- an early Victor Lindelof own goal followed by Maxim De Cuyper finishing off a Georginio Rutter pass -- before Hinshelwood made it personal (VAVEL, 2026). He headed in a Diego Gomez delivery in the 30th minute, then did it again a minute later, capitalising on Brighton's relentless press to win the ball back and find space in the box for a second (VAVEL, 2026). Joao Gomes' 40th-minute red card, upheld on VAR review, ended any hope of a Villa response on the way to Brighton's biggest opening-day win in years.",
+      "A full-circle moment against Aston Villa",
+      "There was a neat symmetry to the opponent. Hinshelwood made his senior Brighton debut as a late substitute against Aston Villa in May 2023, in a 2-1 defeat at Villa Park (Wikipedia, 2026). Three years on, against the same club, he scored his first Premier League brace -- and did it from a role his own manager still struggles to define.",
+      "Hurzeler's 'unique' problem",
+      "\"I need to speak to him if he says it's unique, what he means by that,\" Hurzeler said afterwards, only half-joking about how Hinshelwood himself describes his job in Brighton's midfield (Sussex Express, 2026). The serious point underneath it stood: \"he's not that guy who needs that many ball touches to create the danger in an opponent's box... he's very intense against the ball, he made another step during pre-season, therefore I'm quite happy with him\" (Sussex Express, 2026).",
+      "Built to arrive in the box late",
+      "That description matches what Brighton have been developing since Hinshelwood joined their academy at seven years old: a central midfielder comfortable both screening the back line and arriving late into the penalty area, rather than someone who needs to dictate every phase of possession to be effective (Read Brighton, 2026). It is a profile suited to exactly the kind of goals he scored against Villa -- both headers, both from good delivery rather than build-up play he was central to.",
+      "Already an England Under-21 champion",
+      "The international pedigree is already there. Hinshelwood has represented England from under-18 to under-21 level, and played every minute of the final as England won the 2025 UEFA European Under-21 Championship against Germany (Wikipedia, 2026). Football runs in the family, too -- his great-grandfather, grandfather and father were all professional players before him (Read Brighton, 2026). At 21, with a first Premier League brace now on his resume and a manager already talking about his development, the pathway from promising academy graduate to first-team fixture looks close to complete."
+    ],
+    sources: [
+      { label: "VAVEL -- Hinshelwood double as Brighton Hove Albion rout Aston Villa 4-0", url: "https://www.vavel.com/en-us/soccer/2026/08/23/1268785-brighton-vs-aston-villa-live-score-in-premier-league.html" },
+      { label: "Wikipedia -- Jack Hinshelwood", url: "https://en.wikipedia.org/wiki/Jack_Hinshelwood" },
+      { label: "Sussex Express -- 'I need to speak to him' -- Fabian Hurzeler makes Jack Hinshelwood claim amid opening day brace", url: "https://www.sussexexpress.co.uk/sport/football/brighton-and-hove-albion/i-need-to-speak-to-him-fabian-hurzeler-makes-jack-hinshelwood-claim-amid-opening-day-brace-for-academy-graduate-8937002" },
+      { label: "Read Brighton -- Jack Hinshelwood: Brighton's homegrown star ready for next step", url: "https://readbrighton.com/2026/05/30/player-profile-jack-hinshelwood-brighton-news/" }
+    ],
+    players: ["Jack Hinshelwood"],
+    teams: ["Brighton & Hove Albion"],
+    featured: true
+},
+{
+    id: 38,
+    title: "Cole Palmer's Answer to Tuchel: A Goal, Two Assists and a Point to Prove",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-25",
+    scoreline: "",
+    image: "images/colepalmeranalysis.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/cole-palmer-chelsea-fc-champions-league-b1248365.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Cole Palmer scored one and set up two more as Chelsea beat Fulham on Xabi Alonso's first night in charge, just weeks after Thomas Tuchel left him out of England's World Cup squad over a season that had \"dipped\". Monday night looked like a very direct response.",
+    content: [
+      "Cole Palmer had waited months to answer Thomas Tuchel in public. He picked the biggest stage available -- Xabi Alonso's first game as Chelsea head coach -- and did it inside 49 minutes: a goal, two assists, and the fastest opening goal of any Premier League season opener on record, as Chelsea beat Fulham 3-2 at Craven Cottage (TNT Sports, 2026).",
+      "The pass that started the fastest opening",
+      "Palmer's first involvement came inside 35 seconds, slipping a through ball for Joao Pedro to convert -- the quickest opening goal of any Premier League season since records began, and as emphatic a start as Alonso could have asked for on his Chelsea debut (TNT Sports, 2026).",
+      "A second assist, then a goal himself",
+      "Fulham hit back through Josh King, but Palmer was involved again just before half-time, teeing up Morgan Rogers for Chelsea's second after Maxence Lacroix's ball across the box (TNT Sports, 2026). Four minutes into the second half, he added his own name to the scoresheet, running onto a pass from Joao Pedro and squeezing a finish through Bernd Leno's legs to make it 3-1, before Gonzalo Garcia's late reply made the scoreline tighter than the performance deserved (TNT Sports, 2026).",
+      "What Tuchel actually said about leaving him out",
+      "The context that made the performance pointed is what happened this summer. Palmer was left out of England's World Cup squad, with manager Thomas Tuchel citing a season that had dipped from the heights of the one before: \"I think he suffers from a lack of individual form within the club. He was not as decisive or as influential as he was in the last seasons\" (Yahoo Sports Snub, 2026). Tuchel added that Palmer's underlying numbers simply weren't strong enough to guarantee him a place \"no matter what\" (Yahoo Sports Snub, 2026).",
+      "Palmer's answer wasn't subtle",
+      "Palmer didn't dispute the decision publicly, but he didn't hide his feelings about it either. \"I know what I could have offered -- something different to what the manager has picked,\" he said at the time. \"It's like anything. If you're told you're essentially not good enough then you're going to want to prove people wrong\" (Yahoo Sports Snub, 2026).",
+      "Alonso sees a different level",
+      "Xabi Alonso, starting his own Chelsea reign, described Palmer's display in similarly pointed terms: \"I have really enjoyed his performance. He has played with responsibility, with maturity, but as well with freedom\" (Yahoo Sports Alonso, 2026). The one slight concern from the afternoon -- Palmer needing treatment for cramp late on -- was played down by Alonso as fatigue rather than injury, with the forward expected to be available for Chelsea's next game against Brighton (Heavy.com, 2026).",
+      "One match under a new manager doesn't erase a season Tuchel judged not good enough, and Palmer knows that better than anyone. But if this was supposed to be the summer he quietly absorbed the snub and moved on, Monday night suggested otherwise -- and Alonso now has to decide how much of his new Chelsea side is built around making the most of it."
+    ],
+    sources: [
+      { label: "TNT Sports -- Fulham 2-3 Chelsea: live commentary", url: "https://www.tntsports.co.uk/football/premier-league/2026-2027/live-fulham-chelsea_mtc21883295/live-commentary.shtml" },
+      { label: "Yahoo Sports Snub -- 'I could've offered something different' -- Chelsea star Cole Palmer speaks out on England World Cup squad snub", url: "https://sports.yahoo.com/articles/couldve-offered-something-different-chelsea-124448017.html" },
+      { label: "Yahoo Sports Alonso -- Fulham 2-3 Chelsea: What Alonso and Palmer said", url: "https://sports.yahoo.com/articles/fulham-2-3-chelsea-alonso-215343341.html" },
+      { label: "Heavy.com -- Chelsea's Xabi Alonso Announces Cole Palmer Injury News Minutes After Win vs. Fulham", url: "https://heavy.com/sports/soccer/premier-league/chelsea-fc/cole-palmer-injury-news-update-xabi-alonso/" }
+    ],
+    players: ["Cole Palmer"],
+    teams: ["Chelsea"],
+    featured: true
+},
+{
+    id: 37,
+    title: "The Alexander Isak Backlash: Newcastle's Anger Is Aimed at the Wrong Target",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-24",
+    scoreline: "",
+    image: "images/isakreception.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/alexander-isak-booed-newcastle-liverpool-premier-league-b3037808.html",
+    imageCredit: "Photo: The Independent",
+    excerpt: "Alexander Isak was jeered from his first touch on his return to St James' Park, cheered when his shot went wide, and accused online of bottling a penalty he wasn't even asked to take. None of that changes who actually forced this transfer to drag on all summer.",
+    content: [
+      "Alexander Isak's first touch back at St James' Park on Sunday was met with a chorus of boos that carried on, on and off, for the full ninety-plus minutes. When his one clear sight of goal drifted wide of the far post, the home end cheered louder than it had for almost anything else in the match (Shields Gazette, 2026). By full time, some supporters were accusing him online of \"bottling\" the stoppage-time penalty that earned Liverpool their point -- even though it was Dominik Szoboszlai, not Isak, who took it (Shields Gazette, 2026). None of it seemed to bother him much: as he trooped down the tunnel after the equaliser, Isak gave the crowd a small, deliberate wink (AOL, 2026).",
+      "How the transfer actually broke down",
+      "The anger has been building since last summer, when Isak's British-record £125m move from Newcastle to Liverpool turned into one of the ugliest transfer sagas the Premier League has seen in years (ESPN, 2026). Eddie Howe left Isak out of Newcastle's pre-season tour of Asia, citing a minor thigh injury, and the striker spent the following weeks training at his old club Real Sociedad rather than with his Newcastle teammates, missing the entire pre-season and the opening game of the campaign (ESPN, 2026). Isak eventually broke his silence on Instagram, writing that \"promises were made and the club has known my position for a long time... when promises are broken and trust is lost, the relationship can't continue\" (ESPN, 2026) -- a claim Newcastle's own statement at the time flatly denied, insisting no such promises had ever been made.",
+      "Even Howe wasn't told what was happening",
+      "What made the situation genuinely dysfunctional wasn't Isak's absence alone -- it was that Newcastle's own manager was reportedly left almost as in the dark as everyone else. \"The situation is far from ideal. It is quite complex,\" Howe said in early August, admitting he had learned about Liverpool's opening £110m bid through media reports rather than from the club (BBC Sport, 2026). Howe also said he had no direct contact with Isak during the standoff and was relying on the same news coverage as supporters to find out where his own player was training (BBC Sport, 2026). If the manager picking the team didn't know what was going on, it's hard to see why the anger over how messily it played out should land on the player rather than the executives running the process.",
+      "A ceiling almost no player turns down",
+      "Strip away the acrimony and the outcome was, for Isak, close to the best case a player in his position could hope for: a British transfer record, roughly £125m, and a move to a club that had just won the league the previous year, all while Newcastle's own statement insisted he was going nowhere (ESPN, 2026). Wanting that move, and pushing hard to get it once talks had stalled, is not an unusual response to a release clause and a boyhood-sized paycheque -- it is closer to how almost every big-money transfer saga in the modern game eventually resolves, however uncomfortable the middle part looks from the outside.",
+      "The wink was the only answer needed",
+      "Isak did not have a vintage game on Sunday -- Iraola admitted afterwards that his forward had \"a couple of situations to finish inside the box\" that weren't the clearest chances either of them wanted, while acknowledging the striker \"expected a little bit the atmosphere\" and that it \"has not been a big surprise for him\" (Shields Gazette, 2026). But the reception was never really about Sunday's ninety minutes. It was about a summer of frustration finally finding a target it could see in person, in a stadium, close enough to boo. Isak's answer was to keep working for the full match and then wink on his way down the tunnel -- which, given the actual chain of events that got him there, is a considerably more measured response than the one he received."
+    ],
+    sources: [
+      { label: "Shields Gazette -- Alexander Isak's hostile Newcastle United reception on return with Liverpool", url: "https://www.shieldsgazette.com/sport/football/newcastle-united/alexander-isak-newcastle-united-liverpool-st-james-park-return-8937088" },
+      { label: "AOL -- Alexander Isak's subtle action to Newcastle fans after Liverpool's late equaliser", url: "https://www.aol.co.uk/articles/alexander-isaks-subtle-action-newcastle-210656000.html" },
+      { label: "ESPN -- Alexander Isak, Liverpool and Newcastle United: the transfer saga, so far", url: "https://global.espn.com/football/story/_/id/46027433/alexander-isak-liverpool-line-newcastle-united-star-transfer-saga-far" },
+      { label: "BBC Sport -- Isak transfer situation 'far from ideal' -- Howe", url: "https://feeds.bbci.co.uk/sport/football/articles/ckgynrnyklxo" }
+    ],
+    players: ["Alexander Isak"],
+    teams: ["Newcastle United", "Liverpool"],
+    featured: true
+},
+{
+    id: 36,
+    title: "Newcastle 2-2 Liverpool: Szoboszlai's Late Penalty Rescues a Point on Iraola's Debut",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-24",
+    scoreline: "Newcastle United 2-2 Liverpool",
+    image: "images/newcastleliverpool.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/newcastle-vs-liverpool-fc-live-stream-latest-score-updates-result-premier-league-b1294360.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Dominik Szoboszlai's stoppage-time penalty rescued a 2-2 draw for Liverpool at St James' Park, as Andoni Iraola's first game in charge and Matthias Jaissle's competitive Newcastle debut both ended in chaotic, contentious fashion.",
+    content: [
+      "Dominik Szoboszlai's penalty deep into stoppage time salvaged a 2-2 draw for Liverpool at St James' Park on Sunday, as Andoni Iraola's first game in permanent charge and Matthias Jaissle's competitive debut as Newcastle manager both ended in chaotic, contentious fashion (Sky Sports, 2026). Both sides fielded heavily reshaped line-ups: Iraola's new-look Liverpool started summer signings Florian Wirtz, Milos Kerkez, Jeremie Frimpong and Alexander Isak, while Jaissle handed a full debut to new goalkeeper Hornicek (NBC Sports, 2026).",
+      "Elanga punishes an early mix-up",
+      "Newcastle were ahead inside five minutes, Anthony Elanga finishing after a mistake in the Liverpool half was worked into a clear sight of goal on the opening weekend of Iraola's reign (Sky Sports, 2026). It was the perfect start for Jaissle in his first game since replacing Eddie Howe, and it set the tone for a helter-skelter afternoon in the north-east.",
+      "Gakpo levels, Willock restores the lead",
+      "Liverpool's response came just after the hour, Cody Gakpo drilling a low finish from 20 yards to make it 1-1 (Sky Sports, 2026). The parity lasted three minutes: Joe Willock restored Newcastle's lead almost immediately, converting after good work down the left from summer signing Yoane Wissa, who arrived from Brentford (Sky Sports, 2026).",
+      "A 96th-minute penalty and a long VAR check",
+      "With Newcastle seemingly set to hold on for a first win of Jaissle's reign, Lewis Hall brought down Victor Munoz inside the penalty area deep into stoppage time, and the referee was sent to a lengthy VAR review before pointing to the spot (Sky Sports, 2026). Sky Sports also reported some gamesmanship from Newcastle's players in the moments before Szoboszlai stepped up (Sky Sports, 2026); the Hungarian was not to be put off, sending Hornicek the wrong way in the ninth minute of stoppage time to make it 2-2 (Sky Sports, 2026).",
+      "Isak's toughest audience gives him a wink back",
+      "The result meant Alexander Isak avoided defeat on his first return to St James' Park since his British-record £125m move from Newcastle to Liverpool last summer, though the reception from the home crowd was hostile throughout (Shields Gazette, 2026). Isak struggled to make a telling impact -- his best sight of goal, a second-half effort from the edge of the box, drifted wide to loud cheers from the stands -- but as he left the field after Szoboszlai's equaliser, he offered the crowd a small, pointed wink on his way down the tunnel (AOL, 2026). \"I think he expected a little bit the atmosphere, I don't think it has been a big surprise for him,\" Iraola said afterwards, adding that his forward \"has tried everything, has given us good positions... has continued pushing on in the game, fighting\" (Shields Gazette, 2026).",
+      "What Jaissle and Iraola said afterwards",
+      "\"Hard luck, I would say. I'm really, really happy with the performance after such a short amount of time,\" Jaissle said of a debut that had promised more than a point (Sky Sports, 2026). Iraola, for his part, pointed to a familiar problem even amid the relief of a leveller: \"There are different reasons why we conceded both goals, even though both are transitions... You don't want to concede transitions\" (Liverpool FC, 2026).",
+      "Both managers were making competitive bows in the job: Jaissle, poached from Saudi champions Al-Ahli to replace Eddie Howe (Yahoo Sports, 2026), and Iraola, who succeeded Arne Slot after leaving Bournemouth over the summer (Sky Sports, 2026). Two sides in transition shared the spoils on an afternoon that had almost everything -- goals, controversy and a stoppage-time twist neither manager could have scripted for their first game in charge."
+    ],
+    sources: [
+      { label: "Sky Sports -- Newcastle 2-2 Liverpool: Match Report & Highlights", url: "https://www.skysports.com/football/newcastle-united-vs-liverpool/report/559452" },
+      { label: "NBC Sports -- Newcastle vs Liverpool live updates: Score, goals, highlights, stats", url: "https://www.nbcsports.com/soccer/live/newcastle-vs-liverpool-live-updates-score-goals-highlights-stats-2026-august-23" },
+      { label: "Liverpool FC -- In full: Andoni Iraola's press conference after Newcastle United 2-2 Liverpool", url: "https://www.liverpoolfc.com/news/full-andoni-iraolas-press-conference-after-newcastle-united-2-2-liverpool" },
+      { label: "Shields Gazette -- Alexander Isak's hostile Newcastle United reception on return with Liverpool", url: "https://www.shieldsgazette.com/sport/football/newcastle-united/alexander-isak-newcastle-united-liverpool-st-james-park-return-8937088" },
+      { label: "AOL -- Alexander Isak's subtle action to Newcastle fans after Liverpool's late equaliser", url: "https://www.aol.co.uk/articles/alexander-isaks-subtle-action-newcastle-210656000.html" },
+      { label: "Yahoo Sports -- Insight into new Newcastle United boss Matthias Jaissle", url: "https://sports.yahoo.com/articles/insight-newcastle-united-boss-matthias-074011284.html" }
+    ],
+    players: [],
+    teams: ["Newcastle United", "Liverpool"],
+    featured: true
+},
+{
+    id: 35,
+    title: "Brentford 3-0 Tottenham Hotspur: Bees Stun De Zerbi on Opening Day",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-23",
+    scoreline: "Brentford 3-0 Tottenham Hotspur",
+    image: "images/spursbrentford.jpg",
+    imageLink: "https://www.skysports.com/football/news/11675/13565665/brentford-3-0-tottenham-big-spending-spurs-start-new-premier-league-season-with-dismal-defeat",
+    imageCredit: "Photo: Sky Sports",
+    excerpt: "Roberto De Zerbi's first game in charge of Tottenham ended in a chastening 3-0 defeat at Brentford, with Keane Lewis-Potter, Vitaly Janelt and Michael Kayode all scoring as Keith Andrews began life after Thomas Frank in perfect fashion.",
+    content: [
+      "Tottenham's Roberto De Zerbi era began with a chastening defeat as Brentford won 3-0 at the Gtech Community Stadium, Keane Lewis-Potter, Vitaly Janelt and Michael Kayode all scoring inside the first 49 minutes of Keith Andrews' first competitive game in charge (VAVEL, 2026).",
+      "Lewis-Potter strikes early",
+      "Brentford were ahead inside 12 minutes, Keane Lewis-Potter converting from close range after a mistake in the Tottenham half was worked into a clear sight of goal (VAVEL, 2026).",
+      "A Kinsky error doubles the lead",
+      "Vitaly Janelt made it two just after the half-hour mark, pouncing after Tottenham goalkeeper Antonin Kinsky was unable to hold a shot from distance (VAVEL, 2026). Lucas Bergvall was heavily involved in the build-up to both goals, one of several De Zerbi selection calls that backfired -- James Maddison and Mateus Fernandes were left out of the starting eleven altogether (NBC Sports Reaction, 2026).",
+      "Kayode adds a third after the break",
+      "Four minutes into the second half, Michael Kayode made it 3-0 with a spectacular finish from a corner, by which point Tottenham's afternoon had effectively been settled (VAVEL, 2026). Brentford almost had a fourth from the penalty spot, but Igor Thiago struck the post from twelve yards, sparing Tottenham further embarrassment (VAVEL, 2026).",
+      "De Zerbi makes changes, too late to matter",
+      "De Zerbi withdrew Bergvall and Callum Gallagher at half-time for Mateus Fernandes and Rodrigo Bentancur, and Tottenham did show some improvement without ever threatening a way back into the game -- they failed to register a single shot on target all afternoon, with Caoimhin Kelleher untroubled in the Brentford goal for long periods (NBC Sports Reaction, 2026).",
+      "What De Zerbi and Andrews said",
+      "\"We suffered physically but we knew that before the game. We were not ready to fight the duels... we didn't fight in the right way,\" De Zerbi admitted afterwards. \"We arrived too many times late and we lost too many duels to compete with Brentford... I expected better for sure. I didn't expect this result but I knew the problems we would find today\" (Goal.com, 2026). For Andrews, in his first Premier League game as a manager, the response from his players mattered as much as the result: energy and enthusiasm, he said, are \"the bare minimum for me\" (NBC Sports Andrews, 2026).",
+      "It is an alarming start for a Tottenham side that spent heavily over the summer with top-five ambitions, and De Zerbi -- inheriting a squad that finished 17th last season -- now has a fortnight before facing Newcastle to find some answers. For Brentford and Keith Andrews, life after Thomas Frank could not have started much better."
+    ],
+    sources: [
+      { label: "VAVEL -- A solid victory for the Bees: Highlights and goals of Brentford 3-0 Tottenham", url: "https://www.vavel.com/en-us/soccer/2026/08/22/1268685-brentford-vs-tottenham-live-score-premier-league.html" },
+      { label: "NBC Sports Reaction -- Roberto De Zerbi reaction: Tottenham Hotspur 'were not ready to fight' in Week 1 rout at Brentford", url: "https://www.nbcsports.com/soccer/news/roberto-de-zerbi-reaction-what-did-tottenham-hotspur-boss-say-after-brutal-debut-blowout" },
+      { label: "Goal.com -- Tottenham vs Brentford: Roberto De Zerbi quotes", url: "https://www.goal.com/en-ca/lists/tottenham-brentford-roberto-de-zerbi-quotes-/blt1e5662bd3192d3d2" },
+      { label: "NBC Sports Andrews -- Keith Andrews on Brentford: Energy and enthusiasm 'the bare minimum for me'", url: "https://www.nbcsports.com/watch/soccer/premier-league/keith-andrews-on-brentford-energy-and-enthusiasm-the-bare-minimum-for-me" }
+    ],
+    players: [],
+    teams: ["Brentford", "Tottenham Hotspur"],
+    featured: true
+},
+{
+    id: 34,
+    title: "Premier League Transfer Round-Up: Tottenham's Double Swoop Nears Completion as Baleba's Manchester United Move Gets There",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-23",
+    scoreline: "",
+    image: "images/aug23transferroundup.jpg",
+    imageLink: "https://www.aljazeera.com/sports/2026/8/18/barcelona-seal-deal-for-world-cup-winner-rodri-from-manchester-city",
+    imageCredit: "Photo: Al Jazeera",
+    excerpt: "With the summer window closing on 1 September, the past week has brought Savinho's Tottenham medical, real movement on Omar Marmoush, confirmation on Carlos Baleba's move to Manchester United, and fresh business at Villa Park, Old Trafford and Anfield.",
+    content: [
+      "With the Premier League window closing at 11pm on 1 September, the last week has moved several ongoing sagas closer to the finish line, plus a handful of fresh deals elsewhere in the division. Here's the latest on Tottenham's two pending arrivals, Carlos Baleba's move to Manchester United, and what else has been confirmed since.",
+      "Tottenham's double swoop nears completion",
+      "Savinho has completed his medical at Tottenham and is \"ready to proceed\", with an official announcement and media unveiling expected imminently, confirming the £85m deal first covered on this site last week (Yardbarker, 2026). Fellow arrival Omar Marmoush is further behind: personal terms with the Manchester City forward are already agreed as part of a swoop reported to be worth up to £140m combined, but the move is contingent on City coming through their next fixture without further injury setbacks (Yardbarker, 2026).",
+      "Baleba's move to Manchester United gets there",
+      "Carlos Baleba's move to Manchester United, also covered on this site, has been confirmed as done in all but formalities: Fabrizio Romano gave his trademark \"here we go\" on Friday, with an improved package of £65m plus £5m in add-ons agreed after United's original £65m bid was rejected. Baleba has been authorised to travel for a medical, with a long-term contract to follow (CaughtOffside, 2026).",
+      "Villa Park business continues",
+      "Aston Villa have added Johan Manzambi from Freiburg for £59.5m, days after selling defender Ezri Konsa to Arsenal for £55m as Unai Emery continues to reshape his squad (Sky Sports, 2026).",
+      "Midfield reinforcements at Old Trafford and Anfield",
+      "Manchester United's rebuild under Michael Carrick continues with Andrey Santos arriving from Chelsea for £50m and Youri Tielemans signing from Aston Villa for £35m, while Liverpool have added defender Jeremy Jacquet from Rennes for £60m and winger Victor Munoz from Osasuna for £34.5m as Andoni Iraola shapes his squad for the season ahead (Sky Sports, 2026).",
+      "With the window shutting on 1 September, expect plenty more to be confirmed before it does -- not least how Tottenham's two remaining deals are resolved. We'll have updates as they land."
+    ],
+    sources: [
+      { label: "Yardbarker -- Reports: Savinho completes Tottenham medical as Omar Marmoush deal hinges on Manchester City injury status", url: "https://www.yardbarker.com/soccer/articles/reports_savinho_completes_tottenham_medical_as_omar_marmoush_deal_hinges_on_manchester_city_injury_status/s1_17451_44206852" },
+      { label: "CaughtOffside -- Carlos Baleba to Manchester United: Fabrizio Romano confirms 'Here We Go'", url: "https://www.caughtoffside.com/2026/08/21/carlos-baleba-manchester-united-here-we-go-fabrizio-romano/" },
+      { label: "Sky Sports -- Transfer news: Summer transfer window 2026 - Premier League deals, ins and outs", url: "https://www.skysports.com/football/news/11095/13546618/transfer-news-summer-transfer-window-2026-premier-league-deals-ins-and-outs" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
+    id: 33,
+    title: "Arsenal 3-0 Coventry City: Havertz, Saka and Odegaard Launch the Title Defence in Style",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-22",
+    scoreline: "Arsenal 3-0 Coventry City",
+    image: "images/arsenalcovreport.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/arsenal-fc-vs-coventry-live-stream-latest-score-updates-result-premier-league-2026-b1294243.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Arsenal opened the defence of their Premier League title with a comfortable 3-0 win over newly promoted Coventry City at the Emirates, with Kai Havertz, Bukayo Saka and Martin Odegaard doing the damage inside the opening hour.",
+    content: [
+      "Arsenal began the defence of their Premier League title with a routine 3-0 win over newly promoted Coventry City at the Emirates Stadium, goals from Kai Havertz, Bukayo Saka and Martin Odegaard putting Mikel Arteta's side out of sight before half-time was even over (Sky Sports, 2026).",
+      "Havertz breaks the deadlock",
+      "Havertz gave Arsenal the lead in the 15th minute, sweeping in a fine finish after Riccardo Calafiori's low cross from the left picked him out inside the box. The goal briefly went to a VAR review for offside before being confirmed (Sky Sports, 2026) (Heavy.com, 2026).",
+      "Saka doubles the lead",
+      "Saka made it two just eight minutes later, tucking in after Coventry goalkeeper Carl Rushworth could only parry a fierce cross-shot from summer signing Christos Tzolis into his path. It capped an eye-catching Premier League debut for the Greek winger, who was directly involved in both of Arsenal's first-half goals (Sky Sports, 2026).",
+      "Odegaard adds gloss after the break",
+      "Arsenal's captain put the result beyond any realistic doubt four minutes into the second half, his shot from the right-hand channel deceiving Rushworth on its way in for a 3-0 lead that Coventry never threatened to overturn (Sky Sports, 2026).",
+      "A record no side wants",
+      "Coventry's afternoon was summed up by one remarkable statistic: Frank Lampard's side failed to make a single tackle in the entire first half, the first team to manage that since Opta began tracking the data in 2007. Their first challenge of the match did not arrive until the 69th minute, by which point the game was already gone. Gabriel Magalhaes and Coventry's Caleb Yirenkyi were both booked, and a Coventry penalty appeal in the 38th minute was waved away on review (Heavy.com, 2026).",
+      "What Arteta and Lampard said",
+      "\"We were really dominant and we flowed with the ball. Overall the performance was positive, with some big individual performances,\" Arteta said afterwards, pointing to the early understanding already forming between Saka, Odegaard and Ben White (Sky Sports, 2026). Odegaard was similarly satisfied with the platform his side has set: \"It was solid. We looked good, and the quality in the squad is unbelievable,\" he said, while also flagging room to improve (Sky Sports, 2026). For Lampard, the result was a reality check delivered on the biggest possible stage. \"It was a big learning curve,\" the Coventry manager admitted. \"There are Premier League debuts, there's noise here -- those are things you have to handle as a player\" (Sky Sports, 2026).",
+      "It is exactly the kind of statement win a champion is supposed to make on the opening weekend, and a reminder of the gap Coventry -- back in the top flight after 25 years away -- now have to close. Arsenal's title defence is up and running; theirs is only just beginning."
+    ],
+    sources: [
+      { label: "Sky Sports -- Arsenal 3-0 Coventry City: Match report & highlights", url: "https://www.skysports.com/football/arsenal-vs-coventry-city/559444" },
+      { label: "Heavy.com -- Arsenal vs Coventry Highlights: Gunners Leave Sky Blues With a Bitter Start", url: "https://heavy.com/sports/soccer/premier-league/arensal-fc/arsenal-vs-coventry-highlights-gunners-leave-sky-blues-with-a-bitter-start/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Coventry City"],
+    featured: true
+},
+{
+    id: 32,
+    title: "Premier League Weekend Preview: Iraola's Liverpool Era Begins at Newcastle as Matchweek One Continues",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-22",
+    scoreline: "",
+    image: "images/matchweek1.jpg",
+    imageLink: "https://www.reuters.com/sports/soccer/new-liverpool-boss-iraola-says-club-need-more-signings-ahead-new-season-2026-07-13/",
+    imageCredit: "Photo: Reuters",
+    excerpt: "Arsenal's win over Coventry got the season started on Friday night -- here's what to expect from the eight Premier League fixtures still to come across the rest of the opening weekend, headlined by Andoni Iraola's first game in charge of Liverpool at Newcastle.",
+    content: [
+      "Arsenal's 3-0 win over Coventry City on Friday night got the 2026/27 Premier League season under way, but the vast majority of Matchweek One is still to be played. Eight more fixtures unfold across Saturday and Sunday before Fulham host Chelsea on Monday night to close the round out -- here's what to expect from all of them.",
+      "Newcastle vs Liverpool: two new eras collide",
+      "Sunday's late-afternoon kick-off at St James' Park is the standout fixture of the weekend, and it pits two sides going through genuine transition against each other. Liverpool have appointed Andoni Iraola as their new head coach, poaching him from Bournemouth to replace Arne Slot after last season's disappointing fifth-place finish (Sky Sports, 2026). Iraola's first competitive game in charge arrives with Liverpool still working out life after Mohamed Salah, who is in talks to leave for Trabzonspor, and further departures in Ibrahima Konate and Andy Robertson (ESPN, 2026). Newcastle, meanwhile, hand German coach Matthias Jaissle his own Premier League bow after losing Anthony Gordon, Sandro Tonali and Bruno Guimaraes over the summer, with 20-year-old Bazoumana Toure -- a club-record £42.8m signing -- expected to be central to how they replace that creativity (Goal.com Newcastle, 2026). Liverpool have not lost any of their last 19 league meetings with Newcastle, but Newcastle have won six of their last nine home games in the fixture, a reminder that St James' Park is rarely straightforward (Goal.com Newcastle, 2026).",
+      "Manchester City look for an immediate response",
+      "Manchester City host Bournemouth on Sunday looking to put right their Community Shield defeat to Arsenal, a 3-0 loss in which Enzo Maresca's side conceded early and could not find a way back (Goal.com City, 2026). City will be without Rodri, Jack Grealish, Jeremy Doku and Matheus Nunes, while Bournemouth arrive with an even longer absentee list under new boss Marco Rose -- notable timing, given it was Bournemouth's own outgoing manager who has just taken over at Anfield (Goal.com City, 2026).",
+      "Carrick takes his Manchester United revival to Hull",
+      "Michael Carrick's first Premier League game since being handed the Manchester United job on a permanent basis comes away at newly promoted Hull City on Saturday lunchtime (Premier League, 2026). United's form under Carrick -- 12 wins from 17 Premier League games in interim charge, a run already covered in detail on this site -- makes Hull's return to the top flight after 25 years away as tough a re-entry as the fixture list could have handed them (Planet Football, 2026).",
+      "Spurs' new arrivals will have to wait",
+      "Tottenham's own summer business -- the £85m deal for Savinho and a continuing pursuit of Omar Marmoush, both covered on this site last week -- will not be on show at Brentford on Saturday. Reports suggest Savinho may not even have been registered in time to feature, and with Roberto De Zerbi's game plan for the trip already set, a full debut is regarded as more likely the following weekend, at home to Newcastle, once he has had a proper week of training with his new teammates (Yahoo Sports, 2026).",
+      "New managers, new tests",
+      "Saturday's early kick-off brings a first competitive test for Crystal Palace's Pierre Sage, who arrives at Everton having won a trophy at RC Lens last season and taking over a Palace squad that reports a clean bill of health heading into the opener (Goal.com Everton, 2026). David Moyes' Everton go in as the form side of the two, with pre-season wins that included a 3-1 win over Newcastle (Goal.com Everton, 2026). Elsewhere, Fabian Hurzeler's Brighton host Unai Emery's Aston Villa on Sunday off the back of three straight pre-season wins, though Villa hold the recent head-to-head edge, including a 4-3 comeback win in December 2025 (Goal.com Brighton, 2026). Brighton's absentee list is a long one, and includes Carlos Baleba -- still working his way back from the ankle injury that has delayed his move to Manchester United (Goal.com Brighton, 2026).",
+      "Two promoted sides, and a Yorkshire test",
+      "Newly promoted Ipswich Town host Sunderland at Portman Road on Saturday under Gary O'Neil, who arrives with rather better pre-season momentum than Regis Le Bris's visitors (Goal.com Ipswich, 2026). And at the City Ground, Oliver Glasner's Nottingham Forest welcome Daniel Farke's Leeds United, who head into the weekend on the back of four wins from five pre-season friendlies, including a 4-2 win over Liverpool, and will fancy their chances of an opening-day upset (Goal.com Forest, 2026).",
+      "Add Friday's Arsenal win to the mix, and it is as busy and unpredictable an opening weekend as the Premier League has served up in years -- three promoted clubs finding their feet, brand-new head coaches making their away-day bows at Newcastle and Everton, and Manchester City looking to shake off their Community Shield hangover. Fulham and Chelsea close the round out on Monday night."
+    ],
+    sources: [
+      { label: "Sky Sports -- Andoni Iraola: Liverpool appoint former Bournemouth boss as Arne Slot's successor", url: "https://www.skysports.com/football/news/11669/13550174/andoni-iraola-liverpool-appoint-former-bournemouth-boss-as-arne-slots-successor-on-two-year-deal" },
+      { label: "ESPN -- Ex-Liverpool star Mohamed Salah in talks to join Trabzonspor", url: "https://www.espn.com/soccer/story/_/id/49531510/mohamed-salah-transfer-trabzonspor-liverpool-egypt" },
+      { label: "Goal.com Newcastle -- Newcastle United vs Liverpool Premier League preview", url: "https://www.goal.com/en/news/newcastle-united-liverpool-premier-league-preview/blt8a1b76d6d787990e" },
+      { label: "Premier League -- All 380 fixtures for the 2026/27 Premier League season", url: "https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season" },
+      { label: "Goal.com City -- Manchester City vs AFC Bournemouth Premier League preview", url: "https://www.goal.com/en/news/manchester-city-afc-bournemouth-premier-league-preview/blt76e24fd099ffbe3b" },
+      { label: "Planet Football -- The amazing Premier League table since Michael Carrick took charge of Man Utd", url: "https://www.planetfootball.com/manchester-united/amazing-premier-league-table-carrick-manager" },
+      { label: "Yahoo Sports -- When could Savinho realistically make his Tottenham debut?", url: "https://sports.yahoo.com/articles/could-savinho-realistically-tottenham-debut-183001598.html" },
+      { label: "Goal.com Everton -- Everton vs Crystal Palace Premier League preview", url: "https://www.goal.com/en/news/everton-crystal-palace-premier-league-preview/bltb73d4fb734c12f69" },
+      { label: "Goal.com Brighton -- Brighton & Hove Albion vs Aston Villa Premier League preview", url: "https://www.goal.com/en/news/brighton-hove-albion-aston-villa-premier-league-preview/bltb8ba3290b85ca95b" },
+      { label: "Goal.com Ipswich -- Ipswich Town vs Sunderland Premier League preview", url: "https://www.goal.com/en/news/ipswich-town-sunderland-premier-league-preview/blt2859b8b04a2bb2bd" },
+      { label: "Goal.com Forest -- Nottingham Forest vs Leeds United Premier League preview", url: "https://www.goal.com/en/news/nottingham-forest-leeds-united-premier-league-preview/blt2fe4c478298a6ee1" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
+    id: 31,
+    title: "Carlos Baleba to Manchester United: Third Midfield Signing Nears Completion in Deal Worth Up to £65m",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-21",
+    scoreline: "",
+    image: "images/balebautd.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/carlos-baleba-manchester-united-transfer-news-brighton-b3035819.html",
+    imageCredit: "Photo: The Independent",
+    excerpt: "Manchester United are closing in on a deal worth up to £65m for Brighton's Carlos Baleba, their third midfield signing of the summer. Here's where the deal stands, and why the Cameroon international may take time to make an impact.",
+    content: [
+      "Manchester United are close to a full agreement with Brighton for Carlos Baleba, with the Cameroon international expected to travel for a medical once the paperwork is finalised on a deal reported to be worth in excess of £60m (Sky Sports, 2026).",
+      "A third midfield addition",
+      "Baleba would become United's third midfield signing of the summer, following the arrivals of Andrey Santos from Chelsea and Youri Tielemans from Aston Villa -- and, according to journalist Fabrizio Romano, the club remain \"optimistic to get one more\" before the transfer window shuts (football365, 2026).",
+      "From Lille breakout to Brighton mainstay",
+      "The 22-year-old joined Brighton from Lille in 2023 and has made 112 appearances for the club since, with a breakout 2024/25 season establishing him as one of the most coveted young defensive midfielders in Europe (Sky Sports, 2026).",
+      "A dip in form, and an ankle problem",
+      "That reputation has taken a knock more recently -- Sky Sports reported his form has \"dipped dramatically\" since that breakout campaign, and he is currently working his way back from an ankle ligament injury picked up in pre-season, a recovery that could delay his Manchester United debut even once the move goes through (Sky Sports, 2026).",
+      "Personal terms already agreed",
+      "Baleba has reportedly agreed personal terms on a five-year contract, with a medical already pencilled in. Manager Michael Carrick stopped short of confirming the deal by name but was clear about the club's approach to the market this summer: \"I just think we're looking to strengthen the squad. We're certainly working towards that, making the most of the situation that we have and trying to improve things and trying to move forward... And I think we're a good way to doing that, so far\" (Yahoo Sports, 2026).",
+      "With Andrey Santos and Youri Tielemans already through the door, Baleba's arrival would put Manchester United's midfield rebuild under Carrick within touching distance of complete -- at a cost approaching £65m for a player who, fitness permitting, gives the manager exactly the defensive athleticism his reshaped shape has been built to use."
+    ],
+    sources: [
+      { label: "Sky Sports -- Carlos Baleba transfer: Manchester United close to full agreement with Brighton for Cameroon midfielder", url: "https://www.skysports.com/football/news/11095/13574619/carlos-baleba-transfer-manchester-united-close-to-full-agreement-with-brighton-for-cameroon-midfielder" },
+      { label: "football365 -- Man Utd: Jacobs confirms fourth midfield signing after Romano gives Baleba update", url: "https://www.football365.com/news/man-utd-jacobs-confirms-fourth-midfield-signing-romano-baleba-update" },
+      { label: "Yahoo Sports -- Michael Carrick confirms Manchester United transfer target as Carlos Baleba 'agrees' personal terms", url: "https://uk.sports.yahoo.com/news/michael-carrick-confirms-manchester-united-172101711.html" }
+    ],
+    players: ["Carlos Baleba"],
+    teams: ["Manchester United", "Brighton & Hove Albion"],
+    featured: true
+},
+{
+    id: 30,
+    title: "Tottenham's Double Manchester City Swoop: Spurs Agree £85m Savinho Deal, Close In on Omar Marmoush",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-21",
+    scoreline: "",
+    image: "images/savinhospurs.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/clyddxxgx9wo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Tottenham have agreed an £85m deal for Manchester City winger Savinho and are closing in on a second signing in Omar Marmoush, as Spurs pursue a double swoop on the champions to strengthen their attack.",
+    content: [
+      "Tottenham have agreed an £85m deal to sign Savinho from Manchester City, with the Brazil winger undergoing his medical on Friday afternoon -- and Spurs are simultaneously closing in on a second City player, Omar Marmoush, in what is shaping up as a genuine double swoop on the champions (Sky Sports, 2026).",
+      "A club-record sale for City",
+      "The Savinho deal is worth £75m up front plus £10m in add-ons, with around £80m of that effectively guaranteed -- a fee that would make it Manchester City's record sale, surpassing the £82m Julian Alvarez fetched when he left for Atletico Madrid in 2024 (Sky Sports, 2026).",
+      "Another player who wants out",
+      "Manchester City manager Enzo Maresca offered a blunt explanation for why the champions are willing to sell a player of Savinho's quality: \"It happened with Rodri and the same thing is happening with Savinho. Since day one, he has asked me that he wants to leave\" (Sky Sports, 2026).",
+      "Marmoush still to be finalised",
+      "Unlike Savinho, no fee has been confirmed for Marmoush's move, but talks are described as advanced and \"progressing in the right direction,\" with the Egypt international said to be \"on board with the move to north London\" (CaughtOffside, 2026).",
+      "Funding City's own rebuild",
+      "Manchester City's willingness to sanction both sales fits a wider pattern this summer -- the champions are looking to raise funds to strengthen their own midfield, having already sold their World Cup-winning captain Rodri earlier in the window (CaughtOffside, 2026).",
+      "A busy window for Spurs",
+      "The double deal would be a significant statement of intent from Tottenham, and reports suggest a move for Liverpool's Cody Gakpo could follow depending on how Liverpool's own business shapes up before deadline day (CaughtOffside, 2026).",
+      "With Savinho's medical already done and Marmoush's move edging closer, Tottenham look set to end the window with two ready-made Manchester City attackers -- continuing a market dynamic in which selling to fund a rebuild is becoming as central to Enzo Maresca's Manchester City project as buying."
+    ],
+    sources: [
+      { label: "Sky Sports -- Savinho transfer: Tottenham agree £85m deal to sign Man City winger as Spurs close in on Omar Marmoush", url: "https://www.skysports.com/transfer/news/12691/13575264/savinho-transfer-tottenham-agree-lb85m-deal-to-sign-man-city-winger-as-spurs-close-in-on-omar-marmoush" },
+      { label: "CaughtOffside -- Tottenham in advanced talks with Manchester City over double swoop for Savinho and Omar Marmoush", url: "https://www.caughtoffside.com/2026/08/19/tottenham-savinho-omar-marmoush-man-city-transfer/" }
+    ],
+    players: ["Savinho", "Omar Marmoush"],
+    teams: ["Tottenham Hotspur", "Manchester City"],
+    featured: true
+},
+{
+    id: 29,
+    title: "Arsenal vs Coventry City Preview: Arteta's Champions Open Title Defence Against Lampard's Sky Blues",
+    type: "Match Preview",
+    competition: "Premier League",
+    date: "2026-08-19",
+    scoreline: "",
+    kickoff: "2026-08-21T20:00:00+01:00",
+    image: "images/arsenalcov.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/teams/arsenal",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal open the defence of their Premier League title at home to newly promoted Coventry City on Friday night, with Mikel Arteta missing two first-choice defenders against Frank Lampard's Sky Blues.",
+    content: [
+      "The 2026/27 Premier League season kicks off on Friday night, with champions Arsenal hosting newly promoted Coventry City at the Emirates Stadium in the traditional curtain-raiser to the new campaign (Goal, 2026).",
+      "Lampard's return to the top flight",
+      "Coventry arrive in the Premier League under Frank Lampard, who guided the club to the Championship title last season and, with it, a first crack at English football's top division in years. It is exactly the kind of opening fixture that offers little except difficulty for a newly promoted side, with Arsenal fresh off a first piece of silverware of the season (Goal, 2026).",
+      "Arsenal's summer additions",
+      "Mikel Arteta has strengthened an already title-winning squad over the summer, with Bruno Guimaraes arriving from Newcastle United for a reported £75m after a season in which he scored nine Premier League goals. Winger Christos Tzolis has joined from Club Brugge on the back of 17 goals and 23 assists in the Belgian Pro League, while Piero Hincapie's loan spell has been converted into a permanent deal and Illan Meslier has signed on a free transfer from Leeds United (Goal, 2026).",
+      "Coventry's own rebuild",
+      "Lampard has been similarly busy strengthening his own squad for the step up. Goalkeeper Carl Rushworth has arrived for around £22m from Brighton & Hove Albion, Gustavo Hamer has returned to the club from Sheffield United, Frank Onyeka has signed permanently after a loan spell from Brentford, and further additions include Loum Tchaouna from Burnley, Caleb Yirenkyi from Nordsjaelland and Aurele Amenda from Eintracht Frankfurt (Goal, 2026).",
+      "Team news",
+      "Arteta will be without two first-choice defenders for the opener, with both Jurrien Timber and William Saliba sidelined through injury -- a considerable blow against a Coventry side who will fancy their chances of causing an upset if Arsenal's back line looks unsettled. Coventry, in turn, are missing defender Luke Woolfenden (Goal, 2026).",
+      "Arteta's ambition",
+      "Arsenal go into the season as the team to beat, and Arteta has made no secret of his ambitions for the club beyond simply retaining the title, saying: \"It's certainly the ambition of the club and the owners to be the best club in the world\" and that doing so requires \"the best squad and the best players in the world\" (Sports Mole, 2026).",
+      "Momentum from Cardiff",
+      "Arsenal's pre-season form and Sunday's 3-0 Community Shield win over Manchester City -- scored inside the first 24 seconds through Riccardo Calafiori, before further goals from Kai Havertz and Martin Odegaard -- have provided about as strong a platform as a title defence could hope to begin from.",
+      "Kick-off at the Emirates is 8pm on Friday, with Arsenal overwhelming favourites on paper but Coventry arriving with nothing to lose and a manager who has already proven he can get a team promoted playing without fear."
+    ],
+    sources: [
+      { label: "Goal -- Arsenal vs Coventry City Premier League match preview", url: "https://www.goal.com/en/news/arsenal-coventry-city-premier-league-preview/blt77a9fa95aeb86284" },
+      { label: "Sports Mole -- Arsenal vs. Coventry: Mikel Arteta reveals how he aims to build \"best\" club in world as Premier League opener assessed", url: "https://www.sportsmole.co.uk/football/arsenal/title-race/news/arteta-reveals-how-to-build-best-club-in-world-as-opener-vs-coventry-assessed_603247.html" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Coventry City"],
+    featured: true
+},
+{
+    id: 28,
+    title: "Rodri's Manchester City Exit: Barcelona Complete £65.4m Deal for Spain's World Cup Captain",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-19",
+    scoreline: "",
+    image: "images/rodribarca.jpg",
+    imageLink: "https://www.mancity.com/news/mens/six-and-the-city-for-rodri-63887228",
+    imageCredit: "Photo: Manchester City FC",
+    excerpt: "Barcelona have completed a £65.4m deal for Rodri, ending the Spain captain's seven-year stay at Manchester City. Here's how the move unfolded, and what it means for the club he leaves behind.",
+    content: [
+      "Rodri's seven years at Manchester City are over. Barcelona have completed the signing of the Spain captain and 2024 Ballon d'Or winner on a four-year contract, with the World Cup winner telling Barcelona supporters: \"Playing for Barcelona is a dream come true. I am extremely happy and excited to work with my teammates\" (Goal, 2026).",
+      "A bidding war that escalated fast",
+      "The deal moved quickly once Barcelona made their move. An opening bid of around £40m was rejected, as was a follow-up offer of £55m, before a final package worth £65.4m was accepted -- despite Rodri having a year still to run on his existing City contract and the club's own hopes of tying him down to a new one (Sky Sports, 2026).",
+      "A season already disrupted",
+      "The end of Rodri's Manchester City career was overshadowed by fitness problems even before the transfer went through. He underwent minor back surgery over the summer and only returned to full training on 15 August, missing City's 3-0 Community Shield defeat to Arsenal days later as a result (Sky Sports, 2026).",
+      "Seven years, twelve trophies",
+      "Rodri joined City from Atletico Madrid in 2019 for what was then a club-record £62.8m. He leaves having made 298 appearances and won 12 major honours, including four Premier League titles, two FA Cups, three League Cups and the Champions League -- a trophy haul that culminated in his 2024 Ballon d'Or award as Spain's World Cup-winning captain (Al Jazeera, 2026).",
+      "A farewell letter to the club",
+      "In a message to City supporters confirming his departure, Rodri reflected on his time at the club: \"It's hard to find the words to express how much gratitude, love and support me and my family have experienced all these years,\" crediting the club with helping him grow \"as a human\" as well as a footballer (Sky Sports, 2026).",
+      "The hole he leaves behind",
+      "City's numbers without Rodri tell their own story -- their win percentage in matches he doesn't start has been reported at 62.1%, compared with 71.5% when he plays (Sky Sports, 2026). New manager Enzo Maresca has already been blunt about the scale of the loss, saying simply: \"All teams need a player like Rodri\" (Sky Sports, 2026).",
+      "Replacing the irreplaceable",
+      "With the World Cup winner gone, City are moving quickly in the market, with reports linking the club to Lille's Ayyoub Bouaddi and Chelsea's Enzo Fernandez as they search for a way to fill the gap in central midfield before deadline day (Sky Sports, 2026).",
+      "Whether either arrival can replicate what Rodri offered -- the control, the leadership, the sheer weight of trophies -- is a question City now have very little time left to answer before the season starts in earnest."
+    ],
+    sources: [
+      { label: "Sky Sports -- Rodri transfer news: Barcelona complete £65.4m signing of Spain midfielder from Man City", url: "https://www.skysports.com/football/news/11095/13574286/rodri-transfer-news-barcelona-complete-lb65-4m-signing-of-spain-midfielder-from-man-city" },
+      { label: "Goal -- The big deal is done: Barcelona officially announce the signing of Rodri", url: "https://www.goal.com/en/news/big-money-signing-complete-barcelona-officially-announce-rodri-s-arrival/blt890fcaac6de7f576" },
+      { label: "Al Jazeera -- Rodri headed to Barcelona after Man City accepts transfer bid", url: "https://www.aljazeera.com/sports/2026/8/17/rodri-headed-to-barcelona-after-man-city-accepts-transfer-bid" }
+    ],
+    players: ["Rodri"],
+    teams: ["Manchester City"],
+    featured: true
+},
+{
+    id: 27,
+    title: "Guglielmo Vicario's Tottenham Exit: How Kinsky's Rise Ended His Spurs Career",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-17",
+    scoreline: "",
+    image: "images/vicario.jpg",
+    imageLink: "https://www.goal.com/en-gb/lists/tottenham-player-ratings-monaco-guglielmo-vicario-champions-league-spurs/blt69b0377df6861509",
+    imageCredit: "Photo: GOAL",
+    excerpt: "Guglielmo Vicario is heading to Juventus on loan, the clearest sign yet that Antonin Kinsky's rise has ended his time as Tottenham's number one. Here's how three years unravelled into a Turin medical.",
+    content: [
+      "A little over three years after signing from Empoli as one of Serie A's most promising young goalkeepers, Guglielmo Vicario's time at Tottenham Hotspur is ending in Turin -- Juventus have agreed a season-long loan for the Italian, with an option to make the move permanent for a further £8.5m (Sky Sports, 2026).",
+      "A season derailed",
+      "Vicario's exit has its roots in March, when Tottenham confirmed the goalkeeper would need surgery for a hernia problem. The club described it at the time as a minor procedure, timed to have as little impact on the season as possible, with Vicario expected back within roughly a month (Tottenham Hotspur, 2026).",
+      "Kinsky's chance",
+      "The recovery took longer to translate into regular football than that timeline suggested, and in Vicario's continued absence, Antonin Kinsky was handed an extended run in goal. The Czech goalkeeper made the most of it -- a strong run of form across the final seven matches of the season was enough to convince Tottenham to tear up the pecking order (Sky Sports, 2026).",
+      "A new number one",
+      "Kinsky signed a new five-year contract in June, with the club holding an option to extend it by a further year, and Roberto De Zerbi has made clear since taking over as head coach that the young goalkeeper is his first-choice option between the posts. Teammate Dominic Solanke has been similarly effusive, describing Kinsky as \"phenomenal\" (GiveMeSport, 2026).",
+      "Juventus come calling",
+      "For Juventus, Vicario represents a pivot rather than a first choice. The Italian champions spent the early part of the summer pursuing Aston Villa's Emiliano Martinez, but that pursuit collapsed after Villa rejected an opening bid and Martinez's recurring finger problems raised fresh fitness concerns. Vicario, a full Italy international with Euro 2024 experience, offered Juventus a proven Serie A-ready alternative at a fraction of the cost (Sky Sports, 2026).",
+      "What it means for Spurs",
+      "For Tottenham, letting Vicario leave on loan -- rather than trying to keep two senior goalkeepers competing for one shirt -- is as much a statement about Kinsky's ceiling as it is about Vicario's misfortune. A player signed three years ago as Tottenham's long-term number one now heads into the new season fighting to be Juventus's, while the goalkeeper who inherited his shirt in his absence prepares to start Tottenham's Premier League opener as first choice."
+    ],
+    sources: [
+      { label: "Sky Sports -- Guglielmo Vicario transfer news: Juventus agree deal to sign Spurs goalkeeper on loan as Emi Martinez alternative", url: "https://www.skysports.com/football/news/11661/13573938/guglielmo-vicario-transfer-news-juventus-agree-deal-to-sign-spurs-goalkeeper-on-loan-as-emi-martinez-alternative" },
+      { label: "Tottenham Hotspur -- Vicario to undergo surgery", url: "https://www.tottenhamhotspur.com/news/2026/march/vicario-to-undergo-surgery/" },
+      { label: "GiveMeSport -- Tottenham's Antonin Kinsky signs 5-year contract extension", url: "https://www.givemesport.com/breaking-tottenham-antonin-kinsky-5-year-deal-romano-update/" }
+    ],
+    players: ["Guglielmo Vicario"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+},
+{
+    id: 26,
+    title: "Arsenal 3-0 Manchester City: Maresca's Debut Ends in a Cardiff Mauling",
+    type: "Match Report",
+    competition: "Community Shield",
+    date: "2026-08-16",
+    scoreline: "Arsenal 3-0 Manchester City",
+    image: "images/comshield.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/articles/c88v2p1vzlyo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal needed just 24 seconds to set the tone in Cardiff, brushing aside Manchester City 3-0 in Enzo Maresca's first competitive game as City boss to lift the Community Shield.",
+    content: [
+      "Arsenal's title defence began with a trophy after all, as Mikel Arteta's side brushed aside Manchester City 3-0 in the Community Shield at Cardiff's Principality Stadium on Sunday -- scoring the earliest goal in the fixture's history since 1968 along the way.",
+      "Twenty-four seconds",
+      "Riccardo Calafiori needed less than half a minute to put Arsenal ahead, latching onto a Myles Lewis-Skelly delivery on the edge of the box to stun a Manchester City side making its first competitive appearance under new manager Enzo Maresca (The FA, 2026).",
+      "Havertz doubles the lead",
+      "Kai Havertz made it two just before the half-hour mark, turning in a Christos Tzolis header at the back post to cap a well-worked move and leave City chasing the game before half-time (The FA, 2026).",
+      "Odegaard's nutmeg seals it",
+      "Arsenal's captain put the result beyond doubt three minutes into the second half, rounding Josko Gvardiol and nutmegging Gianluigi Donnarumma to roll the ball into an empty net -- a goal that also earned him the match's player-of-the-match award (Man City, 2026).",
+      "A tough afternoon for Maresca",
+      "It was a chastening first experience of management for Maresca, who admitted the early setback shaped the whole afternoon: \"Unfortunately after 30 seconds we conceded the first one... the reaction was good, before they scored the second goal we had three or four chances\" (Man City, 2026). \"It's a defeat that hurts us,\" he added, \"but it's only the beginning\" (NBC New York, 2026).",
+      "A quiet return for Haaland",
+      "Erling Haaland, only just back in training after his World Cup recovery, was substituted after 53 minutes having managed just seven touches -- a reminder that Community Shield results, however chastening, are rarely the full picture this early in pre-season conditioning (NBC New York, 2026).",
+      "Arsenal's statement of intent",
+      "For Arsenal, the manner of the win mattered as much as the trophy. Odegaard called it proof the team is ready and serious about defending the title, and a first piece of silverware before a ball has been kicked in the league is exactly the kind of statement Arteta will have wanted (NBC New York, 2026).",
+      "What's next",
+      "Arsenal begin the defence of their Premier League title at home to newly promoted Coventry City on Friday, while Maresca gets his first league test at the Etihad against Bournemouth two days later -- with considerably more time to work with a squad that is still, by his own admission, finding its identity (NBC New York, 2026)."
+    ],
+    sources: [
+      { label: "The FA -- FA Community Shield 2026 match report", url: "https://www.thefa.com/news/2026/aug/16/fa-community-shield-2026-report-16082026" },
+      { label: "Man City -- City defeated in 2026 Community Shield", url: "https://www.mancity.com/news/mens/arsenal-manchester-city-community-shield-match-report-63922483" },
+      { label: "NBC New York -- Arsenal outclasses Manchester City 3-0 in Community Shield", url: "https://www.nbcnewyork.com/news/sports/soccer/arsenal-manchester-city-community-shield-score/6537338/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Manchester City"],
+    featured: true
+},
+{
+    id: 25,
+    title: "Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-16",
+    scoreline: "",
+    image: "images/dowmanscoutingreport.jpg",
+    imageLink: "https://www.nytimes.com/athletic/6572800/2025/08/25/max-dowman-premier-league-youngest-scorer-record/",
+    imageCredit: "Photo: The New York Times",
+    excerpt: "Max Dowman is 16 years old and already the youngest player to score in, start, and win the Premier League. Ahead of a title-defence season at Arsenal, we look at what he actually offers on the pitch -- and how Mikel Arteta is trying to protect him from his own hype.",
+    content: [
+      "Most scouting reports exist to explain why a player might be good one day. This one is different, because Max Dowman has already spent the last twelve months rewriting the Premier League's record books before he was legally allowed to change in Arsenal's first-team dressing room.",
+      "A record-breaking rise",
+      "Dowman joined Arsenal's academy at eight years old and was training with the first team by 14. On 23 August 2025 he came off the bench against Leeds United to become the second-youngest player in Premier League history, behind only his own teammate Ethan Nwaneri. By the end of that season he had become the youngest player to start a match for Arsenal, the youngest player ever to appear in the Champions League, and -- with a stoppage-time winner against Everton in March -- the youngest goalscorer in Premier League history at 16 years and 73 days old, beating a record that had stood since 2005 <a href=\"https://www.bbc.com/sport/football/articles/crm4p9xkwlko\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2025)</a> <a href=\"https://www.espn.co.uk/football/story/_/id/48207115/premier-league-youngest-goalscorers-max-dowman-wayne-rooney-cesc-fabregas-more\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2026)</a>.",
+      "What he actually offers",
+      "Strip away the records and Dowman is a right-sided attacker comfortable through the middle as a number 10, with the ball-carrying and set-piece delivery of a much older player. Academy coaches have compared him to Kaká; supporters have reached for Bukayo Saka. What stands out watching him is less the pace than the composure -- a willingness to slow the game down, draw a defender in, and beat them with a single change of direction rather than a burst of speed.",
+      "Arteta's balancing act",
+      "Arsenal's title-winning campaign gave Mikel Arteta a genuine selection problem: how much of a 16-year-old do you actually play, even one this good? After Dowman's breakout Carabao Cup start against Brighton, Arteta praised how naturally he handled the occasion: \"For him, everything is natural, for him everything is OK. It is the way he plays. That's the secret, that he doesn't make a big fuss of it. He just does what he does best which is to play football with a lot of courage and determination\" <a href=\"https://www.espn.in/football/story/_/id/46772481/max-dowman-arsenal-youngest-starter-carabao-cup-brighton\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2025)</a>. But Arteta has also been consistently cautious about managing the noise around him, saying: \"We just need to bring the temperature down and understand what is the best thing for this boy at his age... let's keep it down a little bit and respect his nature to do what he has to do, which I'm sure is going to be something really good\" <a href=\"https://www.espn.com/soccer/story/_/id/48226466/max-dowman-youthful-exuberance-inspire-arsenal-mikel-arteta\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(ESPN, 2026)</a>.",
+      "Protected by more than tactics",
+      "Some of the safeguards around Dowman aren't tactical at all. Because of his age, FA rules require he be chaperoned around the first-team squad and he isn't permitted to change in the main dressing room -- a reminder, alongside the record-breaking headlines, that Arsenal are still managing the development of a schoolboy <a href=\"https://www.bbc.co.uk/sport/football/articles/cp94e0d531go\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2025)</a>.",
+      "The 2026/27 question",
+      "Dowman closed last season by becoming the youngest player ever to win the Premier League, at 16 years and 139 days old, and started Arsenal's final-day win over Crystal Palace as the league's youngest ever starter while Arteta rotated ahead of the Champions League final <a href=\"https://www.premierleague.com/en/news/4658279/who-are-the-youngest-ever-players-to-win-the-premier-league-title\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Premier League, 2026)</a>. None of that guarantees regular minutes in a title defence against a fully fit squad. But few 16-year-olds have ever arrived at a new season with this much already proven -- and Arsenal's biggest challenge with Dowman may no longer be developing his talent, but managing everyone else's expectations of it."
+    ],
+    featured: true,
+    players: ["Max Dowman"],
+    teams: ["Arsenal"]
+},
+{
+    id: 24,
+    title: "Scouting Report: Rio Ngumoha -- Liverpool's Teenager Already Writing Club History",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-16",
+    scoreline: "",
+    image: "images/rioscoutingreport.jpg",
+    imageLink: "https://www.liverpoolfc.com/news/rio-ngumoha-makes-history-liverpools-youngest-appearance-maker-europe",
+    imageCredit: "Photo: Liverpool FC",
+    excerpt: "A last-minute winner at Newcastle. The youngest goal at Anfield in the club's history. A senior England debut before his 18th birthday. Rio Ngumoha's rise at Liverpool has been remarkable -- now the question is whether he keeps his place under a new manager.",
+    content: [
+      "Rio Ngumoha's move to Liverpool in the summer of 2024 was contentious enough to sour relations between two clubs -- a tribunal later ordered Liverpool to pay Chelsea at least £2.8m in compensation for the winger's development <a href=\"https://www.bbc.co.uk/sport/football/articles/c1dkvy56vn3o\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(BBC Sport, 2026)</a>. Two years on, it's hard to argue Liverpool got the wrong player.",
+      "An immediate impact",
+      "Ngumoha's Premier League debut, in August last season, is the kind aspiring academy players dream about but almost never get: introduced as a stoppage-time substitute away at Newcastle, he scored a 100th-minute winner in a 3-2 victory, becoming Liverpool's youngest ever Premier League goalscorer and setting the club's record for the latest winning goal in the competition's history <a href=\"https://www.liverpoolfc.com/news/rio-ngumohas-100th-minute-winner-gives-liverpool-thrilling-3-2-win-newcastle\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Liverpool FC, 2025)</a>. A month later he became the youngest player ever to appear for Liverpool in the Champions League <a href=\"https://www.liverpoolfc.com/news/rio-ngumoha-makes-history-liverpools-youngest-appearance-maker-europe\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Liverpool FC, 2025)</a>.",
+      "What kind of player he is",
+      "Ngumoha plays as a left winger who cuts inside onto his stronger foot, but what separates him from a typical academy dribbler is his composure in the final third -- both of his headline moments, the Newcastle winner and a first Anfield goal against Fulham in April, came from staying calm in a crowded box rather than simply beating a man for pace. The Fulham goal made him the youngest player ever to score at Anfield, beating a record held by Raheem Sterling, and prompted a memorable line from TNT Sports describing how he \"ignored Andy Robertson's screams\" to go it alone rather than square the ball <a href=\"https://www.theguardian.com/football/2026/apr/11/liverpool-fulham-premier-league-match-report\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(The Guardian, 2026)</a> <a href=\"https://www.tntsports.co.uk/football/premier-league/2025-2026/rio-ngumoha-liverpool-fulham-andy-robertson-youngest-goalscorer-anfield_sto23289547/story.shtml\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(TNT Sports, 2026)</a>.",
+      "Recognition beyond the club",
+      "The wider game has taken notice. In May, Ngumoha won the Premier League's Debutant of the Season award, and weeks later he was named in England's senior squad ahead of the 2026 World Cup, making his debut as a substitute against New Zealand and winning Player of the Match -- becoming the fifth-youngest debutant in England men's history in the process <a href=\"https://www.skysports.com/football/news/11095/13407507/rio-ngumoha-who-is-16-year-old-liverpool-winger-and-how-did-he-break-into-arne-slots-first-team-squad\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Sky Sports, 2025)</a>.",
+      "The Iraola question",
+      "Everything above happened under Arne Slot, the manager who first trusted Ngumoha with a first-team squad number. What happens next is less certain. Liverpool's switch to Andoni Iraola resets the trust a breakout academy player has to earn all over again, and pre-season form guarantees nothing once the games start to matter. Ngumoha's case for regular minutes, though, is no longer about potential -- it's a season-long body of record-breaking evidence that a new manager will have to actively choose to ignore.",
+      "For a player who wasn't even a first-team regular this time last year, that's about as strong a starting position as a teenager could ask for heading into 2026/27."
+    ],
+    featured: true,
+    players: ["Rio Ngumoha"],
+    teams: ["Liverpool"]
+},
+{
+    id: 23,
+    title: "Community Shield Preview: Arsenal vs Manchester City -- Maresca's First Test",
+    type: "Match Preview",
+    competition: "Community Shield",
+    date: "2026-08-15",
+    scoreline: "",
+    kickoff: "2026-08-16T15:00:00+01:00",
+    image: "images/cuppreview.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/ce8kp6k3p1no",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Arsenal and Manchester City meet at the Principality Stadium on Sunday with more than a trophy at stake -- it's Enzo Maresca's first competitive match in charge of City, and Arsenal's title defence begins with Saliba and Timber both missing.",
+    content: [
+      "The 2026/27 season's first piece of silverware is up for grabs on Sunday, when Premier League champions Arsenal face FA Cup winners Manchester City in the Community Shield at the Principality Stadium in Cardiff -- the first time the fixture has been played there in two decades.",
+      "Maresca's first competitive test",
+      "For Manchester City, the occasion carries extra weight. Enzo Maresca takes charge of a competitive City match for the first time, and will become the first City manager in the club's history to open his tenure with the Community Shield. He has already dismissed suggestions the game is a glorified friendly, saying he is targeting silverware from his very first game in the dugout (Sky Sports, 2026).",
+      "Arteta's endorsement",
+      "Mikel Arteta, meanwhile, offered a striking compliment to his opposite number ahead of the match, rating Maresca as good as Pep Guardiola. It's a notable statement given the season Arsenal have just had, and underlines how highly regarded Maresca's methods already are inside the league (Sky Sports, 2026).",
+      "Recent history favours City",
+      "Manchester City go into the match with the psychological edge in this specific fixture. City beat Arsenal 2-1 at the Etihad in April, and have lost just once in their last six meetings with the Gunners. Their pre-season form has also been strong under Maresca, unbeaten across a 1-1 draw with Inter Milan and back-to-back 3-1 wins over a K-League XI and Atletico Madrid, with Omar Marmoush scoring twice in the win over Atletico (Al Jazeera, 2026).",
+      "Arsenal's defensive crisis",
+      "Arsenal's preparation has been considerably more difficult. Jurrien Timber and William Saliba, two first-choice defenders, are both expected to miss out through injury -- Timber with a groin problem, Saliba with a back issue -- leaving Arteta light at the exact position that has to face down Erling Haaland and City's front line (Sports Mole, 2026).",
+      "Team news elsewhere",
+      "City have their own selection questions. Wing-back Rayan Ait-Nouri has recovered from a minor issue and is available, but Haaland is unlikely to start, and both Savinho and Rodri are set to miss out through injury -- with Ayyoub Bouaddi, City's marquee summer midfield signing, waiting for the eventual chance to make his mark in exactly the kind of role Rodri would ordinarily occupy (101 Great Goals, 2026).",
+      "Kick-off is at 3pm BST on Sunday. Whatever happens, it is the first proper look at both a title defence and a new era -- and after the summer both clubs have had, few fixtures on the calendar carry this much curiosity before a ball is even kicked."
+    ],
+    sources: [
+      { label: "Sky Sports -- Arsenal vs Man City in Community Shield: Maresca vows to 'close the gap' on champions", url: "https://www.skysports.com/football/news/11670/13572888/arsenal-vs-man-city-in-community-shield-enzo-maresca-vows-to-close-the-gap-on-champions-as-mikel-arteta-says-man-city-boss-is-as-good-as-pep-guardiola" },
+      { label: "Al Jazeera -- Arsenal vs Manchester City: Community Shield -- prediction, lineups, teams", url: "https://www.aljazeera.com/sports/2026/8/15/arsenal-vs-manchester-city-community-shield-prediction-lineups-teams" },
+      { label: "Sports Mole -- Preview: Arsenal vs Manchester City", url: "https://www.sportsmole.co.uk/football/arsenal/preview/arsenal-vs-man-city-prediction-team-news-lineups_602989.html" },
+      { label: "101 Great Goals -- Arsenal v Manchester City: Expected line-ups, stats, preview", url: "https://www.101greatgoals.com/match-previews/arsenal-v-manchester-city-expected-line-ups-stats-preview-stream-where-to-watch-community-shield/" }
+    ],
+    players: [],
+    teams: ["Arsenal", "Manchester City"],
+    featured: true
+  },
+{
+    id: 22,
+    title: "Cody Gakpo Closing In On £60m Tottenham Move as Liverpool Eye Barcola",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-15",
+    scoreline: "",
+    image: "images/gakpospurs.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/c98vnel56q6o",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Tottenham have reached an agreement in principle with Liverpool over a 60 million pound deal for Cody Gakpo, with the Dutch international believed to have already agreed personal terms. We look at the move, and why Liverpool are willing to sell to fund a run at Bradley Barcola.",
+    content: [
+      "Tottenham are closing in on a 60 million pound deal for Liverpool forward Cody Gakpo, with the two clubs having reached an agreement in principle and Gakpo himself understood to have agreed personal terms on a five-year contract in north London (This Is Anfield, 2026).",
+      "De Zerbi's next attacking piece",
+      "The move would mark another significant statement from Roberto De Zerbi's rebuild, adding a proven Premier League and Champions League forward to a squad that has already spent heavily on Sandro Tonali, Mateus Fernandes and Jan Paul van Hecke this summer. Gakpo offers De Zerbi a versatile forward comfortable through the middle or from the left, with over three years of Anfield first-team experience behind him (FootballTransfers, 2026).",
+      "Why Liverpool are willing to sell",
+      "Liverpool's willingness to do business appears to be directly connected to their own summer plans. The Reds are believed to be using funds raised from a permanent Gakpo sale to fund a move for PSG winger Bradley Barcola, continuing Andoni Iraola's reshaping of the forward line following his appointment after Arne Slot's exit in May (This Is Anfield, 2026).",
+      "The final hurdle",
+      "The one remaining obstacle is the fee and structure of the deal itself, rather than any reluctance from the player. Personal terms are understood to be agreed, but Liverpool and Tottenham still need to finalise the exact package before the transfer can be confirmed (FourFourTwo, 2026).",
+      "What it means for Spurs",
+      "If completed, Gakpo would become the latest name in what is shaping up to be one of the most aggressive rebuilds in the Premier League this summer, alongside a defence that has already lost both Cristian Romero and Djed Spence and a midfield reshaped around Tonali. For a squad that has changed this much before a ball has been kicked competitively, adding a proven attacking outlet like Gakpo would be a coherent next step rather than business for its own sake."
+    ],
+    sources: [
+      { label: "This Is Anfield -- Cody Gakpo 'agrees Tottenham deal': Claims of £60m+ bid to Liverpool", url: "https://www.thisisanfield.com/2026/08/cody-gakpo-tottenham-deal-claims-60m-bid-liverpool/" },
+      { label: "FootballTransfers -- Liverpool transfer news: Cody Gakpo reaches Tottenham agreement", url: "https://www.footballtransfers.com/en/transfer-news/uk-premier-league/2026/08/liverpool-transfer-news-cody-gakpo-tottenham-agreement-contract-summer-2026" },
+      { label: "FourFourTwo -- Tottenham Hotspur strike agreement for Cody Gakpo deal", url: "https://www.fourfourtwo.com/transfer/tottenham-hotspur-strike-agreement-for-cody-gakpo-deal-report" }
+    ],
+    players: ["Cody Gakpo"],
+    teams: ["Tottenham Hotspur", "Liverpool"],
+    featured: true
+  },
+{
+    id: 21,
+    title: "Twelve Signings In: Inside Xabi Alonso's Chelsea Rebuild",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-15",
+    scoreline: "",
+    image: "images/xabichelsea.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/may/12/chelsea-optimistic-about-luring-xabi-alonso-but-are-also-eyeing-andoni-iraola",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Chelsea have spent more than any club in world football this summer, reshaping the squad from back to front under new manager Xabi Alonso. We look at the full picture of ins, outs, and what it says about the size of the job after finishing 10th last season.",
+    content: [
+      "No club in world football has spent more this summer than Chelsea. Since appointing Xabi Alonso in May, the club has added a dozen new faces to the squad, a rebuild that reflects just how far off the pace Chelsea fell last season, when they finished 10th in the Premier League.",
+      "The headline arrival",
+      "The marquee signing is Morgan Rogers, who arrived from Aston Villa in a British-record deal after starring in Villa's run to their first Europa League title. Alongside him, Chelsea have added Marco Palestra from Atalanta, Geovany Quenda from Sporting Lisbon, and Emanuel Emegha from Racing Strasbourg, spreading the investment across defence, midfield and attack rather than concentrating it in one area (Sports Mole, 2026).",
+      "Experience alongside youth",
+      "Alonso has not built purely around potential. Jordan Henderson arrived on a free transfer to add leadership and Premier League experience to the dressing room, while Danny Welbeck joined from Brighton for a modest fee as competition and cover up front. Spanish left-back Pep Chavarria completed a separate move, signing a contract through to 2031 (TeamTalk, 2026).",
+      "Funding it through outgoings",
+      "Some of the spending has been offset by sales. Andrey Santos left for Manchester United, Marc Cucurella moved to Real Madrid, and youngster Tyrique George was sold to Everton -- all deals that helped balance a summer in which Chelsea's gross spend has run into the hundreds of millions (Sports Mole, 2026).",
+      "What it says about the job",
+      "The scale of the rebuild is itself a message. A club spending more than anyone else in world football, across a dozen separate deals, is not the profile of a squad that merely needs fine-tuning -- it is the profile of one being rebuilt close to the foundations. Combined with the tactical reset already under way, built around the back-three principles Alonso perfected at Bayer Leverkusen, this is as complete a summer overhaul as any club in the Premier League has undertaken. Whether it translates into results will depend on how quickly twelve new faces can be turned into a settled team."
+    ],
+    sources: [
+      { label: "Sports Mole -- Chelsea summer transfers and net spend: Every confirmed signing and sale", url: "https://www.sportsmole.co.uk/football/chelsea/transfer-talk/feature/chelsea-summer-transfers-all-confirmed-ins-and-outs-for-2026_598977.html" },
+      { label: "TeamTalk -- Every Chelsea done deal in the summer 2026 transfer window", url: "https://www.teamtalk.com/chelsea/every-completed-chelsea-transfer-summer-2026-signings-sales-loans" }
+    ],
+    players: [],
+    teams: ["Chelsea"],
+    featured: true
+  },
+{
+    id: 20,
+    title: "Vinicius Junior's New Real Madrid Deal Ends Arsenal's Chase -- What It Means for Arteta's Attack",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/arsenalvinicius.jpg",
+    imageLink: "https://www.premierleague.com/en/news/4294270",
+    imageCredit: "Photo: Premier League",
+    excerpt: "Vinicius Junior has signed a new six-year contract at Real Madrid, ending months of speculation over a move to Arsenal. We look at how close the chase really was, and what missing out means for a title-defending squad that otherwise had a quiet summer.",
+    content: [
+      "Arsenal's pursuit of Vinicius Junior is over before it ever really became a transfer. Real Madrid have confirmed the Brazilian winger has agreed a new contract running until 2032, ending months of speculation over his future and closing the door on what would have been one of the signings of the summer anywhere in Europe (ESPN, 2026).",
+      "A closely-run contract saga",
+      "The two sides had been in talks since January, and Real Madrid were reportedly open to a departure this summer had no agreement been reached. The breakthrough came after the club proposed an improved offer beyond their previous proposal, believed to have been worth around 22 million euros a year, with a fresh round of talks this week finally settling the matter in Madrid's favour (Sky Sports, 2026).",
+      "Why Arsenal were credible suitors",
+      "This was not a speculative long-shot. Fresh off ending a 22-year wait for the Premier League title, Arsenal have been operating like a club willing to spend big to strengthen a squad that is already the best in England, and Vinicius represented exactly the kind of marquee attacking upgrade a champion looks for (NBC Sports, 2026). That Real Madrid felt the need to move off their original valuation to secure the extension is itself a sign of how real the interest was.",
+      "A quiet window otherwise",
+      "Missing out matters more because of how restrained the rest of Arsenal's business has been. Bruno Guimaraes arrived from Newcastle for 75 million pounds and Piero Hincapie's loan was made permanent, but beyond that Mikel Arteta's incomings have been selective rather than transformative, with Leandro Trossard among the more notable departures. A marquee wide addition would have been the headline move of the summer. Instead, Arsenal go into their title defence with largely the same attacking options that won them the league.",
+      "What it means for the attack",
+      "None of this means Arsenal's attack is short of quality. But it does mean the improvement Arsenal are banking on this season has to come from within the existing squad rather than from a marquee wide addition, at exactly the moment every other contender is trying to close the gap that opened up last season. Whether that is enough will be one of the defining questions of Arsenal's title defence."
+    ],
+    sources: [
+      { label: "ESPN -- Vinicius Junior agrees Real Madrid contract, ending Arsenal interest", url: "https://www.espn.com/soccer/story/_/id/49546343/vinicius-junior-agrees-real-madrid-contract-arsenal" },
+      { label: "Sky Sports -- Vinicius Junior: Arsenal target signs Real Madrid contract extension", url: "https://www.skysports.com/football/news/11095/13570470/vinicius-junior-arsenal-target-signs-real-madrid-contract-extension-to-end-uncertainty-over-future" },
+      { label: "NBC Sports -- Arsenal transfer target Vinicius Junior to sign new Real Madrid contract", url: "https://www.nbcsports.com/soccer/news/arsenal-transfer-target-vinicius-junior-to-sign-new-real-madrid-contract" }
+    ],
+    players: ["Vinicius Junior"],
+    teams: ["Arsenal"],
+    featured: true
+  },
+{
+    id: 19,
+    title: "Manchester United's Summer Rebuild: Carrick Reshapes the Midfield With Santos and Tielemans",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/carrickrebuild.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/ckgyg2n10q0o",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Michael Carrick's first full summer window as permanent Manchester United manager has reshaped the midfield around Andrey Santos and Youri Tielemans. We look at how United got here, and what the business says about Carrick's plans for his own squad.",
+    content: [
+      "Manchester United's summer has been defined by a midfield rebuild, and by a manager finally getting the chance to shape a squad he was not originally hired to lead. Michael Carrick's first full transfer window in permanent charge has brought in Andrey Santos, Youri Tielemans, Karl Darlow and Tynan Thompson, with the midfield additions in particular pointing to a clear change in direction.",
+      "From Amorim to Carrick",
+      "Carrick's path to the job was not straightforward. Ruben Amorim was sacked in January 2026 after 14 months in charge, following just three wins in United's previous 11 matches and the club sitting sixth in the Premier League (Goal, 2026). Carrick, a club legend from his playing days, was appointed interim manager and turned the second half of the season around well enough that United's hierarchy handed him the job permanently in May (Al Jazeera, 2026).",
+      "Santos: the marquee midfield addition",
+      "The clearest statement of intent was the signing of Andrey Santos from Chelsea for a fee in the region of 48 million pounds, with a further 2 million in potential add-ons. The Brazil international signed a deal running until 2031, with an option for a further year, and represents the kind of long-term midfield investment United have lacked in recent windows (Sky Sports, 2026).",
+      "Tielemans arrives from a rival's cup-winning squad",
+      "Youri Tielemans followed in a 35 million pound deal from Aston Villa, joining on a five-year contract (ESPN, 2026). The move carries a sharp edge given where he has come from: Tielemans was among the scorers as Villa beat Freiburg to win their first-ever Europa League title in May, before losing him just months later as one of the summer's departures from Unai Emery's squad.",
+      "Squad depth signings",
+      "The rest of United's midfield business has been about depth and cover rather than headlines. Karl Darlow arrived on a free transfer after his contract at Leeds United expired, while 18-year-old winger Tynan Thompson joined from Tottenham Hotspur as one for the future rather than an immediate first-team option.",
+      "What it means for United",
+      "Taken together, the business points to Carrick building a younger, more technical central midfield than the one he inherited from Amorim, with Santos and Tielemans offering a different balance of physicality and progressive passing. It is a squad now being shaped in his own image for the first time, rather than one he took over midway through a crisis. Whether that translates into results will be the real test of his permanent appointment."
+    ],
+    sources: [
+      { label: "ESPN -- Inside Man United's summer transfer rebuild, as Santos and Tielemans bolster midfield", url: "https://www.espn.com/soccer/story/_/id/49354932/inside-manchester-united-summer-transfer-rebuild-santos-tielemans-bolster-midfield" },
+      { label: "Sky Sports -- Andrey Santos: Man Utd complete 50 million pound signing from Chelsea", url: "https://www.skysports.com/football/news/11667/13562081/andrey-santos-man-utd-complete-lb50m-signing-of-brazil-international-midfielder-from-chelsea" },
+      { label: "Al Jazeera -- Man Utd appoint Michael Carrick as permanent manager", url: "https://www.aljazeera.com/sports/2026/5/22/man-utd-appoint-michael-carrick-as-permanent-manager" },
+      { label: "Goal -- Man Utd confirm return of Michael Carrick as caretaker manager after Ruben Amorim sacking", url: "https://www.goal.com/en/lists/man-utd-confirm-michael-carrick--caretaker-manager-ole-gunnar-solskjaer-ruben-amorim-sacking/blt60ce7dc477414b8b" }
+    ],
+    players: [],
+    teams: ["Manchester United"],
+    featured: true
+  },
+{
+    id: 18,
+    title: "Tottenham Confirm Two Exits: Cristian Romero Set for Atletico Madrid as Djed Spence Completes Inter Move",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-13",
+    scoreline: "",
+    image: "images/romerotransfer.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/aug/12/atletico-madrid-agree-deal-tottenham-cristian-romero#img-1",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Tottenham's back line looks very different to the one that started last season. Cristian Romero is closing in on a move to Atletico Madrid days after Djed Spence completed his switch to Inter Milan -- we look at both exits, and what they mean for a defence being rebuilt around Micky van de Ven.",
+    content: [
+      "Tottenham's defensive rebuild took a significant turn this week, with two first-team regulars confirmed to be leaving within days of each other. Cristian Romero is set to join Atletico Madrid in a deal worth up to 40 million euros including add-ons, while Djed Spence has already completed his move to Inter Milan. Between them, the two exits remove a captain and a first-team right-back from Roberto De Zerbi's squad before a ball has been kicked in the Premier League this season.",
+      "Romero: an unexpected turn",
+      "Romero's exit has moved quickly once the pieces fell into place. Spurs had previously discussed a similar fee with Napoli, but Romero could not agree personal terms there, while a move to Inter Milan collapsed in July and Barcelona chose not to proceed with an approach days ago. Atletico Madrid stepped in and finalised the paperwork quickly once personal terms were agreed, with the deal reportedly including a 15 percent sell-on clause for Tottenham should Romero move on again in the future (CaughtOffside, 2026). The 28-year-old World Cup winner leaves as club captain, having made 156 appearances across all competitions and played a central role in Tottenham's 2024/25 Europa League triumph.",
+      "The Arsenal contradiction",
+      "There is a pointed footnote to all of this. Only recently, Tottenham drew a hard line refusing to sell Romero to Arsenal, a stance we covered in detail at the time. Selling to Atletico Madrid instead does not undo the logic of that decision -- there is a meaningful difference between strengthening a direct Premier League rival and doing business with a club outside the division entirely. But it does confirm that Romero's future was never really about staying at Tottenham long-term, only about which suitor Spurs were prepared to deal with.",
+      "Spence's exit, in brief",
+      "Spence's departure for Inter Milan has already been covered in detail elsewhere on this site, including the wider question of why his valuation barely moved in four years despite becoming an established Premier League right-back, a Europa League winner and a full England international. The short version: he leaves for a fee close to what Tottenham paid Middlesbrough for him in 2021, closing a chapter that never quite delivered on that early promise in north London.",
+      "What it means for the defence",
+      "Taken together, the two exits strip out a captain and a first-choice right-back from the same summer Tottenham moved fastest to protect Micky van de Ven, tying their first-choice centre-back down to a new five-year contract personally pushed through by De Zerbi. The message from the club's business this window is not subtle: some parts of last season's back line are considered essential to the new era, and others are not. With Marcos Senesi arriving on a free transfer and Jan Paul van Hecke signed from Brighton for 52 million pounds, Spurs already have the beginnings of a replacement pairing in place. Whether either can replicate what Romero offered as both a leader and a ball-winner is the question De Zerbi's first season will have to answer."
+    ],
+    sources: [
+      { label: "CaughtOffside -- Cristian Romero's agent appears to confirm Tottenham exit as Romano drops major update", url: "https://www.caughtoffside.com/2026/08/12/cristian-romero-atletico-madrid-tottenham-40m-transfer/" },
+      { label: "CaughtOffside -- Tottenham and Atletico Madrid discussing Cristian Romero transfer", url: "https://www.caughtoffside.com/2026/08/10/tottenham-are-closing-in-sky-journalist-delivers-update-on-a-move-for-28-year-old-star/" },
+      { label: "CaughtOffside -- Tottenham agree deal to sell Cristian Romero", url: "https://www.caughtoffside.com/2026/08/03/tottenham-agree-deal-in-principle-as-28-year-old-edges-closer-to-summer-move/" }
+    ],
+    players: ["Cristian Romero", "Djed Spence"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
+    id: 17,
+    title: "PSG 2-1 Aston Villa: Brian Madjo's Record-Breaking Goal Wasn't Enough in Salzburg",
+    type: "Match Report",
+    competition: "UEFA Super Cup",
+    date: "2026-08-13",
+    scoreline: "PSG 2-1 Aston Villa",
+    image: "images/supercup.jpg",
+    imageLink: "https://www.theguardian.com/football/live/2026/aug/12/european-super-cup-paris-saint-germain-v-aston-villa-live",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.",
+    content: [
+      "Paris Saint-Germain are UEFA Super Cup champions for the second year running after a 2-1 win over Aston Villa at the Red Bull Arena in Salzburg, becoming the first side to defend the trophy since Real Madrid in 2016 and 2017 (UEFA.com, 2026). But for long spells on Wednesday night, this was Brian Madjo's occasion far more than it was Luis Enrique's.",
+      "Kvaratskhelia's early statement",
+      "PSG made the perfect start. Khvicha Kvaratskhelia cut in from the left in the 20th minute and lashed a fierce, rising shot inside the near post, becoming the first Georgian player ever to score in a UEFA Super Cup (UEFA.com, 2026). It was the kind of goal that suggested a routine European night for the Champions League holders, nine of whom started this final having also started May's Champions League final in Budapest (ESPN, 2026).",
+      "Emery's gamble",
+      "Unai Emery had already signalled his intentions with his team selection. Emiliano Martinez, Ollie Watkins and Ezri Konsa were all left out entirely, with Marco Bizot deputising in goal and summer signing Joao Gomes handed a competitive debut alongside 17-year-old Brian Madjo, who started ahead of Watkins up front (Sports Mole, 2026). Alejandro Garnacho, ruled out through concussion protocols, was the only enforced absence -- the rest of the selection was a deliberate bet on Villa's future over the result in front of them (bet365 News, 2026).",
+      "Madjo makes history",
+      "That bet paid off within a half. Right at the end of the first period, Madjo met a chance with a clean volley to draw Villa level, and in doing so became the youngest player ever to score in a UEFA Super Cup final at 17 years and 212 days old (UEFA.com, 2026). It is exactly the kind of moment this site's scouting report on Madjo suggested was coming, and it arrived on one of the biggest stages in European club football rather than in a youth fixture few people were watching.",
+      "Doue's contentious winner",
+      "PSG regained the lead just after the hour mark. Desire Doue finished off a pass from substitute Ousmane Dembele, who had been withheld from the starting line-up as part of his own late return from the World Cup. The goal was initially ruled out for offside before being awarded on video review (ESPN, 2026), and it proved to be the difference -- Villa pushed for a second equaliser but could not find one, with Madjo's fairytale debut ending in defeat rather than a famous result.",
+      "History for PSG, and a night to build on for Villa",
+      "For PSG, the win extends a period of total dominance in Europe's biggest games, with the continuity in personnel from Budapest to Salzburg -- Warren Zaire-Emery and Maghnes Akliouche were the only players in the XI who did not start the Champions League final -- underlining how little Luis Enrique feels he needs to change (Sports Mole, 2026). For Aston Villa, the story of the night was never really going to be the scoreline. A 17-year-old scoring within minutes of his senior debut, on the losing side of a European final, is the kind of night that gets talked about for entirely different reasons a few years from now."
+    ],
+    sources: [
+      { label: "UEFA.com -- Paris 2-1 Aston Villa: European champions win back-to-back Super Cups", url: "https://www.uefa.com/uefasupercup/news/02a8-215538a51719-2eeabf96b5c7-1000--paris-2-1-aston-villa-european-champions-win-back-to-back/" },
+      { label: "ESPN -- PSG 2-1 Aston Villa (Aug 12, 2026) Game Analysis", url: "https://www.espn.com/soccer/report/_/gameId/401873624" },
+      { label: "Sports Mole -- PSG vs. Aston Villa team news: UEFA Super Cup final starting lineups confirmed", url: "https://www.sportsmole.co.uk/football/aston-villa/news/psg-aston-villa-starting-lineups-confirmed-how-many-new-signings-feature-in-super-cup-final_602859.html" },
+      { label: "bet365 News -- Paris Saint-Germain v Aston Villa team news: Garnacho absent from Villa squad", url: "https://news.bet365.com/en-gb/article/paris-saint-germain-v-aston-villa-team-news/2026081217334478576" }
+    ],
+    players: ["Brian Madjo"],
+    teams: ["Aston Villa"],
+    featured: true
+  },
+{
+    id: 16,
+    title: "Micky van de Ven's New Contract Is De Zerbi's Clearest Statement Yet",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/vdvcontract.jpeg",
+    imageLink: "https://www.tottenhamhotspur.com/news/1083617/new-deal-for-micky-van-de-ven",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "Micky van de Ven has signed a new five-year Tottenham contract, personally pushed through by Roberto De Zerbi after interest from Liverpool and Barcelona. Why retaining him matters as much as any of Spurs' big-money arrivals this summer.",
+    content: [
+      "Tottenham moved fast this week to tie down their best defender. Micky van de Ven has signed a new five-year contract at Spurs, running to 2031, ending any lingering uncertainty over his future just as Liverpool and Barcelona were reportedly circling. The deal is reported to be worth around 75 million euros over its length, with Van de Ven's wages rising above 240,000 pounds a week (Read Tottenham, 2026). More revealing than the numbers, though, is who pushed hardest to make it happen.",
+      "De Zerbi's fingerprints",
+      "Roberto De Zerbi personally lobbied the Tottenham board to get the deal over the line, a level of direct involvement that says as much about the new head coach's priorities as it does about Van de Ven himself (beIN Sports, 2026). \"Micky is one of the best centre-backs in Europe and an important player for us,\" De Zerbi said. \"He has the qualities, mentality and ambition that we want at Tottenham, and I am very happy that he has decided to continue his journey with the club\" (Hayters, 2026).",
+      "Why Van de Ven specifically",
+      "The praise is not simply generic manager talk. De Zerbi's Tottenham are built to defend in open space rather than sit deep behind the ball, which puts a premium on a centre-back who can win foot races rather than simply hold a line. Van de Ven's recovery pace is exactly that kind of asset -- across 35 Premier League starts last season he played 3,044 minutes, averaging 1.15 tackles and 3.75 clearances per 90 (FotMob, 2026). He also kept nine clean sheets and scored four Premier League goals, level with Tottenham's third-highest scorer in the league last season (Premier League, 2026).",
+      "Seeing off Liverpool and Barcelona",
+      "That profile is precisely why Liverpool and Barcelona were credibly linked with an approach this summer. Losing a 24-year-old defender already established as a first-team regular, and an occasional goalscorer, would have been a damaging blow to a squad De Zerbi is still rebuilding around. Instead, Spurs got their retention in early, tying Van de Ven down before interest from elsewhere could turn into a formal approach (Yardbarker, 2026).",
+      "The player's side of it",
+      "Van de Ven's own comments suggest the pursuit was not really necessary in the first place. \"It's a special moment to sign a new deal and a proud moment for me and my family,\" he said. \"I've always loved Spurs, from the first day I stepped in here. I love the club, I love the fans and I've developed really well here\" (Goal, 2026).",
+      "What it signals for the new era",
+      "On its own, one contract extension is a squad-management story. In the context of Tottenham's wider summer -- a club-record 100 million pound move for Sandro Tonali, an 85 million pound deal for Mateus Fernandes, 52 million pounds for Jan Paul van Hecke, and free transfers for Andy Robertson, Marcos Senesi and Martin Dubravka, taking their outlay past 237 million pounds -- it reads as something bigger (Sports Mole, 2026). De Zerbi is not just buying a new spine for Tottenham; he is persuading the parts of the old one worth keeping to stay and build it with him. Retaining Van de Ven before a ball has been kicked in anger this season is arguably a stronger early statement than any of the incoming names."
+    ],
+    sources: [
+      { label: "Read Tottenham -- How much will Micky van de Ven earn after bumper new contract?", url: "https://readtottenham.com/2026/08/11/tottenham-news-how-much-will-micky-van-de-ven-earn-after-bumper-new-contract/" },
+      { label: "beIN Sports -- 'I'm excited about what's to come' -- Van de Ven signs new Spurs contract", url: "https://www.beinsports.com/en-us/soccer/premier-league/articles/im-excited-about-whats-to-come--van-de-ven-signs-new-spurs-contract-2026-08-10" },
+      { label: "Hayters -- 'Micky is one of the best centre-backs in Europe' -- De Zerbi praises defender", url: "https://hayters.com/micky-is-one-of-the-best-centre-backs-in-europe-de-zerbi-praises-defender-after-he-signs-new-deal-with-spurs/" },
+      { label: "FotMob -- Micky van de Ven stats, career and market value", url: "https://www.fotmob.com/players/1097466/micky-van-de-ven" },
+      { label: "Premier League -- Micky van de Ven stats this season and career statistics", url: "https://www.premierleague.com/en/players/491279/micky-van-de-ven/stats" },
+      { label: "Yardbarker -- Micky van de Ven commits long-term future to Tottenham", url: "https://www.yardbarker.com/soccer/articles/micky_van_de_ven_commits_long_term_future_to_tottenham_with_new_five_year_contract/s1_17451_44161177" },
+      { label: "Goal -- 'I love this club' -- Micky van de Ven commits future to Tottenham", url: "https://www.goal.com/en-gb/lists/micky-van-de-ven-tottenham-new-contract/blt9022888369b9df6a" },
+      { label: "Sports Mole -- Tottenham summer transfers and net spend", url: "https://www.sportsmole.co.uk/football/spurs/transfer-talk/feature/spurs-summer-transfers-all-confirmed-ins-and-outs-for-2026_599114.html" }
+    ],
+    players: ["Micky van de Ven"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
+    id: 15,
+    title: "Scouting Report: Ayyoub Bouaddi -- The Teenager Manchester City Are Trusting With Rodri's Future",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/bouaddicity.jpg",
+    imageLink: "https://ligue1.com/en/articles/l1_article_1014-profile-ayyoub-bouaddi-lille-s-latest-17-year-old-prodigy",
+    imageCredit: "Photo: Ligue 1",
+    excerpt: "Manchester City are closing in on an 18-year-old Lille midfielder in a deal worth up to 100 million euros. The scanning habit and vertical passing that have him lined up as Rodri's long-term successor -- and what the transfer signals for Omar Marmoush and Savinho's futures at the club.",
+    content: [
+      "Manchester City are closing in on one of the more eye-catching pieces of business of the summer: an agreement worth up to 100 million euros for an 18-year-old who has not yet started 40 senior matches. Ayyoub Bouaddi, Lille's teenage central midfielder, has provisionally agreed personal terms on a six-year contract, and City are reportedly planning to bring him straight into Enzo Maresca's first-team squad rather than loan him back to Ligue 1. With Rodri's long-term future at the club now genuinely uncertain, the timing looks less like coincidence and more like succession planning.",
+      "The read before the pass",
+      "Bouaddi's defining habit happens before he ever touches the ball. Scouting reports consistently note that he checks his shoulder and maps out both his passing options and the nearest presser's position in the moment before the ball reaches him, which lets him play first-time or under minimal control even against a set defence (Total Football Analysis, 2026). It is a habit built on information rather than raw pace, the kind of foundation that tends to age well.",
+      "What the numbers show",
+      "The underlying data backs up the reputation. Bouaddi averages a little under 41 passes per game at roughly 85 percent completion this season, with the emphasis on verticality rather than simply retaining possession -- picking the line-breaking pass into the half-space over the safe ball sideways, with genuine range on both feet (FootyStats, 2026). For a teenager, his defensive engagement and duels-won numbers are also unusually high, closer to a combative Ligue 1 veteran than a raw academy graduate still finding his feet (Breaking The Lines, 2026).",
+      "A World Cup education",
+      "Bouaddi's rise has not gone unnoticed internationally either. He was named in Morocco's 26-man squad for this summer's World Cup, its youngest member, as Mohamed Ouahbi's Atlas Lions reached the quarter-finals -- rare senior tournament exposure for a player still a year removed from a regular starting shirt at club level (Khel Now, 2026).",
+      "What this means for Marmoush and Savinho",
+      "The Bouaddi deal says almost as much about who Manchester City are moving away from as who they are building around. Omar Marmoush and Savinho have both been told their futures are, in Maresca's words, essentially their own decision, with Tottenham and Newcastle both circling and neither player guaranteed regular minutes in a rebuilt attack (ESPN, 2026). Neither directly competes with Bouaddi for a shirt -- he is a central midfielder, they are attackers. But the two situations are connected by where Maresca is choosing to spend his trust and City's transfer budget. A six-year, nine-figure commitment to an unproven teenage midfielder, arriving in the same window City are actively willing to let two established internationals leave, is a clear signal of priority (SportBible, 2026). It fits the pattern already visible in Maresca's early tactical setup at City: a controlling double pivot and patient buildup play rather than the front-footed, interchangeable attacking line Guardiola preferred. A self-sufficient deep midfielder who can both progress the ball and win it back is, on that evidence, a higher priority right now than a third or fourth option in behind Erling Haaland.",
+      "The risk City are taking",
+      "None of this guarantees Bouaddi succeeds. Eighteen-year-olds arriving from Ligue 1 with fewer than 2,500 senior minutes have failed to adapt to the Premier League before, and City are asking him to eventually replace one of the most complete central midfielders of his generation. But the fact that City are willing to fast-track him into the first-team squad rather than ease him in via a loan suggests they see the ceiling as worth the risk. Whether Bouaddi becomes Rodri's long-term successor or an expensive lesson in patience, Manchester City have made their intentions for this midfield unmistakably clear."
+    ],
+    sources: [
+      { label: "Yahoo Sports -- Manchester City reach verbal agreement with Ayyoub Bouaddi", url: "https://sports.yahoo.com/articles/manchester-city-reach-verbal-agreement-with-ayyoub-bouaddi-as-transfer-edges-closer-094500712.html" },
+      { label: "Total Football Analysis -- Ayyoub Bouaddi Scout Report at LOSC Lille 2025/2026", url: "https://totalfootballanalysis.com/player-analysis/ayyoub-bouaddi-scout-report-lille-2025-2026-analysis-tactics" },
+      { label: "FootyStats -- Ayyoub Bouaddi: goals, xG, assists, career stats", url: "https://footystats.org/players/france/ayyoub-bouaddi" },
+      { label: "Breaking The Lines -- Ayoub Bouaddi: Lille's Teenage Prodigy", url: "https://breakingthelines.com/@btl/ayoub-bouaddi-lilles-teenage-prodigy" },
+      { label: "Khel Now -- Morocco name preliminary squad for FIFA World Cup 2026 ft. Bouaddi", url: "https://khelnow.com/football/world-football-morocco-preliminary-squad-fifa-world-cup-202605" },
+      { label: "ESPN -- Enzo Maresca on Omar Marmoush's Man City future: \"He needs to decide\"", url: "https://www.espn.com/soccer/story/_/id/49574541/manchester-city-premier-league-enzo-maresca-omar-marmoush-future-needs-decide" },
+      { label: "SportBible -- Enzo Maresca hints Man City star can leave as Spurs and Newcastle placed on red alert", url: "https://www.sportbible.com/football/transfer-news/omar-marmoush-manchester-city-transfer-news-spurs-newcastle-886651-20260809" }
+    ],
+    players: ["Ayyoub Bouaddi"],
+    teams: ["Manchester City"],
+    featured: true
+  },
+{
+    id: 14,
+    title: "The Djed Spence Discount: Why Some Players Never Escape Their Reputation",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/djedtransfer.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/jun/08/djed-spence-england-world-cup-broken-jaw",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Djed Spence is heading to Inter Milan for a fee barely bigger than the one Tottenham paid four years ago -- despite becoming an established Premier League right-back, a Europa League winner and a full England international in between. His stagnant price tag says less about his ability than about how football decides what a player is worth in the first place.",
+    content: [
+      "Inter Milan are closing in on a deal for Djed Spence, with reports on Monday putting the fee at around £25-26m (in the region of €30m) plus bonuses (Get Italian Football News, 2026). On paper, that's an unremarkable, mid-market transfer in a summer full of them. Look closer, though, and the number is strange. It's barely more than what Tottenham paid Middlesbrough for Spence four years ago -- for a player who has since become an established Premier League right-back, a European trophy winner, and part of England's World Cup squad this summer.",
+      "That flat trajectory looks even odder set against the market around it. Premier League clubs have put together a record summer, spending crossing £3.19 billion before the window has even closed, headlined by a British-record £117m for Morgan Rogers and £116m for Elliot Anderson (Sky Sports, 2026). Fees are rising everywhere. Spence's, relative to what he's achieved, barely has.",
+      "The same number, four years apart",
+      "Spurs signed Spence from Middlesbrough for £20m in July 2022, off the back of a loan season at Nottingham Forest so good it won him the Championship's Young Player of the Month award twice and a place in the PFA Team of the Year. He was 21, unproven at the top level, essentially a bet on potential. Inter's fee, four years later, is being negotiated for a 25-year-old who has since nailed down a starting right-back spot at a club chasing the top four, won the 2025 Europa League, made his senior England debut, and was part of the Three Lions' squad at this summer's World Cup. On output alone, that CV should be worth a far bigger jump than the one currently on the table.",
+      "The comment that never left",
+      "The gap between Spence's reputation and his output starts almost the moment he signed. Antonio Conte publicly distanced himself from the move within days, calling Spence \"an investment by the club\" rather than his own signing (BBC Sport, 2022). Spence made just six substitute appearances before being loaned out, and later said the comment \"shattered his confidence\" (The Standard, 2025). A transfer market doesn't price a player on ability alone -- it prices him on the story being told about him, and that story was written before Spence had a real chance to write it himself.",
+      "Chaos mistaken for a personality flaw",
+      "What followed did little to correct it. A promising loan at Rennes, including a rare away win at Paris Saint-Germain, ended early through injury. A loan at Leeds was cut short after seven appearances, with manager Daniel Farke citing concerns about his attitude (Yorkshire Post, 2024). Each incident had its own circumstantial explanation. Strung together, though, they hardened into a single, simplified label -- \"problem player\" -- that had almost nothing to do with what Spence could actually do with a football.",
+      "The proof that should have reset the price",
+      "The turnaround, when it came, was thorough. A loan at Genoa in early 2024 repaired his reputation enough that Ange Postecoglou brought him back into the fold; his first Tottenham start finally arrived 881 days after he signed (The Athletic, 2024). He was named Player of the Match against Manchester United in February 2025, scored his first Premier League goal weeks later, and came off the bench in Tottenham's Europa League final win that May. By September, he'd signed a new long-term Spurs contract, made his senior England debut, and become the first Muslim player capped for the men's national team -- before being named in England's World Cup squad this summer. That is not a marginal résumé. It's the CV of a player who should be significantly more expensive than the one Spurs bought in 2022, not roughly the same price.",
+      "Spence isn't a one-off",
+      "This isn't unique to Spence. Arsenal let centre-back Jakub Kiwior leave for Porto this summer for around £14.5m -- less than half his estimated market value, for what was described as \"an experienced, versatile, peak-aged centre-half\" a rival club would likely have paid £40m for (Football365, 2026). Rasmus Hojlund needed to leave a misfiring Manchester United entirely, and score 26 goals in 95 games elsewhere, before Napoli would pay anywhere close to what his output actually suggested he was worth. In both cases, a reputation formed in one specific, difficult context outlived the football evidence that should have replaced it.",
+      "Reputation is sticky, form isn't",
+      "In theory, a transfer market should reprice a player instantly on new evidence -- a good season, a trophy, an international call-up. In practice, it does no such thing. A bad early episode, especially one delivered publicly by a manager, becomes the fixed point every future assessment gets measured against. Reversing it doesn't just take good form. It takes years of it, delivered patiently enough to outlast the story that got there first -- and even then, as Spence's fee suggests, the market can still be strangely slow to catch up.",
+      "This is where the value is",
+      "If Inter do land Spence for anywhere near the reported fee, they are getting an established Premier League right-back and full international at a price that reflects who he was in 2022, not who he's become since. That's not really a story about Djed Spence. It's a story about how football decides what a player is worth -- and how long a reputation can keep collecting rent long after the facts that built it have stopped being true."
+    ],
+    sources: [
+      { label: "Get Italian Football News -- Breaking: Inter close in on €30 million deal for Tottenham star Djed Spence", url: "https://www.getfootballnewsitaly.com/2026/inter-30m-tottenham-spence/" },
+      { label: "BBC Sport -- Spurs: Spence not my signing, says Conte", url: "https://www.bbc.com/sport/articles/cyjmddrr0w7o" },
+      { label: "The Standard -- Spurs star slams Conte as he reveals ex-boss 'shattered my confidence'", url: "https://www.standard.co.uk/sport/football/djed-spence-antonio-conte-tottenham-transfer-b1218539.html" },
+      { label: "Yorkshire Post -- Leeds United transfer latest: Whites exercise recall option on Djed Spence", url: "https://www.yorkshirepost.co.uk/sport/football/leeds-united/leeds-united-transfer-latest-whites-exercise-recall-option-to-allow-djed-spence-to-return-to-premier-league-side-tottenham-hotspur-4466922" },
+      { label: "The Athletic (via The New York Times) -- It took Djed Spence 881 days to make his first start for Tottenham", url: "https://www.nytimes.com/athletic/5996822/2024/12/16/djed-spence-tottenham-hotspur-first-start/" },
+      { label: "Football365 -- The biggest transfer underpays of summer 2026", url: "https://www.football365.com/news/biggest-transfer-underpays-summer-2026-arsenal-manchester-united" },
+      { label: "Sky Sports -- Transfer window trends revealed as Premier League spending hits £3.19bn", url: "https://www.skysports.com/football/news/11661/13423608/transfer-window-trends-revealed-as-premier-league-spending-hits-lb3-19bn-and-domestic-trading-increases" }
+    ],
+    players: ["Djed Spence"],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+{
+    id: 13,
+    title: "Brennan Johnson and Dwight McNeil Swap: Everton and Palace Finish What January Started",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/johnsonmcneil.jpeg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cgr7lde58glo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Seven months after a £20m move collapsed on deadline day, Dwight McNeil is finally getting his switch to Crystal Palace -- this time as part of a straight, fee-free swap for Brennan Johnson, who arrived at Selhurst Park for a club-record £35m in January and left without scoring a single goal. We look at how the deal came together, and why both clubs think they've won it.",
+    content: [
+      "Everton and Crystal Palace have completed a straight swap deal sending Brennan Johnson to Merseyside and Dwight McNeil to south London, with no fee changing hands in either direction. Both players are set to sign four-year contracts at their new clubs, and in a detail few could have scripted, Everton host Palace on the opening weekend of the season -- meaning both men could face their old side within days of putting pen to paper.",
+      "Undoing January's collapse",
+      "The deal effectively completes a transfer that should have happened seven months ago. Everton, McNeil and Palace agreed a deal in principle on deadline day in January, an initial loan with an obligation to buy worth around £20m, and McNeil had even completed a medical. The move collapsed at the last minute after the necessary paperwork wasn't finalised in time, a delay complicated by Palace simultaneously trying to push through Jean-Philippe Mateta's move to AC Milan, which fell apart during his medical. Palace asked Everton to restructure the McNeil deal as a result; Everton refused, and the transfer died. The fallout was significant enough that McNeil's partner, Megan Sharpley, publicly criticised the process afterwards, writing that the winger had been \"dragged along on an emotional rollercoaster\" only for the move to be \"torn away\" at the last second <a href=\"https://uk.sports.yahoo.com/news/crystal-palace-everton-agree-brennan-100641574.html\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Yahoo Sports/Evening Standard, 2026)</a>.",
+      "Johnson's expensive false start at Selhurst Park",
+      "While McNeil waited for his move to resurface, Palace pressed ahead in January with a club-record £35m signing of their own: Brennan Johnson, signed from Tottenham Hotspur. It has not worked out. Johnson made 26 appearances in all competitions for Palace but did not score a single goal, managing only two assists along the way. He does leave south London with a Europa Conference League winner's medal, though he didn't feature in the final itself -- a fittingly muted end to a seven-month spell that never got going.",
+      "Why Everton think they've got the better profile",
+      "David Moyes has watched McNeil, an Everton player since 2022 and a regular under Sean Dyche, drift out of his plans since taking over at Goodison Park, with the emergence of Jack Grealish and Tyrique George squeezing him out of the left-wing picture despite 122 appearances for the club. Johnson offers a different profile entirely: a proven Premier League goal threat who racked up 41 goals and assists during his time at Nottingham Forest, with more pace and directness in transition than McNeil provides. Where McNeil's game has centred on pinpoint crossing, a style several Everton managers have valued less than Dyche did, Johnson is expected to give Moyes a sharper attacking outlet on the flank (VAVEL, 2026).",
+      "Palace's calculation",
+      "The maths could easily have looked very different. Reports over the weekend before the deal was finalised suggested Palace, mindful that Johnson had cost £35m against McNeil's roughly £20m valuation from January, wanted an additional cash top-up from Everton of around £10m to make a swap work <a href=\"https://sports.yahoo.com/articles/evertons-dwight-mcneil-dilemma-explained-061000410.html\" target=\"_blank\" rel=\"noopener nofollow\" class=\"citation-link\">(Yahoo Sports/Goodison News, 2026)</a>. That extra fee never materialised. With McNeil entering the final 12 months of his Everton contract and Pierre Sage, Palace's manager since Oliver Glasner's departure, still keen on a player his club had chased since January, a straight swap ultimately suited both boardrooms more than a fee-laden deal would have.",
+      "The reunion no one scripted",
+      "Whatever each club's calculation, the timing hands supporters an immediate storyline. Everton's opening fixture of the season is at home to Crystal Palace, meaning Johnson could make his competitive Everton debut against the club he left a week earlier, while McNeil returns to Goodison Park in Palace colours before he's had time to properly settle in south London. Two players who spent January in transfer limbo now start their season having swapped places entirely -- and almost immediately swapping shirts against each other, too."
+    ],
+    sources: [
+      { label: "Yahoo Sports (via Evening Standard) -- Crystal Palace and Everton agree Brennan Johnson-Dwight McNeil swap deal", url: "https://uk.sports.yahoo.com/news/crystal-palace-everton-agree-brennan-100641574.html" },
+      { label: "VAVEL -- Why Everton have benefited from McNeil and Johnson swap deal", url: "https://www.vavel.com/en/football/2026/08/10/everton/1267703-why-everton-have-benefited-from-mcneil-and-johnson-swap-deal.html" },
+      { label: "Yahoo Sports (via Goodison News) -- Everton's Dwight McNeil dilemma explained as Brennan Johnson swap deal now on cards", url: "https://sports.yahoo.com/articles/evertons-dwight-mcneil-dilemma-explained-061000410.html" }
+    ],
+    players: ["Brennan Johnson", "Dwight McNeil"],
+    teams: ["Everton", "Crystal Palace"],
+    featured: true
+},
+{
+    id: 12,
+    title: "Carabao Cup Round Two: The Shock That's Already Landed, and the Underdogs Dreaming of More",
+    type: "Analysis",
+    competition: "Carabao Cup",
+    date: "2026-08-11",
+    scoreline: "",
+    image: "images/carabaocupround2.jpg",
+    imageLink: "https://www.theguardian.com/football/2026/aug/07/middlesbrough-wrexham-carabao-cup-match-report",
+    imageCredit: "Photo: The Guardian",
+    excerpt: "Walsall's stunning win over Bristol City set the tone for a chaotic first round, and Monday's second round draw has handed several lower-league sides a genuine route to another shock. We look at the result that mattered most, the ties worth circling, and the underdogs with a puncher's chance when round two kicks off on 24 August.",
+    content: [
+      "Round one of the Carabao Cup wrapped up on Monday night, and by 7.20pm the balls were already being pulled for round two. In between, English football's most maligned domestic competition delivered exactly the kind of chaos that makes the early rounds worth paying attention to: a League Two side dumping out a Championship promotion fancy, a string of shootouts, and a second round draw that has left several unfashionable names with a genuine route to Wembley. Here's what actually mattered from round one, and where round two's shocks are most likely to come from.",
+      "The result that set the tone",
+      "The standout scoreline of the entire first round came at Ashton Gate on the opening night, where League Two's Walsall beat Championship promotion hopefuls Bristol City 1-0. Aaron Pressley scored the only goal in the 47th minute, turning in a low cross from Reece Smith, but the game was arguably won by his own goalkeeper: Jed Ward produced a string of saves to deny Jed Wallace and Lorent Tolaj at the other end, while City's new signing Sam Tickle somehow kept out three efforts from a single corner at 0-0. It capped a miserable night for incoming Bristol City boss Michael Skubala, whose first game in charge ended in defeat to a side two divisions below his own (Yahoo Sports, 2026).",
+      "Fine margins across the board",
+      "Walsall's win was the biggest shock by division gap, but it wasn't the only tie decided by fine margins. Barnsley needed penalties to see off Wigan Athletic, Preston North End required the same to beat Huddersfield Town, and Burnley -- one of three clubs relegated from the Premier League last season -- were taken all the way by League Two's Notts County before winning on spot-kicks. Across both sections, VAVEL reported that six ties in total went the distance to a shootout, a reminder that gulfs in league position count for less than the fixture list suggests in the first week of August (VAVEL, 2026).",
+      "Underdogs with a route through",
+      "Monday's draw didn't just pair up whoever was left in the hat -- it handed a genuine run to a handful of lower-league sides. Walsall's reward for beating Bristol City is a trip to Leyton Orient, themselves fresh off a 2-0 win over League One rivals Oxford United, guaranteeing at least one more shock-hunting side reaches round three. Crewe Alexandra, who haven't progressed beyond the second round since 2009, travel to League One's Barnsley in search of a repeat. Fleetwood Town and Shrewsbury Town, both League Two, were drawn together, guaranteeing another lower-league side advances regardless of the result. And Lincoln City, preparing for their first Championship season in over 60 years, take that newfound status to Blackpool looking to make an early statement (VAVEL, 2026).",
+      "Two ties worth circling",
+      "Two fixtures stand out above the rest for genuine shock potential. Bradford City, beaten League Two finalists back in 2013, will host Burnley at a sold-out-in-waiting Valley Parade -- and after needing penalties to get past Notts County in round one, Scott Parker's side will arrive as anything but comfortable favourites. Further south, Doncaster Rovers welcome a Middlesbrough side chasing their first major trophy since winning this very competition in 2004, a Championship promotion contender who will need to be sharper than their round one shootout win over Stockport County suggested if they're to avoid another upset.",
+      "Names to watch when the ties kick off",
+      "It isn't just the sides in League One and League Two with something to prove. Jack Wilshere takes charge of Luton Town's trip to Chelsea, a fixture the two clubs have now played five times in as many years. Neil Harris returns to Millwall, the club he captained and later managed, as Cambridge United's manager. And David Moyes takes Everton to Deepdale to face Preston North End for the first time competitively since 2004, a fixture with more shared history between the two clubs than the gulf in league position might suggest.",
+      "When it's played",
+      "Second round ties are scheduled for the week commencing 24 August, giving every side involved a fortnight to prepare. Waiting at the other end of the draw, eventually, is holders Manchester City, chasing a second successive Carabao Cup and looking to draw level with Liverpool's record of ten League Cup triumphs (GiveMeSport, 2026). For Walsall, Crewe, Fleetwood and the rest, that's a long way off. Getting through round two, against opponents picked out specifically because they offer a route through, is the more immediate and entirely realistic ambition."
+    ],
+    sources: [
+      { label: "Yahoo Sports (PA Media) -- Walsall upset Bristol City as Aaron Pressley seals Carabao Cup progress", url: "https://uk.sports.yahoo.com/news/walsall-upset-bristol-city-aaron-204546000.html" },
+      { label: "VAVEL -- Carabao Cup second round draw in full as Premier League sides enter", url: "https://www.vavel.com/en/football/2026/08/10/1267698-carabao-cup-draw-in-full-as-premier-league-sides-enter.html" },
+      { label: "GiveMeSport -- Carabao Cup 2026/27: Draw, Fixtures & Results", url: "https://www.givemesport.com/carabao-cup-2026-27-draw-fixtures-results/" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
+    id: 11,
+    title: "Carabao Cup Second Round Draw: Newcastle, Everton, Wolves and Burnley Learn Their Opponents",
+    type: "Analysis",
+    competition: "Carabao Cup",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/carabaocupdraw.jpg",
+    imageLink: "https://sports.yahoo.com/articles/efl-cup-second-round-draw-131733559.html",
+    imageCredit: "Photo: Yahoo Sports",
+    excerpt: "Newcastle United were sent to West Bromwich Albion and Nottingham Forest drew Leeds United at home as the Carabao Cup second round draw was made on Monday night, while Chelsea host Luton and Tottenham were handed a London derby against Charlton. We run through every confirmed tie from both sections.",
+    content: [
+      "The draw for the second round of the Carabao Cup -- still the EFL Cup to most supporters -- was made on Monday evening, broadcast live on Sky Sports ahead of Plymouth Argyle's derby with Exeter City at Home Park. David Prutton hosted, with pundits Jobi McAnuff and Jamie Mackie pulling the balls shortly after 7.20pm.",
+      "Still split north and south",
+      "As in round one, the draw remained regionalised, with 46 teams split into Northern and Southern sections and kept apart from opponents on the other side of the country until round three. The pot was made up of the 35 winners from last week's first round, plus the 11 Premier League clubs not involved in this season's European competitions, who entered the competition for the first time tonight: Brentford, Chelsea, Coventry City, Everton, Fulham, Hull City, Ipswich Town, Leeds United, Newcastle United, Nottingham Forest and Tottenham Hotspur.",
+      "Northern section in full",
+      "Newcastle United were drawn at home to West Bromwich Albion, and Leeds United were given an all-Premier League clash away to Nottingham Forest. David Moyes' Everton go to second-tier Preston North End, Sheffield Wednesday were handed a home tie against Wolverhampton Wanderers, and Bradford City will welcome Burnley to Valley Parade -- two of the three clubs relegated from the Premier League last season, along with West Ham, already back in the hat as first-round winners.",
+      "Elsewhere in the North, newly promoted Hull City travel to Stoke City, Blackburn Rovers were drawn against Sheffield United, Doncaster Rovers face Middlesbrough, and Barnsley were paired with Crewe Alexandra. Blackpool will play host to Lincoln City, while Fleetwood Town were given a tie against fellow League Two side Shrewsbury Town.",
+      "Chelsea and Spurs both handed home London ties",
+      "The Southern section draw sent Xabi Alonso's Chelsea to a home tie against Jack Wilshere's Luton Town -- the fifth time the two clubs have met in five years. Chelsea beat the Hatters in consecutive FA Cup ties in 2021 and 2022, then completed a league double over them during Luton's solitary Premier League season in 2023-24. Luton have since suffered back-to-back relegations and missed out on the League One play-offs last season by a single point, meaning Chelsea will start their pursuit of a sixth League Cup title as firm favourites.",
+      "Tottenham Hotspur, who entered the draw as ball number 20, were handed a London derby of their own, drawn at home to Charlton Athletic. Elsewhere in the south, Alvaro Arbeloa's Fulham will host League One's AFC Wimbledon at Craven Cottage, while Keith Andrews' Brentford face a trickier away tie at Championship side Birmingham City. West Ham, relegated from the Premier League last season, were drawn away to fellow Championship club Southampton, and newly promoted Ipswich Town host Leicester City. Coventry City, who also enter as one of the 11 Premier League sides without European football, will host the winner of Monday night's Devon derby between Plymouth Argyle and Exeter City.",
+      "The remaining Southern ties pair Walsall with Leyton Orient, Cardiff City with Norwich City, Stevenage with Reading, Cambridge United with Millwall, and Watford with Peterborough United.",
+      "When the ties are played",
+      "Second round fixtures are scheduled for the week commencing 24 August. The Premier League clubs still involved in Europe this season enter at the third round, which is split across the weeks commencing 7 and 14 September, with the Champions League sides waiting until the later of the two."
+    ],
+    sources: [
+      { label: "Sky Sports -- Carabao Cup second round: Chelsea vs Luton, Tottenham vs Charlton and Newcastle vs West Brom as 11 Premier League sides enter draw", url: "https://www.skysports.com/football/news/11095/13571634/carabao-cup-second-round-chelsea-vs-luton-tottenham-vs-charlton-and-newcastle-vs-west-brom-as-11-premier-league-sides-enter-draw" },
+      { label: "Yahoo Sports (via BBC Sport) -- When is the EFL Cup second-round draw?", url: "https://sports.yahoo.com/articles/efl-cup-second-round-draw-131733559.html" },
+      { label: "Chelsea FC -- Chelsea's Carabao Cup second round opponents revealed", url: "https://www.chelseafc.com/en/news/article/chelseas-carabao-cup-second-round-opponents-revealed" },
+      { label: "EFL -- Carabao Cup Round Two draw confirmed", url: "https://www.efl.com/news/2026/august/10/carabao-cup-round-two-draw-confirmed/" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+},
+{
+    id: 10,
+    title: "Scouting Report: Brian Madjo -- The 17-Year-Old Aston Villa Had to Fight FIFA to Register",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/brianmadjo.jpg",
+    imageLink: "https://www.bbc.com/sport/football/articles/cgr74dj0xryo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Aston Villa signed Brian Madjo from Metz in January for £10m, but FIFA's rules on international transfers involving minors meant the 17-year-old striker couldn't play a single competitive minute -- until a Court of Arbitration for Sport ruling changed everything days before the UEFA Super Cup final.",
+    content: [
+      "Not every scouting report exists because a player is already good enough to demand attention. Some exist because of everything that had to happen just for a player to be selectable in the first place. Brian Madjo's belongs to the second category -- although on the evidence of this pre-season, it may not stay there for long.",
+      "Aston Villa signed the 17-year-old centre-forward from French club Metz in January 2026 for a reported £10m, on a five-and-a-half-year contract. Born in Enfield to Cameroonian parents before being raised in Luxembourg, Madjo came through the youth ranks at Racing Union and Marisca Mersch before Metz picked him up, where 13 goals in 26 games for the club's Under-19 side earned him a quick promotion to the senior squad.",
+      "It was, by the standards of a mid-table Premier League club's January window, a low-key piece of business. It has not stayed that way.",
+      "Villa's problem was never Madjo's ability -- it was FIFA's paperwork. Because Madjo had represented Luxembourg at youth level before switching allegiance to England, his move from Metz was classed as an international transfer involving a minor, a category FIFA restricts until a player turns 18. In practice, that meant Villa would not have been able to register him for competitive football until January 2027, a full year after signing him.",
+      "Villa disputed that ruling on the grounds that Madjo was born in Enfield and holds British citizenship, and took the case to the Court of Arbitration for Sport. On 4 August 2026, CAS upheld the club's appeal, ruling that his British birth and UK citizenship made him instantly eligible to play.",
+      "The timing could not have been scripted better. Villa's first fixture with Madjo available is Wednesday's UEFA Super Cup final against Paris Saint-Germain -- the biggest match of their season so far, and the first time the teenager can even be named among the substitutes.",
+      "What makes the case worth making, beyond the legal drama, is what Unai Emery has already seen in pre-season. Madjo scored four goals across Villa's summer fixtures, including two in a single game against Walsall. At 6'4\", he has the frame of a conventional target man, but reports from inside the club describe close control, link-up play and distribution with both feet that is unusual for a striker his size and age -- giving Emery a genuinely different profile to first-choice forward Ollie Watkins, rather than a like-for-like backup.",
+      "None of that guarantees regular Premier League minutes. Watkins remains first choice, and a 17-year-old with four pre-season goals to his name is still a long way from being a nailed-on starter. But the pathway that looked closed as recently as early August is now wide open, and few teenage forwards arrive at a Super Cup final with a court ruling already behind them and a manager already convinced."
+    ],
+    featured: true,
+    players: ["Brian Madjo"],
+    teams: ["Aston Villa"]
+},
+{
+    id: 9,
+    title: "UEFA Super Cup Preview: Aston Villa Chase a Second European Trophy Against Champions League Holders PSG",
+    type: "Match Preview",
+    competition: "UEFA Super Cup",
+    date: "2026-08-10",
+    scoreline: "",
+    kickoff: "2026-08-12T21:00:00+02:00",
+    image: "images/villapsgsupercup.jpg",
+    imageLink: "https://www.goal.com/en/lists/alejandro-garnacho-dig-chelsea-aston-villa-indonesia/blt3a0e7605d0f892a0",
+    imageCredit: "Photo: GOAL",
+    excerpt: "Three months after their first-ever Europa League triumph, Aston Villa face the toughest test imaginable: back-to-back Champions League winners PSG in the UEFA Super Cup. We look at how both sides got here, the Premier League's uneasy recent history in this fixture, and the World Cup hangover complicating team news on both sides.",
+    content: [
+      "Aston Villa's remarkable season continues on Wednesday night, when Unai Emery's side travel to Austria to face Paris Saint-Germain in the UEFA Super Cup, the traditional curtain-raiser to the new European season. Three months after beating Freiburg 3-0 in Istanbul to win their first-ever UEFA Europa League title, Villa now face the toughest possible test of that achievement: the back-to-back Champions League holders, chasing a piece of history of their own.",
+      "How both sides got here",
+      "PSG's route to Salzburg was earned the hard way. Luis Enrique's side beat Arsenal on penalties in Budapest in May, retaining the Champions League and becoming only the second team since Real Madrid in 2016 and 2017 to defend the European Cup (Goal.com, 2026). Villa's path was arguably even more improbable, with goals from Youri Tielemans, Emiliano Buendia and Morgan Rogers seeing off Freiburg in Istanbul to win a first European trophy in over 40 years.",
+      "The Premier League's recent history here",
+      "There is a slightly uncomfortable precedent for Villa to be aware of. This is the second year running that a Premier League club has represented English football in the Super Cup final against PSG, and last year did not end well. Tottenham Hotspur led 2-0 through Micky van de Ven and Cristian Romero in Udine last August, only for PSG to score twice in the final five minutes through Lee Kang-in and Goncalo Ramos, before winning 4-3 on penalties (ESPN, 2025). Villa will hope to avoid a repeat of that late collapse, but the warning is clear: PSG have twice shown against English opposition that they do not need to be at their best for long to still find a way to win.",
+      "A history of near misses",
+      "Villa and PSG are no strangers to each other, and their only previous meetings suggest this fixture rarely lacks drama. The two sides met in the 2024-25 Champions League quarter-finals, with PSG winning the first leg 3-1 at Parc des Princes before Villa produced a spirited 3-2 win at home in the return leg, Morgan Rogers among the scorers on both occasions. PSG progressed 5-4 on aggregate, but Villa's fightback from 5-1 down at one stage remains one of Villa Park's most memorable European nights (Goal.com, 2026).",
+      "Villa's missing men",
+      "Complicating Villa's task considerably is the fact that two of their Europa League final goalscorers will not be involved on Wednesday. Morgan Rogers completed a British-record £117 million move to Chelsea earlier this summer, while Youri Tielemans left for Manchester United in a £35 million deal. Losing two players who scored two of Villa's three goals in Istanbul is a significant blow, leaving Emery's attacking options notably thinner than they were in May.",
+      "Team news: a World Cup hangover",
+      "Villa's preparation has also been complicated by the World Cup, which finished less than a month ago. Amadou Onana, Johan Manzambi and Leon Bailey are all definitely unavailable, with Onana and Manzambi out through knee injuries and Bailey sidelined by a muscular problem. Emiliano Martinez, Ezri Konsa and Ollie Watkins are all doubts after returning late from international duty, with Martinez having carried the heaviest workload of any Premier League player this summer during Argentina's run to the World Cup final (Read Aston Villa, 2026). John McGinn is being managed after a knee concern, and new loan signing Alejandro Garnacho, who could make his competitive debut, picked up a facial injury in pre-season. If Martinez isn't passed fit, Marco Bizot is set to deputise in goal.",
+      "PSG have their own fitness questions to answer. Ousmane Dembele, Bradley Barcola and Achraf Hakimi are among several senior players managing a late return from the World Cup, featuring only sparingly in a recent friendly draw with Manchester United as a result. New signing Maghnes Akliouche arrived from Monaco only last Thursday and is unlikely to start (Read Aston Villa, 2026).",
+      "What to expect",
+      "Both squads head into Wednesday undercooked by their own admission. Villa have won two and lost three of their last five pre-season matches, including a 2-1 defeat to Bayern Munich just four days out, while PSG's own form has been similarly patchy following their exertions in Budapest. Expect a cagey opening period as both managers manage fitness carefully, before space opens up as substitutions are made. Emery is likely to set up in a 4-2-3-1, with Boubacar Kamara and Joao Gomes screening the back four and Watkins leading the line if fit, while Luis Enrique's PSG should line up in their familiar 4-3-3, built around Vitinha and Joao Neves in midfield.",
+      "Whatever happens on Wednesday, Villa have already delivered one of English football's more remarkable European campaigns in years. Beating PSG would be a statement in its own right, not just for Villa's season but for English football's credibility against the current dominant force in Europe. Losing, as Tottenham found out twelve months ago, would not undo what Villa have already achieved. But for a club chasing only its second Super Cup appearance in more than 40 years, the chance to win it is not one Emery's side will want to let slip."
+    ],
+    sources: [
+      { label: "Goal.com -- PSG vs Aston Villa: Comprehensive UEFA Super Cup preview", url: "https://www.goal.com/en/news/paris-saint-germain-aston-villa-uefa-super-cup-preview/bltdfff59300d29b07f" },
+      { label: "ESPN -- PSG 2-2 Spurs (Aug 13, 2025) Game Analysis", url: "https://www.espn.com/soccer/report/_/gameId/735899" },
+      { label: "Read Aston Villa -- Aston Villa v PSG: Predicted line-up, injury news and how to watch", url: "https://readastonvilla.com/2026/08/08/aston-villa-v-psg-predicted-line-up-injury-news-and-how-to-watch/" }
+    ],
+    players: [],
+    teams: ["Aston Villa"],
+    featured: true
+  },
+{
+    id: 8,
+    title: "Transfer Round-Up: Anderson, Rogers and Guimaraes Redraw the Premier League's Spending Rules",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-10",
+    scoreline: "",
+    image: "images/transferroundup.JPG",
+    imageLink: "https://www.mancity.com/news/mens/elliot-anderson-first-day-gallery-63920411",
+    imageCredit: "Photo: Manchester City",
+    excerpt: "Two British transfer records broken inside a month, and Newcastle United banking more than £240 million in sales. We break down what the completed moves for Elliot Anderson, Morgan Rogers and Bruno Guimaraes actually tell us about where Premier League money is going this summer.",
+    content: [
+      "Summer transfer windows produce headlines every year, but the last few weeks of this one have delivered something more unusual: two British transfer records broken inside a month, and Newcastle United, of all clubs, sitting at the centre of the window's biggest exit story. Here's what three of the summer's most significant completed deals actually tell us about where Premier League money is going.",
+      "A record broken twice",
+      "Elliot Anderson's £116 million move from Nottingham Forest to Manchester City looked, when it was agreed in June, like the kind of fee that would stand for years. Forest, who had paid roughly a tenth of that figure to sign him from Newcastle only two seasons earlier, held firm on their valuation throughout, and City eventually met it in full to beat Manchester United to a 23-year-old they had watched closely since his breakthrough season at the City Ground (ESPN, 2026).",
+      "It didn't stand for long. Within weeks, Chelsea agreed £117 million with Aston Villa for Morgan Rogers, edging past Anderson's fee by a single million pounds and making Rogers, on paper, the most expensive British player in football history (Goal.com, 2026). Both deals were driven by a similar calculation: two 23-year-old England internationals, already Premier League-proven, with resale value still ahead of them, bought by clubs unwilling to let a domestic rival get there first.",
+      "Why domestic fees keep climbing",
+      "The scale of both fees says as much about the market as it does about either player. English-qualified players help squads meet homegrown quota rules more comfortably than imports, and buying domestically avoids the complications that can come with recruiting from abroad. Add two clubs, City and Chelsea, both operating comfortably within profit and sustainability limits and both determined not to lose a rival transfer battle, and fees this size stop looking like outliers and start looking like the going rate for proven English talent.",
+      "Newcastle's summer of exits",
+      "The third deal worth examining involves less spending and more selling. Bruno Guimaraes's £75 million move to Arsenal was, by his own account, driven by a personal request to leave St James' Park after four years as one of Newcastle's most important players. Newcastle didn't fight it. If anything, the club leaned into the sale, with the deal taking their total player sales this summer past £240 million, a figure that also includes Sandro Tonali's British-record move to Tottenham and Anthony Gordon's departure to Barcelona (Sky Sports, 2026).",
+      "That volume of outgoing business looks like a deliberate strategy rather than a fire sale. Newcastle have spent much of the summer reinvesting the proceeds into a younger, cheaper squad, while banking a substantial transfer surplus that strengthens their position under profit and sustainability rules for seasons to come. Losing Guimaraes, a genuine fan favourite and long-serving captain, is a real footballing cost. Financially, it looks closer to the plan working exactly as intended.",
+      "The bigger picture",
+      "Taken together, these three deals total more than £300 million in confirmed spending, agreed inside a single transfer window, on three players who have all featured for their countries at senior international level within the past year. It's a reminder of how far transfer inflation has moved even by recent standards, and of how directly profit and sustainability rules now shape which clubs can spend and which are forced to sell. Anderson and Rogers show what the buying end of that equation looks like when two clubs both refuse to blink. Guimaraes shows the selling end: even a club as ambitious as Newcastle now treats a homegrown-feeling talisman as an asset to be cashed in under the right circumstances, rather than a player to be protected at all costs.",
+      "None of the three deals guarantees success on the pitch, big fees rarely do on their own, but together they tell a consistent story about the state of the market heading into the season: British internationals with sell-on value are now worth more than continental imports of similar quality, PSR is dictating almost as much transfer business as ambition is, and Newcastle, historically one of the window's biggest spenders, has spent this summer as one of its most disciplined sellers."
+    ],
+    sources: [
+      { label: "Sky Sports -- Bruno Guimaraes: Arsenal sign midfielder in £75m transfer as Newcastle surpass £240m in player sales this summer", url: "https://www.skysports.com/football/news/11095/13570096/bruno-guimaraes-arsenal-sign-midfielder-in-lb75m-transfer-as-newcastle-surpass-lb240m-in-player-sales-this-summer" },
+      { label: "ESPN -- Elliot Anderson completes move to Manchester City from Nottingham Forest", url: "https://www.espn.com/soccer/story/_/id/49433223/elliot-anderson-completes-move-manchester-city-nottingham-forest" },
+      { label: "Goal.com -- Chelsea complete record-breaking £117m transfer for Morgan Rogers, with England international leaving Aston Villa as the most expensive British player of all-time", url: "https://www.goal.com/en/lists/chelsea-record-breaking-117m-transfer-morgan-rogers-aston-villa-british-player/blt51956570079aa15b" }
+    ],
+    players: ["Bruno Guimaraes", "Morgan Rogers", "Elliot Anderson"],
+    teams: ["Arsenal", "Newcastle United", "Chelsea", "Aston Villa", "Manchester City", "Nottingham Forest"],
+    featured: true
+  },
+{
+    id: 7,
+    title: "Tottenham Are Right to Refuse Arsenal for Romero -- But the Principle Behind It Is Outdated",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-09",
+    scoreline: "",
+    image: "images/romeroarsenal.JPG",
+    imageLink: "https://www.tottenhamhotspur.com/news/987603/romero-reflects-on-world-cup-glory-at-that-moment-i-was-very-emotional",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "Tottenham's ownership has blocked Cristian Romero from joining Arsenal on rivalry grounds alone, even as their captain looks open to the move and better financial offers sit elsewhere. It's a decision most Spurs fans will cheer. It's also, increasingly, the wrong way to run a football club.",
+    content: [
+      "Cristian Romero wants to leave Tottenham this summer, and for a while it looked like he might end up somewhere unthinkable to most of the fanbase: Arsenal.",
+      "The chain of events is straightforward enough. William Saliba's serious back injury left Arsenal short at centre-back, and with Aston Villa refusing to budge on Ezri Konsa, Mikel Arteta's club made contact over Romero instead. According to Fabrizio Romano, Romero is genuinely open to the move, partly due to his relationship with Gabriel Heinze, the Argentine coach Arsenal appointed to their first-team staff last summer.",
+      "Tottenham's response has been unambiguous. The club will not sell Cristian Romero to Arsenal, full stop, regardless of what Arsenal offer or what Romero himself wants.",
+      "This isn't a football decision",
+      "What makes this particular refusal interesting is how openly it has been framed as symbolic rather than strategic. Romano has been explicit that the call sits with Tottenham's ownership, not with anyone assessing football or financial logic: it's about the board, the rivalry, full stop. Reports elsewhere describe the same stance from a high-level source at Spurs, framed simply as not entertaining the prospect of selling to Arsenal.",
+      "That is worth sitting with for a moment. Tottenham are not arguing the fee is too low. They are not arguing Romero is more valuable to keep than to sell. They are arguing, purely and explicitly, that a rival club's money is worth less than everyone else's.",
+      "The financial reality",
+      "Spurs have reportedly set a valuation of £34-38 million for Romero. Atletico Madrid have already agreed personal terms and are viewed as the likely destination, while Inter Milan remain interested but complicated by their own outgoing business. There is no indication Arsenal's offer would have been worse than either of those. If anything, a direct swap of Premier League money, spent by a club with no reason to negotiate patiently, is often the cleanest deal on the table.",
+      "By ruling Arsenal out entirely, Tottenham haven't protected their financial position. They have narrowed it, on principle, at a moment when Roberto De Zerbi's rebuild needs every available pound.",
+      "Why the taboo exists",
+      "None of this is to pretend the instinct is irrational. Selling to a direct rival has always carried a different emotional weight than selling to a club a few hundred miles away, and North London derbies are not just fixtures, they're identity. The example everyone still reaches for a quarter of a century later is Sol Campbell's free transfer from Tottenham to Arsenal in 2001, a move that remains one of the most bitterly remembered in Premier League history among Spurs supporters.",
+      "That memory is precisely why the current stance exists. Ownership groups are, understandably, wary of repeating it.",
+      "But that's exactly the problem",
+      "Football finance in 2026 does not look like it did in 2001. Profit and sustainability rules mean every pound of transfer income matters more, not less, than it used to. Rebuilding a squad under De Zerbi is expensive, and turning away the most straightforward buyer, for a fee that is unlikely to differ meaningfully from other offers, is a luxury few clubs can genuinely afford to indulge purely for symbolic reasons.",
+      "There's also a player-relations cost that shouldn't be ignored. Romero is Tottenham's captain, by all accounts a willing and reportedly happy one until now. Blocking a move he wants, for reasons that have nothing to do with football, risks the exact kind of unhappy-captain situation clubs spend most of their energy trying to avoid.",
+      "The counterargument, and why it doesn't hold",
+      "The honest defence of Tottenham's position is that fan identity has real value too, that a club is not just a business, and that some things are worth more than the difference between two similar bids. There's truth in that. Football without tribalism would be a much emptier sport.",
+      "But identity and financial discipline aren't actually in conflict here, because the alternative destinations exist and the fee is comparable either way. This isn't a case of Tottenham sacrificing millions to protect their pride. It's a case of Tottenham insisting the transfer happen with literally any other buyer, at a similar price, for no reason beyond which badge is on the cheque.",
+      "That's not principle. That's optics dressed up as principle, and it's an increasingly expensive habit for a club trying to rebuild on a budget.",
+      "Where this leaves Romero",
+      "Romero will very likely end up at Atletico Madrid, a good move by most measures, and Tottenham will get their fee regardless of how this played out. In that narrow sense, the outcome barely changes.",
+      "But the reasoning behind it is worth challenging anyway, because this situation will happen again, at Tottenham and everywhere else. The clubs that treat every transfer purely as a football and financial decision, rather than a tribal one, are the clubs best placed to compete in an era where every pound of value genuinely matters. The 'never sell to your rivals' rule made emotional sense in 2001. In 2026, it's mostly just an expensive story clubs tell themselves."
+    ],
+    sources: [
+      { label: "Goal.com -- Tottenham issue firm response to Arsenal interest in Romero", url: "https://www.goal.com/en-us/lists/tottenham-block-cristian-romero-arsenal-transfer/blt9ad2b51e6be0fd3f" },
+      { label: "football365 -- Romano reveals ENIC involvement as Tottenham reach final decision", url: "https://www.football365.com/news/tottenham-hotspur-arsenal-cristian-romero-fabrizio-romano-reveals-final-decision" },
+      { label: "ESPN -- Transfer rumors: Could Tottenham's Romero join Arsenal?", url: "https://www.espn.com/soccer/story/_/id/49566333/transfer-rumors-news-tottenham-hotspur-cristian-romero-arsenal" }
+    ],
+    players: ["Cristian Romero"],
+    teams: ["Tottenham Hotspur", "Arsenal"],
+    featured: true
+  },
+{
+    id: 6,
+    title: "Scouting Report: Jayden Lienou -- The Left-Back Leeds Are Quietly Building Around",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-09",
+    scoreline: "",
+    image: "images/jaydenlienousigning.JPG",
+    imageLink: "https://www.leedsunited.com/en/news/jayden-lienou-joins-leeds-united",
+    imageCredit: "Photo: Leeds United",
+    excerpt: "Signed from Manchester City's academy just over a year ago, Jayden Lienou has gone from a name few outside West Yorkshire recognised to a first-team bench regular and a full Wales international. We look at what makes him one of the more compelling under-the-radar prospects in the country.",
+    content: [
+      "Not every breakout story arrives with fanfare. Jayden Lienou's has built quietly, one contract extension and one matchday squad list at a time, and it is now reaching the point where it deserves proper attention.",
+      "The 18-year-old left-back joined Leeds United from Manchester City's academy in the summer of 2025, having previously come through Everton's youth setup. It was not, on paper, the kind of signing that generates headlines. A year on, it looks like one of the shrewder pieces of business Leeds did that window.",
+      "The road to Elland Road",
+      "Lienou's first season at Leeds was spent almost entirely with Scott Gardner's Under-21 side, where he made 26 appearances across the EFL Trophy and National League Cup. It was a solid, unspectacular introduction to English football culture at a new club, the kind of season that rarely gets written about until it starts paying off.",
+      "It has started paying off. In July 2026, Leeds rewarded Lienou with a new three-year contract, tying him to the club until 2029 (Yorkshire Evening Post, 2026). For a teenager not yet a year into his time at the club, that is a significant statement of internal belief.",
+      "Making the bench",
+      "With first-choice left-back Gabriel Gudmundsson sidelined by injury towards the end of last season, Daniel Farke turned to Lienou. He was named in Leeds' matchday squad for Premier League fixtures against both Tottenham Hotspur and Brighton & Hove Albion (Leeds United, 2026), his first taste of first-team involvement at the highest level in England.",
+      "Being an unused substitute is a modest milestone in isolation. In context, for a player who spent the first half of the season entirely in Under-21 football, it represents a genuinely fast trajectory.",
+      "What the numbers say",
+      "Lienou's Premier League 2 season provides a clearer picture of his level. Across 1,556 minutes, he registered one assist and an average match rating of 6.59 (FotMob, 2026). His standout performances tell their own story: an 8.4-rated display against Chelsea's Under-21s that included his assist, and a 7.6-rated away win over Tottenham Hotspur's Under-21 side.",
+      "None of those numbers are spectacular in isolation. Taken together, across a full season adjusting to a new club and a new level of competition, they describe a defender building genuine consistency rather than relying on standout moments.",
+      "International recognition",
+      "Lienou's progress has not gone unnoticed outside Leeds either. He received his first call-up to Craig Bellamy's senior Wales squad in May 2026, featuring as an unused substitute in a friendly against Ghana (Yahoo Sports, 2026). For a left-back who started the season in Under-21 football, a senior international call-up within twelve months is a meaningful marker of trajectory.",
+      "What comes next",
+      "Lienou travelled with Leeds' first-team squad for their pre-season tour of the United States this summer, a strong indicator of where he currently sits in Farke's thinking heading into the new campaign. With Gudmundsson still the incumbent, regular Premier League minutes are not guaranteed. But the pathway is visibly there, and few 18-year-old left-backs enter a season with as clear a sense of a manager's trust already established.",
+      "Lienou is exactly the kind of player scouting reports exist for: not yet a first-team certainty, not yet a name outside his own club's fanbase, but with enough evidence already on record to suggest that will not remain the case for long."
+    ],
+    sources: [
+      { label: "Yorkshire Evening Post -- Whites secure Lienou with new contract", url: "https://www.yorkshireeveningpost.co.uk/sport/football/leeds-united/leeds-united-news-jayden-lienou-wales-man-city-pre-season-elland-road-8813705" },
+      { label: "Leeds United -- Jayden Lienou signs new contract with the Whites", url: "https://www.leedsunited.com/en/news/jayden-lienou-signs-new-contract-with-the-whites" },
+      { label: "FotMob -- Jayden Lienou player profile and statistics", url: "https://www.fotmob.com/players/1797582/jayden-lienou" },
+      { label: "Yahoo Sports -- Wales call up teenage Leeds left-back Lienou", url: "https://ca.sports.yahoo.com/news/wales-call-teenage-leeds-left-161531066.html" }
+    ],
+    players: ["Jayden Lienou"],
+    teams: ["Leeds United"],
+    featured: true
+  },
+{
+    id: 5,
+    title: "Ronald Araujo's Liverpool Loan: Why a Fallen Barcelona Captain Could Solve Iraola's Defensive Crisis",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-08",
+    scoreline: "",
+    image: "images/araujoliverpool.JPG",
+    imageLink: "https://www.fcbarcelona.com/en/news/4392119/ronald-araujo-a-game-away-from-making-top-10-list",
+    imageCredit: "Photo: FC Barcelona",
+    excerpt: "Liverpool have moved quickly to sign Ronald Araujo on a season-long loan from Barcelona. We break down what he actually offers, why the timing makes sense for both clubs, and what Andoni Iraola will expect from him.",
+    content: [
+      "Liverpool have completed one of the more eye-catching moves of the summer, agreeing a season-long loan for Barcelona captain Ronald Araujo. The deal has moved unusually fast by transfer-window standards, going from first reports to documents being signed within a matter of days (ESPN, 2026).",
+      "The structure of the deal is worth understanding before anything else. There is no loan fee involved, with Liverpool simply covering Araujo's wages for the campaign. Built into the agreement is a buy option, not an obligation, reportedly set at around 55 million euros, roughly 47 million pounds (Liverpool.com, 2026). That gives Liverpool a full season to assess whether a permanent deal makes sense, without committing to one now.",
+      "Why Liverpool moved for a defender at all becomes obvious once their current injury list is considered. Joe Gomez, Giovanni Leoni and Jeremy Jacquet are all working their way back from injury, while Conor Bradley remains sidelined following a serious knee problem. That has left Andoni Iraola short of recognised defensive options heading into the new season, with preseason already exposing the gap.",
+      "Araujo himself is a well-established profile in Spanish football. Primarily a centre-back, the Uruguay international has made over 200 appearances for Barcelona and captained the side, built a reputation on aggressive duelling, strong aerial presence and a willingness to lead from the back. He is not the most composed passer in possession, and has at times been prone to rash challenges under pressure, but few defenders in Europe win more individual battles.",
+      "What makes him particularly useful for Liverpool specifically is his versatility. Araujo can also operate at right-back, a position where Liverpool have had persistent issues. Bradley is still recovering, and Jeremie Frimpong has struggled for both fitness and form since arriving at Anfield. A single signing capable of covering two problem positions is a notably efficient piece of business given the circumstances.",
+      "The Barcelona side of the deal is its own story. Araujo remains one of the club's four captains, which makes his departure, even on loan, a notable moment (Forbes, 2026). Reports indicate a conversation with head coach Hansi Flick made clear he was not viewed as a key player for the season ahead, prompting the move. Losing a captain to a direct rival's growing sphere of interest is an unusual look for any club, though Barcelona's motivation appears to be squad management rather than anything more dramatic.",
+      "For Iraola, the expectations are relatively clear. Araujo will not need to adapt to a new league's tactical demands so much as its physical ones, the Premier League's pace and intensity are a different test to LaLiga, but his duel-heavy style should translate reasonably well. The more interesting question is where he actually plays. If fit-again defenders return to form quickly, Araujo may end up as valuable squad depth rather than a guaranteed starter. If Liverpool's injury situation persists, he could end up first choice at either centre-back or right-back within weeks.",
+      "That uncertainty is, in a sense, the point of a loan with a buy option rather than an outright transfer. Liverpool are not required to make a long-term judgement now. They get a season to see how Araujo performs against Premier League opposition, how he fits Iraola's system, and how the club's other defensive options recover, before deciding whether 55 million euros is money well spent.",
+      "For a squad that looked genuinely short at the back heading into preseason, that is a sensible way to solve an immediate problem without closing off future options. Whether it becomes a bargain or a footnote will depend largely on factors outside Araujo's control, but on paper, it is exactly the kind of low-risk, high-utility move a club in Liverpool's position should be making."
+    ],
+    sources: [
+      { label: "ESPN -- Sources: Liverpool set to sign Barcelona's Ronald Araujo on loan", url: "https://www.espn.com/soccer/story/_/id/49556442/liverpool-barcelona-transfer-ronald-araujo-loan" },
+      { label: "Liverpool.com -- How much Liverpool must pay for permanent Araujo transfer", url: "https://www.liverpool.com/liverpool-fc-news/transfer-news/araujo-transfer-clause-price-liverpool-34425680" },
+      { label: "Forbes -- Liverpool Signs FC Barcelona Defender Ronald Araujo In Shock Transfer", url: "https://www.forbes.com/sites/tomsanderson/2026/08/07/liverpool-signs-fc-barcelona-defender-ronald-araujo/" }
+    ],
+    players: ["Ronald Araujo"],
+    teams: ["Liverpool"],
+    featured: true
+  },
+{
+    id: 4,
+    title: "From Scouting Reports to Algorithms: How Performance Analysis Has Transformed Modern Recruitment",
+    type: "Opinion",
+    competition: "Premier League",
+    date: "2026-08-07",
+    scoreline: "",
+    image: "images/PepPA.JPG",
+    imageLink: "https://www.independent.co.uk/sport/football/man-city-pep-guardiola-juanma-lillo-club-world-cup-b2759197.html?callback=in&code=ZDY3MDHHMDYTODBHZI0ZMTVILTGWY2ITZMU1OWQ1ZDQ3YTLL&state=7cee6cc75178494787c0e7adc046aceb",
+    imageCredit: "Photo: The Independent",
+    excerpt: "Data has changed the way football clubs discover talent, assess players and make transfer decisions. While traditional scouting remains vital, performance analysis has become one of the most influential tools in modern recruitment. We explore how clubs are combining human expertise with technology to gain an advantage in an increasingly competitive transfer market.",
+    content: [
+      "Football recruitment has always been about finding an advantage. For decades, clubs relied primarily on experienced scouts who travelled from stadium to stadium, analysing players through observation, instinct and years of football knowledge. While this traditional approach remains valuable, the modern game has introduced another powerful tool: performance analysis.",
+      "Today, the best recruitment departments combine human judgement with data-driven insight. Rather than simply asking whether a player looks talented, clubs can now analyse thousands of performance metrics to understand exactly how a player contributes, where their strengths lie and whether they fit a specific tactical system.",
+      "Performance analysis has not replaced scouting; it has transformed it.",
+      "The rise of analytics has changed the way clubs view player recruitment. Historically, statistics were often limited to basic measures such as goals, assists and appearances. However, modern analysis provides a far more detailed picture of performance, including expected goals (xG), expected assists (xA), progressive passes, defensive actions, pressing intensity and physical outputs.",
+      "These metrics allow clubs to identify players who may be undervalued by traditional scouting methods. A midfielder who does not score regularly, for example, may still be highly effective due to their ability to progress the ball, recover possession or create space for teammates.",
+      "This shift has been particularly valuable for clubs operating with smaller budgets. Teams can no longer compete financially with the biggest clubs, but performance analysis provides an opportunity to compete intelligently.",
+      "Brentford and Brighton & Hove Albion have become two of the most frequently discussed examples of clubs using data-led recruitment successfully. Rather than focusing exclusively on established names, both clubs have developed systems designed to identify undervalued players who possess the potential to improve. Brighton's recruitment model, in particular, has helped the club discover players before they become globally recognised, allowing them to develop talent and generate significant transfer revenue.",
+      "The importance of data in recruitment is not simply about finding the best player; it is about finding the right player.",
+      "Modern clubs increasingly analyse whether an individual's characteristics match the tactical demands of their manager. A winger's value is not determined only by goals and assists, but also by their ability to press, create separation, carry the ball and contribute defensively. Similarly, defenders are assessed not only on tackles and interceptions, but also their ability to progress possession and defend large spaces.",
+      "This tactical compatibility has become one of the biggest developments in modern recruitment. Signing a talented player is no longer enough. The player must fit the club's style, philosophy and long-term strategy.",
+      "However, despite the growth of analytics, the traditional scouting process remains essential. Football is an unpredictable sport, and numbers cannot always explain the qualities that make players successful.",
+      "Mentality, personality, adaptability and decision-making under pressure are difficult to measure.",
+      "For example, a data model may identify a player's technical ability, but it cannot fully predict how they will respond to the pressure of playing for a major club, adapting to a new country or performing in important matches. This is where experienced scouts and coaches remain vital.",
+      "The most successful recruitment departments therefore do not view data and scouting as competing methods. Instead, they use them together. Data can narrow the search and identify potential targets, while scouts provide the context required to make the final decision.",
+      "The modern football industry has also increased the importance of performance analysts within clubs. Analysts are no longer only responsible for reviewing matches; they contribute directly to recruitment decisions by producing detailed reports, comparing potential signings and identifying tactical trends. Their role demonstrates how football has evolved into a sport where information is now one of the most valuable resources available.",
+      "Ultimately, performance analysis has changed football recruitment forever. The days of signing players purely based on reputation or a handful of impressive performances are disappearing. Clubs now have access to more information than ever before, allowing them to make more calculated decisions in an increasingly competitive market.",
+      "Yet football remains a human sport. Data can highlight potential, but it cannot completely measure character, mentality or ambition. The future of recruitment will not belong to clubs that rely only on statistics or only on traditional scouting, but to those capable of combining both.",
+      "The best recruiters of tomorrow will not choose between the eye test and expected goals. They will understand that both are essential pieces of the same puzzle."
+    ],
+    sources: [
+      { label: "The Coaches Voice", url: "https://www.coachesvoice.com" },
+      { label: "The FA", url: "https://www.thefa.com" },
+      { label: "Harvard Business Review", url: "https://hbr.org" }
+    ],
+    players: [],
+    teams: [],
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Spurs' High Line Is Back -- And So Is the Risk",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-07",
+    scoreline: "",
+    image: "images/RDZhighline.JPG",
+    imageLink: "https://www.tottenhamhotspur.com/news/1018847/gallery-every-photo-from-roberto-de-zerbis-first-training-session",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "Roberto De Zerbi's arrival has brought an immediate return to the aggressive defensive approach Tottenham fans became familiar with under Ange Postecoglou. But while the high line promises greater control and attacking intent, it also reintroduces the same defensive vulnerabilities that have divided opinion in recent seasons. We examine why Spurs are embracing the risk once again, and whether this squad is better equipped to make it work.",
+    content: [
+      "For better or worse, Tottenham Hotspur's high defensive line has returned.",
+      "Early signs from Roberto De Zerbi's opening weeks in charge suggest Spurs are once again committing to one of football's most demanding tactical principles. The pre-season fixtures have already shown defenders stepping aggressively towards the halfway line, the goalkeeper positioned high outside the penalty area and an emphasis on compressing the pitch whenever possession is lost.",
+      "It is a philosophy that suits De Zerbi's footballing identity. Throughout his managerial career, whether at Sassuolo, Shakhtar Donetsk or Brighton & Hove Albion, the Italian has consistently prioritised controlling matches through possession, positional play and territorial dominance (The Coaches' Voice, 2023). A high defensive line is not simply a stylistic preference; it is fundamental to how his teams function.",
+      "By defending higher up the pitch, Tottenham can reduce the space between defence, midfield and attack. This allows Spurs to counter-press more effectively after losing possession, sustain attacking pressure and keep opponents pinned inside their own half. Rather than retreating into defensive shape, De Zerbi's system encourages his players to recover the ball as quickly as possible.",
+      "However, there is an unavoidable trade-off.",
+      "The higher a defensive line becomes, the greater the space left behind it. If Tottenham fail to apply pressure to the ball or lose individual duels in midfield, opponents only require one accurate pass to expose the defence. Pace, timing and communication become essential, while even minor positional errors can quickly develop into goalscoring opportunities.",
+      "It is a risk Spurs supporters know all too well.",
+      "During Ange Postecoglou's tenure, Tottenham became one of the Premier League's most aggressive defensive sides. While the approach often produced exciting attacking football, it also resulted in periods where Spurs looked vulnerable to direct balls, counter-attacks and runners exploiting the space behind the defence. The tactical debate rarely centred on whether the high line was entertaining; instead, it questioned whether the squad possessed the personnel required to execute it consistently (Premier League, 2025).",
+      "De Zerbi's version, however, differs in several important ways.",
+      "Where Postecoglou often prioritised vertical attacking transitions, De Zerbi generally seeks greater control through possession. His Brighton side frequently dominated the ball, inviting pressure before progressing through midfield using carefully structured passing patterns. The objective is not simply to attack quickly, but to manipulate opposition pressing structures before exploiting the space created.",
+      "This difference may reduce some of the defensive exposure Tottenham experienced previously. Longer spells of possession naturally limit the opportunities opponents have to launch counter-attacks, while improved control of territory allows the defensive line to remain compact.",
+      "Recruitment also suggests Tottenham have recognised the demands of such an approach.",
+      "The arrival of Jan Paul van Hecke provides another defender comfortable operating in large spaces while contributing to build-up play. Alongside Micky van de Ven's recovery pace, Spurs possess two centre-backs capable of defending one-versus-one situations away from their own penalty area. Sandro Tonali's arrival may prove equally important, with the Italian's positional discipline and defensive awareness offering additional protection ahead of the back four.",
+      "Even Andy Robertson's signing could play a subtle but significant role. His experience in Liverpool's aggressive pressing system means he understands the demands of defending high up the pitch, particularly when tracking runners and recovering defensive positions.",
+      "Nevertheless, personnel alone cannot eliminate the risks.",
+      "The success of a high line relies on collective organisation rather than individual quality. Pressing triggers must be coordinated, distances between units carefully maintained and communication constant throughout matches. Should one player hesitate or press at the wrong moment, the entire structure can quickly unravel.",
+      "Goalkeeping also becomes increasingly important. Modern high defensive systems demand goalkeepers capable of acting almost as an additional defender, sweeping behind the back line and remaining composed when receiving possession under pressure. This role extends far beyond traditional shot-stopping responsibilities.",
+      "Ultimately, Tottenham supporters should not expect De Zerbi to abandon his principles if defensive mistakes occur during the opening months of the season. Throughout his managerial career, the Italian has remained committed to his footballing philosophy despite criticism, believing that long-term improvement comes through consistency rather than compromise.",
+      "For Spurs, that means accepting both the rewards and the risks.",
+      "The potential benefits are significant. A successful high line allows Tottenham to dominate territory, control possession and suffocate opponents through relentless pressure. Yet the dangers remain equally clear, particularly against teams with pace in transition and clinical finishing.",
+      "As the new season approaches, Tottenham once again find themselves walking one of football's finest tactical tightropes. The high line is back.",
+      "Now comes the difficult part: proving this time it can be sustained."
+    ],
+    sources: [
+      { label: "Premier League", url: "https://www.premierleague.com" },
+      { label: "The Coaches Voice", url: "https://www.coachesvoice.com/cv/roberto-de-zerbi-tactics-brighton/" },
+      { label: "UEFA", url: "https://www.uefa.com" }
+    ],
+    players: [],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Tottenham Hotspur's Summer Rebuild: Ambition, Experience and a New Identity Under De Zerbi",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-06",
+    scoreline: "",
+    image: "images/tonalishirt.jpg",
+    imageLink: "https://www.tottenhamhotspur.com/news/1076467/welcome-sandro-tonali-makes-the-move-to-n17",
+    imageCredit: "Photo: Tottenham Hotspur",
+    excerpt: "A summer of significant change has reshaped Tottenham's squad. From marquee signings to smart free transfers, we examine how Spurs have approached the market and whether their recruitment has laid the foundations for a new era.",
+    content: [
+      "Following an underwhelming 2025/26 campaign, Tottenham Hotspur entered the 2026 summer transfer window with a clear objective: reshape the squad, increase technical quality and provide Roberto De Zerbi with the tools required to implement his distinctive footballing philosophy. With significant investment committed and a mixture of experienced winners and emerging talent arriving in North London, Spurs have become one of the Premier League's most active clubs during this summer's window.",
+      "For Tottenham, the rebuild began before the window officially opened, with experienced defenders Andy Robertson and Marcos Senesi arriving on free transfers. Both signings represent a strategic approach from the club, adding proven quality, leadership and top-level experience without requiring significant transfer fees.",
+      "Robertson arrives as one of the most decorated full-backs of the modern Premier League era. During his time at Liverpool, the Scotland international collected nine major honours, including two Premier League titles, the FA Cup and the UEFA Champions League in the 2018/19 season (Liverpool FC, 2026). Beyond his success at club level, Robertson's experience as Scotland captain provides further leadership qualities that could prove valuable within a relatively young Tottenham squad. His professionalism, mentality and understanding of elite competition should complement De Zerbi's ambition to develop a stronger winning culture at Spurs.",
+      "Similarly, Senesi brings valuable experience from both European and international football. After establishing himself during spells with Feyenoord and AFC Bournemouth, the Argentine centre-back arrives with a reputation for composure in possession, defensive awareness and physical presence. Senesi was also part of Argentina's 2022 FIFA World Cup-winning squad, adding further experience of competing at the highest level of international football (FIFA, 2022). Together, Robertson and Senesi provide defensive depth, leadership and experience while representing financially efficient additions.",
+      "Martin Dubravka was the next arrival, joining on a free transfer to strengthen Tottenham's goalkeeping options. While unlikely to immediately challenge for the starting position, the Slovakian goalkeeper brings significant Premier League experience and provides De Zerbi with a reliable option as Spurs prepare to compete across multiple domestic competitions (Tottenham Hotspur, 2026).",
+      "The headline acquisition of the window, however, has undoubtedly been Sandro Tonali. The Italian midfielder's arrival represents a significant statement of intent, with reports suggesting Tottenham invested a fee exceeding £90 million to secure his services from Newcastle United (The Athletic, 2026). Tonali brings composure, tactical intelligence and outstanding ability in possession, qualities that align closely with De Zerbi's possession-based philosophy. His ability to control the tempo of matches while contributing defensively makes him an ideal profile for the central role Spurs have been searching for.",
+      "Alongside Tonali, Tottenham strengthened their midfield further with the signing of Mateus Fernandes from West Ham United. The Portuguese midfielder offers versatility, creativity and energy, providing greater tactical flexibility within De Zerbi's system. His ability to operate in multiple midfield roles gives Spurs additional depth and allows rotation without a significant drop in technical quality. Together, the arrivals of Tonali and Fernandes address an area that lacked consistency throughout the previous campaign.",
+      "Defensively, Tottenham have also acted decisively with the arrival of Jan Paul van Hecke. After impressing in the Premier League with Brighton & Hove Albion, the Dutch centre-back has developed a reputation for his composure in possession, aerial ability and positional intelligence. His profile suits De Zerbi's emphasis on structured build-up play from defence, with his technical qualities allowing him to contribute during the first phase of possession (Brighton & Hove Albion, 2026). At 26 years old, Van Hecke combines immediate Premier League experience with the potential to remain an important figure for Spurs over several seasons.",
+      "Outgoing transfers have also played a significant role in Tottenham's squad transformation. The club has generated substantial funds through departures, with players including Radu Dragusin, Alejo Veliz, Alfie Devine and Luka Vuskovic leaving for reported combined fees of around £120 million (BBC Sport, 2026). Vuskovic's reported £46 million move was particularly notable, demonstrating Spurs' willingness to maximise the value of their young assets. Further decisions may still be required regarding the futures of Cristian Romero, Manor Solomon and Djed Spence.",
+      "Equally important has been Tottenham's work to retain key players. Reports suggest Micky van de Ven is close to agreeing a new long-term contract, securing one of the club's most valuable defensive assets for the foreseeable future (Sky Sports, 2026). Maintaining core players while strengthening the squad demonstrates a more balanced recruitment approach rather than relying solely on expensive additions.",
+      "Despite the scale of investment, Tottenham's recruitment strategy appears more calculated than in previous windows. Rather than focusing exclusively on high-profile names, Spurs have targeted players who fit De Zerbi's tactical demands, with technical ability, positional intelligence and versatility becoming clear themes throughout the summer.",
+      "However, the work may not yet be complete. Tottenham continue to be linked with attacking reinforcements, particularly in wide areas, as the club searches for additional pace and creativity in the final third. Interest in players such as Antonio Nusa and continued speculation surrounding Savinho suggests the recruitment team remains active ahead of the deadline (The Athletic, 2026).",
+      "While Spurs deserve credit for an ambitious transfer window, expectations will inevitably rise alongside investment. Integrating several new arrivals into De Zerbi's demanding tactical system will require patience, and success will depend not only on individual quality but also on how effectively the squad adapts to a new style of play. Tottenham's transfer activity represents a significant attempt to establish a new identity under De Zerbi. Although performances on the pitch will ultimately determine whether the rebuild succeeds, Spurs have created stronger foundations for future progress."
+    ],
+    sources: [
+      { label: "Liverpool FC -- Robertson leaves Liverpool at end of season", url: "https://www.liverpoolfc.com/news/andy-robertson-leave-liverpool-end-season" },
+      { label: "Brighton & Hove Albion -- Van Hecke completes move to Tottenham", url: "https://www.brightonandhovealbion.com/media-article/mft-transfer-news-jan-paul-van-hecke-tottenham-hotspur-june-2026" },
+      { label: "Tottenham Hotspur -- Dubravka deal completed", url: "https://www.tottenhamhotspur.com/news/1074879/dubravka-deal-completed" },
+      { label: "The Athletic (via Yahoo Sports) -- Tottenham agree £92.5m deal for Tonali", url: "https://sports.yahoo.com/articles/breaking-tottenham-agree-92-5m-184929164.html" },
+      { label: "Sky Sports (via Yahoo Sports) -- Van de Ven close to new contract", url: "https://sports.yahoo.com/articles/sky-sports-tottenham-hotspur-set-205000167.html" },
+      { label: "The Athletic (via Football Talk) -- Tottenham remain interested in Savinho", url: "https://football-talk.co.uk/235581/tottenham-remain-interested-in-signing-savinho" }
+    ],
+    players: [],
+    teams: ["Tottenham Hotspur"],
+    featured: true
+  },
+  {
+    id: 1,
+    title: "Inside Roberto De Zerbi's Tottenham Revolution: The Key Themes From His Early Press Conferences",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-06",
+    scoreline: "",
+    image: "images/RobertoDeZerbiPressConference.JPG",
+    imageLink: "https://www.thetimes.com/sport/football/article/roberto-de-zerbi-stay-tottenham-a-long-time-2g78k2p6g",
+    imageCredit: "Photo: The Times",
+    excerpt: "From culture and leadership to tactical identity and recruitment, Roberto De Zerbi's early press conferences have provided supporters with a clear insight into his vision for Tottenham Hotspur. We break down the key messages shaping the club's new era and what they could mean for Spurs this season.",
+    content: [
+      "Since arriving at Tottenham Hotspur, Roberto De Zerbi's press conferences have offered a fascinating insight into the manager's vision for the club. While much of the attention surrounding Spurs this summer has focused on recruitment and transfer spending, De Zerbi's public comments have repeatedly highlighted a deeper priority: rebuilding the culture, mentality and identity of the team.",
+      "From his first media appearance as Tottenham head coach, De Zerbi has emphasised the importance of confidence, relationships and creating the right environment for players to succeed. Rather than focusing solely on tactical adjustments, the Italian manager has repeatedly spoken about understanding his squad and bringing out the qualities that already exist within the group. In his first press conference, De Zerbi highlighted that his responsibility was to bring his own style, personality and passion while helping players show their abilities (Tottenham Hotspur, 2026).",
+      "Building a new identity",
+      "One of the clearest messages from De Zerbi's press conferences has been the importance of creating a new identity at Tottenham. The manager has consistently suggested that success is built beyond the tactical work completed on the training pitch, placing significant emphasis on commitment, personality and togetherness.",
+      "During pre-season, De Zerbi discussed his ambition to create 'a new team' with not only quality, but also 'soul' and passion. This reflects a broader philosophy that football is not solely about technical ability, but also about the mentality and standards established within the squad (Tottenham Hotspur, 2026).",
+      "This approach appears to have influenced Tottenham's recruitment strategy. The club's summer signings have largely shared similar characteristics: players with technical quality, tactical intelligence and experience of competing at a high level. The arrivals of Sandro Tonali, Andy Robertson, Marcos Senesi and Jan Paul van Hecke suggest Spurs are targeting personalities capable of contributing both on and off the pitch.",
+      "The importance of relationships",
+      "Perhaps the most noticeable theme from De Zerbi's media appearances has been his focus on relationships. The Italian has frequently spoken about building trust with his players and creating an atmosphere where individuals feel confident.",
+      "During Tottenham's difficult period last season, De Zerbi suggested that the squad's main requirement was not simply tactical improvement, but restoring belief and confidence. His comments reflected a management style based around emotional intelligence, with the manager positioning himself as someone responsible for supporting players as well as coaching them (BBC Sport, 2026).",
+      "This emphasis on personal connection has also been evident in his comments about individual players. When discussing Cristian Romero's injury, De Zerbi highlighted the defender's emotional connection with Tottenham and praised his commitment to the club. Similarly, his public support of Richarlison demonstrated his willingness to defend players and maintain strong relationships within the squad (Tottenham Hotspur, 2026).",
+      "Tactical expectations under De Zerbi",
+      "Although De Zerbi has placed significant focus on culture, his tactical philosophy remains a defining part of his approach. The Italian is widely recognised for a possession-based style built around controlled build-up play, positional rotations and encouraging defenders and midfielders to take responsibility in possession.",
+      "His recruitment choices suggest Tottenham are attempting to build a squad capable of executing this style. Players such as Tonali and Van Hecke possess the technical ability and composure required to progress the ball under pressure, while versatile midfielders such as Mateus Fernandes provide additional flexibility.",
+      "However, De Zerbi has also acknowledged that tactical development requires time. Creating a team capable of consistently performing his style requires players to understand their roles, develop chemistry and build trust in the system. This may mean Spurs supporters will need patience as the manager implements his ideas.",
+      "Standards and ambition",
+      "Another important message from De Zerbi's press conferences has been his demand for commitment. The manager has spoken openly about the importance of players being proud to represent Tottenham and fully embracing the responsibility of playing for the club.",
+      "This mentality appears to be a key factor behind the squad rebuild. While talent remains essential, De Zerbi appears determined to create a group where standards and ambition are shared across the dressing room. The decision to bring in experienced winners such as Robertson reflects this desire for stronger leadership.",
+      "What comes next?",
+      "As Tottenham prepare for the new season, De Zerbi's press conferences have provided supporters with a clearer understanding of his priorities. The Italian is not simply attempting to improve results; he is attempting to establish a new culture and footballing identity at the club.",
+      "The early signs suggest a manager who values personality, technical quality and collective responsibility. However, the true test will come when competitive football begins and Spurs must translate these ideas into consistent performances.",
+      "Ultimately, De Zerbi's message has been clear: Tottenham's rebuild is not only about signing better players, but about creating a team with a shared mentality and a clear purpose. Whether this approach delivers long-term success remains to be seen, but the foundations of a new era are beginning to emerge."
+    ],
+    sources: [
+      { label: "Tottenham Hotspur -- press conference", url: "https://www.tottenhamhotspur.com/news/1081286/chelsea-1-2-spurs-every-word-of-roberto-de-zerbis-post-match-press-conference-in-sydney" },
+      { label: "BBC Sport", url: "https://www.bbc.co.uk/sport/football/live/cm2pem5vp95t" }
+    ],
+    players: [],
+    teams: ["Tottenham Hotspur"],
+    featured: false
+  }
+];

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Davies -- Football Writer &amp; Analyst</title>
+<meta name="description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14224B">
+<link rel="alternate" type="application/rss+xml" title="Samuel Davies -- RSS Feed" href="rss.xml">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sdjournalism.github.io/">
+<meta property="og:title" content="Samuel Davies -- Football Writer & Analyst">
+<meta property="og:description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Samuel Davies -- Football Writer & Analyst">
+<meta name="twitter:description" content="Match reports, tactical analysis and opinion from Samuel Davies -- football writer covering the Premier League and beyond.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/og-image.png">
+
+<!-- Google Analytics -- replace G-F6G9RSG4MN with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="index.html">
+      <img src="images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="tactical-lab.html">Tactical Lab</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="ticker-wrap">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<section class="hero hero-compact">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow" id="hero-eyebrow">Manchester, UK &middot; Football Writer &amp; Analyst</span>
+      <h1 id="hero-headline">Match reports and tactical analysis, written properly.</h1>
+      <div class="tag-row" id="hero-contact-tags"></div>
+    </div>
+
+    <div class="quote-panel" id="quote-panel">
+      <span class="eyebrow">In my own words</span>
+      <div class="quote-mark">&ldquo;</div>
+      <p class="quote-text" id="quote-text"></p>
+      <a class="quote-attribution" id="quote-attribution" href="#"></a>
+      <div class="quote-nav">
+        <button class="quote-arrow" id="quote-prev" type="button" aria-label="Previous quote">&larr;</button>
+        <div class="quote-dots" id="quote-dots"></div>
+        <button class="quote-arrow" id="quote-next" type="button" aria-label="Next quote">&rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Editor's picks</span>
+      <h2>Featured articles</h2>
+    </div>
+  </div>
+
+  <div class="magazine-split">
+    <div class="magazine-lead" id="magazine-lead"></div>
+    <div class="magazine-list" id="magazine-list"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Latest work</span>
+      <h2>Most recent articles</h2>
+    </div>
+    <a href="articles.html" class="read-link">View all articles &rarr;</a>
+  </div>
+
+  <div class="article-grid" id="latest-grid">
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+      <div class="card-skeleton" aria-hidden="true">
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line title"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line" style="width:70%"></div>
+      </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="newsletter-box" id="newsletter-box"></div>
+</div>
+
+<div class="wrap">
+  <div class="patreon-strip" id="patreon-strip"></div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="js/contact-info.js"></script>
+<script src="js/articles-data.js"></script>
+<script src="js/tactical-lab-data.js"></script>
+<script src="js/site.js"></script>
+<script src="js/theme.js"></script>
+<script>
+  document.getElementById("hero-headline").textContent = siteConfig.heroHeadline;
+  renderTicker("ticker-track");
+  renderMagazine("magazine-lead", "magazine-list");
+  renderLatest("latest-grid", 3);
+  renderContactTags("hero-contact-tags");
+  renderFplLink("hero-contact-tags");
+  renderQuotePanel("quote-text", "quote-attribution", "quote-dots", "quote-panel");
+  renderNewsletterSignup("newsletter-box");
+  renderPatreonStrip("patreon-strip");
+  renderMegaFooter("mega-footer", "index");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+</script>
+</body>
+</html>
