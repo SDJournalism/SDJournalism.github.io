@@ -54,6 +54,75 @@
 
 const articles = [
 {
+    id: 39,
+    title: "Scouting Report: Jack Hinshelwood -- Brighton's Academy Graduate Announces Himself With a Brace",
+    type: "Scouting Report",
+    competition: "Premier League",
+    date: "2026-08-25",
+    scoreline: "",
+    image: "images/jackhinshelwood.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cz7w1pn7epvo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Jack Hinshelwood scored twice in four second-half minutes as Brighton put four goals past Aston Villa on the opening weekend -- a breakout moment for a homegrown midfielder Fabian Hurzeler has quietly been building toward first-team importance for two years.",
+    content: [
+      "Jack Hinshelwood scored twice inside a minute as Brighton put four goals past Aston Villa in the opening half-hour of the new season, the loudest possible statement yet from a player Fabian Hurzeler has spent two years building towards first-team importance (VAVEL, 2026).",
+      "Two headers in sixty seconds",
+      "Brighton were already 2-0 up inside 18 minutes -- an early Victor Lindelof own goal followed by Maxim De Cuyper finishing off a Georginio Rutter pass -- before Hinshelwood made it personal (VAVEL, 2026). He headed in a Diego Gomez delivery in the 30th minute, then did it again a minute later, capitalising on Brighton's relentless press to win the ball back and find space in the box for a second (VAVEL, 2026). Joao Gomes' 40th-minute red card, upheld on VAR review, ended any hope of a Villa response on the way to Brighton's biggest opening-day win in years.",
+      "A full-circle moment against Aston Villa",
+      "There was a neat symmetry to the opponent. Hinshelwood made his senior Brighton debut as a late substitute against Aston Villa in May 2023, in a 2-1 defeat at Villa Park (Wikipedia, 2026). Three years on, against the same club, he scored his first Premier League brace -- and did it from a role his own manager still struggles to define.",
+      "Hurzeler's 'unique' problem",
+      "\"I need to speak to him if he says it's unique, what he means by that,\" Hurzeler said afterwards, only half-joking about how Hinshelwood himself describes his job in Brighton's midfield (Sussex Express, 2026). The serious point underneath it stood: \"he's not that guy who needs that many ball touches to create the danger in an opponent's box... he's very intense against the ball, he made another step during pre-season, therefore I'm quite happy with him\" (Sussex Express, 2026).",
+      "Built to arrive in the box late",
+      "That description matches what Brighton have been developing since Hinshelwood joined their academy at seven years old: a central midfielder comfortable both screening the back line and arriving late into the penalty area, rather than someone who needs to dictate every phase of possession to be effective (Read Brighton, 2026). It is a profile suited to exactly the kind of goals he scored against Villa -- both headers, both from good delivery rather than build-up play he was central to.",
+      "Already an England Under-21 champion",
+      "The international pedigree is already there. Hinshelwood has represented England from under-18 to under-21 level, and played every minute of the final as England won the 2025 UEFA European Under-21 Championship against Germany (Wikipedia, 2026). Football runs in the family, too -- his great-grandfather, grandfather and father were all professional players before him (Read Brighton, 2026). At 21, with a first Premier League brace now on his resume and a manager already talking about his development, the pathway from promising academy graduate to first-team fixture looks close to complete."
+    ],
+    sources: [
+      { label: "VAVEL -- Hinshelwood double as Brighton Hove Albion rout Aston Villa 4-0", url: "https://www.vavel.com/en-us/soccer/2026/08/23/1268785-brighton-vs-aston-villa-live-score-in-premier-league.html" },
+      { label: "Wikipedia -- Jack Hinshelwood", url: "https://en.wikipedia.org/wiki/Jack_Hinshelwood" },
+      { label: "Sussex Express -- 'I need to speak to him' -- Fabian Hurzeler makes Jack Hinshelwood claim amid opening day brace", url: "https://www.sussexexpress.co.uk/sport/football/brighton-and-hove-albion/i-need-to-speak-to-him-fabian-hurzeler-makes-jack-hinshelwood-claim-amid-opening-day-brace-for-academy-graduate-8937002" },
+      { label: "Read Brighton -- Jack Hinshelwood: Brighton's homegrown star ready for next step", url: "https://readbrighton.com/2026/05/30/player-profile-jack-hinshelwood-brighton-news/" }
+    ],
+    players: ["Jack Hinshelwood"],
+    teams: ["Brighton & Hove Albion"],
+    featured: true
+},
+{
+    id: 38,
+    title: "Cole Palmer's Answer to Tuchel: A Goal, Two Assists and a Point to Prove",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-08-25",
+    scoreline: "",
+    image: "images/colepalmeranalysis.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/cole-palmer-chelsea-fc-champions-league-b1248365.html",
+    imageCredit: "Photo: The Standard",
+    excerpt: "Cole Palmer scored one and set up two more as Chelsea beat Fulham on Xabi Alonso's first night in charge, just weeks after Thomas Tuchel left him out of England's World Cup squad over a season that had \"dipped\". Monday night looked like a very direct response.",
+    content: [
+      "Cole Palmer had waited months to answer Thomas Tuchel in public. He picked the biggest stage available -- Xabi Alonso's first game as Chelsea head coach -- and did it inside 49 minutes: a goal, two assists, and the fastest opening goal of any Premier League season opener on record, as Chelsea beat Fulham 3-2 at Craven Cottage (TNT Sports, 2026).",
+      "The pass that started the fastest opening",
+      "Palmer's first involvement came inside 35 seconds, slipping a through ball for Joao Pedro to convert -- the quickest opening goal of any Premier League season since records began, and as emphatic a start as Alonso could have asked for on his Chelsea debut (TNT Sports, 2026).",
+      "A second assist, then a goal himself",
+      "Fulham hit back through Josh King, but Palmer was involved again just before half-time, teeing up Morgan Rogers for Chelsea's second after Maxence Lacroix's ball across the box (TNT Sports, 2026). Four minutes into the second half, he added his own name to the scoresheet, running onto a pass from Joao Pedro and squeezing a finish through Bernd Leno's legs to make it 3-1, before Gonzalo Garcia's late reply made the scoreline tighter than the performance deserved (TNT Sports, 2026).",
+      "What Tuchel actually said about leaving him out",
+      "The context that made the performance pointed is what happened this summer. Palmer was left out of England's World Cup squad, with manager Thomas Tuchel citing a season that had dipped from the heights of the one before: \"I think he suffers from a lack of individual form within the club. He was not as decisive or as influential as he was in the last seasons\" (Yahoo Sports Snub, 2026). Tuchel added that Palmer's underlying numbers simply weren't strong enough to guarantee him a place \"no matter what\" (Yahoo Sports Snub, 2026).",
+      "Palmer's answer wasn't subtle",
+      "Palmer didn't dispute the decision publicly, but he didn't hide his feelings about it either. \"I know what I could have offered -- something different to what the manager has picked,\" he said at the time. \"It's like anything. If you're told you're essentially not good enough then you're going to want to prove people wrong\" (Yahoo Sports Snub, 2026).",
+      "Alonso sees a different level",
+      "Xabi Alonso, starting his own Chelsea reign, described Palmer's display in similarly pointed terms: \"I have really enjoyed his performance. He has played with responsibility, with maturity, but as well with freedom\" (Yahoo Sports Alonso, 2026). The one slight concern from the afternoon -- Palmer needing treatment for cramp late on -- was played down by Alonso as fatigue rather than injury, with the forward expected to be available for Chelsea's next game against Brighton (Heavy.com, 2026).",
+      "One match under a new manager doesn't erase a season Tuchel judged not good enough, and Palmer knows that better than anyone. But if this was supposed to be the summer he quietly absorbed the snub and moved on, Monday night suggested otherwise -- and Alonso now has to decide how much of his new Chelsea side is built around making the most of it."
+    ],
+    sources: [
+      { label: "TNT Sports -- Fulham 2-3 Chelsea: live commentary", url: "https://www.tntsports.co.uk/football/premier-league/2026-2027/live-fulham-chelsea_mtc21883295/live-commentary.shtml" },
+      { label: "Yahoo Sports Snub -- 'I could've offered something different' -- Chelsea star Cole Palmer speaks out on England World Cup squad snub", url: "https://sports.yahoo.com/articles/couldve-offered-something-different-chelsea-124448017.html" },
+      { label: "Yahoo Sports Alonso -- Fulham 2-3 Chelsea: What Alonso and Palmer said", url: "https://sports.yahoo.com/articles/fulham-2-3-chelsea-alonso-215343341.html" },
+      { label: "Heavy.com -- Chelsea's Xabi Alonso Announces Cole Palmer Injury News Minutes After Win vs. Fulham", url: "https://heavy.com/sports/soccer/premier-league/chelsea-fc/cole-palmer-injury-news-update-xabi-alonso/" }
+    ],
+    players: ["Cole Palmer"],
+    teams: ["Chelsea"],
+    featured: true
+},
+{
     id: 37,
     title: "The Alexander Isak Backlash: Newcastle's Anger Is Aimed at the Wrong Target",
     type: "Opinion",

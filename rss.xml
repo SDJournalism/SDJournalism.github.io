@@ -6,7 +6,23 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Mon, 24 Aug 2026 09:25:29 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 25 Aug 2026 06:09:58 GMT</lastBuildDate>
+  <item>
+    <title>Scouting Report: Jack Hinshelwood -- Brighton&apos;s Academy Graduate Announces Himself With a Brace</title>
+    <link>https://sdjournalism.github.io/articles/39.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/39.html</guid>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Scouting Report</category>
+    <description>Jack Hinshelwood scored twice in four second-half minutes as Brighton put four goals past Aston Villa on the opening weekend -- a breakout moment for a homegrown midfielder Fabian Hurzeler has quietly been building toward first-team importance for two years.</description>
+  </item>
+  <item>
+    <title>Cole Palmer&apos;s Answer to Tuchel: A Goal, Two Assists and a Point to Prove</title>
+    <link>https://sdjournalism.github.io/articles/38.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/38.html</guid>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Cole Palmer scored one and set up two more as Chelsea beat Fulham on Xabi Alonso&apos;s first night in charge, just weeks after Thomas Tuchel left him out of England&apos;s World Cup squad over a season that had &quot;dipped&quot;. Monday night looked like a very direct response.</description>
+  </item>
   <item>
     <title>The Alexander Isak Backlash: Newcastle&apos;s Anger Is Aimed at the Wrong Target</title>
     <link>https://sdjournalism.github.io/articles/37.html</link>
@@ -230,22 +246,6 @@
     <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Michael Carrick&apos;s first full summer window as permanent Manchester United manager has reshaped the midfield around Andrey Santos and Youri Tielemans. We look at how United got here, and what the business says about Carrick&apos;s plans for his own squad.</description>
-  </item>
-  <item>
-    <title>Tottenham Confirm Two Exits: Cristian Romero Set for Atletico Madrid as Djed Spence Completes Inter Move</title>
-    <link>https://sdjournalism.github.io/articles/18.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/18.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Tottenham&apos;s back line looks very different to the one that started last season. Cristian Romero is closing in on a move to Atletico Madrid days after Djed Spence completed his switch to Inter Milan -- we look at both exits, and what they mean for a defence being rebuilt around Micky van de Ven.</description>
-  </item>
-  <item>
-    <title>PSG 2-1 Aston Villa: Brian Madjo&apos;s Record-Breaking Goal Wasn&apos;t Enough in Salzburg</title>
-    <link>https://sdjournalism.github.io/articles/17.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/17.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Match Report</category>
-    <description>Paris Saint-Germain won back-to-back UEFA Super Cups at the Red Bull Arena, but the night belonged for long stretches to a 17-year-old making his competitive debut. We break down how Brian Madjo became the youngest scorer in Super Cup history, and how PSG found a way to win anyway.</description>
   </item>
 </channel>
 </rss>
