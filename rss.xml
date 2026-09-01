@@ -6,7 +6,31 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Tue, 25 Aug 2026 06:09:58 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 01 Sep 2026 14:05:52 GMT</lastBuildDate>
+  <item>
+    <title>Enzo Fernandez Closing In on Manchester City Move as Chelsea Prepare to Cash In</title>
+    <link>https://sdjournalism.github.io/articles/42.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/42.html</guid>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Enzo Fernandez is closing in on a move from Chelsea to Manchester City for a reported £120m, with an official bid on the table on deadline day -- closing the book on an increasingly strained relationship at Stamford Bridge, and reuniting him with Enzo Maresca, the manager now rebuilding City&apos;s midfield after Rodri&apos;s departure.</description>
+  </item>
+  <item>
+    <title>Tottenham&apos;s Deadline Day Chelsea Raid: Mudryk In on Loan, Tosin Signs for £7m</title>
+    <link>https://sdjournalism.github.io/articles/40.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/40.html</guid>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Tottenham struck twice against Chelsea on transfer deadline day: a season-long loan with a £75m option for Mykhailo Mudryk, and a permanent £7m deal for centre-back Tosin Adarabioyo -- the first direct transfer business between the two clubs since 2009.</description>
+  </item>
+  <item>
+    <title>Aston Villa 0-1 Arsenal: Saka&apos;s Second-Half Strike Keeps the Perfect Start Alive</title>
+    <link>https://sdjournalism.github.io/articles/41.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/41.html</guid>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Bukayo Saka&apos;s 59th-minute finish was enough to see Arsenal past a battling Aston Villa at Villa Park, extending Mikel Arteta&apos;s side&apos;s perfect start to the season while Unai Emery&apos;s rebuilding Villa remain without a point after two games.</description>
+  </item>
   <item>
     <title>Scouting Report: Jack Hinshelwood -- Brighton&apos;s Academy Graduate Announces Himself With a Brace</title>
     <link>https://sdjournalism.github.io/articles/39.html</link>
@@ -222,30 +246,6 @@
     <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
     <category>Analysis</category>
     <description>Tottenham have reached an agreement in principle with Liverpool over a 60 million pound deal for Cody Gakpo, with the Dutch international believed to have already agreed personal terms. We look at the move, and why Liverpool are willing to sell to fund a run at Bradley Barcola.</description>
-  </item>
-  <item>
-    <title>Twelve Signings In: Inside Xabi Alonso&apos;s Chelsea Rebuild</title>
-    <link>https://sdjournalism.github.io/articles/21.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/21.html</guid>
-    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Chelsea have spent more than any club in world football this summer, reshaping the squad from back to front under new manager Xabi Alonso. We look at the full picture of ins, outs, and what it says about the size of the job after finishing 10th last season.</description>
-  </item>
-  <item>
-    <title>Vinicius Junior&apos;s New Real Madrid Deal Ends Arsenal&apos;s Chase -- What It Means for Arteta&apos;s Attack</title>
-    <link>https://sdjournalism.github.io/articles/20.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/20.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Vinicius Junior has signed a new six-year contract at Real Madrid, ending months of speculation over a move to Arsenal. We look at how close the chase really was, and what missing out means for a title-defending squad that otherwise had a quiet summer.</description>
-  </item>
-  <item>
-    <title>Manchester United&apos;s Summer Rebuild: Carrick Reshapes the Midfield With Santos and Tielemans</title>
-    <link>https://sdjournalism.github.io/articles/19.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/19.html</guid>
-    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Michael Carrick&apos;s first full summer window as permanent Manchester United manager has reshaped the midfield around Andrey Santos and Youri Tielemans. We look at how United got here, and what the business says about Carrick&apos;s plans for his own squad.</description>
   </item>
 </channel>
 </rss>

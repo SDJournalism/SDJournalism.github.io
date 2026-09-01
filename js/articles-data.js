@@ -66,6 +66,103 @@
 
 const articles = [
 {
+    id: 42,
+    title: "Enzo Fernandez Closing In on Manchester City Move as Chelsea Prepare to Cash In",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-09-01",
+    scoreline: "",
+    image: "images/enzocitymove.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/ckgvrlme148o",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Enzo Fernandez is closing in on a move from Chelsea to Manchester City for a reported £120m, with an official bid on the table on deadline day -- closing the book on an increasingly strained relationship at Stamford Bridge, and reuniting him with Enzo Maresca, the manager now rebuilding City's midfield after Rodri's departure.",
+    content: [
+      "Enzo Fernandez's three-and-a-half-year spell at Chelsea looks to be closing in on an end. Manchester City had a fee reported at £120m (€140m) agreed in principle for the Argentina midfielder and, per Fabrizio Romano, an official bid on the table with Chelsea on deadline day itself -- though as of writing, the move was still going through Chelsea's final approval rather than being formally confirmed (TNT Sports, 2026; FootballTransfers, 2026).",
+      "A relationship that had soured",
+      "The move caps a summer in which Fernandez's standing among sections of the Chelsea support had become increasingly strained -- criticised for saying he liked \"Madrid a lot\", booed during a pre-season friendly against Real Sociedad amid City's interest, and left out of Chelsea's Carabao Cup squad for the visit of Luton Town (TNT Sports, 2026). Fernandez had been Chelsea's captain and part of the side that won the 2025 UEFA Conference League and Club World Cup, making the fall from favour in a matter of months all the more striking.",
+      "Reunited with Maresca",
+      "The move reunites Fernandez with Enzo Maresca, who left Chelsea for Manchester City in the summer to replace Pep Guardiola, and gives City fresh midfield reinforcement following the departures of Rodri, Bernardo Silva and Nico Gonzalez (TNT Sports, 2026). Fabrizio Romano confirmed City's move had become concrete: \"Manchester City have now made official club to club approach with Chelsea for Enzo Fernandez! For the first time this summer, Manchester City have approached Chelsea and negotiations are ongoing. Enzo, waiting for a verdict. Deal on\" (Football365, 2026).",
+      ">> \"Manchester City have now made official club to club approach with Chelsea for Enzo Fernandez! Enzo, waiting for a verdict. Deal on.\"",
+      "A record sale to match the record buy",
+      "There is a symmetry to the numbers. Chelsea paid a British-record £107m to sign Fernandez from Benfica in January 2023, and now stand to make a profit selling him just three and a half years later (Gulf News, 2023). For Xabi Alonso, the priority now shifts to finding a replacement in central midfield before the transfer window closes (Goal.com, 2026)."
+    ],
+    sources: [
+      { label: "TNT Sports -- Chelsea and Manchester City agree €140m Enzo Fernandez deal, Manchester United face Inter competition for Alejandro Balde", url: "https://www.tntsports.co.uk/football/transfers/2026-2027/chelsea-manchester-city-agree-140m-enzo-fernandez-deal-manchester-united-face-internazionale-competition-alejandro-balde_sto23331998/story.shtml" },
+      { label: "Football365 -- Man City on brink of £185m double deal as Ornstein reveals 'agreement' with Fernandez 'transfer finalised'", url: "https://www.football365.com/news/romano-reveals-fernandez-man-city-deal-on-chelsea-finalised-transfer" },
+      { label: "FootballTransfers -- Fabrizio Romano Transfer News: Enzo deal close, Ndiaye hijack, Fofana to Arsenal?", url: "https://www.footballtransfers.com/en/transfer-news/uk-premier-league/2026/09/fabrizio-romano-transfer-news-enzo-fernandez-chelsea-iliman-ndiaye-man-city-malick-fofana-arsenal-deadline-day" },
+      { label: "Gulf News -- Chelsea agree British record £107 million fee for Benfica midfielder Enzo Fernandez", url: "https://gulfnews.com/sport/football/chelsea-agree-british-record-107-million-fee-for-benfica-midfielder-enzo-fernandez-1.1675222056668" },
+      { label: "Goal.com -- Enzo Fernandez agrees terms with Man City as Chelsea prepare for shock Premier League transfer", url: "https://www.goal.com/en/lists/enzo-fernandez-man-city-chelsea-transfer-agreement/blt8687a60963b15be6" }
+    ],
+    players: ["Enzo Fernandez"],
+    teams: ["Chelsea", "Manchester City"],
+    featured: true
+},
+{
+    id: 41,
+    title: "Aston Villa 0-1 Arsenal: Saka's Second-Half Strike Keeps the Perfect Start Alive",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-08-31",
+    scoreline: "Aston Villa 0-1 Arsenal",
+    image: "images/villaarsenalreport.jpg",
+    imageLink: "https://www.arsenal.com/news/match-report-aston-villa-0-1-arsenal-aEx1E2V3f3gI",
+    imageCredit: "Photo: Arsenal FC",
+    excerpt: "Bukayo Saka's 59th-minute finish was enough to see Arsenal past a battling Aston Villa at Villa Park, extending Mikel Arteta's side's perfect start to the season while Unai Emery's rebuilding Villa remain without a point after two games.",
+    content: [
+      "Arsenal made it two wins from two matches with a 1-0 victory away at Aston Villa, Bukayo Saka's 59th-minute finish enough to separate the sides on an afternoon that was far tighter than the scoreline suggests (TNT Sports, 2026).",
+      "Buendia rattles the crossbar",
+      "Villa were the better side for long spells of the first half, with Emiliano Buendia's early first-time strike grazing the top of David Raya's crossbar inside the opening quarter of an hour -- the closest either side came to breaking the deadlock before half-time (Yahoo Sports, 2026).",
+      "A penalty given, then taken away",
+      "The game turned on a VAR intervention early in the second half. Arsenal were awarded a penalty after Saka went down under a challenge from Ian Maatsen, only for the referee to reverse the decision on review, ruling the contact had begun just outside the box -- Martin Odegaard's resulting free-kick curled just wide of the far post (Yahoo Sports, 2026). Saka was not to be denied for long, scoring the only goal of the game moments later.",
+      "Saka: 'we had to adapt'",
+      "\"It was a very tough game,\" Saka said afterwards. \"They defended really compact, and they were catching us offside with the high line, so we had to adapt to that\" (Al Jazeera, 2026). Kai Havertz also went close for the visitors, drawing a smart save from Villa goalkeeper Zion Suzuki as Arsenal pushed to make the game safe (Al Jazeera, 2026).",
+      ">> \"It was a very tough game. They defended really compact, and they were catching us offside with the high line, so we had to adapt to that.\"",
+      "Villa still searching for a first point",
+      "The defeat leaves Aston Villa pointless after two matches, following a 4-0 opening-day loss at Brighton amid a summer of major squad turnover. \"To lose one match is painful, but after feeling pain we have to get positive things,\" Unai Emery said, while Mikel Arteta had respect for the club that beat Arsenal to the title two seasons ago: \"It's a tough place to come and earn three points. I think we deserved it... every big team has struggled against them because they are so good\" (Al Jazeera, 2026)."
+    ],
+    sources: [
+      { label: "TNT Sports -- Aston Villa v Arsenal - Premier League result as Bukayo Saka's second-half strike continues champions' perfect start", url: "https://www.tntsports.co.uk/football/premier-league/2026-2027/live-aston-villa-arsenal_mtc21883051/live-commentary.shtml" },
+      { label: "Yahoo Sports -- Aston Villa 0-1 Arsenal: Saka Seals Second Straight Win For The Gunners", url: "https://sports.yahoo.com/articles/aston-villa-0-1-arsenal-211107604.html" },
+      { label: "Al Jazeera -- Arsenal edge past troubled Aston Villa 1-0 as Saka scores only goal", url: "https://www.aljazeera.com/sports/2026/8/31/arsenal-edge-past-troubled-aston-villa-1-0-as-saka-scores-only-goal" }
+    ],
+    players: [],
+    teams: ["Aston Villa", "Arsenal"],
+    featured: true
+},
+{
+    id: 40,
+    title: "Tottenham's Deadline Day Chelsea Raid: Mudryk In on Loan, Tosin Signs for £7m",
+    type: "Analysis",
+    competition: "Premier League",
+    date: "2026-09-01",
+    scoreline: "",
+    image: "images/mudryktosinspurs.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cm2m37k27pjo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Tottenham struck twice against Chelsea on transfer deadline day: a season-long loan with a £75m option for Mykhailo Mudryk, and a permanent £7m deal for centre-back Tosin Adarabioyo -- the first direct transfer business between the two clubs since 2009.",
+    content: [
+      "Tottenham completed a rare double raid on Chelsea's squad on transfer deadline day, agreeing a season-long loan with a buy option for winger Mykhailo Mudryk and a separate permanent deal for centre-back Tosin Adarabioyo, with both players set to be unveiled before the summer window shut at 11pm (TheHardTackle, 2026).",
+      "Mudryk reunites with De Zerbi",
+      "The Mudryk deal sees Tottenham take the winger on a season-long loan carrying a non-mandatory buy option of £75m (€87.5m) -- above the roughly €70m Chelsea originally paid Shakhtar Donetsk for him, meaning Chelsea would turn a profit if Tottenham exercise it (FootballTransfers, 2026). Mudryk was reportedly \"desperate\" to join Tottenham specifically to reunite with Roberto De Zerbi, who managed him at Shakhtar before either man arrived in the Premier League, and was said to have turned down a temporary move to Chelsea's sister club Strasbourg in order to make the switch happen (FootballTransfers, 2026).",
+      "A return delayed by a doping ban",
+      "The move also draws a line under a difficult period for the 25-year-old, who only returned to competitive football on 30 July 2026 following a doping-related absence stretching back to November 2024 (FootballTransfers, 2026). With Chelsea's attacking options crowded and regular football hard to come by, a loan away -- rather than a fourth season fighting for minutes at Stamford Bridge -- gives him a clearer path back to full match sharpness, arriving at a club already reshaped this summer by the arrivals of Savinho and Omar Marmoush.",
+      "Tosin ends a 17-year freeze",
+      "The separate deal for Tosin Adarabioyo is a permanent transfer reported at around £7m, remarkable mainly for how rarely these two clubs do business directly: the last senior player to move between Tottenham and Chelsea was goalkeeper Carlo Cudicini, back in January 2009 (Yahoo Sports, 2026). De Zerbi has tried to sign the 6'5\" defender before, at both Brighton and Marseille, and finally got his man after Kevin Danso's request to leave -- with Sunderland pursuing a permanent deal for the Austrian -- opened up space in Tottenham's back line (Yahoo Sports, 2026).",
+      ">> The last senior player to move between Tottenham and Chelsea was goalkeeper Carlo Cudicini, back in January 2009.",
+      "A player Chelsea had stopped picking",
+      "Adarabioyo joined Chelsea on a free transfer from Fulham in 2024 after more than 130 appearances for the west London club, but hadn't featured for Chelsea at all this season before this move -- a straightforward case of a fringe player getting an escape route to regular football, and Tottenham getting a composed, Premier-League-tested body at centre-back at a modest fee (Yahoo Sports, 2026).",
+      "Two very different transfers, then, but the same conclusion for Chelsea: two players outside Xabi Alonso's plans moved on for a combined outlay that comfortably suits Tottenham's business this summer, with De Zerbi getting both a versatile wide option and defensive cover before the season gets fully underway."
+    ],
+    sources: [
+      { label: "TheHardTackle -- Mykhailo Mudryk Set to Join Tottenham as Loan Deal Agreed", url: "https://thehardtackle.com/transfer-news/2026/09/01/mykhailo-mudryk-set-to-join-tottenham-as-loan-deal-agreed/" },
+      { label: "FootballTransfers -- Chelsea transfer news: Mykhailo Mudryk to join Tottenham as loan deal agreed", url: "https://www.footballtransfers.com/en/transfer-news/uk-premier-league/2026/09/chelsea-transfer-news-mykhailo-mudryk-tottenham-hotspur-loan-deal-agreed-fabrizio-romano" },
+      { label: "Yahoo Sports -- Tottenham Agree Deal To Sign Tosin Adarabioyo From Chelsea", url: "https://sports.yahoo.com/articles/tottenham-agree-deal-sign-tosin-204012660.html" }
+    ],
+    players: ["Mykhailo Mudryk", "Tosin Adarabioyo"],
+    teams: ["Tottenham Hotspur", "Chelsea"],
+    featured: true
+},
+{
     id: 39,
     title: "Scouting Report: Jack Hinshelwood -- Brighton's Academy Graduate Announces Himself With a Brace",
     type: "Scouting Report",
