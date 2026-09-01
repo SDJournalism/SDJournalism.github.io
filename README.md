@@ -128,38 +128,64 @@ anything.
 
 ### Big pull quotes in articles
 
-To make one line in an article stand out as a big styled quote,
-write it a SECOND time as its own paragraph in `js/articles-data.js`,
-starting with `>> `, right after the paragraph it came from. For
-example, if a paragraph already contains: he said "it's now or
-never" -- add a new paragraph straight after it that just says:
-`>> It's now or never.` Use this very sparingly -- one, maybe two
-per article, only for the single best-worded, most important line.
-This only takes effect when the article is (re)generated with
-`scripts/generate-articles.js` -- it won't retroactively appear on
-existing pages unless you regenerate them (see the warning above
-about which articles are safe to regenerate).
+Every article on the site now has one of these -- a single
+best-worded line, pulled out and styled big. All 39 existing
+articles were done by hand directly in both `js/articles-data.js`
+and their `articles/N.html` page, so this didn't require running
+the generator or touching the 5 articles that can't be safely
+regenerated.
 
-### Recent Form on match reports (automatic)
+For a NEW article going forward, write the line a SECOND time as
+its own paragraph in `js/articles-data.js`, starting with `>> `,
+right after the paragraph it came from. For example, if a paragraph
+already contains: he said "it's now or never" -- add a new
+paragraph straight after it that just says: `>> It's now or never.`
+This takes effect automatically when the article is generated with
+`scripts/generate-articles.js`. Use it sparingly -- just the one
+single best-worded, most important line per article.
 
-Every Match Report page now automatically shows a small "Recent
-Form" box for both teams -- their last five results as W/D/L dots,
-based only on Match Reports that exist on this site (not a full
-real-world record), ending with the match the page is actually
-about. This is entirely automatic (built by `initFormGuide()` in
-`js/site.js`) and works on every existing Match Report page too,
-including ones that can't be regenerated -- there's nothing to add
-or edit. The only thing to keep in mind: always spell a team's name
-in the `scoreline` field exactly the same way (e.g. always
-"Manchester United", never sometimes "Man Utd"), or the guide won't
-realise it's the same team across two different reports.
+### Recent Form on match reports (automatic, real data)
+
+Every Match Report page automatically shows a small "Recent Form"
+box for both teams -- their REAL last five results as W/D/L dots,
+across all competitions, not just matches covered on this site.
+
+This works in two parts:
+
+1. `scripts/fetch-form-guide.js` is a script that talks to the free
+   football-data.org API and saves the last five results for a list
+   of clubs into `form-guide-data.json` at the top of the site.
+2. A GitHub Action (`.github/workflows/update-form-guide.yml`) runs
+   that script automatically four times a day, so the file -- and
+   the widget -- stay up to date without anyone touching anything.
+   `js/site.js`'s `initFormGuide()` just reads that file.
+
+For this to work, a free API key from football-data.org needs to be
+saved as a GitHub Actions secret named `FOOTBALL_DATA_API_KEY` (in
+the GitHub repo: Settings -> Secrets and variables -> Actions -> New
+repository secret). The key itself never appears anywhere in the
+site's code or on GitHub Pages -- only inside that one private
+secret, which only the scheduled robot job can read.
+
+Two things to know:
+- The free API plan doesn't cover domestic cups (Carabao Cup,
+  Community Shield) or lower-league football -- only the big
+  leagues (Premier League, Championship, Champions League, La Liga,
+  Bundesliga, Serie A, Ligue 1, Eredivisie, Primeira Liga). If a
+  team in a match report isn't covered, the widget just doesn't
+  show for that page rather than showing something wrong.
+- To add a new team so the widget can find it, add its name (spelled
+  exactly the way it's spelled in the `scoreline` field) to the
+  `SITE_TEAMS` list at the top of `scripts/fetch-form-guide.js`.
+  Always spell a team's name the same way everywhere (e.g. always
+  "Manchester United", never sometimes "Man Utd").
 
 ### Quick search (Cmd/Ctrl+K)
 
-Every page now has a small search button in the top nav (and the
-Cmd/Ctrl+K keyboard shortcut) that searches across every article and
-Tactical Lab piece by title and summary. This is automatic too --
-nothing to maintain.
+Every page can be searched with the Cmd/Ctrl+K keyboard shortcut --
+deliberately no visible button anywhere, it's a keyboard-only
+feature. It searches across every article and Tactical Lab piece by
+title and summary. Automatic, nothing to maintain.
 
 ### Focus mode
 
@@ -191,4 +217,7 @@ js/contact-info.js      -- EDIT THIS to change your contact details
 js/articles-data.js     -- EDIT THIS to add/change articles
 js/site.js              -- Behind-the-scenes code, no need to touch
 images/profile.jpg      -- Add your own photo here (not included yet)
+form-guide-data.json    -- Recent Form data, auto-updated -- don't edit by hand
+scripts/fetch-form-guide.js          -- Fetches real form data (run by GitHub Actions)
+.github/workflows/update-form-guide.yml -- Schedules the above to run automatically
 ```

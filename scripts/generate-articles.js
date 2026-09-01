@@ -97,18 +97,34 @@ function linkCitations(text, sources, articleId) {
   });
 }
 
-/* ---------- body paragraphs -> subheadings or <p> ----------
+/* ---------- body paragraphs -> subheadings, pull quotes or <p> ----------
    Any paragraph that's 8 words or fewer AND doesn't end in a
-   period auto-renders as a bold subheading instead of body text. */
+   period auto-renders as a bold subheading instead of body text.
+
+   A paragraph that starts with ">> " instead renders as a big
+   styled pull quote (see .body-pullquote in css/style.css) -- write
+   the quote text after the ">> ", exactly as it should appear. This
+   is meant to be a SECOND copy of a line that already appears in a
+   normal paragraph nearby, added purely for visual effect -- not a
+   replacement for it. Use this VERY sparingly: one, maybe two per
+   article, only for the single best-worded, most important line. */
 function isSubheading(line) {
   const words = line.trim().split(/\s+/).filter(Boolean);
   return words.length > 0 && words.length <= 8 && !line.trim().endsWith(".");
+}
+
+function isPullQuote(line) {
+  return line.trim().startsWith(">>");
 }
 
 function renderBody(article) {
   const paragraphs = article.premium ? article.content.slice(0, 1) : article.content;
 
   const html = paragraphs.map(line => {
+    if (isPullQuote(line)) {
+      const quote = line.trim().replace(/^>>\s*/, "");
+      return `      <blockquote class="body-pullquote">${linkCitations(quote, article.sources, article.id)}</blockquote>`;
+    }
     if (isSubheading(line)) {
       return `      <h4 class="body-subheading">${line}</h4>`;
     }

@@ -2354,15 +2354,26 @@ initFormationLightbox();
 /* ============================================================
    FORM GUIDE (Match Report pages only)
    ------------------------------------------------------------
-   Reads every Match Report in articles-data.js and, only on a
-   Match Report page, shows each of that match's two teams' recent
-   results here on the site (NOT a full real-world record -- just
-   however many Match Reports exist for that team so far) as a
-   strip of coloured W/D/L dots, ending with the match this page is
-   about. Runs automatically on every page; finds nothing to do
-   anywhere else. Keep a team's name spelled exactly the same way
-   in every scoreline (always "Manchester United", never sometimes
-   "Man Utd") or the guide won't recognise it's the same team.
+   Shows each of a match's two teams' real recent form -- their
+   last 5 results across ALL competitions, not just what's been
+   covered on this site. The data comes from a file called
+   form-guide-data.json, which a robot ("GitHub Action") refreshes
+   automatically a few times a day by pulling real results from a
+   live football data service. This file lives in js/site.js's
+   fetch below -- see scripts/fetch-form-guide.js and
+   .github/workflows/update-form-guide.yml for how it's built.
+
+   Runs automatically on every page; only actually does anything
+   on a Match Report page. If either team isn't in that data file
+   yet (for example a cup match against a club the free data
+   service doesn't track), the whole widget is simply skipped for
+   that page rather than showing incomplete info.
+
+   Keep a team's name spelled exactly the same way in every
+   scoreline (always "Manchester United", never sometimes "Man
+   Utd") -- the fetch-form-guide.js script matches team names
+   against a list of known spellings, and unrecognised spellings
+   just won't get form data.
    ============================================================ */
 
 function parseScoreline(scoreline) {
@@ -2372,36 +2383,23 @@ function parseScoreline(scoreline) {
   return { teamA: m[1].trim(), scoreA: parseInt(m[2], 10), scoreB: parseInt(m[3], 10), teamB: m[4].trim() };
 }
 
-function resultForTeam(parsed, teamName) {
-  if (!parsed || !teamName) return null;
-  const norm = s => s.trim().toLowerCase();
-  if (norm(parsed.teamA) === norm(teamName)) {
-    return parsed.scoreA > parsed.scoreB ? "W" : parsed.scoreA < parsed.scoreB ? "L" : "D";
-  }
-  if (norm(parsed.teamB) === norm(teamName)) {
-    return parsed.scoreB > parsed.scoreA ? "W" : parsed.scoreB < parsed.scoreA ? "L" : "D";
-  }
-  return null;
-}
-
-function teamFormStrip(teamName, currentArticleId) {
-  const rows = (typeof articles !== "undefined" ? articles : [])
-    .filter(a => a.type === "Match Report")
-    .map(a => ({ a, result: resultForTeam(parseScoreline(a.scoreline), teamName) }))
-    .filter(x => x.result)
-    .sort((x, y) => new Date(x.a.date) - new Date(y.a.date));
-
-  return rows.slice(-5).map(x => ({ result: x.result, isCurrent: x.a.id === currentArticleId }));
-}
-
 const FORM_RESULT_LABEL = { W: "Win", D: "Draw", L: "Loss" };
+let formGuideDataPromise = null;
 
-function formGuideTeamHTML(teamName, currentArticleId) {
-  const dots = teamFormStrip(teamName, currentArticleId);
-  if (!dots.length) return "";
-  const dotsHtml = dots.map(d => {
-    const title = FORM_RESULT_LABEL[d.result] + (d.isCurrent ? " -- this match" : "");
-    return `<span class="form-dot form-dot-${d.result}${d.isCurrent ? " form-dot-current" : ""}" title="${title}">${d.result}</span>`;
+function loadFormGuideData() {
+  if (!formGuideDataPromise) {
+    formGuideDataPromise = fetch("/form-guide-data.json")
+      .then(res => (res.ok ? res.json() : null))
+      .catch(() => null);
+  }
+  return formGuideDataPromise;
+}
+
+function formGuideTeamHTML(teamName, results) {
+  if (!results || !results.length) return "";
+  const dotsHtml = results.map(result => {
+    const title = FORM_RESULT_LABEL[result] || result;
+    return `<span class="form-dot form-dot-${result}" title="${title}">${result}</span>`;
   }).join("");
   return `
     <div class="form-guide-team">
@@ -2417,22 +2415,28 @@ function initFormGuide() {
   const parsed = parseScoreline(meta.item.scoreline);
   if (!parsed) return;
 
-  const teamsHtml = [
-    formGuideTeamHTML(parsed.teamA, meta.item.id),
-    formGuideTeamHTML(parsed.teamB, meta.item.id)
-  ].join("");
-  if (!teamsHtml) return;
+  loadFormGuideData().then(data => {
+    const teams = (data && data.teams) || {};
+    const resultsA = teams[parsed.teamA];
+    const resultsB = teams[parsed.teamB];
+    if (!resultsA || !resultsB) return;
 
-  const bodyText = document.querySelector(".detail.open .body-text");
-  if (!bodyText) return;
+    const teamsHtml = [
+      formGuideTeamHTML(parsed.teamA, resultsA),
+      formGuideTeamHTML(parsed.teamB, resultsB)
+    ].join("");
 
-  bodyText.insertAdjacentHTML("beforebegin", `
-    <div class="form-guide">
-      <span class="eyebrow">Recent Form</span>
-      ${teamsHtml}
-      <p class="form-guide-note">Based on matches covered on this site -- most recent (including this one) on the right.</p>
-    </div>
-  `);
+    const bodyText = document.querySelector(".detail.open .body-text");
+    if (!bodyText) return;
+
+    bodyText.insertAdjacentHTML("beforebegin", `
+      <div class="form-guide">
+        <span class="eyebrow">Recent Form</span>
+        ${teamsHtml}
+        <p class="form-guide-note">Each team's last 5 results across all competitions -- updated automatically.</p>
+      </div>
+    `);
+  });
 }
 
 initFormGuide();
