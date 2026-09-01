@@ -1,4 +1,125 @@
 {
-  "generatedAt": null,
-  "teams": {}
+  "generatedAt": "2026-09-01T13:43:20.444Z",
+  "teams": {
+    "Arsenal": [
+      "W",
+      "W"
+    ],
+    "Aston Villa": [
+      "L",
+      "L"
+    ],
+    "Bournemouth": [
+      "L",
+      "D"
+    ],
+    "Brentford": [
+      "W",
+      "D"
+    ],
+    "Brighton & Hove Albion": [
+      "W",
+      "L"
+    ],
+    "Chelsea": [
+      "W",
+      "W"
+    ],
+    "Coventry City": [
+      "L",
+      "L"
+    ],
+    "Crystal Palace": [
+      "L",
+      "L"
+    ],
+    "Everton": [
+      "W",
+      "D"
+    ],
+    "Fulham": [
+      "L",
+      "L"
+    ],
+    "Hull City": [
+      "W",
+      "W"
+    ],
+    "Ipswich Town": [
+      "W",
+      "L"
+    ],
+    "Leeds United": [
+      "W",
+      "D"
+    ],
+    "Liverpool": [
+      "D",
+      "D"
+    ],
+    "Manchester City": [
+      "W",
+      "W"
+    ],
+    "Manchester United": [
+      "L",
+      "W"
+    ],
+    "Newcastle United": [
+      "D",
+      "W"
+    ],
+    "Nottingham Forest": [
+      "L",
+      "D"
+    ],
+    "Sunderland": [
+      "L",
+      "W"
+    ],
+    "Tottenham Hotspur": [
+      "L",
+      "L"
+    ],
+    "PSG": [
+      "D",
+      "D"
+    ],
+    "Real Madrid": [
+      "W",
+      "W",
+      "W"
+    ],
+    "Barcelona": [
+      "W",
+      "W",
+      "W"
+    ],
+    "Borussia Dortmund": [
+      "W"
+    ],
+    "Juventus": [
+      "W",
+      "W"
+    ],
+    "AC Milan": [
+      "W",
+      "W"
+    ],
+    "Napoli": [
+      "W",
+      "L"
+    ],
+    "Ajax": [
+      "W",
+      "D",
+      "W"
+    ],
+    "Porto": [
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  }
 }
