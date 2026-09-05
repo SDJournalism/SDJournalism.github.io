@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T18:05:59.247Z",
+  "generatedAt": "2026-09-05T00:06:23.017Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -47,6 +47,7 @@
     ],
     "Ipswich Town": [
       "W",
+      "L",
       "L"
     ],
     "Leeds United": [
@@ -55,7 +56,8 @@
     ],
     "Liverpool": [
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Manchester City": [
       "W",
@@ -83,12 +85,14 @@
     ],
     "PSG": [
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "Real Madrid": [
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Barcelona": [
       "W",
@@ -116,6 +120,7 @@
       "W"
     ],
     "Porto": [
+      "W",
       "W",
       "W",
       "W",
