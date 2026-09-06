@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T18:05:42.205Z",
+  "generatedAt": "2026-09-06T00:06:19.728Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -7,7 +7,8 @@
     ],
     "Aston Villa": [
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "Bournemouth": [
       "L",
@@ -49,7 +50,8 @@
     ],
     "Hull City": [
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Ipswich Town": [
       "W",
@@ -131,7 +133,8 @@
     "Ajax": [
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Porto": [
       "W",
