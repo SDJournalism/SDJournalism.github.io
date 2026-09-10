@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-09T20:10:46.032Z",
+  "generatedAt": "2026-09-10T01:44:14.155Z",
   "teams": {
     "Arsenal": [
+      "W",
       "W",
       "W",
       "W"
@@ -70,6 +71,7 @@
     "Liverpool": [
       "D",
       "D",
+      "W",
       "W"
     ],
     "Manchester City": [
@@ -106,7 +108,8 @@
     "PSG": [
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Real Madrid": [
       "W",
@@ -139,6 +142,7 @@
     ],
     "Napoli": [
       "W",
+      "L",
       "L",
       "L"
     ],
