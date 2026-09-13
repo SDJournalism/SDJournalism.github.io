@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-12T19:48:18.587Z",
+  "generatedAt": "2026-09-13T01:40:01.877Z",
   "teams": {
     "Arsenal": [
+      "W",
       "W",
       "W",
       "W",
@@ -110,7 +111,8 @@
     "Sunderland": [
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Tottenham Hotspur": [
       "L",
@@ -127,8 +129,8 @@
     "Real Madrid": [
       "W",
       "W",
-      "W",
       "L",
+      "W",
       "W"
     ],
     "Barcelona": [
@@ -165,7 +167,8 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Porto": [
       "W",
