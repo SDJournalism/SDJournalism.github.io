@@ -66,6 +66,68 @@
 
 const articles = [
 {
+    id: 44,
+    title: "Liverpool vs Tottenham Preview: De Zerbi's Goal Drought Meets Anfield's Cup Fortress",
+    type: "Match Preview",
+    competition: "Carabao Cup",
+    date: "2026-09-15",
+    scoreline: "",
+    kickoff: "2026-09-15T19:00:00+01:00",
+    image: "images/spursliverpoolpreview.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/cd696j44jqyo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Tottenham travel to Anfield for a Carabao Cup third round tie having gone 360 minutes without a Premier League goal, against a Liverpool side unbeaten under Andoni Iraola and heavily favoured by recent head-to-head history.",
+    content: [
+      "Tottenham head to Anfield for Tuesday night's Carabao Cup third round tie in the middle of the strangest goalscoring spell of Roberto De Zerbi's time in charge, against a Liverpool side that has lost just once to them in ten meetings in all competitions (To The Lane and Back, 2026).",
+      "A goal drought unlike any other",
+      "Spurs have gone 360 minutes without scoring in the Premier League, a run without precedent in the club's history, and arrive on the back of a goalless draw at home to Everton (To The Lane and Back, 2026). The one place they haven't struggled for goals is this competition -- a 5-1 demolition of Charlton Athletic in the previous round remains their only truly free-scoring afternoon of the season so far (To The Lane and Back, 2026).",
+      ">> Tottenham have gone 360 minutes without scoring in the Premier League -- a drought without precedent in the club's history.",
+      "History favours the hosts",
+      "Liverpool have not lost since Andoni Iraola took charge and go into the tie off the back of a goalless draw of their own, at home to Fulham, but the recent head-to-head record leans heavily in their favour: Tottenham have won just once in their last ten meetings with Liverpool across all competitions (Yardbarker, 2026).",
+      "Team news at Anfield",
+      "Liverpool have Joe Gomez back in training and available for selection, though Conor Bradley, Giovanni Leoni and Hugo Ekitike all remain sidelined (Yardbarker, 2026). Tottenham are without Sandro Tonali, who has a knock, and Pedro Porro, but Destiny Udogie is fit again and James Maddison is available having recovered from a shoulder injury (Yardbarker, 2026).",
+      "A first knockout-round exit for either side would sting more than most early-season cup ties usually do -- Liverpool as favourites with a squad light in a couple of areas, and Tottenham because, right now, goals of any description are in short supply."
+    ],
+    sources: [
+      { label: "To The Lane and Back -- How to Watch Liverpool vs. Tottenham in the EFL Cup, TV Channel, Prediction and Latest Team News", url: "https://tothelaneandback.com/2026/09/14/how-to-watch-liverpool-vs-tottenham-efl-cup-tv-channel-prediction-2/" },
+      { label: "Yardbarker -- Liverpool vs. Tottenham in the EFL Cup: Preview, Kick-Off Time, Prediction and Latest Team News", url: "https://www.yardbarker.com/soccer/articles/liverpool_vs_tottenham_in_the_efl_cup_preview_kick_off_time_prediction_and_latest_team_news/s1_17451_44303399" }
+    ],
+    players: [],
+    teams: ["Liverpool", "Tottenham Hotspur"],
+    featured: true
+},
+{
+    id: 43,
+    title: "Manchester United 0-1 Manchester City: Foden Sees Red as Haaland Settles Controversial Derby",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-09-13",
+    scoreline: "Manchester United 0-1 Manchester City",
+    image: "images/manchesterderbyreport.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/c6pwlk0kjqwqo",
+    imageCredit: "Photo: BBC Sport",
+    excerpt: "Erling Haaland's 60th-minute tap-in gave 10-man Manchester City a controversial win at Old Trafford, after Phil Foden's first-half red card for kicking out at Bruno Fernandes overshadowed a derby both managers had complaints about afterwards.",
+    content: [
+      "Erling Haaland's 60th-minute finish gave Manchester City a 1-0 win at Old Trafford, but the Manchester derby will be remembered for a first-half red card and a build-up to the winner that United felt should never have stood (Sky Sports, 2026).",
+      "Foden's flashpoint",
+      "The game turned in the 23rd minute when Bruno Fernandes kicked the ball into Phil Foden's midriff and Foden kicked out in response; after a VAR review, Foden was shown a straight red card for violent conduct, reducing City to ten men for the remaining hour-plus (Sky Sports, 2026).",
+      "Haaland settles it, with a caveat",
+      "Down a man, City still found the breakthrough when Haaland tapped in at the far post in the 60th minute, though the goal was immediately clouded by questions over whether Enzo Fernandez had been onside in the build-up (Sky Sports, 2026).",
+      ">> \"The explanation I got was that he wasn't interfering with play. I just don't get it, I really don't get it.\"",
+      "Even Maresca agreed with United",
+      "Michael Carrick could not hide his frustration afterwards: \"The explanation I got was that he wasn't interfering with play. I just don't get it, I really don't get it\" (Sky Sports, 2026), while Lisandro Martinez added: \"Five or six people doing this kind of mistake in the Premier League is unacceptable\" (Sky Sports, 2026). Even City boss Enzo Maresca offered United some sympathy on the red card, if not the final result: \"I think Phil Foden's red card is a red card, but I also think Bruno Fernandes should have been sent off\" (Sky Sports, 2026).",
+      "The win puts Manchester City level on points with Arsenal at the top of the table after four games, a result that came despite playing over an hour with ten men -- and did nothing to ease the pressure building on Carrick at Old Trafford (NigFooty, 2026)."
+    ],
+    sources: [
+      { label: "Sky Sports -- Man Utd 0-1 Man City: Erling Haaland's controversial winner follows Phil Foden's contentious red card in dramatic Manchester derby", url: "https://www.skysports.com/football/manchester-united-vs-manchester-city/report/559481" },
+      { label: "NBC Sports -- Manchester United 0-1 Manchester City: Haaland, Donnarumma lead 10-man City win", url: "https://www.nbcsports.com/soccer/live/manchester-united-vs-man-city-live-updates-score-goals-highlights-stats-2026-september-13" },
+      { label: "NigFooty -- Premier League Matchday 4 Results and Updated Table", url: "https://www.nigfooty.com/2026/09/premier-league-matchday-4-results-and.html" }
+    ],
+    players: [],
+    teams: ["Manchester United", "Manchester City"],
+    featured: true
+},
+{
     id: 42,
     title: "Enzo Fernandez Closing In on Manchester City Move as Chelsea Prepare to Cash In",
     type: "Analysis",
