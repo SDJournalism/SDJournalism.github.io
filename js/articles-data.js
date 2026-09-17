@@ -65,6 +65,66 @@
    ============================================================ */
 
 const articles = [
+  {
+    id: 46,
+    title: "Manchester United 2-3 Brighton: Carrick's Cup Nightmare Continues as Lacey and Mount Lead Squandered Lead",
+    type: "Match Report",
+    competition: "Carabao Cup",
+    date: "2026-09-16",
+    scoreline: "Manchester United 2-3 Brighton & Hove Albion",
+    image: "images/unitedbrighton.jpg",
+    imageLink: "https://www.express.co.uk/sport/football/2249251/Man-Utd-player-ratings-Brighton-Carabao-Cup",
+    imageCredit: "Photo: Daily Express",
+    excerpt: "Manchester United led 2-0 inside ten minutes at Old Trafford and still crashed out of the Carabao Cup, Brighton fighting back to win 3-2 and pile fresh pressure on Michael Carrick.",
+    content: [
+      "Manchester United's Carabao Cup campaign ended in stunning fashion as Brighton fought back from two goals down to win 3-2 at Old Trafford, compounding a miserable week for Michael Carrick that had already included a controversial derby defeat to Manchester City (ClickOnDetroit, 2026).",
+      "Lacey and Mount put United in control",
+      "Academy graduate Shea Lacey put the hosts ahead inside eight minutes, and Mason Mount doubled the lead just two minutes later, appearing to put the tie beyond Brighton's reach before half-time (ClickOnDetroit, 2026).",
+      "Kostoulas gives Brighton a lifeline",
+      "Charalampos Kostoulas pulled a goal back from a tight angle in first-half stoppage time, and Brighton emerged from the interval transformed -- Pascal Gross levelling in the 65th minute to extend his personal record against United to eight goals in all competitions, before Maxim De Cuyper fired the visitors in front five minutes later (ClickOnDetroit, 2026; KhelNow, 2026).",
+      "Carrick's frustration boils over",
+      "Marcus Rashford also passed up a clear one-on-one chance that might have restored United's lead, and Michael Carrick did not attempt to hide his frustration afterwards: \"We had the game exactly where we wanted it and let it get away from us in a big way. We can't accept that as a group\" (ClickOnDetroit, 2026).",
+      ">> \"We had the game exactly where we wanted it and let it get away from us in a big way.\"",
+      "Hurzeler credits Brighton's belief",
+      "Brighton head coach Fabian Hurzeler pointed to his side's mentality rather than any tactical adjustment: \"What we had was really the belief to come back,\" he said after Brighton's fourth-round progression (ClickOnDetroit, 2026). The result leaves United 13th in the Premier League table and out of two domestic cup competitions already this season, with pressure on Carrick intensifying by the week (KhelNow, 2026)."
+    ],
+    sources: [
+      { label: "ClickOnDetroit -- Man United stunned by Brighton in League Cup", url: "https://www.clickondetroit.com/sports/2026/09/16/man-united-stunned-by-brighton-in-league-cup/" },
+      { label: "KhelNow -- Manchester United 2-3 Brighton: Five key takeaways from EFL Cup 2026-27 match", url: "https://khelnow.com/football/manchester-united-brighton-key-takeaways-efl-cup-202609" }
+    ],
+    featured: false,
+    teams: ["Manchester United", "Brighton & Hove Albion"]
+  },
+  {
+    id: 45,
+    title: "Liverpool 3-1 Tottenham: Mac Allister, Gakpo and Szoboszlai Send Spurs Crashing Out of the Carabao Cup",
+    type: "Match Report",
+    competition: "Carabao Cup",
+    date: "2026-09-16",
+    scoreline: "Liverpool 3-1 Tottenham Hotspur",
+    image: "images/spursliverpool.jpg",
+    imageLink: "https://www.standard.co.uk/sport/football/liverpool-fc-tottenham-carabao-cup-b1297125.html",
+    imageCredit: "Photo: Evening Standard",
+    excerpt: "Liverpool eased into the fourth round of the Carabao Cup with a 3-1 win over Tottenham at Anfield, though Roberto De Zerbi felt his side deserved far more from the night.",
+    content: [
+      "Liverpool eased into the fourth round of the Carabao Cup with a 3-1 win over Tottenham at Anfield, goals from Alexis Mac Allister, Cody Gakpo and Dominik Szoboszlai putting the tie out of reach before Conor Gallagher's late header offered Spurs nothing more than consolation (Yahoo Sports, 2026).",
+      "Mac Allister and Gakpo take control",
+      "Alexis Mac Allister opened the scoring in the 21st minute, and Liverpool doubled their lead early in the second half when Cody Gakpo finished precisely across Martin Dubravka and into the far corner, the Dutchman's goal also created by Mac Allister (Yahoo Sports, 2026). Tottenham's night was made harder by goalkeeper Giorgi Mamardashvili, who produced a string of important saves at the other end to keep Liverpool's advantage intact deep into the second half.",
+      "Gallagher gives Spurs late hope",
+      "Conor Gallagher headed in from a Mateus Fernandes corner with 21 minutes remaining to set up a nervy finish, and Tottenham piled on late pressure in search of a leveller that never arrived -- Mamardashvili denying substitute Omar Marmoush with a brilliant stop before Dominik Szoboszlai settled the tie in stoppage time, striking a bouncing ball first time from distance (Yahoo Sports, 2026).",
+      "De Zerbi calls the result unfair",
+      "Roberto De Zerbi felt his side's performance deserved more than a two-goal defeat, pointing out that Tottenham had 17 attempts on goal to Liverpool's far smaller tally: \"I think it is unfair but we have to accept it and be stronger than this unlucky moment,\" he said, before linking the exit to a wider recent pattern: \"I think in this five or six games we have been, for sure, not lucky, Newcastle, with Everton, even with Nottingham and tonight as well\" (Goal.com, 2026).",
+      ">> \"I think it is unfair but we have to accept it and be stronger than this unlucky moment.\"",
+      "The result sends Andoni Iraola's Liverpool into the fourth round draw and continues a miserable few weeks for Roberto De Zerbi, whose side went into the tie already 360 minutes without a Premier League goal and now have a first knockout-round cup exit of the season to go with it (Sky Sports, 2026)."
+    ],
+    sources: [
+      { label: "Yahoo Sports -- Liverpool hold off Spurs fightback to advance in Carabao Cup", url: "https://sports.yahoo.com/articles/liverpool-x-tottenham-highlights-summary-205500765.html" },
+      { label: "Goal.com -- Roberto De Zerbi slams 'unfair' result as Tottenham crash out of Carabao Cup against Liverpool", url: "https://www.goal.com/en-us/lists/roberto-de-zerbi-tottenham-carabao-cup-liverpool/blt0e87be0e849dcafa" },
+      { label: "Sky Sports -- Liverpool 3-1 Spurs | Carabao Cup highlights", url: "https://www.skysports.com/football/video/30998/13586401/liverpool-3-1-spurs-carabao-cup-highlights" }
+    ],
+    featured: false,
+    teams: ["Liverpool", "Tottenham Hotspur"]
+  },
 {
     id: 44,
     title: "Liverpool vs Tottenham Preview: De Zerbi's Goal Drought Meets Anfield's Cup Fortress",
