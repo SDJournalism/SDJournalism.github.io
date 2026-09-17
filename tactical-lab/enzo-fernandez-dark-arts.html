@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enzo Fern&aacute;ndez: The Dark Arts -- Samuel Davies</title>
+<meta name="description" content="Enzo Fernandez was booed by away fans on his Manchester City debut and reunited with the manager who once demanded more from him at Chelsea. Two weeks later, he was the calmest man on the pitch during the most chaotic Manchester derby in years.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enzo Fern&aacute;ndez: The Dark Arts">
+<meta property="og:description" content="Enzo Fernandez was booed by away fans on his Manchester City debut and reunited with the manager who once demanded more from him at Chelsea. Two weeks later, he was the calmest man on the pitch during the most chaotic Manchester derby in years.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/enzotaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/enzo-fernandez-dark-arts.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enzo Fern&aacute;ndez: The Dark Arts">
+<meta name="twitter:description" content="Enzo Fernandez was booed by away fans on his Manchester City debut and reunited with the manager who once demanded more from him at Chelsea. Two weeks later, he was the calmest man on the pitch during the most chaotic Manchester derby in years.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/enzotaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/enzotaclab.jpg" alt="Enzo Fernandez">
+      <figcaption><a href="https://www.sloughobserver.co.uk/sport/national/26525102.enzo-fernandez-makes-man-city-debut-late-issue-nico-oreilly/" target="_blank" rel="noopener nofollow">Photo: Slough Observer</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Player Blueprints</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Enzo Fern&aacute;ndez</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Manchester City</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Dark Arts</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="enzo-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="enzo-name"></span>
+          <div class="buzzword-row" id="enzo-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="enzo-stage-list"></div>
+        <div class="annotation-legend" id="enzo-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="enzo-stats"></div>
+
+    <div class="body-text">
+      <p>Enzo Fern&aacute;ndez arrived at Manchester City on transfer deadline day, training for barely two days before an injury to Nico O'Reilly forced Enzo Maresca into throwing him straight into a Premier League start against Coventry City -- and inside the opening exchanges, away supporters were already jeering a player they'd barely had time to learn the name of <a href="https://www.si.com/soccer/how-enzo-fernandez-fared-man-city-debut-emergency-start" target="_blank" rel="noopener nofollow" class="citation-link">(SI.com, 2026)</a>. Two weeks and a controversial Manchester derby later, that reception looks like it said more about the opposition than about him.</p>
+
+      <h4 class="body-subheading">Booed on arrival, trusted within the hour</h4>
+      <p>The numbers from that first Coventry appearance explain why Maresca stuck with him. Fern&aacute;ndez completed 66 of 73 passes -- a 90% completion rate -- put eight passes into the final third, double any other Manchester City player on the pitch that day, and played a line-breaking ball that set up Erling Haaland's winning goal <a href="https://www.si.com/soccer/how-enzo-fernandez-fared-man-city-debut-emergency-start" target="_blank" rel="noopener nofollow" class="citation-link">(SI.com, 2026)</a>. Maresca, who managed Fern&aacute;ndez previously at Chelsea, played down the emergency nature of the selection afterwards: "The reason why Enzo was on the bench was just because he arrived two days ago... I think it was quite good and I'm happy also with his performance" <a href="https://www.si.com/soccer/how-enzo-fernandez-fared-man-city-debut-emergency-start" target="_blank" rel="noopener nofollow" class="citation-link">(SI.com, 2026)</a>.</p>
+
+      <h4 class="body-subheading">The reputation that follows him</h4>
+      <p>None of that composure has softened the other side of his game. Fern&aacute;ndez has long carried a reputation, generously described by some as involving the game's "dark arts" -- niggling fouls and a willingness to slow a match down the moment it stops going his way -- and Coventry's travelling fans jeered him through the ninety minutes for exactly that reason <a href="https://sports.yahoo.com/articles/enzo-fernandez-taunted-fans-dark-163356705.html" target="_blank" rel="noopener nofollow" class="citation-link">(Yahoo Sports, 2026)</a>. The same pattern followed him into the Manchester derby a week later.</p>
+
+      <h4 class="body-subheading">The calm in the eye of the derby storm</h4>
+      <p>With City reduced to ten men inside 23 minutes at Old Trafford after Phil Foden's red card, Fern&aacute;ndez was the player City trusted to keep dictating tempo down a man for over an hour -- and it was his part in the build-up to Haaland's eventual winner that Manchester United spent the rest of the afternoon disputing, insisting the move had strayed offside before the ball reached the Norwegian <a href="https://www.skysports.com/football/manchester-united-vs-manchester-city/report/559481" target="_blank" rel="noopener nofollow" class="citation-link">(Sky Sports, 2026)</a>. It's the paradox that already defines his Manchester City career: a player opponents can't stand being on the pitch with, doing exactly the job his manager brought him in to do.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.si.com/soccer/how-enzo-fernandez-fared-man-city-debut-emergency-start" target="_blank" rel="noopener nofollow">SI.com -- How Enzo Fernandez Fared on Man City Debut After Emergency Start</a></li>
+        <li><a href="https://sports.yahoo.com/articles/enzo-fernandez-taunted-fans-dark-163356705.html" target="_blank" rel="noopener nofollow">Yahoo Sports -- Enzo Fernandez taunted by fans but his "dark arts" help City win</a></li>
+        <li><a href="https://www.skysports.com/football/manchester-united-vs-manchester-city/report/559481" target="_blank" rel="noopener nofollow">Sky Sports -- Man Utd 0-1 Man City: Erling Haaland's controversial winner follows Phil Foden's contentious red card in dramatic Manchester derby</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="maresca-inverted-pivot.html">
+          <div class="related-thumb"><img src="../images/marescataclab.jpg" alt="Enzo Maresca: The Inverted Pivot" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
+        </a>
+        <a class="related-card" href="haaland-one-touch-kill.html">
+          <div class="related-thumb"><img src="../images/haalandtaclab.jpg" alt="Erling Haaland: The One-Touch Kill" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Erling Haaland: The One-Touch Kill</span>
+        </a>
+        <a class="related-card" href="palmer-shift-and-shoot.html">
+          <div class="related-thumb"><img src="../images/palmertaclab.jpg" alt="Cole Palmer: The Shift and Shoot" loading="lazy"></div>
+          <span class="type-pill">Player Blueprints</span>
+          <span class="related-title">Cole Palmer: The Shift and Shoot</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Dark%20Arts%3A%20how%20Enzo%20Fernandez%20went%20from%20booed%20debutant%20to%20City%27s%20calmest%20head%20in%20the%20Manchester%20derby%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fenzo-fernandez-dark-arts.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Dark%20Arts%3A%20how%20Enzo%20Fernandez%20went%20from%20booed%20debutant%20to%20City%27s%20calmest%20head%20in%20the%20Manchester%20derby%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fenzo-fernandez-dark-arts.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const ENZO_FRAMES = [
+    {
+      name: "Dropping Deep to Receive",
+      buzzwords: ["Under Pressure", "Composure"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 34, y: 70 },
+        { x: 20, y: 55 },
+        { x: 48, y: 58 },
+        { x: 34, y: 30 },
+        { x: 34, y: 60, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Drops to receive between the lines under an immediate press" }
+      ]
+    },
+    {
+      name: "The Line-Breaking Pass",
+      buzzwords: ["Splits the Defence"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 34, y: 66 },
+        { x: 20, y: 50 },
+        { x: 48, y: 52 },
+        { x: 60, y: 20 },
+        { x: 55, y: 30, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "A single pass removes four defenders from the game" }
+      ]
+    },
+    {
+      name: "The Derby, Down A Man",
+      buzzwords: ["10 vs 11", "Tempo Control"]
+      ,
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 30, y: 65 },
+        { x: 18, y: 48 },
+        { x: 46, y: 48 },
+        { x: 34, y: 25 },
+        { x: 40, y: 35, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Slows the game down whenever City need to protect the lead" }
+      ]
+    }
+  ];
+  const ENZO_STATS = [
+    { value: "90%", label: "Pass completion (66/73) on his Manchester City debut against Coventry City" },
+    { value: "8", label: "Passes into the final third on debut -- double any other City player on the pitch that day" },
+    { value: "60+", label: "Minutes City played with ten men in the derby win at Old Trafford, with Fernández dictating tempo throughout" }
+  ];
+  initFormationDiagram("enzo-pitch", "enzo-name", "enzo-buzzwords", ENZO_FRAMES, 3400, "enzo-stage-list", "horizontal", "enzo-legend");
+  renderStatPanel("enzo-stats", ENZO_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Enzo Fernández: The Dark Arts",
+      text: "Enzo Fernández: The Dark Arts -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/enzo-fernandez-dark-arts.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

@@ -32,6 +32,48 @@
 
 const tacticalLabEntries = [
   {
+    id: "emery-rehearsal",
+    category: "Manager DNA",
+    title: "Unai Emery: The Rehearsal",
+    excerpt: "Aston Villa were the better side at Villa Park against Arsenal this season and still lost. That gap between performance and result is the clearest signature of Unai Emery's management -- built on a level of opposition-specific preparation few of his Premier League peers even attempt.",
+    team: "Aston Villa",
+    competition: "Premier League",
+    date: "2026-09-15",
+    image: "images/emerytaclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/articles/c1k70g4x8nro",
+    imageCredit: "Photo: BBC Sport",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "enzo-fernandez-dark-arts",
+    category: "Player Blueprints",
+    title: "Enzo Fern\u00e1ndez: The Dark Arts",
+    excerpt: "Enzo Fern\u00e1ndez was booed by away fans on his Manchester City debut and reunited with the manager who once demanded more from him at Chelsea. Two weeks later, he was the calmest man on the pitch during the most chaotic Manchester derby in years. The mix of nuisance and control that makes him City's most disruptive new signing.",
+    team: "Manchester City",
+    competition: "Premier League",
+    date: "2026-09-15",
+    image: "images/enzotaclab.jpg",
+    imageLink: "https://www.sloughobserver.co.uk/sport/national/26525102.enzo-fernandez-makes-man-city-debut-late-issue-nico-oreilly/",
+    imageCredit: "Photo: Slough Observer",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
+    id: "blackburn-9495-the-sas",
+    category: "Tactical Vault",
+    title: "Blackburn Rovers 1994/95: The SAS",
+    excerpt: "Blackburn Rovers went from the second tier to Premier League champions in four years without ever being the most sophisticated team in England. Alan Shearer scored 34, Chris Sutton scored 15, and Kenny Dalglish built an entire title-winning machine around the two of them finding each other in the penalty box.",
+    team: "Blackburn Rovers",
+    competition: "Premier League",
+    date: "2026-09-15",
+    image: "images/roverstaclab.jpg",
+    imageLink: "https://www.bbc.co.uk/sport/football/52640999",
+    imageCredit: "Photo: BBC Sport",
+    readTime: 2,
+    comingSoon: false
+  },
+  {
     id: "carrick-shape-shift",
     category: "Manager DNA",
     title: "Michael Carrick: The Shape-Shift",

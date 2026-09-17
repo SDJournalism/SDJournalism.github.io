@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unai Emery: The Rehearsal -- Samuel Davies</title>
+<meta name="description" content="Aston Villa were the better side at Villa Park against Arsenal this season and still lost. That gap between performance and result is the clearest signature of Unai Emery's management -- built on a level of opposition-specific preparation few of his Premier League peers even attempt.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unai Emery: The Rehearsal">
+<meta property="og:description" content="Aston Villa were the better side at Villa Park against Arsenal this season and still lost. That gap between performance and result is the clearest signature of Unai Emery's management -- built on a level of opposition-specific preparation few of his Premier League peers even attempt.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/emerytaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/emery-rehearsal.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unai Emery: The Rehearsal">
+<meta name="twitter:description" content="Aston Villa were the better side at Villa Park against Arsenal this season and still lost. That gap between performance and result is the clearest signature of Unai Emery's management -- built on a level of opposition-specific preparation few of his Premier League peers even attempt.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/emerytaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/emerytaclab.jpg" alt="Unai Emery">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/articles/c1k70g4x8nro" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Manager DNA</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Unai Emery</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Aston Villa</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The Rehearsal</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="emery-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="emery-name"></span>
+          <div class="buzzword-row" id="emery-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="emery-stage-list"></div>
+        <div class="annotation-legend" id="emery-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="emery-stats"></div>
+
+    <div class="body-text">
+      <p>Aston Villa were the better side for long spells at Villa Park against Arsenal at the end of August, Emiliano Buendia's early strike rattling the crossbar inside the opening quarter of an hour before Bukayo Saka's second-half finish separated the sides in what finished a 1-0 defeat that flattered the champions <a href="https://www.tntsports.co.uk/football/premier-league/2026-2027/live-aston-villa-arsenal_mtc21883051/live-commentary.shtml" target="_blank" rel="noopener nofollow" class="citation-link">(TNT Sports, 2026)</a>. It's a pattern that has followed Unai Emery for years now: performances that consistently outstrip the scoreline, built on a level of opposition-specific preparation that has become the clearest signature of his management.</p>
+
+      <h4 class="body-subheading">A different plan for every single opponent</h4>
+      <p>Emery's methods start long before kick-off. His weekly analysis is understood to work backwards from the opponent rather than forwards from his own team, identifying two or three moments he expects to be decisive and rehearsing the exact scenario in training so nothing that happens on matchday is a surprise. His captain John McGinn has described it as unlike anything he's encountered in the game: "His drive to succeed, and the hours he puts into the most minute of details to give us the best possible chance to win a game, is something I've never seen before" <a href="https://coachnotes.co.uk/blogs/coaching-analysis/unai-emery" target="_blank" rel="noopener nofollow" class="citation-link">(Coach Notes, 2026)</a>.</p>
+
+      <h4 class="body-subheading">Two banks of four, built to strangle the counter</h4>
+      <p>In an attacking 4-2-3-1, Emery drops his number ten alongside the striker and pulls his wide players level with the double pivot out of possession, compressing into two flat banks of four that shuffle across the pitch together rather than press aggressively out of position. It's a patient, central-first structure -- shutting off the middle before worrying about the ball out wide -- and it produced one of the most eye-catching numbers in the Premier League last season: Villa conceded zero goals from opposition counter-attacks across the entire 2025/26 campaign <a href="https://totalfootballanalysis.com/data-analysis/unai-emery-tactics-aston-villa-2025-2026-data-analysis" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>.</p>
+
+      <h4 class="body-subheading">The same idea, adjusted for the opponent in front of him</h4>
+      <p>That structure isn't fixed -- it bends depending on who's in front of it. Villa's passes-per-defensive-action figure, a proxy for pressing intensity, swung from 20.43 away at Liverpool to just 4.99 at home to Wolves last season, evidence that Emery's teams press as hard as the occasion demands and no harder <a href="https://totalfootballanalysis.com/data-analysis/unai-emery-tactics-aston-villa-2025-2026-data-analysis" target="_blank" rel="noopener nofollow" class="citation-link">(Total Football Analysis, 2026)</a>. It's the same instinct that shapes his recruitment and his team talks: sign players who absorb detail rather than crave autonomy, then ask them to defend a specific plan rather than a general principle. Four years into the job, that plan has Villa competing with sides who spend considerably more than they do -- even on nights, like the one against Arsenal, when the final score says otherwise.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.tntsports.co.uk/football/premier-league/2026-2027/live-aston-villa-arsenal_mtc21883051/live-commentary.shtml" target="_blank" rel="noopener nofollow">TNT Sports -- Aston Villa v Arsenal - Premier League result as Bukayo Saka's second-half strike continues champions' perfect start</a></li>
+        <li><a href="https://totalfootballanalysis.com/data-analysis/unai-emery-tactics-aston-villa-2025-2026-data-analysis" target="_blank" rel="noopener nofollow">Total Football Analysis -- Unai Emery Tactics At Aston Villa 2025/2026: Tactical Evolution, Build-Up Trends & Adaptability</a></li>
+        <li><a href="https://coachnotes.co.uk/blogs/coaching-analysis/unai-emery" target="_blank" rel="noopener nofollow">Coach Notes -- Unai Emery Tactics and Coaching Style Analysis</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="maresca-inverted-pivot.html">
+          <div class="related-thumb"><img src="../images/marescataclab.jpg" alt="Enzo Maresca: The Inverted Pivot" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Enzo Maresca: The Inverted Pivot</span>
+        </a>
+        <a class="related-card" href="arteta-rest-defence.html">
+          <div class="related-thumb"><img src="../images/artetataclab.jpg" alt="Mikel Arteta: The Rest Defence" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Mikel Arteta: The Rest Defence</span>
+        </a>
+        <a class="related-card" href="xabi-alonso-back-three-reset.html">
+          <div class="related-thumb"><img src="../images/xabitaclab.jpg" alt="Xabi Alonso: The Back-Three Reset" loading="lazy"></div>
+          <span class="type-pill">Manager DNA</span>
+          <span class="related-title">Xabi Alonso: The Back-Three Reset</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20Rehearsal%3A%20the%20opposition-specific%20preparation%20behind%20Unai%20Emery%27s%20Aston%20Villa%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Femery-rehearsal.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20Rehearsal%3A%20the%20opposition-specific%20preparation%20behind%20Unai%20Emery%27s%20Aston%20Villa%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Femery-rehearsal.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const EMERY_FRAMES = [
+    {
+      name: "In Possession (4-2-3-1)",
+      buzzwords: ["Structured Build-Up"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 18, y: 80 },
+        { x: 50, y: 82 },
+        { x: 34, y: 58 },
+        { x: 46, y: 36 },
+        { x: 60, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "The No.10 drops alongside the striker the moment the ball is lost" }
+      ]
+    },
+    {
+      name: "Out of Possession (4-4-2 Block)",
+      buzzwords: ["Two Banks of Four"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 18, y: 78 },
+        { x: 50, y: 80 },
+        { x: 26, y: 56 },
+        { x: 42, y: 56 },
+        { x: 60, y: 40, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Wide players tuck level with the pivot to close the middle first" }
+      ]
+    },
+    {
+      name: "The Rehearsed Trigger",
+      buzzwords: ["Pressing Trap", "Turnover Won"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 22, y: 74 },
+        { x: 48, y: 76 },
+        { x: 30, y: 52 },
+        { x: 44, y: 50 },
+        { x: 46, y: 42, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "The exact scenario Emery's side rehearsed all week plays out live" },
+        { dotIndex: 4, text: "Two players close the passing lane before the pass even arrives" }
+      ]
+    }
+  ];
+  const EMERY_STATS = [
+    { value: "0", label: "Goals conceded from opposition counter-attacks across the entire 2025/26 Premier League season" },
+    { value: "20.43", label: "Villa's PPDA (pressing intensity) away at Liverpool last season, dropping to just 4.99 at home to Wolves" },
+    { value: "4", label: "Years in charge at Villa Park since taking over in November 2022" }
+  ];
+  initFormationDiagram("emery-pitch", "emery-name", "emery-buzzwords", EMERY_FRAMES, 3400, "emery-stage-list", "horizontal", "emery-legend");
+  renderStatPanel("emery-stats", EMERY_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Unai Emery: The Rehearsal",
+      text: "Unai Emery: The Rehearsal -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/emery-rehearsal.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>

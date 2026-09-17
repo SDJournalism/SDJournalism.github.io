@@ -6,7 +6,47 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Tue, 01 Sep 2026 14:05:52 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 15 Sep 2026 18:04:02 GMT</lastBuildDate>
+  <item>
+    <title>Liverpool vs Tottenham Preview: De Zerbi&apos;s Goal Drought Meets Anfield&apos;s Cup Fortress</title>
+    <link>https://sdjournalism.github.io/articles/44.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/44.html</guid>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Preview</category>
+    <description>Tottenham travel to Anfield for a Carabao Cup third round tie having gone 360 minutes without a Premier League goal, against a Liverpool side unbeaten under Andoni Iraola and heavily favoured by recent head-to-head history.</description>
+  </item>
+  <item>
+    <title>Unai Emery: The Rehearsal (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/emery-rehearsal.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/emery-rehearsal.html</guid>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Manager DNA</category>
+    <description>Aston Villa were the better side at Villa Park against Arsenal this season and still lost. That gap between performance and result is the clearest signature of Unai Emery&apos;s management -- built on a level of opposition-specific preparation few of his Premier League peers even attempt.</description>
+  </item>
+  <item>
+    <title>Enzo Fernández: The Dark Arts (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/enzo-fernandez-dark-arts.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/enzo-fernandez-dark-arts.html</guid>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Player Blueprints</category>
+    <description>Enzo Fernández was booed by away fans on his Manchester City debut and reunited with the manager who once demanded more from him at Chelsea. Two weeks later, he was the calmest man on the pitch during the most chaotic Manchester derby in years. The mix of nuisance and control that makes him City&apos;s most disruptive new signing.</description>
+  </item>
+  <item>
+    <title>Blackburn Rovers 1994/95: The SAS (Tactical Lab)</title>
+    <link>https://sdjournalism.github.io/tactical-lab/blackburn-9495-the-sas.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/blackburn-9495-the-sas.html</guid>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Tactical Vault</category>
+    <description>Blackburn Rovers went from the second tier to Premier League champions in four years without ever being the most sophisticated team in England. Alan Shearer scored 34, Chris Sutton scored 15, and Kenny Dalglish built an entire title-winning machine around the two of them finding each other in the penalty box.</description>
+  </item>
+  <item>
+    <title>Manchester United 0-1 Manchester City: Foden Sees Red as Haaland Settles Controversial Derby</title>
+    <link>https://sdjournalism.github.io/articles/43.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/43.html</guid>
+    <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Erling Haaland&apos;s 60th-minute tap-in gave 10-man Manchester City a controversial win at Old Trafford, after Phil Foden&apos;s first-half red card for kicking out at Bruno Fernandes overshadowed a derby both managers had complaints about afterwards.</description>
+  </item>
   <item>
     <title>Enzo Fernandez Closing In on Manchester City Move as Chelsea Prepare to Cash In</title>
     <link>https://sdjournalism.github.io/articles/42.html</link>
@@ -206,46 +246,6 @@
     <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
     <category>Scouting Report</category>
     <description>A last-minute winner at Newcastle. The youngest goal at Anfield in the club&apos;s history. A senior England debut before his 18th birthday. Rio Ngumoha&apos;s rise at Liverpool has been remarkable -- now the question is whether he keeps his place under a new manager.</description>
-  </item>
-  <item>
-    <title>Mikel Arteta: The Rest Defence (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/arteta-rest-defence.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>How Arsenal build every attack with its own defensive collapse already accounted for -- the low-conceding, double-pivot structure that carried Mikel Arteta&apos;s side to the 2025/26 title.</description>
-  </item>
-  <item>
-    <title>Alexander Isak: The Blindside Curve (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/isak-blindside-curve.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/isak-blindside-curve.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>The bent run and double movement that turns a straight sprint into an unstoppable blindside curve -- and why Alexander Isak&apos;s £125m Liverpool move is only now getting a fair test.</description>
-  </item>
-  <item>
-    <title>Manchester City 2017/18: The Centurions (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/man-city-1718-centurions.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>How Pep Guardiola&apos;s inverted full-backs turned a back four into a back three in possession -- the tactical mechanism behind the only 100-point season English football has ever seen.</description>
-  </item>
-  <item>
-    <title>Community Shield Preview: Arsenal vs Manchester City -- Maresca&apos;s First Test</title>
-    <link>https://sdjournalism.github.io/articles/23.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/23.html</guid>
-    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Match Preview</category>
-    <description>Arsenal and Manchester City meet at the Principality Stadium on Sunday with more than a trophy at stake -- it&apos;s Enzo Maresca&apos;s first competitive match in charge of City, and Arsenal&apos;s title defence begins with Saliba and Timber both missing.</description>
-  </item>
-  <item>
-    <title>Cody Gakpo Closing In On £60m Tottenham Move as Liverpool Eye Barcola</title>
-    <link>https://sdjournalism.github.io/articles/22.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/22.html</guid>
-    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Tottenham have reached an agreement in principle with Liverpool over a 60 million pound deal for Cody Gakpo, with the Dutch international believed to have already agreed personal terms. We look at the move, and why Liverpool are willing to sell to fund a run at Bradley Barcola.</description>
   </item>
 </channel>
 </rss>

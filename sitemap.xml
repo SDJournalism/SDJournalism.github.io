@@ -36,6 +36,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://sdjournalism.github.io/articles/44.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sdjournalism.github.io/articles/43.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sdjournalism.github.io/articles/42.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -284,6 +296,24 @@
   <url>
     <loc>https://sdjournalism.github.io/articles/1.html</loc>
     <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sdjournalism.github.io/tactical-lab/emery-rehearsal.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sdjournalism.github.io/tactical-lab/enzo-fernandez-dark-arts.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sdjournalism.github.io/tactical-lab/blackburn-9495-the-sas.html</loc>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

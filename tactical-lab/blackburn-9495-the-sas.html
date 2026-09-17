@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem("sd-theme");
+    var dark;
+    if (t === "dark" || t === "light") {
+      dark = t === "dark";
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dark = true;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      dark = false;
+    } else {
+      var h = new Date().getHours();
+      dark = h >= 21 || h < 7;
+    }
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackburn Rovers 1994/95: The SAS -- Samuel Davies</title>
+<meta name="description" content="Blackburn Rovers went from the second tier to Premier League champions in four years without ever being the most sophisticated team in England. Alan Shearer scored 34, Chris Sutton scored 15, and Kenny Dalglish built an entire title-winning machine around the two of them finding each other in the penalty box.">
+
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#14224B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blackburn Rovers 1994/95: The SAS">
+<meta property="og:description" content="Blackburn Rovers went from the second tier to Premier League champions in four years without ever being the most sophisticated team in England. Alan Shearer scored 34, Chris Sutton scored 15, and Kenny Dalglish built an entire title-winning machine around the two of them finding each other in the penalty box.">
+<meta property="og:image" content="https://sdjournalism.github.io/images/roverstaclab.jpg">
+<meta property="og:url" content="https://sdjournalism.github.io/tactical-lab/blackburn-9495-the-sas.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blackburn Rovers 1994/95: The SAS">
+<meta name="twitter:description" content="Blackburn Rovers went from the second tier to Premier League champions in four years without ever being the most sophisticated team in England. Alan Shearer scored 34, Chris Sutton scored 15, and Kenny Dalglish built an entire title-winning machine around the two of them finding each other in the penalty box.">
+<meta name="twitter:image" content="https://sdjournalism.github.io/images/roverstaclab.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6G9RSG4MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-F6G9RSG4MN");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="lab-page">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="logo" href="../index.html">
+      <img src="../images/logo-badge.png" alt="" class="logo-badge">
+      <span class="logo-name">
+        <span class="js-site-name">Samuel Davies</span>
+        <span class="kicker js-tagline">Football Writer &amp; Analyst</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../tactical-lab.html" class="active">Tactical Lab</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../saved.html" class="nav-saved-link">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div id="main-content" class="wrap">
+  <a href="../tactical-lab.html" class="close-detail" style="display:inline-block; margin: 24px 0 0;">&larr; Back to Tactical Lab</a>
+
+  <div class="detail open" style="margin-top: 16px;">
+    <figure class="detail-image">
+      <img src="../images/roverstaclab.jpg" alt="Alan Shearer and Chris Sutton celebrate for Blackburn Rovers">
+      <figcaption><a href="https://www.bbc.co.uk/sport/football/52640999" target="_blank" rel="noopener nofollow">Photo: BBC Sport</a></figcaption>
+    </figure>
+
+    <div class="spec-strip">
+      <div class="spec-field"><span class="spec-field-label">Category</span><span class="spec-field-value is-accent">Tactical Vault</span></div>
+      <div class="spec-field"><span class="spec-field-label">Subject</span><span class="spec-field-value">Kenny Dalglish</span></div>
+      <div class="spec-field"><span class="spec-field-label">Club</span><span class="spec-field-value">Blackburn Rovers</span></div>
+      <div class="spec-field"><span class="spec-field-label">Competition</span><span class="spec-field-value">Premier League</span></div>
+    </div>
+    <h3>The SAS</h3>
+
+    <div class="formation-hero article">
+      <div class="formation-hero-inner">
+        <div class="tactical-pitch-wrap">
+          <div class="tactical-pitch" id="blackburn-pitch"></div>
+        </div>
+        <div class="formation-caption">
+          <span class="formation-name" id="blackburn-name"></span>
+          <div class="buzzword-row" id="blackburn-buzzwords"></div>
+        </div>
+        <div class="stage-list" id="blackburn-stage-list"></div>
+        <div class="annotation-legend" id="blackburn-legend"></div>
+      </div>
+    </div>
+
+    <div class="stat-panel" id="blackburn-stats"></div>
+
+    <div class="body-text">
+      <p>Blackburn Rovers won the Premier League in 1994/95 with a squad built around one relationship: Alan Shearer and Chris Sutton, a strike partnership nicknamed the "SAS" that scored 49 of the club's 80 league goals between them that season <a href="https://www.premierleague.com/en/news/60236" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2026)</a>. It remains one of the most direct, least complicated title wins English football has produced -- and it worked because almost every other part of the team existed to feed those two.</p>
+
+      <h4 class="body-subheading">Everybody knew their job</h4>
+      <p>Colin Hendry, the centre-back who marshalled Kenny Dalglish's defence that season, described the setup in blunt terms: "It was a stereotypical 4-4-2 formation, and everybody knew their job" <a href="https://www.fourfourtwo.com/features/blackburn-rovers-premier-league-title-win-colin-hendry-interview-liverpool-man-utd" target="_blank" rel="noopener nofollow" class="citation-link">(FourFourTwo, 2026)</a>. Tim Flowers protected the goal, Hendry and Henning Berg defended in front of him, and Stuart Ripley and Jason Wilcox supplied width from the flanks, with Graeme Le Saux offering an additional creative outlet from left-back <a href="https://www.myfootballfacts.com/articles/blackburn-rovers-1994-95-premier-league-winners/" target="_blank" rel="noopener nofollow" class="citation-link">(My Football Facts, 2026)</a>.</p>
+
+      <h4 class="body-subheading">One job for Sutton, another for Shearer</h4>
+      <p>Sutton, signed from Norwich City that summer, wasn't primarily there to outscore Shearer -- he was there to win the ball in the air and lay it back into space for a strike partner who could do the rest. Hendry called him "a great player... a good foil for Alan," and the numbers back him up: Sutton's 15 goals were almost incidental to a partnership built to get Shearer, in the season of his career, in behind defences as often as possible <a href="https://www.fourfourtwo.com/features/blackburn-rovers-premier-league-title-win-colin-hendry-interview-liverpool-man-utd" target="_blank" rel="noopener nofollow" class="citation-link">(FourFourTwo, 2026)</a>. Shearer finished with 34 -- the Golden Boot, and the platform for a world-record move to Newcastle United a year later.</p>
+
+      <h4 class="body-subheading">A title decided by someone else's night</h4>
+      <p>The championship itself wasn't won on the pitch at Ewood Park. Blackburn beat Newcastle 1-0 on the final day, then had to wait on Manchester United's result at Upton Park -- United needing a win to leapfrog them, managing only a 1-1 draw as West Ham goalkeeper Ludek Miklosko produced a string of second-half saves to deny them <a href="https://www.premierleague.com/en/news/60236" target="_blank" rel="noopener nofollow" class="citation-link">(Premier League, 2026)</a>. Blackburn finished champions by a single point, from 27 wins, 8 draws and 7 defeats -- the last true outsider to win an English title before the growing financial gap at the top of the game began to make that kind of story increasingly rare <a href="https://www.myfootballfacts.com/articles/blackburn-rovers-1994-95-premier-league-winners/" target="_blank" rel="noopener nofollow" class="citation-link">(My Football Facts, 2026)</a>.</p>
+    </div>
+
+    <div class="sources-list">
+      <span class="eyebrow">Sources</span>
+      <ul>
+        <li><a href="https://www.premierleague.com/en/news/60236" target="_blank" rel="noopener nofollow">Premier League -- 1994/95 Season Review: Blackburn's glory</a></li>
+        <li><a href="https://www.fourfourtwo.com/features/blackburn-rovers-premier-league-title-win-colin-hendry-interview-liverpool-man-utd" target="_blank" rel="noopener nofollow">FourFourTwo -- Colin Hendry tells the inside story of Blackburn's 1994/95 Premier League triumph, 25 years on</a></li>
+        <li><a href="https://www.myfootballfacts.com/articles/blackburn-rovers-1994-95-premier-league-winners/" target="_blank" rel="noopener nofollow">My Football Facts -- Blackburn Rovers 1994-95 Premier League Title: Full Story</a></li>
+      </ul>
+    </div>
+
+    <div class="related-section">
+      <span class="eyebrow">Related Lab Reports</span>
+      <div class="related-grid">
+        <a class="related-card" href="man-city-1718-centurions.html">
+          <div class="related-thumb"><img src="../images/centurionstaclab.jpg" alt="Manchester City 2017/18: The Centurions" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Manchester City 2017/18: The Centurions</span>
+        </a>
+        <a class="related-card" href="leicester-1516-counter-attack-kings.html">
+          <div class="related-thumb"><img src="../images/leicestertaclab.jpg" alt="Leicester City 2015/16: The Counter-Attack Kings" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Leicester City 2015/16: The Counter-Attack Kings</span>
+        </a>
+        <a class="related-card" href="arsenal-0304-invincibles.html">
+          <div class="related-thumb"><img src="../images/wengertaclab.jpg" alt="Arsenal 2003/04: The Invincibles" loading="lazy"></div>
+          <span class="type-pill">Tactical Vault</span>
+          <span class="related-title">Arsenal 2003/04: The Invincibles</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="engage-row">
+      <div class="reaction-row" id="reaction-row">
+        <span class="reaction-prompt">What did you make of this?</span>
+        <div class="reaction-btns">
+          <button class="reaction-btn" data-value="fire" type="button" aria-label="React fire" aria-pressed="false"><span class="reaction-emoji">🔥</span><span class="reaction-label">Fire</span></button>
+          <button class="reaction-btn" data-value="wow" type="button" aria-label="React wow" aria-pressed="false"><span class="reaction-emoji">😮</span><span class="reaction-label">Wow</span></button>
+          <button class="reaction-btn" data-value="class" type="button" aria-label="React class" aria-pressed="false"><span class="reaction-emoji">👏</span><span class="reaction-label">Class</span></button>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" type="button" aria-pressed="false">
+        <span class="save-icon">☆</span><span class="save-btn-label">Save for later</span>
+      </button>
+    </div>
+
+    <div class="share-row">
+      <span class="eyebrow">Share this breakdown</span>
+      <div class="tag-row">
+        <a class="tag" href="https://twitter.com/intent/tweet?text=The%20SAS%3A%20how%20Alan%20Shearer%2C%20Chris%20Sutton%20and%20Kenny%20Dalglish%20won%20Blackburn%20Rovers%20the%201994%2F95%20title%20--%20by%20Samuel%20Davies&url=https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fblackburn-9495-the-sas.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="1.8"/><line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="1.8"/></svg></span> Share to X</a>
+        <a class="tag" href="https://wa.me/?text=The%20SAS%3A%20how%20Alan%20Shearer%2C%20Chris%20Sutton%20and%20Kenny%20Dalglish%20won%20Blackburn%20Rovers%20the%201994%2F95%20title%20https%3A%2F%2Fsdjournalism.github.io%2Ftactical-lab%2Fblackburn-9495-the-sas.html" target="_blank" rel="noopener"><span class="tag-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8.5 9.5c0 4 2 6 6 6l1-2-2.5-1-1 1c-1-.5-1.5-1-2-2l1-1-1-2.5-2 .5z" fill="currentColor" stroke="none"/></svg></span> WhatsApp</a>
+        <button class="tag" id="share-more-btn" type="button"><span class="tag-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="7.2" stroke="currentColor" stroke-width="1.5"/><line x1="8.2" y1="13.2" x2="15.8" y2="16.8" stroke="currentColor" stroke-width="1.5"/></svg></span> <span id="share-more-label">More</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="mega-footer" id="mega-footer"></footer>
+
+<script src="../js/contact-info.js"></script>
+<script src="../js/articles-data.js"></script>
+<script src="../js/tactical-lab-data.js"></script>
+<script src="../js/field-notes-data.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/theme.js"></script>
+<script>
+  const BLACKBURN_FRAMES = [
+    {
+      name: "Long Ball to Sutton",
+      buzzwords: ["Direct Route"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 20, y: 60 },
+        { x: 48, y: 62 },
+        { x: 34, y: 30 },
+        { x: 44, y: 20 },
+        { x: 40, y: 15, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 1, text: "Centre-back goes long, straight into Sutton's chest" }
+      ]
+    },
+    {
+      name: "The Flick-On",
+      buzzwords: ["Aerial Duel Won"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 20, y: 55 },
+        { x: 48, y: 58 },
+        { x: 34, y: 22 },
+        { x: 50, y: 16 },
+        { x: 40, y: 12, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 3, text: "Sutton wins the header and knocks it into the space in behind" }
+      ]
+    },
+    {
+      name: "Shearer's Run and Finish",
+      buzzwords: ["SAS", "Goal"],
+      dots: [
+        { x: 34, y: 100, gk: true },
+        { x: 20, y: 50 },
+        { x: 48, y: 52 },
+        { x: 34, y: 18 },
+        { x: 58, y: 8 },
+        { x: 44, y: 10, opponent: true }
+      ],
+      annotations: [
+        { dotIndex: 4, text: "Shearer arrives to finish -- the move that repeated all season long" }
+      ]
+    }
+  ];
+  const BLACKBURN_STATS = [
+    { value: "49", label: "Goals scored by Shearer and Sutton combined in the 1994/95 title-winning season" },
+    { value: "34", label: "Alan Shearer's total that season, enough to win the Golden Boot outright" },
+    { value: "1", label: "Point that separated champions Blackburn from runners-up Manchester United" }
+  ];
+  initFormationDiagram("blackburn-pitch", "blackburn-name", "blackburn-buzzwords", BLACKBURN_FRAMES, 3400, "blackburn-stage-list", "horizontal", "blackburn-legend");
+  renderStatPanel("blackburn-stats", BLACKBURN_STATS);
+  renderMegaFooter("mega-footer", "tactical-lab");
+  renderKicker();
+  initThemeToggle("theme-toggle");
+  initAutoTheme();
+
+  document.getElementById("share-more-btn").addEventListener("click", () => {
+    const shareData = {
+      title: "Blackburn Rovers 1994/95: The SAS",
+      text: "Blackburn Rovers 1994/95: The SAS -- by Samuel Davies",
+      url: "https://sdjournalism.github.io/tactical-lab/blackburn-9495-the-sas.html"
+    };
+    if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        const label = document.getElementById("share-more-label");
+        const original = label.textContent;
+        label.textContent = "Copied!";
+        setTimeout(() => { label.textContent = original; }, 2000);
+      });
+    }
+  });
+  initEngageRow();
+  initReadingProgress();
+  initBreadcrumb();
+  initJargonLinks();
+  initStalenessBanner();
+  initKickoffCountdown();
+  injectArticleSchema();
+  initPdfButton();
+  renderSmartRelated();
+</script>
+</body>
+</html>
