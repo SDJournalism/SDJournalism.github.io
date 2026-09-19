@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T09:53:03.925Z",
+  "generatedAt": "2026-09-19T14:57:58.301Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -10,10 +10,10 @@
     ],
     "Aston Villa": [
       "L",
-      "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Bournemouth": [
       "L",
@@ -126,7 +126,8 @@
       "L",
       "L",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "PSG": [
       "D",
