@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-19T14:57:58.301Z",
+  "generatedAt": "2026-09-19T19:43:49.510Z",
   "teams": {
     "Arsenal": [
       "W",
       "W",
       "W",
       "W",
-      "W"
+      "L"
     ],
     "Aston Villa": [
       "L",
@@ -32,6 +32,7 @@
       "W",
       "L",
       "D",
+      "W",
       "W"
     ],
     "Chelsea": [
@@ -45,7 +46,8 @@
       "L",
       "L",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Crystal Palace": [
       "L",
@@ -57,7 +59,8 @@
       "W",
       "D",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Fulham": [
       "L",
@@ -69,13 +72,15 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "Ipswich Town": [
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Leeds United": [
       "W",
@@ -108,13 +113,15 @@
       "D",
       "W",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Nottingham Forest": [
       "L",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Sunderland": [
       "L",
@@ -151,6 +158,7 @@
       "W"
     ],
     "Borussia Dortmund": [
+      "W",
       "W",
       "W",
       "W",
