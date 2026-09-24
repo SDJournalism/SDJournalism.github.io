@@ -66,6 +66,66 @@
 
 const articles = [
   {
+    id: 48,
+    title: "Fulham 1-1 Manchester United: Cunha's Stoppage-Time Leveller Rescues a Point at Craven Cottage",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-09-20",
+    scoreline: "Fulham 1-1 Manchester United",
+    image: "images/fulhamunitedreport.jpg",
+    imageLink: "https://www.fulhamfc.com/news/2026/september/20/fulham-1-1-manchester-united/",
+    imageCredit: "Photo: Fulham FC",
+    excerpt: "Manchester United hit the post twice and had 16 shots at Craven Cottage but still needed a Matheus Cunha strike deep into stoppage time to salvage a 1-1 draw, extending a difficult week for Michael Carrick's side.",
+    content: [
+      "Manchester United needed a stoppage-time equaliser from Matheus Cunha to salvage a 1-1 draw at Fulham, a result that did little to ease the pressure on Michael Carrick after a Manchester derby defeat and a Carabao Cup exit to Brighton in the space of a week (Yahoo Sports, 2026).",
+      "Bruno strikes the post early on",
+      "Bruno Fernandes came closest to breaking the deadlock in the first half, striking the far post with a first-time effort after Cunha cut the ball back from the byline in the 25th minute (ESPN, 2026). The game turned just after the hour when Calvin Bassey forced a turnover and shot, Senne Lammens' save deflecting into Lisandro Martinez, who could only turn the ball into his own net trying to clear it.",
+      "Cunha rescues a point in stoppage time",
+      "United poured forward in search of an equaliser and hit the woodwork for a second time before Matheus Cunha finally beat Fulham goalkeeper Bernd Leno in the 89th minute, finishing off a left-wing cutback from Patrick Dorgu to snatch a point that had looked to be slipping away (ESPN, 2026).",
+      "Carrick insists United did enough to win",
+      "Michael Carrick pointed to the performance rather than the result afterwards: \"I thought we should've won the game, we created enough to win the game. We had a lot of good play and the goal we did concede, it is one of those goals,\" he said, praising his side's response: \"I really liked the reaction and how we finished the game. It would be easy for it to go in another direction\" (ReadManUtd, 2026).",
+      ">> \"I thought we should've won the game, we created enough to win the game.\"",
+      "United finished with 16 shots to Fulham's four but were repeatedly denied by Leno, who Carrick singled out afterwards: \"Their goalkeeper, the saves he has made, he was player of the match and we hit the post twice\" (ReadManUtd, 2026). The result leaves United without a Premier League win in three matches, adding to a testing week that also included the derby defeat to Manchester City and the Carabao Cup exit to Brighton."
+    ],
+    sources: [
+      { label: "Yahoo Sports -- Fulham 1-1 Manchester United: A lackluster end to a frustrating week", url: "https://sports.yahoo.com/articles/fulham-1-1-manchester-united-173659826.html" },
+      { label: "ESPN -- Fulham 1-1 Man United (Sep 20, 2026) Game Analysis", url: "https://www.espn.com/soccer/report/_/gameId/401878777" },
+      { label: "ReadManUtd -- 'We should've won the game', Michael Carrick pleased with Man Utd response against Fulham", url: "https://readmanutd.com/2026/09/21/michael-carrick-manchester-united-fulham-draw/" }
+    ],
+    featured: false,
+    teams: ["Fulham", "Manchester United"]
+  },
+  {
+    id: 47,
+    title: "Brighton 3-0 Arsenal: Gross, Kostoulas and Andres End the Champions' Unbeaten Start",
+    type: "Match Report",
+    competition: "Premier League",
+    date: "2026-09-19",
+    scoreline: "Brighton & Hove Albion 3-0 Arsenal",
+    image: "images/brightonarsenalreport.jpg",
+    imageLink: "https://www.independent.co.uk/sport/football/brighton-arsenal-premier-league-goals-pascal-gross-b3052930.html",
+    imageCredit: "Photo: The Independent",
+    excerpt: "Arsenal's perfect start to the season unravelled in stunning fashion as Brighton dismantled the champions 3-0 at the Amex, with Mikel Arteta admitting his side were \"extremely poor technically\" from the first whistle.",
+    content: [
+      "Arsenal's unbeaten start to the season came to a shuddering halt as Brighton beat the champions 3-0 at the Amex Stadium, Pascal Gross, Charalampos Kostoulas and Chema Andres all finding the net in a first defeat that left Mikel Arteta admitting his side were \"extremely poor technically\" from the opening whistle (Yahoo Sports, 2026).",
+      "Gross opens the floodgates",
+      "Pascal Gross broke the deadlock in the 31st minute with a low effort curled inside the near post from the edge of the box, continuing a habit of scoring against big-six opposition that has followed him through his Brighton career (Arseblog, 2026). Arsenal's afternoon had already been difficult before that, David Raya repeatedly gifting possession back to Brighton's press in the opening exchanges.",
+      "Kostoulas and Andres punish a flat Arsenal",
+      "Charalampos Kostoulas doubled Brighton's lead with a strike from 20 yards that split Cristhian Mosquera and Gabriel Magalhaes before half-time, and Chema Andres headed in a corner off the underside of the bar early in the second half to complete the scoring (Arseblog, 2026). Mikel Arteta made a double change just after the hour, sending on Mikel Merino and Martin Zubimendi in place of Gabriel Guimaraes and Jurrien Timber, but the substitutions did little to change the pattern of the afternoon -- Kai Havertz lost possession in the move that led directly to Brighton's third.",
+      "Arteta accepts the harsh lesson",
+      "Arteta did not shy away from the scale of the collapse afterwards: \"Full credit to Brighton in the manner they performed and went about the game. They were another gear from us in the basics of the game,\" he said, before turning to his own side's technical level: \"When we had the ball, especially in our own half, we were extremely poor technically, not respecting the game and the game principles you have to apply. We have to make sure we learn the lesson because this can't happen again\" (ESPN, 2026).",
+      ">> \"We have to make sure we learn the lesson because this can't happen again.\"",
+      "The result is Arsenal's first defeat of the season and hands early momentum in the title race back to their closest rivals, while the win is the latest reminder of the habit Brighton have built for troubling bigger clubs under Fabian Hurzeler, who succeeded Roberto De Zerbi at the Amex (Yahoo Sports, 2026)."
+    ],
+    sources: [
+      { label: "Yahoo Sports -- Brighton 3-0 Arsenal: What Arteta said", url: "https://sports.yahoo.com/articles/brighton-3-0-arsenal-arteta-163846833.html" },
+      { label: "Arseblog -- Report: Brighton 3-0 Arsenal (inc. goals)", url: "https://arseblog.news/2026/09/report-brighton-3-0-arsenal-inc-goals/" },
+      { label: "ESPN -- Arsenal 'in trouble from first throw-in' at Brighton - Mikel Arteta", url: "https://www.espn.com/soccer/story/_/id/49980636/arsenal-trouble-first-throw-brighton-mikel-arteta" }
+    ],
+    featured: false,
+    teams: ["Brighton & Hove Albion", "Arsenal"]
+  },
+  {
     id: 46,
     title: "Manchester United 2-3 Brighton: Carrick's Cup Nightmare Continues as Lacey and Mount Lead Squandered Lead",
     type: "Match Report",

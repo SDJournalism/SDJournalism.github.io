@@ -6,7 +6,39 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Tue, 15 Sep 2026 18:04:02 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 24 Sep 2026 12:44:04 GMT</lastBuildDate>
+  <item>
+    <title>Fulham 1-1 Manchester United: Cunha&apos;s Stoppage-Time Leveller Rescues a Point at Craven Cottage</title>
+    <link>https://sdjournalism.github.io/articles/48.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/48.html</guid>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Manchester United hit the post twice and had 16 shots at Craven Cottage but still needed a Matheus Cunha strike deep into stoppage time to salvage a 1-1 draw, extending a difficult week for Michael Carrick&apos;s side.</description>
+  </item>
+  <item>
+    <title>Brighton 3-0 Arsenal: Gross, Kostoulas and Andres End the Champions&apos; Unbeaten Start</title>
+    <link>https://sdjournalism.github.io/articles/47.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/47.html</guid>
+    <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Arsenal&apos;s perfect start to the season unravelled in stunning fashion as Brighton dismantled the champions 3-0 at the Amex, with Mikel Arteta admitting his side were &quot;extremely poor technically&quot; from the first whistle.</description>
+  </item>
+  <item>
+    <title>Manchester United 2-3 Brighton: Carrick&apos;s Cup Nightmare Continues as Lacey and Mount Lead Squandered Lead</title>
+    <link>https://sdjournalism.github.io/articles/46.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/46.html</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Manchester United led 2-0 inside ten minutes at Old Trafford and still crashed out of the Carabao Cup, Brighton fighting back to win 3-2 and pile fresh pressure on Michael Carrick.</description>
+  </item>
+  <item>
+    <title>Liverpool 3-1 Tottenham: Mac Allister, Gakpo and Szoboszlai Send Spurs Crashing Out of the Carabao Cup</title>
+    <link>https://sdjournalism.github.io/articles/45.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/45.html</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Liverpool eased into the fourth round of the Carabao Cup with a 3-1 win over Tottenham at Anfield, though Roberto De Zerbi felt his side deserved far more from the night.</description>
+  </item>
   <item>
     <title>Liverpool vs Tottenham Preview: De Zerbi&apos;s Goal Drought Meets Anfield&apos;s Cup Fortress</title>
     <link>https://sdjournalism.github.io/articles/44.html</link>
@@ -214,38 +246,6 @@
     <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
     <category>Player Blueprints</category>
     <description>Cole Palmer&apos;s finishing doesn&apos;t look rushed, even in the split-second before it happens -- and that&apos;s the whole trick. The technique behind Chelsea&apos;s record-breaking rookie scorer.</description>
-  </item>
-  <item>
-    <title>Chelsea 2004/05: The Impossible Defence (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/chelsea-0405-impossible-defence.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/chelsea-0405-impossible-defence.html</guid>
-    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>No Premier League team has conceded fewer than 15 goals in a season since -- and two decades on, nobody&apos;s got especially close. How Jose Mourinho&apos;s first Chelsea side redefined what a defence could look like.</description>
-  </item>
-  <item>
-    <title>Arsenal 3-0 Manchester City: Maresca&apos;s Debut Ends in a Cardiff Mauling</title>
-    <link>https://sdjournalism.github.io/articles/26.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/26.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Match Report</category>
-    <description>Arsenal needed just 24 seconds to set the tone in Cardiff, brushing aside Manchester City 3-0 in Enzo Maresca&apos;s first competitive game as City boss to lift the Community Shield.</description>
-  </item>
-  <item>
-    <title>Scouting Report: Max Dowman -- The Youngest Player to Ever Win the Premier League</title>
-    <link>https://sdjournalism.github.io/articles/25.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/25.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Scouting Report</category>
-    <description>Max Dowman is 16 years old and already the youngest player to score in, start, and win the Premier League. Ahead of a title-defence season at Arsenal, we look at what he actually offers on the pitch -- and how Mikel Arteta is trying to protect him from his own hype.</description>
-  </item>
-  <item>
-    <title>Scouting Report: Rio Ngumoha -- Liverpool&apos;s Teenager Already Writing Club History</title>
-    <link>https://sdjournalism.github.io/articles/24.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/24.html</guid>
-    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Scouting Report</category>
-    <description>A last-minute winner at Newcastle. The youngest goal at Anfield in the club&apos;s history. A senior England debut before his 18th birthday. Rio Ngumoha&apos;s rise at Liverpool has been remarkable -- now the question is whether he keeps his place under a new manager.</description>
   </item>
 </channel>
 </rss>
