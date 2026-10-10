@@ -1,47 +1,47 @@
 {
-  "generatedAt": "2026-10-10T11:31:35.058Z",
+  "generatedAt": "2026-10-10T16:30:55.807Z",
   "teams": {
     "Arsenal": [
       "W",
       "W",
       "W",
-      "W",
-      "L"
-    ],
-    "Aston Villa": [
-      "L",
-      "D",
-      "W",
       "L",
       "W"
     ],
-    "Bournemouth": [
+    "Aston Villa": [
+      "D",
+      "W",
       "L",
+      "W",
+      "D"
+    ],
+    "Bournemouth": [
       "D",
       "D",
       "D",
+      "L",
       "L"
     ],
     "Brentford": [
+      "D",
+      "D",
+      "D",
       "W",
-      "D",
-      "D",
-      "D",
-      "W"
+      "D"
     ],
     "Brighton & Hove Albion": [
-      "W",
       "L",
       "D",
+      "W",
       "W",
       "W"
     ],
     "Chelsea": [
       "W",
-      "W",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Coventry City": [
       "L",
@@ -67,9 +67,9 @@
     "Fulham": [
       "L",
       "L",
-      "L",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "Hull City": [
       "W",
@@ -79,18 +79,18 @@
       "L"
     ],
     "Ipswich Town": [
-      "W",
       "L",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Leeds United": [
-      "W",
       "D",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Liverpool": [
       "D",
@@ -128,9 +128,9 @@
       "L"
     ],
     "Sunderland": [
-      "L",
       "W",
       "D",
+      "L",
       "L",
       "L"
     ],
