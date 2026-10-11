@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T11:45:00.820Z",
+  "generatedAt": "2026-10-11T16:55:30.444Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -52,17 +52,17 @@
     ],
     "Crystal Palace": [
       "L",
-      "L",
       "W",
       "L",
-      "D"
-    ],
-    "Everton": [
-      "W",
-      "D",
-      "D",
       "D",
       "W"
+    ],
+    "Everton": [
+      "D",
+      "D",
+      "D",
+      "W",
+      "D"
     ],
     "Fulham": [
       "L",
@@ -73,10 +73,10 @@
     ],
     "Hull City": [
       "W",
-      "W",
       "D",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "Ipswich Town": [
       "L",
@@ -121,10 +121,10 @@
       "W"
     ],
     "Nottingham Forest": [
-      "L",
       "D",
       "D",
       "W",
+      "L",
       "L"
     ],
     "Sunderland": [
