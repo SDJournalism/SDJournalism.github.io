@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-18T15:01:58.230Z",
+  "generatedAt": "2026-10-18T19:48:50.517Z",
   "teams": {
     "Arsenal": [
       "W",
-      "W",
       "L",
+      "W",
       "W",
       "W"
     ],
@@ -18,9 +18,9 @@
     "Bournemouth": [
       "D",
       "D",
-      "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Brentford": [
       "D",
@@ -122,8 +122,8 @@
     ],
     "Nottingham Forest": [
       "D",
-      "D",
       "W",
+      "L",
       "L",
       "L"
     ],
@@ -177,11 +177,11 @@
       "D"
     ],
     "AC Milan": [
-      "W",
       "D",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "Napoli": [
       "W",
@@ -191,11 +191,11 @@
       "L"
     ],
     "Ajax": [
-      "L",
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Porto": [
       "L",
