@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T10:04:04.915Z",
+  "generatedAt": "2026-10-18T15:01:58.230Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -30,8 +30,8 @@
       "L"
     ],
     "Brighton & Hove Albion": [
-      "L",
       "D",
+      "W",
       "W",
       "W",
       "W"
@@ -51,11 +51,11 @@
       "W"
     ],
     "Crystal Palace": [
-      "L",
       "W",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Everton": [
       "D",
@@ -87,10 +87,10 @@
     ],
     "Leeds United": [
       "D",
-      "D",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "Liverpool": [
       "D",
@@ -107,11 +107,11 @@
       "W"
     ],
     "Manchester United": [
-      "W",
       "L",
       "D",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "Newcastle United": [
       "D",
@@ -128,8 +128,8 @@
       "L"
     ],
     "Sunderland": [
-      "W",
       "D",
+      "L",
       "L",
       "L",
       "L"
