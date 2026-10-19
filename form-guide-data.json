@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T19:48:50.517Z",
+  "generatedAt": "2026-10-19T02:04:14.713Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -150,8 +150,8 @@
     ],
     "Real Madrid": [
       "W",
-      "W",
       "L",
+      "W",
       "W",
       "W"
     ],
@@ -170,11 +170,11 @@
       "D"
     ],
     "Juventus": [
-      "W",
       "D",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "AC Milan": [
       "D",
