@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T17:54:29.134Z",
+  "generatedAt": "2026-10-19T21:50:55.896Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -46,9 +46,9 @@
     "Coventry City": [
       "L",
       "L",
-      "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Crystal Palace": [
       "W",
@@ -135,11 +135,11 @@
       "L"
     ],
     "Tottenham Hotspur": [
-      "L",
       "D",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "PSG": [
       "W",
