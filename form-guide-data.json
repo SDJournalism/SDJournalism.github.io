@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-01T12:12:37.973Z",
+  "generatedAt": "2026-11-01T21:28:59.288Z",
   "teams": {
     "Arsenal": [
       "W",
       "W",
-      "W",
       "D",
+      "W",
       "W"
     ],
     "Aston Villa": [
@@ -93,11 +93,11 @@
       "L"
     ],
     "Liverpool": [
-      "L",
       "W",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Manchester City": [
       "L",
