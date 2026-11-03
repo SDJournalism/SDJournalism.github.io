@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T14:01:18.772Z",
+  "generatedAt": "2026-11-03T00:09:49.159Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -58,11 +58,11 @@
       "L"
     ],
     "Everton": [
-      "D",
       "W",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Fulham": [
       "D",
@@ -114,11 +114,11 @@
       "L"
     ],
     "Newcastle United": [
-      "L",
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Nottingham Forest": [
       "L",
