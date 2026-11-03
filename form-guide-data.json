@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T13:10:15.786Z",
+  "generatedAt": "2026-11-03T22:41:52.697Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -12,8 +12,8 @@
       "W",
       "W",
       "W",
-      "W",
-      "D"
+      "D",
+      "L"
     ],
     "Bournemouth": [
       "L",
@@ -107,11 +107,11 @@
       "L"
     ],
     "Manchester United": [
-      "L",
       "D",
       "L",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Newcastle United": [
       "W",
@@ -157,9 +157,9 @@
     ],
     "Barcelona": [
       "W",
+      "L",
+      "L",
       "W",
-      "L",
-      "L",
       "W"
     ],
     "Borussia Dortmund": [
