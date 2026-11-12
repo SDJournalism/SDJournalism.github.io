@@ -6,7 +6,39 @@
   <atom:link href="https://sdjournalism.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>Student Football Writer and Analyst -- match reports, tactical analysis and Tactical Lab breakdowns.</description>
   <language>en-gb</language>
-  <lastBuildDate>Thu, 24 Sep 2026 12:44:04 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 15:38:00 GMT</lastBuildDate>
+  <item>
+    <title>Manchester United Sack Michael Carrick: From Permanent Deal to the Exit in 173 Days</title>
+    <link>https://sdjournalism.github.io/articles/52.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/52.html</guid>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <category>Analysis</category>
+    <description>Manchester United have sacked Michael Carrick with the club 18th and one league win from ten, just 173 days after handing him a two-year deal. Mauricio Pochettino is expected to replace him.</description>
+  </item>
+  <item>
+    <title>Manchester United 4-4 Aston Villa: Dorgu&apos;s 96th-Minute Header Caps Old Trafford Chaos</title>
+    <link>https://sdjournalism.github.io/articles/51.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/51.html</guid>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <category>Match Report</category>
+    <description>Aston Villa led 2-0 inside four minutes and 4-2 going into stoppage time, but substitutes Joshua Zirkzee and Patrick Dorgu struck late to earn Manchester United a wild 4-4 draw that still left them in the bottom three.</description>
+  </item>
+  <item>
+    <title>Liverpool vs Manchester City Preview: Maresca&apos;s Perfect Record Meets Iraola&apos;s Anfield Wall</title>
+    <link>https://sdjournalism.github.io/articles/50.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/50.html</guid>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+    <category>Match Preview</category>
+    <description>Manchester City arrive at Anfield with five wins from five and a three-point lead at the top, but without the suspended Phil Foden, to face a Liverpool side unbeaten under Andoni Iraola and riding three straight league clean sheets.</description>
+  </item>
+  <item>
+    <title>Manchester United vs Tottenham Preview: Carrick and De Zerbi Meet With the Pressure Rising</title>
+    <link>https://sdjournalism.github.io/articles/49.html</link>
+    <guid isPermaLink="true">https://sdjournalism.github.io/articles/49.html</guid>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+    <category>Match Preview</category>
+    <description>Michael Carrick&apos;s Manchester United have one league win from five and Roberto De Zerbi&apos;s Tottenham are bottom with two points, so one of these managers will leave Old Trafford on Saturday night under even more pressure.</description>
+  </item>
   <item>
     <title>Fulham 1-1 Manchester United: Cunha&apos;s Stoppage-Time Leveller Rescues a Point at Craven Cottage</title>
     <link>https://sdjournalism.github.io/articles/48.html</link>
@@ -214,38 +246,6 @@
     <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
     <category>Player Blueprints</category>
     <description>Erling Haaland touches the ball less than almost any forward in the Premier League -- and just won his third Golden Boot in four seasons anyway. The movement and finishing mechanics that make so few touches count for so much.</description>
-  </item>
-  <item>
-    <title>Manchester United 1998/99: The Impact Bench (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/man-utd-9899-impact-bench.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/man-utd-9899-impact-bench.html</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Tactical Vault</category>
-    <description>No English club has won the treble since. How Sir Alex Ferguson rotated a squad deep enough to survive three competitions at once -- and how two substitutes, sent on with the game seemingly gone, settled the biggest night of all in stoppage time.</description>
-  </item>
-  <item>
-    <title>Guglielmo Vicario&apos;s Tottenham Exit: How Kinsky&apos;s Rise Ended His Spurs Career</title>
-    <link>https://sdjournalism.github.io/articles/27.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/articles/27.html</guid>
-    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Analysis</category>
-    <description>Guglielmo Vicario is heading to Juventus on loan, the clearest sign yet that Antonin Kinsky&apos;s rise has ended his time as Tottenham&apos;s number one. Here&apos;s how three years unravelled into a Turin medical.</description>
-  </item>
-  <item>
-    <title>Andoni Iraola: The Hybrid Press (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/iraola-hybrid-press.html</guid>
-    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Manager DNA</category>
-    <description>Liverpool didn&apos;t hire Andoni Iraola for continuity -- they hired him because Bournemouth, on a fraction of the budget, pressed the Premier League&apos;s biggest clubs off the pitch. How that identity is being transplanted to Anfield.</description>
-  </item>
-  <item>
-    <title>Cole Palmer: The Shift and Shoot (Tactical Lab)</title>
-    <link>https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html</link>
-    <guid isPermaLink="true">https://sdjournalism.github.io/tactical-lab/palmer-shift-and-shoot.html</guid>
-    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-    <category>Player Blueprints</category>
-    <description>Cole Palmer&apos;s finishing doesn&apos;t look rushed, even in the split-second before it happens -- and that&apos;s the whole trick. The technique behind Chelsea&apos;s record-breaking rookie scorer.</description>
   </item>
 </channel>
 </rss>
