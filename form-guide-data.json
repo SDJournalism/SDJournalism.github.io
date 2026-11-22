@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T13:44:50.002Z",
+  "generatedAt": "2026-11-22T22:57:14.069Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -31,10 +31,10 @@
     ],
     "Brighton & Hove Albion": [
       "W",
-      "W",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Chelsea": [
       "W",
@@ -72,11 +72,11 @@
       "D"
     ],
     "Hull City": [
-      "D",
       "L",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Ipswich Town": [
       "L",
@@ -94,9 +94,9 @@
     ],
     "Liverpool": [
       "W",
+      "L",
+      "L",
       "W",
-      "L",
-      "L",
       "W"
     ],
     "Manchester City": [
@@ -109,9 +109,9 @@
     "Manchester United": [
       "L",
       "L",
-      "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Newcastle United": [
       "L",
@@ -157,7 +157,7 @@
     ],
     "Barcelona": [
       "L",
-      "L",
+      "W",
       "W",
       "W",
       "W"
@@ -178,8 +178,8 @@
     ],
     "AC Milan": [
       "W",
-      "W",
       "L",
+      "W",
       "W",
       "W"
     ],
@@ -191,11 +191,11 @@
       "W"
     ],
     "Ajax": [
+      "W",
+      "W",
+      "W",
       "D",
-      "W",
-      "W",
-      "W",
-      "D"
+      "W"
     ],
     "Porto": [
       "L",
