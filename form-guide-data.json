@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T16:41:56.156Z",
+  "generatedAt": "2026-11-24T03:35:43.032Z",
   "teams": {
     "Arsenal": [
       "W",
@@ -23,11 +23,11 @@
       "W"
     ],
     "Brentford": [
-      "D",
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Brighton & Hove Albion": [
       "W",
@@ -58,11 +58,11 @@
       "L"
     ],
     "Everton": [
-      "D",
       "L",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Fulham": [
       "W",
